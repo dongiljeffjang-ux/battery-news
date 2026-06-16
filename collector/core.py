@@ -11,10 +11,34 @@ import datetime as dt
 from urllib.parse import (urlparse, urlunparse, parse_qs,
                           urlencode, quote)
 
+from difflib import SequenceMatcher
+
 import requests
 import feedparser
 
 KST = dt.timezone(dt.timedelta(hours=9))
+
+# 제목 유사도 임계값. 높을수록 "거의 똑같아야" 중복으로 봄(보수적),
+# 낮을수록 "비슷하면" 중복으로 봄(적극적). 0.72 = 적극적 제거.
+TITLE_SIM_THRESHOLD = 0.72
+
+
+def normalize_title(t: str) -> str:
+    """제목에서 머리표·기호·공백을 제거해 비교용으로 정규화."""
+    t = t or ""
+    t = re.sub(r"\[[^\]]*\]", "", t)   # [속보] [단독] 등
+    t = re.sub(r"\([^)]*\)", "", t)    # (종합) (영상) 등
+    t = re.sub(r"[^0-9a-z가-힣]", "", t.lower())  # 한글·영문·숫자만 남김
+    return t
+
+
+def title_similarity(a: str, b: str) -> float:
+    return SequenceMatcher(None, a, b).ratio()
+
+
+def _source_rank(src: str) -> int:
+    """중복 시 남길 우선순위. 네이버 우선(요약이 있으므로)."""
+    return 0 if src == "네이버" else 1
 
 
 # ───────── 유틸 ─────────
@@ -60,6 +84,27 @@ def classify_steep(text: str, steep_dict: dict) -> str:
         if n > best_n:
             best, best_n = cat, n
     return best
+
+
+def classify_region(text: str, region_dict: dict) -> str:
+    """가장 많이 매칭된 권역. 어디에도 안 걸리면 'Global'."""
+    t = text.lower()
+    best, best_n = "Global", 0
+    for reg, words in (region_dict or {}).items():
+        n = sum(1 for w in words if w.lower() in t)
+        if n > best_n:
+            best, best_n = reg, n
+    return best
+
+
+def extract_hashtags(text: str, tag_dict: dict) -> list:
+    """사전의 변형어가 본문에 있으면 해당 대표 태그를 부착(중복 없이)."""
+    t = text.lower()
+    tags = []
+    for tag, variants in (tag_dict or {}).items():
+        if any(v.lower() in t for v in variants):
+            tags.append(tag)
+    return tags
 
 
 # ───────── 소스: 네이버 ─────────
@@ -137,10 +182,13 @@ def collect(cfg):
             raw += fetch_google(kw, cfg["sources"]["google"])
 
     steep_dict = cfg.get("steep", {})
+    region_dict = cfg.get("regions", {})
+    tag_dict = cfg.get("hashtags", {})
     cfg_sum = cfg.get("summary", {})
     max_age = cfg.get("max_age_days", 2)
 
-    out, seen = [], set()
+    # 1단계: URL 기준 중복 제거 + 기간 필터
+    by_url, seen = [], set()
     for it in raw:
         if not it["url"] or not within_age(it["pub"], max_age):
             continue
@@ -148,13 +196,32 @@ def collect(cfg):
         if h in seen:
             continue
         seen.add(h)
+        by_url.append(it)
+
+    # 2단계: 제목 유사도 기준 중복 제거.
+    # 네이버를 먼저 보도록 정렬해, 같은 사건 묶음에서 네이버가 대표로 남게 함.
+    by_url.sort(key=lambda x: _source_rank(x["source"]))
+    kept = []
+    for it in by_url:
+        nt = normalize_title(it["title"])
+        if any(title_similarity(nt, k["_nt"]) >= TITLE_SIM_THRESHOLD
+               for k in kept):
+            continue
+        it["_nt"] = nt
+        kept.append(it)
+
+    # 3단계: 최종 항목 구성
+    out = []
+    for it in kept:
         text = f"{it['title']} {it['desc']}"
         out.append({
-            "id": h,
+            "id": url_hash(it["url"]),
             "title": it["title"],
             "url": it["url"],
             "summary": make_summary(it["desc"], cfg_sum),
             "steep": classify_steep(text, steep_dict),
+            "region": classify_region(text, region_dict),
+            "hashtags": extract_hashtags(text, tag_dict),
             "source": it["source"],
             "keyword": it["keyword"],
             "published": it["pub"].isoformat() if it["pub"] else None,
