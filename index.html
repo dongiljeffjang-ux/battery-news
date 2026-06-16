@@ -16,73 +16,89 @@
   body{margin:0;background:var(--bg);color:var(--ink);
     font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
 
-  /* ── 로그인 게이트 ── */
+  /* 게이트 */
   #gate{min-height:100vh;display:grid;place-items:center;padding:24px;
     background:radial-gradient(900px 500px at 80% -10%, rgba(34,211,238,.08), transparent), var(--bg)}
-  .card{width:100%;max-width:380px;background:var(--panel);
-    border:1px solid var(--line);border-radius:16px;padding:36px 32px;
-    box-shadow:0 24px 60px rgba(0,0,0,.45)}
+  .card{width:100%;max-width:380px;background:var(--panel);border:1px solid var(--line);
+    border-radius:16px;padding:36px 32px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
   .badge{font:600 12px/1 var(--mono);letter-spacing:.18em;color:var(--accent);text-transform:uppercase}
-  .card h1{font-size:22px;margin:14px 0 4px;letter-spacing:-.01em}
+  .card h1{font-size:22px;margin:14px 0 4px}
   .card p.sub{color:var(--muted);font-size:13px;margin:0 0 26px}
-  .card label{display:block;font-size:12px;color:var(--muted);margin:0 0 7px;letter-spacing:.04em}
+  .card label{display:block;font-size:12px;color:var(--muted);margin:0 0 7px}
   .card input{width:100%;padding:13px 14px;background:#0c111c;color:var(--ink);
     border:1px solid var(--line);border-radius:10px;font-size:15px;outline:none}
   .card input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(34,211,238,.15)}
   .card button{width:100%;margin-top:18px;padding:13px;border:0;border-radius:10px;
-    background:linear-gradient(90deg,var(--accent),var(--accent2));
-    color:#06121a;font-weight:700;font-size:15px;cursor:pointer}
-  .card button:hover{filter:brightness(1.08)}
+    background:linear-gradient(90deg,var(--accent),var(--accent2));color:#06121a;font-weight:700;font-size:15px;cursor:pointer}
   .err{color:var(--danger);font-size:13px;margin-top:14px;min-height:18px}
 
-  /* ── 대시보드 ── */
+  /* 앱 레이아웃 */
   #app{display:none}
-  header{position:sticky;top:0;z-index:10;backdrop-filter:blur(8px);
+  header{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);
     background:rgba(14,19,32,.82);border-bottom:1px solid var(--line);
-    padding:14px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-  .logo{font-weight:800;letter-spacing:-.01em;font-size:17px}
-  .logo span{color:var(--accent)}
+    padding:13px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:17px}.logo span{color:var(--accent)}
   .meta{font:500 12px/1 var(--mono);color:var(--muted)}
   .spacer{flex:1}
-  .logout{font-size:12px;color:var(--muted);background:none;
-    border:1px solid var(--line);padding:7px 12px;border-radius:8px;cursor:pointer}
-  .logout:hover{color:var(--ink);border-color:var(--accent)}
-  main{max-width:1080px;margin:0 auto;padding:26px 22px 60px}
-  .gauge{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:30px}
-  .cell{background:var(--panel);border:1px solid var(--line);border-radius:12px;
-    padding:14px 15px;cursor:pointer;transition:transform .12s,border-color .12s}
-  .cell:hover{transform:translateY(-2px)}
-  .cell.active{border-color:var(--accent)}
+  .btn{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);
+    padding:7px 12px;border-radius:8px;cursor:pointer}
+  .btn:hover{color:var(--ink);border-color:var(--accent)}
+  .btn.spin{opacity:.6;pointer-events:none}
+
+  .wrap{display:grid;grid-template-columns:240px 1fr;gap:0;max-width:1240px;margin:0 auto}
+  aside{border-right:1px solid var(--line);padding:20px 16px;min-height:calc(100vh - 52px)}
+  aside h4{font:600 11px/1 var(--mono);letter-spacing:.1em;color:var(--muted);
+    text-transform:uppercase;margin:22px 0 10px}
+  aside h4:first-child{margin-top:0}
+  .opt{display:block;width:100%;text-align:left;font-size:13px;color:var(--ink);
+    background:none;border:0;padding:7px 9px;border-radius:7px;cursor:pointer;margin-bottom:2px}
+  .opt:hover{background:var(--panel)}
+  .opt.on{background:var(--accent);color:#06121a;font-weight:600}
+  .opt .ct{float:right;color:var(--muted);font:500 11px/1.5 var(--mono)}
+  .opt.on .ct{color:#06121a}
+  select{width:100%;padding:8px 10px;background:var(--panel);color:var(--ink);
+    border:1px solid var(--line);border-radius:8px;font-size:13px;margin-bottom:8px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tagbtn{font:600 11px/1 var(--mono);padding:6px 9px;border-radius:14px;
+    border:1px solid var(--line);color:var(--muted);background:none;cursor:pointer}
+  .tagbtn:hover{color:var(--ink);border-color:var(--accent)}
+  .tagbtn.on{background:var(--accent);color:#06121a;border-color:var(--accent)}
+  .clear{font-size:12px;color:var(--accent);background:none;border:0;cursor:pointer;margin-top:6px;padding:4px}
+
+  .content{padding:22px 22px 60px}
+  .gauge{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:22px}
+  .cell{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 13px;cursor:pointer;transition:transform .12s,border-color .12s}
+  .cell:hover{transform:translateY(-2px)}.cell.active{border-color:var(--accent)}
   .cell .top{display:flex;justify-content:space-between;align-items:baseline}
-  .cell .name{font-size:12px;color:var(--muted);letter-spacing:.03em}
-  .cell .num{font:700 22px/1 var(--mono)}
-  .bar{height:6px;border-radius:4px;background:#0c111c;margin-top:11px;overflow:hidden}
+  .cell .name{font-size:11px;color:var(--muted)}.cell .num{font:700 19px/1 var(--mono)}
+  .bar{height:5px;border-radius:4px;background:#0c111c;margin-top:9px;overflow:hidden}
   .bar>i{display:block;height:100%;border-radius:4px;transition:width .5s ease}
-  .toolbar{display:flex;gap:10px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
-  .toolbar input{flex:1;min-width:200px;padding:11px 13px;background:var(--panel);
+  .toolbar{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+  .toolbar input{flex:1;min-width:180px;padding:10px 13px;background:var(--panel);
     border:1px solid var(--line);border-radius:10px;color:var(--ink);font-size:14px}
   .toolbar input:focus{outline:none;border-color:var(--accent)}
-  .chip{font:600 11px/1 var(--mono);padding:7px 11px;border-radius:20px;
-    border:1px solid var(--line);color:var(--muted);cursor:pointer;background:none}
-  .chip.on{color:#06121a;background:var(--accent);border-color:var(--accent)}
+  .count{font:500 12px/1 var(--mono);color:var(--muted);margin-bottom:12px}
   .list{display:flex;flex-direction:column;gap:11px}
   .art{background:var(--panel);border:1px solid var(--line);border-radius:12px;
-    padding:15px 17px;border-left:4px solid var(--U);transition:background .12s}
+    padding:15px 17px;border-left:4px solid var(--U)}
   .art:hover{background:var(--panel2)}
   .art a.tt{color:var(--ink);font-weight:650;font-size:15.5px;text-decoration:none;line-height:1.4}
   .art a.tt:hover{color:var(--accent)}
   .art .sm{color:var(--muted);font-size:13px;margin:7px 0 9px;line-height:1.55}
-  .art .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-  .tag{font:600 10.5px/1 var(--mono);padding:5px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em}
+  .art .row{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+  .pill{font:600 10.5px/1 var(--mono);padding:5px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.04em}
+  .rgn{font:600 11px/1 var(--mono);padding:5px 8px;border-radius:6px;background:#0c111c;color:var(--muted)}
+  .htag{font:500 11px/1 var(--mono);color:var(--accent);cursor:pointer}
+  .htag:hover{text-decoration:underline}
   .src{font:500 12px/1 var(--mono);color:var(--muted)}
   .empty,.loading{text-align:center;color:var(--muted);padding:60px 0;font-size:14px}
   .err2{color:var(--danger)}
+  @media (max-width:760px){.wrap{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line);min-height:0}}
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 
-<!-- 로그인 게이트 -->
 <div id="gate">
   <main class="card">
     <div class="badge">🔋 Battery Market Intel</div>
@@ -95,123 +111,193 @@
   </main>
 </div>
 
-<!-- 대시보드 -->
 <div id="app">
   <header>
     <div class="logo">🔋 Battery<span>·</span>Intel</div>
     <div class="meta" id="meta">로딩 중…</div>
     <div class="spacer"></div>
-    <button class="logout" id="logout">로그아웃</button>
+    <button class="btn" id="refresh">🔄 새로고침</button>
+    <button class="btn" id="logout">로그아웃</button>
   </header>
-  <main>
-    <section class="gauge" id="gaugeBox"></section>
-    <div class="toolbar">
-      <input id="q" placeholder="제목·요약 검색…" />
-      <button class="chip" data-src="all">전체</button>
-      <button class="chip" data-src="네이버">네이버</button>
-      <button class="chip" data-src="구글">구글</button>
+  <div class="wrap">
+    <aside>
+      <h4>권역</h4>
+      <div id="regionBox"></div>
+      <h4>기간</h4>
+      <select id="yearSel"><option value="">전체 연도</option></select>
+      <select id="monthSel"><option value="">전체 월</option></select>
+      <h4>해시태그</h4>
+      <div class="tags" id="tagBox"></div>
+      <button class="clear" id="clearAll">필터 초기화</button>
+    </aside>
+    <div class="content">
+      <section class="gauge" id="gaugeBox"></section>
+      <div class="toolbar">
+        <input id="q" placeholder="제목·요약 검색…" />
+        <button class="tagbtn" data-src="all">전체</button>
+        <button class="tagbtn" data-src="네이버">네이버</button>
+        <button class="tagbtn" data-src="구글">구글</button>
+      </div>
+      <div class="count" id="count"></div>
+      <section class="list" id="list"><div class="loading">불러오는 중…</div></section>
     </div>
-    <section class="list" id="list">
-      <div class="loading">데이터를 불러오는 중…</div>
-    </section>
-  </main>
+  </div>
 </div>
 
 <script>
 // ════════ 설정 ════════
-const ACCESS_KEY = "battery2026";                          // 접속 키
-const GITHUB_REPO = "dongiljeffjang-ux/battery-news";      // 저장소
-const GITHUB_BRANCH = "main";
-const DATA_URL =
-  `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/data/news.json`;
+const ACCESS_KEY="battery2026";
+const GITHUB_REPO="dongiljeffjang-ux/battery-news";
+const GITHUB_BRANCH="main";
+const DATA_URL=`https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/data/news.json`;
 
-const STEEP=[
-  ["Social","사회","--S"],["Technological","기술","--T"],
+const STEEP=[["Social","사회","--S"],["Technological","기술","--T"],
   ["Economic","경제","--E"],["Environmental","환경","--Env"],
   ["Political","정책","--P"],["Uncategorized","미분류","--U"]];
 const COLORVAR=Object.fromEntries(STEEP.map(s=>[s[0],s[2]]));
-let DATA=[], activeSteep=null, activeSrc="all", query="";
+const REGIONS=[["all","전체"],["Korea","🇰🇷 한국"],["China","🇨🇳 중국"],
+  ["Japan","🇯🇵 일본"],["NorthAmerica","🇺🇸 북미"],["Europe","🇪🇺 유럽"],["Global","🌐 글로벌"]];
+const REGION_KO=Object.fromEntries(REGIONS.map(r=>[r[0],r[1]]));
+
+let DATA=[], fSteep=null, fSrc="all", fRegion="all",
+    fYear="", fMonth="", fTag=null, query="";
 
 function cssvar(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
 function esc(s){return (s||"").replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
+function rOf(a){return a.region||"Global";}
+function tagsOf(a){return Array.isArray(a.hashtags)?a.hashtags:[];}
 
 // ── 게이트 ──
-const gate=document.getElementById('gate'), app=document.getElementById('app');
-const pw=document.getElementById('pw'), go=document.getElementById('go'), err=document.getElementById('err');
-
+const gate=document.getElementById('gate'),app=document.getElementById('app');
+const pw=document.getElementById('pw'),err=document.getElementById('err');
 function openApp(){gate.style.display='none';app.style.display='block';load();}
-function tryEnter(){
-  if(pw.value===ACCESS_KEY){
-    try{sessionStorage.setItem('bn_ok','1');}catch(e){}
-    openApp();
-  }else{err.textContent='접속 키가 올바르지 않습니다.';}
-}
-go.onclick=tryEnter;
+function tryEnter(){if(pw.value===ACCESS_KEY){try{sessionStorage.setItem('bn_ok','1');}catch(e){}openApp();}
+  else err.textContent='접속 키가 올바르지 않습니다.';}
+document.getElementById('go').onclick=tryEnter;
 pw.addEventListener('keydown',e=>{if(e.key==='Enter')tryEnter();});
-document.getElementById('logout').onclick=()=>{
-  try{sessionStorage.removeItem('bn_ok');}catch(e){}
-  location.reload();
-};
-// 같은 탭에서 새로고침 시 재입력 생략
+document.getElementById('logout').onclick=()=>{try{sessionStorage.removeItem('bn_ok');}catch(e){}location.reload();};
 try{if(sessionStorage.getItem('bn_ok')==='1')openApp();}catch(e){}
 
 // ── 데이터 ──
 async function load(){
+  const btn=document.getElementById('refresh');btn.classList.add('spin');
   try{
-    const r=await fetch(DATA_URL,{cache:"no-store"});
+    const r=await fetch(DATA_URL+'?t='+Date.now(),{cache:"no-store"});
     if(!r.ok)throw new Error('fetch '+r.status);
     const d=await r.json();
     DATA=d.articles||[];
     document.getElementById('meta').textContent=
       `총 ${DATA.length}건 · 갱신 ${(d.updated_at||'').slice(0,16).replace('T',' ')}`;
-    renderGauge();render();
+    buildSidebar();renderGauge();render();
   }catch(e){
     document.getElementById('list').innerHTML=
-      '<div class="loading err2">데이터를 불러오지 못했습니다. 저장소가 공개(Public)인지, 주소가 맞는지 확인하세요.</div>';
-  }
+      '<div class="loading err2">데이터를 불러오지 못했습니다. 저장소가 공개(Public)인지 확인하세요.</div>';
+  }finally{btn.classList.remove('spin');}
 }
-function counts(){const c={};STEEP.forEach(s=>c[s[0]]=0);
-  DATA.forEach(a=>{c[a.steep]=(c[a.steep]||0)+1;});return c;}
+document.getElementById('refresh').onclick=load;
+
+// ── 사이드바 구성 ──
+function buildSidebar(){
+  const rc={};DATA.forEach(a=>{const k=rOf(a);rc[k]=(rc[k]||0)+1;});
+  document.getElementById('regionBox').innerHTML=REGIONS.map(([key,ko])=>{
+    const n=key==='all'?DATA.length:(rc[key]||0);
+    return `<button class="opt ${fRegion===key?'on':''}" data-region="${key}">${ko}<span class="ct">${n}</span></button>`;
+  }).join('');
+  document.querySelectorAll('[data-region]').forEach(b=>b.onclick=()=>{
+    fRegion=b.dataset.region;buildSidebar();renderGauge();render();});
+
+  const years=[...new Set(DATA.map(a=>(a.published||'').slice(0,4)).filter(Boolean))].sort().reverse();
+  const ySel=document.getElementById('yearSel');
+  ySel.innerHTML='<option value="">전체 연도</option>'+years.map(y=>`<option value="${y}">${y}년</option>`).join('');
+  ySel.value=fYear;
+  const mSel=document.getElementById('monthSel');
+  mSel.innerHTML='<option value="">전체 월</option>'+
+    Array.from({length:12},(_,i)=>String(i+1).padStart(2,'0')).map(m=>`<option value="${m}">${parseInt(m)}월</option>`).join('');
+  mSel.value=fMonth;
+  ySel.onchange=()=>{fYear=ySel.value;renderGauge();render();};
+  mSel.onchange=()=>{fMonth=mSel.value;renderGauge();render();};
+
+  const tc={};DATA.forEach(a=>tagsOf(a).forEach(t=>{tc[t]=(tc[t]||0)+1;}));
+  const top=Object.entries(tc).sort((a,b)=>b[1]-a[1]).slice(0,20);
+  document.getElementById('tagBox').innerHTML=top.length
+    ? top.map(([t,n])=>`<button class="tagbtn ${fTag===t?'on':''}" data-tag="${esc(t)}">#${esc(t)} ${n}</button>`).join('')
+    : '<span style="color:var(--muted);font-size:12px">아직 태그 없음</span>';
+  document.querySelectorAll('[data-tag]').forEach(b=>b.onclick=()=>{
+    const t=b.dataset.tag;fTag=fTag===t?null:t;buildSidebar();renderGauge();render();});
+}
+document.getElementById('clearAll').onclick=()=>{
+  fSteep=null;fSrc="all";fRegion="all";fYear="";fMonth="";fTag=null;query="";
+  document.getElementById('q').value="";
+  document.querySelectorAll('.toolbar .tagbtn').forEach(x=>x.classList.remove('on'));
+  document.querySelector('.toolbar .tagbtn[data-src="all"]').classList.add('on');
+  buildSidebar();renderGauge();render();
+};
+
+// ── 필터 적용 ──
+function pass(a){
+  if(fSteep&&a.steep!==fSteep)return false;
+  if(fSrc!=="all"&&a.source!==fSrc)return false;
+  if(fRegion!=="all"&&rOf(a)!==fRegion)return false;
+  if(fTag&&!tagsOf(a).includes(fTag))return false;
+  const pub=a.published||"";
+  if(fYear&&pub.slice(0,4)!==fYear)return false;
+  if(fMonth&&pub.slice(5,7)!==fMonth)return false;
+  if(query){const t=(a.title+a.summary).toLowerCase();if(!t.includes(query.toLowerCase()))return false;}
+  return true;
+}
+
 function renderGauge(){
-  const c=counts(),max=Math.max(1,...Object.values(c));
+  const base=DATA.filter(a=>{
+    if(fSrc!=="all"&&a.source!==fSrc)return false;
+    if(fRegion!=="all"&&rOf(a)!==fRegion)return false;
+    if(fTag&&!tagsOf(a).includes(fTag))return false;
+    const pub=a.published||"";
+    if(fYear&&pub.slice(0,4)!==fYear)return false;
+    if(fMonth&&pub.slice(5,7)!==fMonth)return false;
+    return true;});
+  const c={};STEEP.forEach(s=>c[s[0]]=0);base.forEach(a=>{c[a.steep]=(c[a.steep]||0)+1;});
+  const max=Math.max(1,...Object.values(c));
   document.getElementById('gaugeBox').innerHTML=STEEP.map(([key,ko,varname])=>{
     const n=c[key]||0,pct=Math.round(n/max*100),col=cssvar(varname);
-    const on=activeSteep===key?'active':'';
-    return `<div class="cell ${on}" data-steep="${key}">
-      <div class="top"><span class="name">${ko} · ${key.slice(0,4).toUpperCase()}</span>
-      <span class="num">${n}</span></div>
+    return `<div class="cell ${fSteep===key?'active':''}" data-steep="${key}">
+      <div class="top"><span class="name">${ko}</span><span class="num">${n}</span></div>
       <div class="bar"><i style="width:${pct}%;background:${col}"></i></div></div>`;
   }).join('');
-  document.querySelectorAll('.cell').forEach(el=>el.onclick=()=>{
-    const k=el.dataset.steep;activeSteep=activeSteep===k?null:k;renderGauge();render();});
+  document.querySelectorAll('[data-steep]').forEach(el=>el.onclick=()=>{
+    const k=el.dataset.steep;fSteep=fSteep===k?null:k;renderGauge();render();});
 }
+
 function render(){
-  let rows=DATA.filter(a=>{
-    if(activeSteep&&a.steep!==activeSteep)return false;
-    if(activeSrc!=="all"&&a.source!==activeSrc)return false;
-    if(query){const t=(a.title+a.summary).toLowerCase();
-      if(!t.includes(query.toLowerCase()))return false;}
-    return true;});
+  const rows=DATA.filter(pass);
+  document.getElementById('count').textContent=`${rows.length}건 표시 중`;
   const list=document.getElementById('list');
   if(!rows.length){list.innerHTML='<div class="empty">조건에 맞는 기사가 없습니다.</div>';return;}
   list.innerHTML=rows.map(a=>{
     const col=cssvar(COLORVAR[a.steep]||"--U");
     const ko=(STEEP.find(s=>s[0]===a.steep)||[,"미분류"])[1];
     const pub=(a.published||"").slice(0,16).replace("T"," ");
+    const rgn=REGION_KO[rOf(a)]||"🌐 글로벌";
+    const tags=tagsOf(a).map(t=>`<span class="htag" data-jtag="${esc(t)}">#${esc(t)}</span>`).join(" ");
     return `<article class="art" style="border-left-color:${col}">
       <a class="tt" href="${a.url}" target="_blank" rel="noopener">${esc(a.title)}</a>
       <div class="sm">${esc(a.summary||"")}</div>
       <div class="row">
-        <span class="tag" style="background:${col}22;color:${col}">${ko}</span>
-        <span class="src">${a.source} · ${esc(a.keyword)} · ${pub}</span>
+        <span class="pill" style="background:${col}22;color:${col}">${ko}</span>
+        <span class="rgn">${rgn}</span>
+        <span class="src">${a.source} · ${pub}</span>
+        ${tags?'<span style="flex-basis:100%;height:0"></span>'+tags:''}
       </div></article>`;
   }).join('');
+  document.querySelectorAll('[data-jtag]').forEach(el=>el.onclick=()=>{
+    fTag=el.dataset.jtag;buildSidebar();renderGauge();render();
+    window.scrollTo({top:0,behavior:'smooth'});});
 }
+
 document.getElementById('q').addEventListener('input',e=>{query=e.target.value;render();});
-document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{
-  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));
-  b.classList.add('on');activeSrc=b.dataset.src;render();});
-document.querySelector('.chip[data-src="all"]').classList.add('on');
+document.querySelectorAll('.toolbar .tagbtn').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.toolbar .tagbtn').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');fSrc=b.dataset.src;renderGauge();render();});
+document.querySelector('.toolbar .tagbtn[data-src="all"]').classList.add('on');
 </script>
 </body>
 </html>
