@@ -1,6 +1,67 @@
 {
-  "updated_at": "2026-06-16T17:54:51.070917+09:00",
+  "updated_at": "2026-06-16T18:02:24.386784+09:00",
   "articles": [
+    {
+      "id": "455cf1b57030",
+      "title": "[현장의 사람들] 불길이 남긴 흔적 쫓아 진실 밝힌다…대전동부소방서...",
+      "url": "https://www.joongdo.co.kr/web/view.php?key=20260616010004411",
+      "summary": "전기차, 배터리, 첨단 전자기기 등 새로운 변수가 등장하고 있어서다. 특히 전기차 화재는 조사관에게도 가장 어려운 분야 중 하나다.",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "전기차",
+        "충전"
+      ],
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-16T18:00:00+09:00",
+      "collected_at": "2026-06-16T18:02:24.364662+09:00"
+    },
+    {
+      "id": "cf0e75d4c4fd",
+      "title": "도레이첨단소재, 메타 아라미드 2호기 준공...글로벌 첨단소재 시장 선...",
+      "url": "https://news.bbsi.co.kr/news/articleView.html?idxno=4089530",
+      "summary": "이철우 경북도지사는 \"첨단소재는 미래 산업의 엔진이자 경쟁력의 뿌리\"라며 \"도레이첨단소재의 고기능성 고성능 소재들을 방산, 이차전지, 반도체 등 경북의 전방산업과 연계해 미래 첨단산업의 글로벌 주도권을 확실히...",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [],
+      "source": "네이버",
+      "keyword": "이차전지",
+      "published": "2026-06-16T17:58:00+09:00",
+      "collected_at": "2026-06-16T18:02:24.368606+09:00"
+    },
+    {
+      "id": "a751a33dc565",
+      "title": "도요타, ‘올 뉴 RAV4’ 출시…PHEV·인포테인먼트로 일본차 자존심 세울...",
+      "url": "https://www.seoul.co.kr/news/economy/car/2026/06/16/20260616500285?wlog_tag3=naver",
+      "summary": "특히 PHEV 모델은 전기차(EV) 모드 기준 최대 77㎞를 주행할 수 있고, 배터리 잔량 10%에서 80%까지 충전하는 데 약 35분이 소요된다. 도요타 관계자는 “서울·경기에서 출퇴근 거리가 20㎞ 안팎이면 일주일에 두...",
+      "steep": "Uncategorized",
+      "region": "Japan",
+      "hashtags": [
+        "전기차",
+        "충전"
+      ],
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-16T17:55:00+09:00",
+      "collected_at": "2026-06-16T18:02:24.364769+09:00"
+    },
+    {
+      "id": "c87b98b80a45",
+      "title": "피노, 씨앤피신소재 지분 75% 확보…LFP 합작 본격화",
+      "url": "https://www.bloter.net/news/articleView.html?idxno=665666",
+      "summary": "씨앤피신소재테크놀로지는 이차전지 전구체 및 LFP양극재 생산을 목적으로 2024년 1월 설립된 법인이다. 경북 포항 영일만4일반산업단지에 약 13만㎡ 부지를 확보했다.",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [
+        "양극재",
+        "LFP"
+      ],
+      "source": "네이버",
+      "keyword": "이차전지",
+      "published": "2026-06-16T17:55:00+09:00",
+      "collected_at": "2026-06-16T18:02:24.368673+09:00"
+    },
     {
       "id": "ab0367c7f692",
       "title": "르노코리아, 넥스트라이즈서 SDV·AI 미래차 전략 공개",
@@ -3389,6 +3450,19 @@
       "keyword": "배터리 재활용",
       "published": "2026-06-15T22:40:54+09:00",
       "collected_at": "2026-06-16T17:54:51.067383+09:00"
+    },
+    {
+      "id": "f631b766dac6",
+      "title": "포항시-포스텍 이차전지 글로벌 사업단, 이차전지 산업 경쟁력 강화 논의 - 서울경제TV",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0xNWw4X21kZTVUZU9HcUMxNDJycG9ZbGVFcE5leEY4QWMwdGYwZDh2SDZVeWxLWHlQWFZ3dFozaHJCcTMyd2lvclFGLTZwVEVZSk9Ec19kYmNoNTJUWjdYVDlCR3dGYkc2UjdR?oc=5",
+      "summary": "포항시-포스텍 이차전지 글로벌 사업단, 이차전지 산업 경쟁력 강화 논의  서울경제TV",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-15T22:38:59+09:00",
+      "collected_at": "2026-06-16T18:02:24.380475+09:00"
     },
     {
       "id": "4ae99cbc27d5",
