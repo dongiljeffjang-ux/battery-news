@@ -14,6 +14,15 @@ KST = dt.timezone(dt.timedelta(hours=9))
 
 STEEP_ORDER = ["Social", "Technological", "Economic",
                "Environmental", "Political", "Uncategorized"]
+
+REGION_KO = {
+    "Korea": "🇰🇷한국", "China": "🇨🇳중국", "Japan": "🇯🇵일본",
+    "NorthAmerica": "🇺🇸북미", "Europe": "🇪🇺유럽", "Global": "🌐글로벌",
+}
+
+
+def region_label(code):
+    return REGION_KO.get(code, code or "")
 STEEP_KO = {
     "Social": "사회 (Social)",
     "Technological": "기술 (Technological)",
@@ -53,7 +62,10 @@ def build_html(fresh, today_str):
                 f'<br><span style="color:#555;font-size:13px">'
                 f'{a["summary"]}</span>'
                 f'<br><span style="color:#999;font-size:12px">'
-                f'{a["source"]} · {a["keyword"]}</span></li>')
+                f'{a["source"]} · {a["keyword"]}'
+                f'{" · " + region_label(a.get("region")) if a.get("region") else ""}'
+                f'{" · " + " ".join("#" + t for t in a.get("hashtags", [])) if a.get("hashtags") else ""}'
+                f'</span></li>')
         parts.append('</ul>')
     parts.append(
         '<hr style="margin-top:24px;border:none;border-top:1px solid #eee">'
