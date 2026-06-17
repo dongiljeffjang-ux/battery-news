@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Battery Intel · 분석실</title>
+<style>
+  :root{
+    --bg:#0b1018; --ink:#e8edf7; --muted:#8a96b3; --accent:#22d3ee;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+    overflow:hidden}
+  header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;
+    gap:14px;padding:12px 18px;background:linear-gradient(180deg,rgba(11,16,24,.92),transparent)}
+  .logo{font-weight:800;font-size:16px}.logo span{color:var(--accent)}
+  .tag{font:600 11px/1 var(--mono);letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+  .spacer{flex:1}
+  .back{font-size:13px;color:var(--ink);text-decoration:none;background:rgba(34,211,238,.12);
+    border:1px solid var(--accent);padding:8px 14px;border-radius:8px}
+  .back:hover{background:rgba(34,211,238,.22)}
+  .hint{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:10;
+    font:500 12px/1 var(--mono);color:var(--muted);background:rgba(11,16,24,.7);
+    padding:8px 14px;border-radius:20px;border:1px solid #27304a}
+  #stage{width:100vw;height:100vh;display:block;image-rendering:pixelated}
+  .legend{position:fixed;top:54px;left:18px;z-index:10;display:flex;flex-direction:column;gap:5px}
+  .legend .it{font:600 11px/1 var(--mono);color:var(--muted);display:flex;align-items:center;gap:6px}
+  .legend .sw{width:10px;height:10px;border-radius:2px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🔋 Battery<span>·</span>Intel</div>
+  <div class="tag">주간 분석실</div>
+  <div class="spacer"></div>
+  <a class="back" href="index.html">← 대시보드로</a>
+</header>
+<div class="legend" id="legend"></div>
+<canvas id="stage"></canvas>
+<div class="hint">캐릭터에 마우스를 올리면 멈춰서 이번 주 인사이트를 보고합니다</div>
+
+<script>
+const SCALE=6; // 도트 확대
+const canvas=document.getElementById('stage'), ctx=canvas.getContext('2d');
+let W,H;
+function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight;ctx.imageSmoothingEnabled=false;}
+addEventListener('resize',resize);resize();
+
+// ── 에이전트 정의 (가짜 인사이트는 나중에 실제 AI 결과로 교체) ──
+const AGENTS=[
+  {id:"US",flag:"🇺🇸",name:"미국 담당",color:"#5b8def",
+   insight:"美 IRA 세부지침 변경으로 LFP 현지생산 압력↑. 셀 메이커들의 북미 JV 재편 가속 전망."},
+  {id:"EU",flag:"🇪🇺",name:"유럽 담당",color:"#9b7bf0",
+   insight:"유럽 배터리 규정(CRMA) 발효로 재활용 의무 비중 상향. 노스볼트 공백을 아시아 셀이 메우는 중."},
+  {id:"CN",flag:"🇨🇳",name:"중국 담당",color:"#e0556b",
+   insight:"CATL·BYD의 LFP 단가 추가 인하로 글로벌 가격 하방 압력. 나트륨이온 양산 라인 확대 신호."},
+  {id:"KR",flag:"🇰🇷",name:"한국 담당",color:"#22d3ee",
+   insight:"국내 3사 전고체 파일럿 일정 구체화. 다만 캐즘 장기화로 증설 속도 조절 기조 뚜렷."},
+  {id:"JP",flag:"🇯🇵",name:"일본 담당",color:"#f0a04b",
+   insight:"도요타·파나소닉 전고체 로드맵 재확인. 소재 내재화로 한국 소재사와 경쟁 구도 형성."},
+];
+const LEADER={id:"LEAD",flag:"🧭",name:"팀장",color:"#34d399",
+   insight:"각 권역 인사이트를 교차 검증 중. '캐즘 장기화'는 합의됐으나, 中 나트륨이온 위협은 과대평가 소지—웹 자료로 반박 검토."};
+
+// 책상 위치 (그리드 좌표, 픽셀단위는 draw에서 환산)
+function layout(){
+  const cx=W/2, cy=H/2;
+  const r=Math.min(W,H)*0.30;
+  AGENTS.forEach((a,i)=>{
+    const ang=-Math.PI/2 + i*(2*Math.PI/AGENTS.length);
+    a.deskX=cx+Math.cos(ang)*r; a.deskY=cy+Math.sin(ang)*r;
+    a.x=a.deskX; a.y=a.deskY; a.t=Math.random()*6.28; a.frame=0;
+  });
+  LEADER.deskX=cx; LEADER.deskY=cy; LEADER.x=cx; LEADER.y=cy; LEADER.t=0; LEADER.frame=0;
+}
+layout(); addEventListener('resize',layout);
+
+// 범례
+document.getElementById('legend').innerHTML=
+  [...AGENTS,LEADER].map(a=>`<div class="it"><span class="sw" style="background:${a.color}"></span>${a.flag} ${a.name}</div>`).join('');
+
+// ── 도트 캐릭터 그리기 (간단한 16x16 픽셀 인간) ──
+function drawChar(a, walking, t){
+  const s=SCALE, x=Math.round(a.x), y=Math.round(a.y);
+  const bob=walking?Math.sin(t*8)*1:0;
+  ctx.save();
+  ctx.translate(x, y+bob);
+  // 그림자
+  ctx.fillStyle="rgba(0,0,0,.35)";
+  ctx.beginPath();ctx.ellipse(0,12*s/2,7*s/2,2.4*s/2,0,0,6.28);ctx.fill();
+  // 몸 (권역색 셔츠)
+  ctx.fillStyle=a.color;
+  ctx.fillRect(-3*s/2,0,3*s,5*s/2);
+  // 다리 (걸을 때 교차)
+  ctx.fillStyle="#2b3550";
+  const lp=walking?Math.sin(t*8)*1.5:0;
+  ctx.fillRect(-3*s/2, 5*s/2, 1.4*s, 2*s + lp);
+  ctx.fillRect(0.1*s, 5*s/2, 1.4*s, 2*s - lp);
+  // 머리
+  ctx.fillStyle="#f1c9a5";
+  ctx.fillRect(-2.4*s/2,-4*s/2,2.4*s,3*s/2);
+  // 머리카락
+  ctx.fillStyle="#3a2f2a";
+  ctx.fillRect(-2.4*s/2,-4*s/2,2.4*s,1*s/2);
+  ctx.restore();
+
+  // 머리 위 깃발 이모지
+  ctx.font=`${10}px serif`;
+  ctx.textAlign="center";
+  ctx.fillText(a.flag, x, y-13);
+}
+
+// ── 책상 그리기 ──
+function drawDesk(a){
+  const s=SCALE,x=Math.round(a.deskX),y=Math.round(a.deskY);
+  ctx.fillStyle="#6b4f33";ctx.fillRect(x-9*s/2,y+7*s/2,9*s,4*s/2);
+  ctx.fillStyle="#3a4b6b";ctx.fillRect(x-5*s/2,y+5*s/2,5*s,2.4*s/2); // 모니터
+  ctx.fillStyle="#22d3ee";ctx.fillRect(x-4*s/2,y+5.4*s/2,4*s,1.4*s/2);
+}
+
+// ── 바닥 타일 + 벽 + 러그 ──
+function drawFloor(){
+  const tile=32;
+  for(let gy=40;gy<H;gy+=tile)for(let gx=0;gx<W;gx+=tile){
+    const odd=((gx/tile|0)+(gy/tile|0))%2;
+    ctx.fillStyle=odd?"#10202b":"#0d1a23";
+    ctx.fillRect(gx,gy,tile,tile);
+  }
+  // 중앙 러그 (팀장 구역 강조)
+  const cx=W/2, cy=H/2, rw=Math.min(W,H)*0.34;
+  ctx.fillStyle="rgba(52,211,153,.06)";
+  ctx.strokeStyle="rgba(52,211,153,.25)";ctx.lineWidth=2;
+  roundRect(cx-rw,cy-rw*0.7,rw*2,rw*1.4,14);ctx.fill();ctx.stroke();
+  // 상단 벽 띠
+  ctx.fillStyle="#161d2e";ctx.fillRect(0,40,W,16);
+  ctx.fillStyle="#27304a";ctx.fillRect(0,54,W,3);
+}
+
+// ── 말풍선 ──
+function bubble(a){
+  const x=a.x, y=a.y-26;
+  const text=a.insight, maxw=240;
+  ctx.font="13px ui-sans-serif,sans-serif";
+  // 줄바꿈
+  const words=text.split(" ");let lines=[],cur="";
+  for(const w of words){const test=cur?cur+" "+w:w;
+    if(ctx.measureText(test).width>maxw){lines.push(cur);cur=w;}else cur=test;}
+  if(cur)lines.push(cur);
+  const pad=10,lh=18,bw=maxw+pad*2,bh=lines.length*lh+pad*2+14;
+  let bx=x-bw/2, by=y-bh;
+  bx=Math.max(8,Math.min(W-bw-8,bx)); by=Math.max(48,by);
+  // 박스
+  ctx.fillStyle="rgba(16,24,38,.97)";ctx.strokeStyle=a.color;ctx.lineWidth=2;
+  roundRect(bx,by,bw,bh,8);ctx.fill();ctx.stroke();
+  // 이름줄
+  ctx.fillStyle=a.color;ctx.font="700 12px ui-monospace,monospace";
+  ctx.textAlign="left";ctx.fillText(`${a.flag} ${a.name}`,bx+pad,by+pad+10);
+  // 본문
+  ctx.fillStyle="#e8edf7";ctx.font="13px ui-sans-serif,sans-serif";
+  lines.forEach((ln,i)=>ctx.fillText(ln,bx+pad,by+pad+28+i*lh));
+}
+function roundRect(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);
+  ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+
+// ── 상호작용 ──
+let hover=null, mx=-999,my=-999;
+canvas.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+canvas.addEventListener('mouseleave',()=>{mx=-999;my=-999;});
+
+function nearest(){
+  let best=null,bd=34;
+  for(const a of [...AGENTS,LEADER]){
+    const d=Math.hypot(a.x-mx,a.y-my);
+    if(d<bd){bd=d;best=a;}
+  }
+  return best;
+}
+
+// ── 루프 ──
+let last=performance.now();
+function loop(now){
+  const dt=(now-last)/1000;last=now;
+  ctx.clearRect(0,0,W,H);drawFloor();
+  [...AGENTS,LEADER].forEach(a=>drawDesk(a));
+
+  hover=nearest();
+  for(const a of [...AGENTS,LEADER]){
+    const frozen=(a===hover);
+    if(!frozen){
+      a.t+=dt;
+      // 자리 주변 작은 배회
+      const tx=a.deskX+Math.cos(a.t*0.6)*10;
+      const ty=a.deskY-6+Math.sin(a.t*0.8)*6;
+      a.x+=(tx-a.x)*Math.min(1,dt*2);
+      a.y+=(ty-a.y)*Math.min(1,dt*2);
+      a.walking=true;
+    }else{a.walking=false;}
+  }
+  // 캐릭터는 y순으로 그려 겹침 자연스럽게
+  [...AGENTS,LEADER].sort((p,q)=>p.y-q.y).forEach(a=>drawChar(a,a.walking,a.t));
+  if(hover)bubble(hover);
+  // 호버 강조 링
+  if(hover){ctx.strokeStyle=hover.color;ctx.lineWidth=2;
+    ctx.beginPath();ctx.arc(hover.x,hover.y,20,0,6.28);ctx.stroke();}
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
