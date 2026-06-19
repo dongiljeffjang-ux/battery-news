@@ -98,6 +98,20 @@
   .htag{font:500 11px/1 var(--mono);color:var(--accent);cursor:pointer}
   .htag:hover{text-decoration:underline}
   .src{font:500 12px/1 var(--mono);color:var(--muted)}
+  .score{font:600 12px/1 var(--mono);letter-spacing:1px}
+  .linkbtn{background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline}
+  .dategrp{margin-bottom:14px}
+  .datehdr{display:flex;align-items:center;gap:10px;width:100%;text-align:left;
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:11px 14px;cursor:pointer;color:var(--ink);margin-bottom:8px}
+  .datehdr:hover{border-color:var(--accent)}
+  .datehdr .arrow{color:var(--accent);font-size:11px;width:12px}
+  .datehdr .dlabel{font-weight:700;font-size:14px}
+  .datehdr .dcount{margin-left:auto;font:500 12px/1 var(--mono);color:var(--muted)}
+  .datebody{display:flex;flex-direction:column;gap:11px;padding-left:4px}
+  .morebtn{align-self:flex-start;margin-top:2px;background:none;border:1px dashed var(--line);
+    color:var(--accent);padding:8px 14px;border-radius:8px;cursor:pointer;font:600 12px/1 var(--mono)}
+  .morebtn:hover{border-color:var(--accent);background:rgba(34,211,238,.06)}
   .empty,.loading{text-align:center;color:var(--muted);padding:60px 0;font-size:14px}
   .err2{color:var(--danger)}
   @media (max-width:760px){.wrap{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line);min-height:0}}
@@ -173,7 +187,9 @@ const REGIONS=[["all","전체"],["Korea","🇰🇷 한국"],["China","🇨🇳 �
 const REGION_KO=Object.fromEntries(REGIONS.map(r=>[r[0],r[1]]));
 
 let DATA=[], fSteep=null, fSrc="all", fRegion="all",
-    fYear="", fMonth="", fTag=null, query="";
+    fYear="", fMonth="", fTag=null, query="", showLow=false;
+let openDates={}, expandDates={};   // 날짜별 펼침/더보기 상태
+const PER_DATE=20;                   // 날짜당 먼저 보여줄 기사 수
 
 function cssvar(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
 function esc(s){return (s||"").replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
@@ -293,27 +309,84 @@ function renderGauge(){
     const k=el.dataset.steep;fSteep=fSteep===k?null:k;renderGauge();render();});
 }
 
+function scoreOf(a){return typeof a.score==='number'?a.score:3;}
+function artHTML(a){
+  const col=cssvar(COLORVAR[a.steep]||"--U");
+  const ko=(STEEP.find(s=>s[0]===a.steep)||[,"미분류"])[1];
+  const pub=(a.published||"").slice(11,16);
+  const rgn=REGION_KO[rOf(a)]||"🌐 글로벌";
+  const sc=scoreOf(a);
+  const stars="★".repeat(sc)+"☆".repeat(5-sc);
+  const scol=sc>=4?"#34d399":sc<=2?"#64748b":"#8a96b3";
+  const tags=tagsOf(a).map(t=>`<span class="htag" data-jtag="${esc(t)}">#${esc(t)}</span>`).join(" ");
+  return `<article class="art" style="border-left-color:${col};${sc<=2?'opacity:.72':''}">
+    <a class="tt" href="${a.url}" target="_blank" rel="noopener">${esc(a.title)}</a>
+    <div class="sm">${esc(a.summary||"")}</div>
+    <div class="row">
+      <span class="score" style="color:${scol}" title="중요도 ${sc}/5">${stars}</span>
+      <span class="pill" style="background:${col}22;color:${col}">${ko}</span>
+      <span class="rgn">${rgn}</span>
+      <span class="src">${a.source} · ${pub}</span>
+      ${tags?'<span style="flex-basis:100%;height:0"></span>'+tags:''}
+    </div></article>`;
+}
+
 function render(){
-  const rows=DATA.filter(pass);
-  document.getElementById('count').textContent=`${rows.length}건 표시 중`;
+  let rows=DATA.filter(pass);
+  // 저점 숨김
+  const hidden=rows.filter(a=>scoreOf(a)<=2);
+  let pool=showLow?rows:rows.filter(a=>scoreOf(a)>=3);
+
+  document.getElementById('count').innerHTML=
+    `${pool.length}건 표시 중` +
+    (hidden.length&&!showLow?` · <button id="showLowBtn" class="linkbtn">낮은 중요도 ${hidden.length}건 포함</button>`:'') +
+    (showLow&&hidden.length?` · <button id="showLowBtn" class="linkbtn">낮은 중요도 제외</button>`:'');
+
   const list=document.getElementById('list');
-  if(!rows.length){list.innerHTML='<div class="empty">조건에 맞는 기사가 없습니다.</div>';return;}
-  list.innerHTML=rows.map(a=>{
-    const col=cssvar(COLORVAR[a.steep]||"--U");
-    const ko=(STEEP.find(s=>s[0]===a.steep)||[,"미분류"])[1];
-    const pub=(a.published||"").slice(0,16).replace("T"," ");
-    const rgn=REGION_KO[rOf(a)]||"🌐 글로벌";
-    const tags=tagsOf(a).map(t=>`<span class="htag" data-jtag="${esc(t)}">#${esc(t)}</span>`).join(" ");
-    return `<article class="art" style="border-left-color:${col}">
-      <a class="tt" href="${a.url}" target="_blank" rel="noopener">${esc(a.title)}</a>
-      <div class="sm">${esc(a.summary||"")}</div>
-      <div class="row">
-        <span class="pill" style="background:${col}22;color:${col}">${ko}</span>
-        <span class="rgn">${rgn}</span>
-        <span class="src">${a.source} · ${pub}</span>
-        ${tags?'<span style="flex-basis:100%;height:0"></span>'+tags:''}
-      </div></article>`;
+  if(!pool.length){list.innerHTML='<div class="empty">조건에 맞는 기사가 없습니다.</div>';bindAll();return;}
+
+  // 날짜별 그룹화
+  const groups={};
+  pool.forEach(a=>{const d=(a.published||"").slice(0,10)||"날짜미상";(groups[d]=groups[d]||[]).push(a);});
+  const dates=Object.keys(groups).sort().reverse();
+  // 기본 펼침 상태: 최신 날짜만 펼침 (한 번만 초기화)
+  dates.forEach((d,i)=>{ if(openDates[d]===undefined) openDates[d]=(i===0); });
+
+  // 각 날짜 안에서 중요도순 정렬
+  dates.forEach(d=>groups[d].sort((x,y)=>scoreOf(y)-scoreOf(x) ||
+    (y.published||'').localeCompare(x.published||'')));
+
+  list.innerHTML=dates.map(d=>{
+    const arts=groups[d];
+    const open=openDates[d];
+    const showAll=expandDates[d];
+    const slice=showAll?arts:arts.slice(0,PER_DATE);
+    const more=arts.length-PER_DATE;
+    const label=d==="날짜미상"?d:`${d.slice(5,7)}월 ${d.slice(8,10)}일`;
+    const top=arts[0]?scoreOf(arts[0]):0;
+    return `<div class="dategrp">
+      <button class="datehdr" data-date="${d}">
+        <span class="arrow">${open?'▼':'▶'}</span>
+        <span class="dlabel">${label}</span>
+        <span class="dcount">${arts.length}건${top>=4?` · 최고 ★${top}`:''}</span>
+      </button>
+      ${open?`<div class="datebody">
+        ${slice.map(artHTML).join('')}
+        ${(!showAll&&more>0)?`<button class="morebtn" data-more="${d}">+ ${more}건 더 보기</button>`:''}
+        ${(showAll&&more>0)?`<button class="morebtn" data-more="${d}">접기</button>`:''}
+      </div>`:''}
+    </div>`;
   }).join('');
+  bindAll();
+}
+
+function bindAll(){
+  const b=document.getElementById('showLowBtn');
+  if(b)b.onclick=()=>{showLow=!showLow;render();};
+  document.querySelectorAll('[data-date]').forEach(el=>el.onclick=()=>{
+    const d=el.dataset.date;openDates[d]=!openDates[d];render();});
+  document.querySelectorAll('[data-more]').forEach(el=>el.onclick=()=>{
+    const d=el.dataset.more;expandDates[d]=!expandDates[d];render();});
   document.querySelectorAll('[data-jtag]').forEach(el=>el.onclick=()=>{
     fTag=el.dataset.jtag;buildSidebar();renderGauge();render();
     window.scrollTo({top:0,behavior:'smooth'});});
