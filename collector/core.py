@@ -87,11 +87,20 @@ def classify_steep(text: str, steep_dict: dict) -> str:
 
 
 def classify_region(text: str, region_dict: dict) -> str:
-    """가장 많이 매칭된 권역. 어디에도 안 걸리면 'Global'."""
+    """가장 많이 매칭된 권역. 어디에도 안 걸리면 'Global'.
+    영문 약자(GM, EU 등)는 단어경계로 정확히 매칭해 오분류를 줄임."""
     t = text.lower()
     best, best_n = "Global", 0
     for reg, words in (region_dict or {}).items():
-        n = sum(1 for w in words if w.lower() in t)
+        n = 0
+        for w in words:
+            wl = w.lower()
+            if re.fullmatch(r"[a-z]+", wl):       # 영문 약자
+                if re.search(r"\b" + re.escape(wl) + r"\b", t):
+                    n += 2
+            else:                                   # 한글·혼합
+                if wl in t:
+                    n += 2
         if n > best_n:
             best, best_n = reg, n
     return best
@@ -105,6 +114,36 @@ def extract_hashtags(text: str, tag_dict: dict) -> list:
         if any(v.lower() in t for v in variants):
             tags.append(tag)
     return tags
+
+
+def score_importance(text: str, region: str, sc: dict) -> int:
+    """사용자 채점 학습 기반 중요도 점수(1~5)."""
+    if not sc:
+        return 3
+    t = text.lower()
+    def has(words):
+        return any(w.lower() in t for w in (words or []))
+    s = float(sc.get("base", 3))
+    if has(sc.get("pos_strong")):
+        s += 2
+    elif has(sc.get("pos_med")):
+        s += 1
+    elif "배터리" in t or "이차전지" in t:
+        s += 0.5
+    if has(sc.get("neg_strong")):
+        s -= 3
+    elif has(sc.get("neg_med")):
+        s -= 1.8
+    s += (sc.get("region_bonus", {}) or {}).get(region, 0)
+    return max(1, min(5, round(s)))
+
+
+def is_blocked(item: dict, blocked: list) -> bool:
+    """제외 매체인지 (출처/URL에 차단어가 있으면 True)."""
+    if not blocked:
+        return False
+    hay = f"{item.get('source','')} {item.get('url','')}".lower()
+    return any(b.lower() in hay for b in blocked)
 
 
 # ───────── 소스: 네이버 ─────────
@@ -184,6 +223,8 @@ def collect(cfg):
     steep_dict = cfg.get("steep", {})
     region_dict = cfg.get("regions", {})
     tag_dict = cfg.get("hashtags", {})
+    scoring = cfg.get("scoring", {})
+    blocked = cfg.get("blocked_sources", [])
     cfg_sum = cfg.get("summary", {})
     max_age = cfg.get("max_age_days", 2)
 
@@ -191,6 +232,8 @@ def collect(cfg):
     by_url, seen = [], set()
     for it in raw:
         if not it["url"] or not within_age(it["pub"], max_age):
+            continue
+        if is_blocked(it, blocked):   # 제외 매체 거르기
             continue
         h = url_hash(it["url"])
         if h in seen:
@@ -214,14 +257,16 @@ def collect(cfg):
     out = []
     for it in kept:
         text = f"{it['title']} {it['desc']}"
+        region = classify_region(text, region_dict)
         out.append({
             "id": url_hash(it["url"]),
             "title": it["title"],
             "url": it["url"],
             "summary": make_summary(it["desc"], cfg_sum),
             "steep": classify_steep(text, steep_dict),
-            "region": classify_region(text, region_dict),
+            "region": region,
             "hashtags": extract_hashtags(text, tag_dict),
+            "score": score_importance(text, region, scoring),
             "source": it["source"],
             "keyword": it["keyword"],
             "published": it["pub"].isoformat() if it["pub"] else None,
