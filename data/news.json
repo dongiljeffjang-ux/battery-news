@@ -1,6 +1,1431 @@
 {
-  "updated_at": "2026-06-26T19:37:32.379730+09:00",
+  "updated_at": "2026-06-27T18:14:25.391099+09:00",
   "articles": [
+    {
+      "id": "3bbd057459c1",
+      "title": "[현장] '3750만원' BYD PHEV 씨라이언 6 DM-i…현대차·토요타 정조준",
+      "url": "https://www.gpkorea.com/news/articleView.html?idxno=144128",
+      "summary": "BYD가 이를 '전기차 기반 하이브리드'라고 부르는 이유다. 배터리도 일반 하이브리드보다 크다.",
+      "steep": "Technological",
+      "region": "China",
+      "hashtags": [
+        "BYD",
+        "리튬",
+        "LFP",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T18:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.324858+09:00"
+    },
+    {
+      "id": "df1adad7eaba",
+      "title": "[현장] \"단연 BMW가 빛났다\"…전기차 미래라 불리는 'iX3' 얼마나 대단하...",
+      "url": "https://www.gpkorea.com/news/articleView.html?idxno=144131",
+      "summary": "몰라보게 달라진 디자인에다 특히 세대를 넘어선 것과 다름없는 차세대 소프트웨어로 글로벌 전기차... 여기다 새롭게 개발된 원통형 셀 기반 고전압 배터리로 에너지 밀도도 기존 대비 20% 향상시켰다.",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T17:56:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.325075+09:00"
+    },
+    {
+      "id": "aed7bcaaa387",
+      "title": "기후 2차관 \"호남 재생E·한빛원전 묶어 AI 전력벨트로\"",
+      "url": "https://www.news1.kr/society/environment/6210244",
+      "summary": "이 차관은 국제재생에너지기구(IRENA)를 인용해 \"태양광과 에너지저장장치(ESS), 고도화된 전력망 운영기술이 결합하면서 재생에너지가 펌파워 기능을 충분히 발휘할 수 있게 됐다\"고 밝혔다. 이어 \"태양광과 ESS가 결합한...",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 1,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T17:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.329922+09:00"
+    },
+    {
+      "id": "d2dc7e623b0a",
+      "title": "포드(F)의 초기 품질 개선 성과와 LFP 기술 발전이 전기차 수익성 전망을 재편할 것인가? - simplywall.st",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPckpBMF9YNy1oSXpFMlhFVFdWWWJJSmh3MGtqaFlHVklRVXU5OTFsWDNmOVg0dXFsaDJLNHpKTGFrOHl0QmEzXzAxQXFYdDFET241WVVrT0RVbzNaT29UWE40bWhaMVZ1VE5zdTlZVWpDWXc5QzRJVkpRdTJHaHg4Y191MFkyeExNLWR0ZjdXRdIBlAFBVV95cUxQNktWcEEzaW5VbHJTUFRMMTI4MFl5Ukc3dkxXQ2FyS09PMFF3V09fZ3F1R04zVV9GaTlUcFlQbE1PSXgyYTV1UDlVbnExd21XNWF4NXFYaXVuQ2pVbVc2UUgyMk5VQ0dBUU9jTkttMldqUnNwWnZrRjB0dEd5cFk3aWx4MGxlQWc5M0x5TUI3QTlScTVi?oc=5",
+      "summary": "포드(F)의 초기 품질 개선 성과와 LFP 기술 발전이 전기차 수익성 전망을 재편할 것인가? simplywall.st",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [
+        "LFP",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-27T16:11:57+09:00",
+      "collected_at": "2026-06-27T18:14:25.364515+09:00"
+    },
+    {
+      "id": "3f242e7074e9",
+      "title": "삼성·SK, AI 데이터센터 투자 본격화…'한국판 스타게이트' 현실화 기대...",
+      "url": "https://www.newsis.com/view/NISX20260626_0003685578",
+      "summary": "또 LG에너지솔루션과 삼성SDI, SK온 등 배터리 업계는 에너지저장장치(ESS) 배터리 수주를 확대할 수 있는 여건이다. 통상 재생에너지는 변동성을 보완하는 ESS와 함께 구축하기 때문이다.",
+      "steep": "Economic",
+      "region": "Korea",
+      "hashtags": [
+        "LG에너지솔루션",
+        "삼성SDI",
+        "SK온",
+        "ESS"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T16:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.330088+09:00"
+    },
+    {
+      "id": "e821b75442fd",
+      "title": "\"유명 브랜드라 샀더니\" 오너들도 모르는 국산 시장 36% 집어삼킨 '메이드 인 차이나' - v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFB5WF9sRWRqT0Y2aUg3cDhzZDZsMVlibkd0Nm1YVVczTlFMdGZLdkIteDhkS01DbU05ZHo4U3Z0c3JaeUx6ZHc?oc=5",
+      "summary": "\"유명 브랜드라 샀더니\" 오너들도 모르는 국산 시장 36% 집어삼킨 '메이드 인 차이나'  v.daum.net",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T15:56:26+09:00",
+      "collected_at": "2026-06-27T18:14:25.352902+09:00"
+    },
+    {
+      "id": "19d19f7c3f16",
+      "title": "'쓰레기' 플라스틱 병의 변신…전기차 배터리 핵심소재 됐다 - 글로벌 비즈 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1FRHh4LS02RkhxZ1NlWTdGR1pOd09SWmIybGNoOUFsQ3FJbFlQNUpJNXgxNmI5a21JVEptMXVVRGxOcTdPWml4ZXROdHZpS3BJSnBUb0JqRlRTc3ZzbjRaZ1ZPdV9FS2xs0gFoQVVfeXFMTUVEeHgtLTZGSHFnU2VZN0ZHWk53T1JaYjJsY2g5QWxDcUlsWVA1Skk1eDE2YjlrbUlUSm0xdVVEbE5xN09aaXhldE50dmlLcElKcFRvQmpGVFNzdnNuNFpnVk91X0VLbGw?oc=5",
+      "summary": "'쓰레기' 플라스틱 병의 변신…전기차 배터리 핵심소재 됐다  글로벌 비즈 뉴스",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T15:56:23+09:00",
+      "collected_at": "2026-06-27T18:14:25.350048+09:00"
+    },
+    {
+      "id": "bfd7416d14c8",
+      "title": "권성준 FM 대표, 실제 화재 사고 분석 기반 사전 예방 체계 고도화 [보험...",
+      "url": "http://www.fntimes.com/html/view.php?ud=202606261551531489efc5ce4ae_18",
+      "summary": "특히 AI 데이터센터와 반도체, 배터리 공장 등 첨단 산업시설은 전력 사용량 증가와 냉각 시스템, 리튬이온 배터리 등 새로운 위험 요인이 더해지면서 기존 안전 기준만으로는 리스크를 충분히 관리하기 어려운 환경으로...",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "리튬"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "리튬이온 배터리",
+      "published": "2026-06-27T15:38:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.338809+09:00"
+    },
+    {
+      "id": "3d518913a2f8",
+      "title": "글로벌 'EV 보조금 축소' 역주행하는 日 도쿄도, 130만 엔 파격 증액의 ...",
+      "url": "https://www.starnewskorea.com/business-life/2026/06/27/2026062713521367272",
+      "summary": "일본 자동차 전문 매체들에 따르면, 도쿄도는 다음 달 1일부터 배터리 전기차(EV)와 플러그인 하이브리드차(PHEV)의 지자체 보조금 상한액을 각각 30만 엔씩 일괄 상향한다. 이에 따라 도쿄 도민이 순수 전기차를 구입할 때...",
+      "steep": "Political",
+      "region": "Japan",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T15:05:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.325255+09:00"
+    },
+    {
+      "id": "d54b4489f5b6",
+      "title": "AI 시대 인재론 꺼낸 최태원…\"협업이 경쟁력\"",
+      "url": "https://news.bizwatch.co.kr/article/industry/2026/06/26/0004",
+      "summary": "RCPS 발행 주체인 큐셀 EPC 법인은 태양광 발전소와 에너지저장장치(ESS) 프로젝트를 직접 수행하는 핵심 법인. 마이크로소프트와 EPC 계약을 체결한 데 이어 글로벌 빅테크와 협력 확대 추진.",
+      "steep": "Economic",
+      "region": "NorthAmerica",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T15:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.330241+09:00"
+    },
+    {
+      "id": "22a4e69b1ab1",
+      "title": "마츠카와마사루 대표 “산업 자율화는 선택 아닌 전환”… 한국요꼬가...",
+      "url": "https://kidd.co.kr/news/246503",
+      "summary": "그는 “일본 역시 과거 전자•반도체•LCD 산업에서 강점을 가졌지만 상당수 산업이 해외로 이동했다”며 “현재 배터리와 전기차 분야에서도 글로벌 경쟁이 매우 치열해지고 있다”고 진단했다. 또한 “한국과...",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T14:10:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.325442+09:00"
+    },
+    {
+      "id": "f1365c859052",
+      "title": "독일과 저탄소 전력시장 해법 찾다...'제8회 한-독 에너지데이' - 수소신문",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9yUFFvQTJmclB6QXY1TENJRzd0SFcyV2M4V1hjZGlqLVlIU3RTclhVR2hvaUx1NFRxV3A3TW5ZWWJ1NldzdGpDSkJGVXVBNnJValljZ2xMRjlremNnVk9pdFIwNlY5VmIwYnBnMHc1b3BFckZ50gF0QVVfeXFMT3JQUW9BMmZyUHpBdjVMQ0lHN3RIVzJXYzhXWGNkaWotWUhTdFNyWFVHaG9pTHU0VHFXcDdNbllZYnU2V3N0akNKQkZVdUE2clVqWWNnbExGOWt6Y2dWT2l0UjA2VjlWYjBicGcwdzVvcEVyRnk?oc=5",
+      "summary": "독일과 저탄소 전력시장 해법 찾다. ..'제8회 한-독 에너지데이'  수소신문",
+      "steep": "Economic",
+      "region": "Europe",
+      "hashtags": [],
+      "score": 4,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T14:05:03+09:00",
+      "collected_at": "2026-06-27T18:14:25.353042+09:00"
+    },
+    {
+      "id": "be442a53dff3",
+      "title": "차량을 디지털 플랫폼으로…네이버·현대차 맞손",
+      "url": "https://www.segye.com/newsView/20260626514344?OutUrl=naver",
+      "summary": "연료나 배터리 잔량이 부족하면 인근 주유소나 전기차 충전소를 안내하고 출퇴근 시간대에는 집이나 회사로 가는 경로를 제시한다. 최수연 네이버 대표는 “차량이 이용자의 일상과 디지털 경험을 자연스럽게 연결하며...",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "전기차",
+        "충전"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T14:02:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.325618+09:00"
+    },
+    {
+      "id": "1b2f8c89e746",
+      "title": "\"루머와의 전쟁\"…BYD, 비방 콘텐츠 양산한 인플루언서 무더기 처벌",
+      "url": "https://www.starnewskorea.com/business-life/2026/06/27/2026062713355889018",
+      "summary": "중국 최대 전기차 및 배터리 제조업체 BYD(비야디)가 자사 브랜드를 향해 허위 콘텐츠를 유포하고 악의적인 비방을 일삼은 자국 내 유명 자동차 인플루언서들을 상대로 대규모 법적 소송을 벌여 연이어 승소했다. ...",
+      "steep": "Uncategorized",
+      "region": "China",
+      "hashtags": [
+        "BYD",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T13:45:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.325786+09:00"
+    },
+    {
+      "id": "ded3146f0bb3",
+      "title": "포항시, 철강 제조 공정에 AI 도입한다…국비 21억원 확보 - 이야드",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5lODRyQXRQVllmRGt3N1FFT0d1bERyb2lnQUJtYlp4dUJES1BtZTlLR3VxQmdIQi1ZWUxPUHBYOHFuOVI1WEtpS1g5T1gxMEpORmo4?oc=5",
+      "summary": "포항시, 철강 제조 공정에 AI 도입한다…국비 21억원 확보  이야드",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 1,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-27T13:29:05+09:00",
+      "collected_at": "2026-06-27T18:14:25.357460+09:00"
+    },
+    {
+      "id": "8bc940c91d65",
+      "title": "유럽선 7천만원대인데…한국선 3천750만원 '충격'",
+      "url": "https://biz.sbs.co.kr/article_hub/20000319240?division=NAVER",
+      "summary": "18.3킬로와트시 배터리를 탑재해 전기 모드만으로 최대 70킬로미터를 주행할 수 있고, 전기차처럼 외부 전력 공급 기능인 V2L도 지원합니다. 급속 충전 기능도 적용돼 30%에서 80%까지 충전하는 데 약 30분이 걸립니다.",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [
+        "전기차",
+        "충전"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T13:22:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.325959+09:00"
+    },
+    {
+      "id": "116e3d9e1d21",
+      "title": "[동북아 정세 브리핑] 대만은 전시 대비, 중국은 DF-17 공개...미·중 전...",
+      "url": "http://kor.theasian.asia/archives/408358",
+      "summary": "태양광 설비와 배터리, 전기차(EV) 수출은 역대 최고 수준을 기록했고, 중국의 에너지 장비 산업은 새로운 성장 동력을 확보하고 있다는 평가다. 이는 단순한 수출 증가가 아니라 국제 에너지 질서 변화가 중국 산업...",
+      "steep": "Economic",
+      "region": "China",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 3,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T13:20:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.326125+09:00"
+    },
+    {
+      "id": "bdfe00ead680",
+      "title": "대구공항, 전기차 화재 대비 유관기관 합동 재난훈련 실시",
+      "url": "https://news.bbsi.co.kr/news/articleView.html?idxno=4091679",
+      "summary": "이번 훈련은 공군 제11전투비행단 소방대와 대구동부소방서를 비롯해 8개 기관 및 업체 관계자 76명이 참여한 가운데, 주차된 전기차 하부에서 배터리 열폭주로 화재가 발생해 여객터미널로 연기가 확산하는 복합적인...",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T13:02:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.326294+09:00"
+    },
+    {
+      "id": "b2c2146a8551",
+      "title": "교통안전공단, 르완다에 전기차 검사기술 전수ⵈ 모빌리티 안전관리 사...",
+      "url": "http://www.ikld.kr/news/articleView.html?idxno=336678",
+      "summary": "TS는 어제(25일) 첨단자동차검사연구센터(KAVIC)를 방문한 르완다 정부 대표단에 전기차(EV)·SDV·사용후 배터리 등 모빌리티 분야 검사기술을 시연하고 자동차 검사원 법정교육 체계 등 검사인력 양성 노하우를 소개했다. ...",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 2,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T12:56:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.326476+09:00"
+    },
+    {
+      "id": "5be09b413f03",
+      "title": "23년 흑연 한길, 부경신소재 김근우 대표가 만드는 흑연 재자원화와 미래 탄소소재 산업의 새로운 가능성 - 유스연합",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBaQnh5ejZYcjgxOHlaUjlFdE5vNC1taERMTDR1ejZ1V3VzVjlaV1U3LTNmSDJxbDZLbjROS1p4UXA2QjVTTjgwX2VKNmMtTlEwdHc?oc=5",
+      "summary": "23년 흑연 한길, 부경신소재 김근우 대표가 만드는 흑연 재자원화와 미래 탄소소재 산업의 새로운 가능성  유스연합",
+      "steep": "Environmental",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-27T12:39:43+09:00",
+      "collected_at": "2026-06-27T18:14:25.358026+09:00"
+    },
+    {
+      "id": "82711e7273b1",
+      "title": "“하이브리드에 V2L·급속충전?” BYD 씨라이언 6 DM-i, 3750만 원 승부수",
+      "url": "https://www.sportsseoul.com/news/read/1619232?ref=naver",
+      "summary": "특히, 18.3kWh 리튬인산철(LFP) 블레이드 배터리를 탑재해 순수 전기(EV) 모드만으로 최대 70km 주행이 가능하다. 이는 평일 출퇴근 시에는 완전한 전기차처럼 활용하고, 주말 장거리 여행에서는 충전 스트레스 없이...",
+      "steep": "Technological",
+      "region": "China",
+      "hashtags": [
+        "BYD",
+        "리튬",
+        "LFP",
+        "전기차",
+        "충전"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T12:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.326639+09:00"
+    },
+    {
+      "id": "f775374f7bf1",
+      "title": "[SK 오너가 복귀 ⑤] 최태원, 대한상의 회장 마쳐···AI 솔루션 기업 ...",
+      "url": "https://www.seoulfn.com/news/articleView.html?idxno=632012",
+      "summary": "장기 침체에 빠진 SK온은 최근 비용 절감과 ESS(에너지저장장치) 확대, SK엔무브와 합병을 통한 차별화 된 솔루션 제공 등으로 반등을 꾀하고 있다. 이는 SK의 데이터센터 산업과 맞물려 성과를 낼 것으로 예상되지만, 누적...",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [
+        "SK온",
+        "ESS"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T12:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.330423+09:00"
+    },
+    {
+      "id": "7dfe25b5bcf3",
+      "title": "[포토] 산업 현장 누비는 로봇부터 교통약자 차량까지…현대차그룹관 '...",
+      "url": "https://www.news2day.co.kr/article/20260627500031",
+      "summary": "특히 배터리를 차체 하부에 배치해 실내 공간을 최대한 확보한 점도 눈길을 끌었다. 연구원은 \"가솔린이나 디젤 차량이라면 훨씬 저렴해질 수도 있겠지만, 동급 사양의 전기차 가운데 이만한 공간을 확보한 차량은 찾기...",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T11:50:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.326805+09:00"
+    },
+    {
+      "id": "8216bbd671fc",
+      "title": "\"증시 호황 언제 끝날까 '이것' 보면 알수 있다?\" 주가사이클 종료분석...",
+      "url": "https://view.asiae.co.kr/article/2026062610551095351",
+      "summary": "그는 이러한 주장을 뒷받침하기 위해 과거 경험했던 '이차전지 붐'의 붕괴 과정을 되짚어봐야 한다고 강조했다. 당시 ESG 열풍과 정부 보조금 경쟁으로 촉발된 이차전지 투자 붐은 한순간에 사그라지며 주식시장 상승과...",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "이차전지",
+      "published": "2026-06-27T11:36:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.334390+09:00"
+    },
+    {
+      "id": "78adffa5c34a",
+      "title": "글로벌 증시 호황 끝나는 시점 ○○○○보면 알 수 있다 [주末머니] - 네이트",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9PR0lZSTlIN3FteEdPQzZPMzRKdl9nTTBkRmdTclFoVEUxdEhGeXNrWjBtTkc1MnBkVnhoVC1faE1rLWRtbW93clBIWUI5Ukx3NndOZ3RQQ1BCNTVHZ1ljR1h5TGxZRlEySkwwT3Q3X2w3UkltLVEtVA?oc=5",
+      "summary": "글로벌 증시 호황 끝나는 시점 ○○○○보면 알 수 있다 [주末머니]  네이트",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-27T11:36:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.355818+09:00"
+    },
+    {
+      "id": "2945968dea10",
+      "title": "충격의 밸류에이션 하단…영화테크, 미래 모빌리티 신기술 탑재하고 전...",
+      "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=463535",
+      "summary": "수소전기차, 소프트웨어 중심 자동차(SDV), 에너지저장장치(ESS) 등 차세대 성장 분야에 대한 기술 독점을 가속화하고 있는 만큼, 현재의 압축 단계를 지나 상방으로 돌파할 경우 직전 고점을 단숨에 재시험할 가능성이...",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [
+        "ESS",
+        "전기차"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T11:32:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.330592+09:00"
+    },
+    {
+      "id": "b34b285982a0",
+      "title": "산업용 로봇부터 물류로봇까지… 나우로보틱스 토털 솔루션 승부",
+      "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=463531",
+      "summary": "전기차와 배터리 시장 성장에 따라 로봇을 활용한 생산라인 구축 수요도 꾸준히 증가하는 추세다. 화장품과 의료기기 분야 역시 정밀 공정과 생산 효율 개선이 중요한 만큼 산업용 로봇 도입이 확대되고 있다.",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T11:16:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.326972+09:00"
+    },
+    {
+      "id": "b4d3cd9e10c9",
+      "title": "탱크테크(주), 소방관 대상 전기차ㆍ버스 화재진압장비 교육",
+      "url": "http://fpn119.co.kr/253075",
+      "summary": "배터리를 동력원으로 사용하는 전기차와 전기버스는 한번 불이 나면 진압이 어렵다. 산소 없이도 1천℃ 이상 온도가 치솟는 열폭주 현상 때문이다.",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T10:54:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.327131+09:00"
+    },
+    {
+      "id": "f3540b1c1205",
+      "title": "6월 27일 오늘의 안전 상황",
+      "url": "http://fpn119.co.kr/253074",
+      "summary": "내부 및 가전제품 등 집기류 소실, 아래층 세대 수손 피해 ▲ (주택화재) 충남 천안시『단독주택』 - 17:49~18:16, 주택 부속 창고에서 리튬이온배터리 열폭주로 추정되는 화재 발생. 경상 1명, 창고 및 가구 등...",
+      "steep": "Social",
+      "region": "Korea",
+      "hashtags": [
+        "리튬"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "리튬이온 배터리",
+      "published": "2026-06-27T10:42:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.338964+09:00"
+    },
+    {
+      "id": "4e4eab218b0a",
+      "title": "“감사 걱정 말고 소신껏 일하라”…고양시, ‘적극행정’ 보호막 더 강...",
+      "url": "https://view.asiae.co.kr/article/2026062710150196904",
+      "summary": "실제로 고양시는 전국 최초 '공유형 에너지저장장치(ESS) 실증사업' 추진 당시, 관련 법령이 미비해 사업이 좌초될 위기에 처하자 위원회 의견제시를 통해 돌파구를 마련한 바 있다. 산업단지 지방세 감면 이슈 역시...",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 2,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T10:15:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.330752+09:00"
+    },
+    {
+      "id": "56e2ddd316d0",
+      "title": "LG엔솔 폴란드 공장, 투자 유치 성공 모델로 '주목'",
+      "url": "https://www.theguru.co.kr/news/article.html?no=103668",
+      "summary": "에너지저장장치(ESS)용 리튬인산철(LFP) 배터리도 양산하며 제품군을 다각화한다. 지난 2024년에는 브로츠와프 법인이 현지 경제 매체 '가제타 피난소와(Gazeta Finansowa)'가 선정한 폴란드 1000대 기업 중 7위를 차지한...",
+      "steep": "Economic",
+      "region": "Korea",
+      "hashtags": [
+        "LG에너지솔루션",
+        "리튬",
+        "LFP",
+        "ESS"
+      ],
+      "score": 3,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T10:02:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.330906+09:00"
+    },
+    {
+      "id": "33d4e4610ac2",
+      "title": "존재감 키우는 PHEV…수입차 '틈새 전략' 통할까",
+      "url": "https://www.mediapen.com/news/view/1106908",
+      "summary": "토요타 올 뉴 RAV4./사진=토요타 제 ◆ '전기차·내연기관 장점 결합'…수입차, PHEV 공략 속도 PHEV는 외부 충전이 가능한 배터리와 내연기관을 함께 탑재한 차량이다. 출퇴근 등 일상에서는 전기차처럼 주행하고...",
+      "steep": "Uncategorized",
+      "region": "Japan",
+      "hashtags": [
+        "전기차",
+        "충전"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T09:42:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.327287+09:00"
+    },
+    {
+      "id": "a0f87ca705ae",
+      "title": "중국 향한 녹색기업 14곳, 자원순환 수출 시험대",
+      "url": "https://www.vegannews.co.kr/news/article.html?no=383614",
+      "summary": "참여 기업들은 수소 생산·저장 통합 솔루션, 폐배터리 재활용 자원회수, 수소 정제 시스템, 태양광 폐모듈 및 전기차 폐배터리 재활용 등 에너지·자원순환 관련 기술을 중심으로 사업 기회를 모색했다. 수출 계약과 신규...",
+      "steep": "Economic",
+      "region": "China",
+      "hashtags": [
+        "전기차",
+        "재활용"
+      ],
+      "score": 2,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T09:34:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.327452+09:00"
+    },
+    {
+      "id": "7af3862264a0",
+      "title": "\"관세 없는 중국차\" 스페인서 온다… 현대·기아 유럽 전선 비상",
+      "url": "https://www.g-enews.com/view.php?ud=2026062709253129212bd56fbc3c_1",
+      "summary": "(서스펜션·배터리·범퍼·시트·바퀴 조립) → 최종 조립 라인(액체 주입·도어 장착·전자 점검) → 검사... 이는 중국 전기차 업체 가운데 가장 높은 수준으로, 사실상 유럽 시장에서의 가격 경쟁력이 크게...",
+      "steep": "Economic",
+      "region": "China",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T09:30:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.327620+09:00"
+    },
+    {
+      "id": "db0056f9e169",
+      "title": "[시승기] 친구 결혼식 가는 길, 가족여행이 됐다…KGM 토레스 EVX로 달린...",
+      "url": "https://www.thepublic.kr/news/articleView.html?idxno=309147",
+      "summary": "출발 전에는 배터리 잔량과 충전 시간을 먼저 떠올렸지만, 막상 운전을 시작하자 관심은 결혼식과 바다, 음식과 가족에게 옮겨갔다. 토레스 EVX는 SUV의 넓은 공간과 전기차의 정숙성, 충분한 주행거리를 현실적인...",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "전기차",
+        "충전"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T09:26:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.327786+09:00"
+    },
+    {
+      "id": "61a633d17516",
+      "title": "조폐공사, CEO 특별 안전점검 실시…\"중대재해 원천 차단\"",
+      "url": "https://www.thepublic.kr/news/articleView.html?idxno=309110",
+      "summary": "이어 성창훈 사장은 현장 유해·위험요인 중 치명률이 가장 높은 △화재·폭발 △떨어짐 △부딪힘 △질식 △익사 △총기사고를 '6대 고위험'으로 지정하고, 전기실, 에너지저장장치(ESS), 무기고, 폐수처리장 등을 차례로...",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 2,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T09:26:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.331069+09:00"
+    },
+    {
+      "id": "4e10fee311d1",
+      "title": "천안 주택 창고서 화재…전동드릴 배터리 열폭주 추정",
+      "url": "https://www.daejonilbo.com/news/articleView.html?idxno=2284065",
+      "summary": "양손에 화상을 입었으며 창고 일부와 집기류 등이 불에 타 소방서 추산 181만원의 재산피해가 발생했다. 소방당국은 전동드릴 리튬이온 배터리의 열폭주로 불이 시작된 것으로 보고 정확한 화재 원인을 조사하고 있다.",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "리튬"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "리튬이온 배터리",
+      "published": "2026-06-27T09:23:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.339126+09:00"
+    },
+    {
+      "id": "7609156b9597",
+      "title": "[HS효성 2주년]②‘글로벌 초격차’ HS효성첨단소재, 경기 침체 뚫고 슈...",
+      "url": "https://www.asiatime.co.kr/article/20260624500382",
+      "summary": "또 전기차 및 에너지저장장치(ESS) 시장의 구조적 성장에 발맞춰 차세대 배터리 핵심 소재인 실리콘 음극재 사업에 본격 진출도 결정지었다. 실제 실적 상향에 재무구조도 빠르게 안정되는 모양새다.",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "음극재",
+        "ESS",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T09:02:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.327947+09:00"
+    },
+    {
+      "id": "d07c57ccd8bd",
+      "title": "[시승기]\"전기차 정답 찾았다\"...BMW iX3, 주행·디지털·전동화의 新 기...",
+      "url": "https://www.asiatime.co.kr/article/20260626500400",
+      "summary": "BMW가 전기차의 새로운 기준을 제시했다. 더 뉴 iX3는 디자인부터 디지털 경험, 주행 성능, 전동화 기술, 가격...",
+      "steep": "Technological",
+      "region": "Europe",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T09:02:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.328116+09:00"
+    },
+    {
+      "id": "036008fefc8e",
+      "title": "[시승기] BYD 돌핀, 이름값 제대로…작고 귀엽지만 의외 공간감",
+      "url": "https://www.mydaily.co.kr/page/view/2026062615591904617",
+      "summary": "거창한 미래를 말하는 전기차가 아니라, 전기차를 처음 타보려는 사람을 설득할만한 차다. 2000만원대로...",
+      "steep": "Technological",
+      "region": "China",
+      "hashtags": [
+        "BYD",
+        "LFP",
+        "전기차",
+        "충전"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T09:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.328273+09:00"
+    },
+    {
+      "id": "cef133e2f5c7",
+      "title": "[전문가 기고] 안방까지 파고든 중국산 전기차",
+      "url": "https://www.seoulfn.com/news/articleView.html?idxno=632017",
+      "summary": "전기차, 배터리, 충전시스템, 인공지능, 자율주행 등 어느 하나 우리가 확실히 앞서가고 있는 분야는 없는 현실이다. 이제 중국에서는 우리나라를 선진화된 하나의 '성'으로 간주할 정도로 우리의 고민은 커지고 있는...",
+      "steep": "Uncategorized",
+      "region": "China",
+      "hashtags": [
+        "전기차",
+        "충전"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T09:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.328449+09:00"
+    },
+    {
+      "id": "9e0e7ba75d60",
+      "title": "[ETF워치]스페이스X 담자마자 흔들…안 담은 ETF만 웃었다",
+      "url": "https://news.bizwatch.co.kr/article/market/2026/06/26/0017",
+      "summary": "삼성SDI와 LG에너지솔루션에 약 50%를 투자하고 나머지는 전고체배터리와 에너지저장장치(ESS) 밸류체인 기업으로 구성한 상품입니다. 월배당 상품도 추가됐습니다.",
+      "steep": "Technological",
+      "region": "Korea",
+      "hashtags": [
+        "LG에너지솔루션",
+        "삼성SDI",
+        "전고체",
+        "ESS"
+      ],
+      "score": 3,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T09:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.331225+09:00"
+    },
+    {
+      "id": "31a7a57de431",
+      "title": "\"이러니 모델 3 안 부럽다\"... 충전 한 번으로 725km, 그랜저급으로 넓은 ‘2천만 원대’ 세단 - topictree.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbUh3M3dFY0hQN3RVaEdKRGtMWk5SNHBPcWluV1RpLTNqYnduS3RySXJvMzExSFhvYnZBN3h1aF9fblJScF81SmJzX3BFa1hrQjFma25pX1p3ZjFVUnlOTGtmM3hEUl8wWHNOLUI0el9ZRURLbmF6ZzBwUHJNS045Z3RzZ2J3ZXpzMXg1RDJn0gGOAUFVX3lxTE1tSHczd0VjSFA3dFVoR0pEa0xaTlI0cE9xaW5XVGktM2pid25LdHJJcm8zMTFIWG9idkE3eHVoX19uUlJwXzVKYnNfcEVrWGtCMWZrbmlfWndmMVVSeU5Ma2YzeERSXzBYc04tQjR6X1lFREtuYXpnMHBQck1LTjlndHNnYndlenMxeDVEMmc?oc=5",
+      "summary": "\"이러니 모델 3 안 부럽다\"... 충전 한 번으로 725km, 그랜저급으로 넓은 ‘2천만 원대’ 세단  topictree.co.kr",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "충전"
+      ],
+      "score": 3,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-27T08:51:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.364673+09:00"
+    },
+    {
+      "id": "247b328c1bce",
+      "title": "현대모비스 낙점한 폭스바겐, 배터리 팩 내부 생산 무산… 외주화로 추...",
+      "url": "https://www.g-enews.com/view.php?ud=2026062707592544770c8c1c064d_1",
+      "summary": "글로벌 완성차 진영의 친환경 가치사슬 재편 과정에서 가혹한 재정난과 보호무역주의 관세 파고를 마주한 독일 폭스바겐(Volkswagen) 그룹이 스페인 나바라 공장의 전기차 배터리 팩 자체 조립 투자를 전격 포기한...",
+      "steep": "Economic",
+      "region": "Europe",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T08:02:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.328619+09:00"
+    },
+    {
+      "id": "84d24b0b8e18",
+      "title": "폭스바겐, 배터리 팩 내부 생산 포기하고 현대모비스에 외주 - 글로벌이코노믹",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxObFl4V05TeVZJV0pNcVFKWEdVQWhtSTAzV3FMZ2lmS1IzOGVqY3hCVkRRcTlROVVZSjh6YmEzRWZObHp6TjhENkJXZHFNV3R1WExBSm5JNDNGT0QzWEpOWFJqY0xPUTMyLUtZX1NJYkhQaFZsbEN1cVNjSW1wS1JOV0NTbzVkdXVj?oc=5",
+      "summary": "폭스바겐, 배터리 팩 내부 생산 포기하고 현대모비스에 외주  글로벌이코노믹",
+      "steep": "Uncategorized",
+      "region": "Europe",
+      "hashtags": [],
+      "score": 4,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T08:01:32+09:00",
+      "collected_at": "2026-06-27T18:14:25.350327+09:00"
+    },
+    {
+      "id": "ade7d3349685",
+      "title": "차량 내 방치한 보조배터리, 여름철 폭염에 90도까지 치솟아 화재 위험 - 2news.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA2cFVMQlhQX0hrdWI0WFpTZEJVM2tDUW8xZWhTdW5KREZoMVF2SkVMal80VU83aFp0amE3Ui14RDhXR3RydnNkemhqY2FCNDVsNm5lMlp1c3d4bERrTjMxOWQ2ZUNZYVZu?oc=5",
+      "summary": "차량 내 방치한 보조배터리, 여름철 폭염에 90도까지 치솟아 화재 위험  2news.co.kr",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [],
+      "score": 1,
+      "source": "구글",
+      "keyword": "리튬이온 배터리",
+      "published": "2026-06-27T07:59:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.358303+09:00"
+    },
+    {
+      "id": "abb79b014778",
+      "title": "“삼성전자 덕에 몸값 35조 뛰었다”…삼성물산 목표가 70만원 나온 이유...",
+      "url": "https://www.mk.co.kr/article/12084585",
+      "summary": "여기에 대형 원전과 SMR 수주 기대, 태양광·에너지저장장치(ESS) 등 신재생 사업을 전력 판매·운영까지 확대하는 전략도 사업가치 재평가 요인으로 꼽힌다. 기존 사업 실적도 주가를 받치고 있다.",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 1,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T07:57:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.331380+09:00"
+    },
+    {
+      "id": "815c527be6c4",
+      "title": "AI 랠리 어디까지…변수는 '수요 둔화' 아닌 '신용위험'",
+      "url": "http://www.newsian.co.kr/news/articleView.html?idxno=91488",
+      "summary": "# 이차전지 붐 종료, 수요 아닌 SVB 파산이 방아쇠 27일 업계에 따르면 IBK투자증권은 최근 보고서에서 이차전지 붐의 종료 과정에 주목했다. 당시 이차전지 업황 둔화는 수요 변화보다 2023년 3월 미국 실리콘밸리은행(SVB)...",
+      "steep": "Social",
+      "region": "NorthAmerica",
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "이차전지",
+      "published": "2026-06-27T07:54:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.334571+09:00"
+    },
+    {
+      "id": "9a548498756c",
+      "title": "[부산모빌리티쇼] 벡스코 놀래킨 BYD…\"PHEV를 저 가격에?\"",
+      "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=845254",
+      "summary": "보조하는 '전기차 기반 하이브리드' 방식이다. 샤오윈 1.5리터 가솔린 터보 엔진, 전기 하이브리드 시스템(EHS), 리튬인산철(LFP) 기반 블레이드 배터리가 핵심 구성이다.",
+      "steep": "Technological",
+      "region": "China",
+      "hashtags": [
+        "BYD",
+        "리튬",
+        "LFP",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T07:52:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.328782+09:00"
+    },
+    {
+      "id": "724af9b55fda",
+      "title": "폐 배터리→새 배터리로 만드는 혁신 기술 나왔다…\"성능 95% 회복\"",
+      "url": "https://zdnet.co.kr/view/?no=20260626221301",
+      "summary": "칼라 교수는 \"현재 우리가 처리하는 폐배터리는 초기 성능의 70~80% 상태를 유지하고 있는데, 이는 전기차에서 버려지는 배터리의 전형적인 수준\"이라며, \"다른 열화 원인들까지 함께 해결할 수 있다면 배터리의...",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [
+        "전기차",
+        "재활용"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T07:48:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.328951+09:00"
+    },
+    {
+      "id": "9e8fc763673b",
+      "title": "제로백 2.95초... 918마력의 괴물 전기SUV",
+      "url": "https://www.sedaily.com/article/20060202?ref=naver",
+      "summary": "일반 전기차는 초반 가속에 집중하고 고속에서는 힘이 빠지는 모습을 보이지만 엘레트라는 고속 주행 시에도 가속을 이어간다. 이 차는 112kWh의 대용량 배터리를 탑재했으며 800V 고전압 시스템을 기반으로 350kW의...",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T07:30:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.329117+09:00"
+    },
+    {
+      "id": "23ec88a2f478",
+      "title": "TS, 공공기관 경영실적 평가 3년 연속 '우수'",
+      "url": "https://www.newsis.com/view/NISX20260627_0003685932",
+      "summary": "TS는 지난해 전기차 배터리 안전성 인증, 생애주기별 이력 관리까지 이어지는 전기차 안전관리 체계를 구축했다. 정용식 이사장은 \"이번 3년 연속 우수 등급 획득은 국민의 생명과 안전을 지킨다는 본분에 따라 임직원...",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T07:28:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.329279+09:00"
+    },
+    {
+      "id": "99d4d5d19e69",
+      "title": "獨 도면 조립하던 장학생서 스승 추월…K방산, '원자력 잠수함' 직행한...",
+      "url": "https://www.g-enews.com/view.php?ud=202606270712562549e8b8a793f7_1",
+      "summary": "그러나 40년이 지난 현재 한화오션과 HD현대중공업은 세계 최초로 리튬 이온 배터리를 장착하고, 비핵국가 중 극히 드물게 수직발사관(VLS)을 통해 잠대지 탄도미사일(SLBM)을 투사할 수 있는 독자적인 'KSS-III(도산안창호급)...",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "리튬"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "리튬이온 배터리",
+      "published": "2026-06-27T07:18:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.339300+09:00"
+    },
+    {
+      "id": "74f2eac53fc7",
+      "title": "테슬라 생태계 핵심 파트너로 부상한 LG에너지솔루션·삼성전기",
+      "url": "https://weekly.donga.com/3/all/11/6283279/1",
+      "summary": "한병화 유진투자증권 연구원은 “테슬라의 글로벌 전기차 판매는 최근 2년간 역성장했지만, 올해는 8% 성장할 것으로 추정된다”며 “테슬라의 전기차 판매 회복과 ESS 증설은 K-배터리에 이미 긍정적인 영향을 미치고...",
+      "steep": "Economic",
+      "region": "Korea",
+      "hashtags": [
+        "LG에너지솔루션",
+        "테슬라",
+        "ESS",
+        "전기차"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T07:02:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.329445+09:00"
+    },
+    {
+      "id": "e5f815d347eb",
+      "title": "[2026 부산모빌리티쇼] BYD, PHEV ‘씨라이언 6 DM-i’ 국내 첫선…3천만...",
+      "url": "https://www.ekn.kr/web/view.php?key=20260626025496811",
+      "summary": "즉, 충전 걱정을 줄인 이동의 자유, 블레이드 배터리 기반의 안전성, 전기차 수준의 주행감, 높은 에너지 효율을 모두 구현했음을 강조했다. 씨라이언 6 DM-i에는 1.5리터(L) 가솔린 터보 엔진과 전기 하이브리드...",
+      "steep": "Social",
+      "region": "Korea",
+      "hashtags": [
+        "BYD",
+        "전기차",
+        "충전"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T07:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.329609+09:00"
+    },
+    {
+      "id": "61eb3b10e4f5",
+      "title": "'3750만원' BYD 씨라이언6 DM-i, 국산차 위협하나[카미경]",
+      "url": "https://www.bloter.net/news/articleView.html?idxno=666697",
+      "summary": "블레이드 배터리와 직렬 4기통 1.5리터 가솔린 터보 엔진이 장착됐다. 시스템 최고출력은 150㎾다.",
+      "steep": "Uncategorized",
+      "region": "China",
+      "hashtags": [
+        "BYD",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T07:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.329766+09:00"
+    },
+    {
+      "id": "0d258bf514d2",
+      "title": "軍 전산실 축전지 안전기준 '부재'…국방부, 별도 기준 만든다",
+      "url": "https://www.news1.kr/diplomacy/defense-diplomacy/6209862",
+      "summary": "당시 화재는 UPS용 리튬이온배터리 이설 작업 중 발생한 것으로 알려졌고, 이 여파로 정부 정보시스템 다수가 장애를 겪었다. 군 전산실은 각종 국방정보체계가 운용되는 핵심 기반시설이다.",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "리튬"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "리튬이온 배터리",
+      "published": "2026-06-27T07:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.339468+09:00"
+    },
+    {
+      "id": "f2f5432ab32f",
+      "title": "\"차량 내 보조배터리 보관 위험\" 완충 배터리 3시간 만에 90도까지 상승",
+      "url": "https://www.news1.kr/local/daejeon-chungnam/6209680",
+      "summary": "불에 녹아 커다란 구멍이 생긴 조수석 대시보드 위에 조그마한 리튬이온 배터리가 놓여 있었다. 화재 당시 낮 기온은 17도에 불과했지만 소방당국은 대시보드에 놓여 있던 보조배터리가 햇빛에 장시간 노출되면서...",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "리튬"
+      ],
+      "score": 2,
+      "source": "네이버",
+      "keyword": "리튬이온 배터리",
+      "published": "2026-06-27T07:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.339616+09:00"
+    },
+    {
+      "id": "3a5e8cab1884",
+      "title": "동서대, 청년도약 인재양성 부트캠프 선정",
+      "url": "https://www.naeil.com/news/read/593343?ref=naver",
+      "summary": "교육부 사업 통해 인공지능·이차전지 융합교육 동서대학교는 교육부와 한국산업기술진흥원(KIAT)이 주관하는 ‘2026년 청년도약 인재양성 부트캠프(첨단인재형)’ 사업에 선정됐다고 26일 밝혔다. 청년도약 인재양성...",
+      "steep": "Technological",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "keyword": "이차전지",
+      "published": "2026-06-27T06:44:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.334729+09:00"
+    },
+    {
+      "id": "954e060b9524",
+      "title": "美 군부대에 광물공장 들어선다…‘中 90% 독점’ 탈피",
+      "url": "https://www.sedaily.com/article/20060622?ref=naver",
+      "summary": "현재 중국은 희토류·흑연 가공의 약 90%, 리튬이온 배터리 생산의 약 70%, 세계 붕소 화합물의 최소 80%를 통제한다고 WSJ는 분석했다. 다만 회의적인 시각도 있다.",
+      "steep": "Economic",
+      "region": "China",
+      "hashtags": [
+        "리튬"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "리튬이온 배터리",
+      "published": "2026-06-27T06:10:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.339777+09:00"
+    },
+    {
+      "id": "cf01530fbab8",
+      "title": "삼성·SK ‘호남 반도체’에 지자체 들썩… “또 다른 지역 편중” 우려",
+      "url": "https://biz.chosun.com/topics/topics_social/2026/06/27/S73PFZXTABGHZI6QMPVR5JF3SY/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+      "summary": "24시간 안정적인 전력 공급이 필수인 반도체 공장 특성상 에너지저장장치(ESS), LNG 발전 등 보완 전원이 함께 확보돼야 한다는 지적이 나온다. 용수 확보도 과제다.",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T06:02:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.331563+09:00"
+    },
+    {
+      "id": "ee6fec3c3196",
+      "title": "외국인 다 파는 줄 알았더니…1.9조 담은 종목, 삼전·하닉 아니었다 [테...",
+      "url": "http://www.fnnews.com/news/202606261615143449",
+      "summary": "삼성전자와 SK하이닉스 대신 AI 서버용 부품과 반도체 테스트, 전력 인프라, 에너지저장장치(ESS) 등 구조적인 성장성이 기대되는 분야로 자금이 이동하는 모습이라는 평가다. 리노공업은 AI 반도체 테스트 소켓 수요...",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T06:01:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.331727+09:00"
+    },
+    {
+      "id": "eb0b15b8c966",
+      "title": "반도체만이 아니다…증권가가 꼽은 'AI 다음 수혜주' 10개",
+      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1714138",
+      "summary": "대표적으로 전력 인프라가 꼽힌다\"며 \"AI 데이터센터가 늘어날수록 전력 공급망 확충이 필수적이어서 변압기, 에너지저장장치(ESS), 전력기기 관련 기업의 수주 모멘텀이 강화될 수 있다\"고 분석했다. 세방전지는 자회사...",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T06:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.331890+09:00"
+    },
+    {
+      "id": "48db996fa8b7",
+      "title": "[기자수첩] 호남 반도체는 '지역 선물'이 아니라 '국가 생존 전략'이다",
+      "url": "https://www.newswhoplus.com/news/articleView.html?idxno=63173",
+      "summary": "광주·전남은 AI, 에너지, 미래차, 배터리, 데이터센터, 소재 산업과 연결될 수 있고, 전북은 새만금, 이차전지, 재생에너지, 물류 인프라와 연계 가능성이 있다. 반도체는 단일 공장 하나로 끝나는 산업이 아니다.",
+      "steep": "Economic",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "이차전지",
+      "published": "2026-06-27T06:00:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.334900+09:00"
+    },
+    {
+      "id": "0fae7956c7fd",
+      "title": "\"뒷좌석이 더 편한 세단\"...에어 서스펜션 얹은 볼보 S90 B5 [기똥찬 모빌...",
+      "url": "http://www.fnnews.com/news/202606261626496795",
+      "summary": "수평으로 낮게 깔린 대시보드에 우드 데코와 재활용 폴리에스터 텍스타일이 조합됐다. 화려하게...",
+      "steep": "Environmental",
+      "region": "Global",
+      "hashtags": [
+        "재활용"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "배터리 재활용",
+      "published": "2026-06-27T05:59:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.343981+09:00"
+    },
+    {
+      "id": "7659fdab59d0",
+      "title": "배터리 건강 인증이 중고 EV 시장 확대의 열쇠 - 유스연합",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE43QUZPaHM0WlNJRzM4UHVvc2kxOUp3VXlhSG1WYjlhWmMxR1c0cC1WQWRXR3E0Z0VYckFIdXUyTVp3M0JVQk1UNE9Za29ickk2LXc?oc=5",
+      "summary": "배터리 건강 인증이 중고 EV 시장 확대의 열쇠  유스연합",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T05:55:21+09:00",
+      "collected_at": "2026-06-27T18:14:25.350914+09:00"
+    },
+    {
+      "id": "06b5ad624616",
+      "title": "EV 배터리 인증, 중고시장 관건 - knpp.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBwMTZ1NkZYTklMbnlGSFhuNW9zR3hPWFctTVAxbUdYMS1JWXkxUVZ1c3haWXpjY0N1M0NGdDhHbHZrSWs?oc=5",
+      "summary": "EV 배터리 인증, 중고시장 관건  knpp.co.kr",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "배터리 재활용",
+      "published": "2026-06-27T05:51:27+09:00",
+      "collected_at": "2026-06-27T18:14:25.363078+09:00"
+    },
+    {
+      "id": "3a8a746a1f3d",
+      "title": "나트륨·AI ESS가 바꿀 전력 일상 - knpp.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE9tQTdxVTZsYm1WYWdHXzFoTnM3bW1Vd3FyYlY4TGJWd1NnUGJFQ2RWaVIybHBwRmducG5wT3FvSGRVZDg?oc=5",
+      "summary": "나트륨·AI ESS가 바꿀 전력 일상  knpp.co.kr",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T05:45:13+09:00",
+      "collected_at": "2026-06-27T18:14:25.353459+09:00"
+    },
+    {
+      "id": "8589854233a6",
+      "title": "나트륨 이온·AI ESS의 시장 영향 - knpp.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE5SX3NRd04tSDVtaFVlUmhwN1RUaFVfWXliUFVkYXBuQjlsaHo2Y01xRllBMkIzTUFRZER4Rk5zc203dUk?oc=5",
+      "summary": "나트륨 이온·AI ESS의 시장 영향  knpp.co.kr",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T05:42:10+09:00",
+      "collected_at": "2026-06-27T18:14:25.354574+09:00"
+    },
+    {
+      "id": "c28e6ee78f4c",
+      "title": "전기차 전망과 한국의 대응: 2026~2035 시장 변곡점과 배터리·AI 전략 - 뉴스N연합",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1FV2ZycFk4bE5FN0NaRExDaEJnU2NhV05PZDdSOUVnRWNqdzcxRndBdm5ya1pkalhESXVRQzY1aDA3QjhqLVk5a3VB?oc=5",
+      "summary": "전기차 전망과 한국의 대응: 2026~2035 시장 변곡점과 배터리·AI 전략  뉴스N연합",
+      "steep": "Economic",
+      "region": "Korea",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T05:29:58+09:00",
+      "collected_at": "2026-06-27T18:14:25.350780+09:00"
+    },
+    {
+      "id": "24b446df0878",
+      "title": "\"남편이 그랜저 놔두고 이것만 타요\"... 기름값 걱정 아예 없다는 ‘2천만 원대’ 소형 SUV 정체 - topictree.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxORWN0NXlBdnNJdUZqMVBLZFNOM0JqMzZrbVdyZElJM1VFdllhd2FEZHhVUV9kaFJBYk41Q3k4RzFWOWF6RXpETDRkUXVsUFI0c2ZTbWp4d3ZVUm9jV25sSDM5OXlOTmpUWXZtalJVaGlkMnRvODBNVXRhRHhZTmpjWElJd0pIbkxF0gGIAUFVX3lxTE5FY3Q1eUF2c0l1RmoxUEtkU04zQmozNmttV3JkSUkzVUV2WWF3YURkeFVRX2RoUkFiTjVDeThHMVY5YXpFekRMNGRRdWxQUjRzZlNtanh3dlVSb2NXbmxIMzk5eU5OalRZdm1qUlVoaWQydG84ME1VdGFEeFlOamNYSUl3SkhuTEU?oc=5",
+      "summary": "\"남편이 그랜저 놔두고 이것만 타요\"... 기름값 걱정 아예 없다는 ‘2천만 원대’ 소형 SUV 정체  topictree.co.kr",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-27T04:27:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.364973+09:00"
+    },
+    {
+      "id": "eb09bf66f2fe",
+      "title": "CATL은 자사의 새로운 나트륨 이온 배터리를 장착한 전기차가 올해 최대 20만 대까지 시장에 출시될 것으로 예상합니다. - Highmotor",
+      "url": "https://news.google.com/rss/articles/CBMi3gRBVV95cUxNd1JVbVVpaGR1amg2VHcwX180OWV4TWVPMnd3b2RtWDBsQ2ZfeWVNRWZDMjhweFk0WE01eG12bnFneDM0dmY1RHVId2dVcmdnZzdiZzJodDd4M1ItY3Q2TnI2Mm9zZ2F4ajk0bGtWbHdnT2tYWlNTd0lBS0Q2X1NtTnhlSmppNHBiNnFVNTFwZXVDZFk2UHRRU0kzWURIaWtSLU5ldGxRT2I4aHlZMG5jMzhhWXN5dWZBMFVzZkRaZ3VKcDZOZlQwekZCNy1EeGVhcV81U0d5U2NWNzlKSGVvMTZMekYwQlRvRGlQZmpZM1NXd1JBT0FFSmVxTnVFUWZkSW9LMXRsWUdmeTRNU3VhMDdqVld3RWxuWDV2N3FXb0IwaDZHOVRJbVhUVnZYS0JZTW5RNmRYaFkySms2UUxNOWpTc3F2Z0hPTXJ1a25zQzNwS3JJeG8xTVZMTzRKSnRNbTMtOTB5SmFYX01vWXFoTWowTGRaOERRYVRCOTBQUW5vNy05RnhXX19XR0oybzRxVEZOeUJ0QlBFaUhpbG95WEd2aWlsRTdkcExkbzhWeEprcTVnYkxIU09wd01PMjE2Mkp3cWViVjVBX09odkwxWXAyVHBCWE9xMVVTckROTzhYNDhWQnEzLUczSjhycHdyOFpJZ215cEwyQU1iRWQwY2hwUmtJX1QtWDdzT242VkR4SzBaR3BOZHZ5STlqNi1uZWlNZUp6dFo2SUJCRkwxejdTbjdvSUNTSUJQWDdjUUt6Qk82amYwaHhXLXFNc05Ja0FUUEtsalgtNE13MVE?oc=5",
+      "summary": "CATL은 자사의 새로운 나트륨 이온 배터리를 장착한 전기차가 올해 최대 20만 대까지 시장에 출시될 것으로 예상합니다. Highmotor",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "CATL",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-27T02:43:50+09:00",
+      "collected_at": "2026-06-27T18:14:25.350638+09:00"
+    },
+    {
+      "id": "e0da1f9bf8b3",
+      "title": "[단독] ESS 화재 피해 5년간 890억…위험 커지는데 통계 분류 없다 - 쿠키뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1nWjh2eWxXajQxVkRwclM2bVV4c0lxOGNJcGgwMXZoQm10dHAtQWU3Z3FyRzVqbVJlMzZzdndjcXJpcUphS0ZUd2ROTmZ3XzNFbDhNek9BR1lMamlMSjVvUnVtNA?oc=5",
+      "summary": "[단독] ESS 화재 피해 5년간 890억…위험 커지는데 통계 분류 없다  쿠키뉴스",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T02:01:22+09:00",
+      "collected_at": "2026-06-27T18:14:25.353183+09:00"
+    },
+    {
+      "id": "ebf804213cc2",
+      "title": "[부산모빌리티쇼] BYD, '씨라이언 6'로 승부수 띄우고 韓 전동화 시장 '...",
+      "url": "https://www.todaykorea.co.kr/news/articleView.html?idxno=403154",
+      "summary": "또한 1.5리터 샤오윈 가솔린 터보 엔진, 리튬인산철(LFP) 기반 블레이드 배터리도 탑재된다. 회사 측은 이번에 선보이는 모델에는 18.3㎾h 배터리가 탑재돼 전기(EV)모드만으로 최대 70㎞(1회 충전 주행거리, 복합기준)...",
+      "steep": "Technological",
+      "region": "China",
+      "hashtags": [
+        "BYD",
+        "리튬",
+        "LFP",
+        "전기차",
+        "충전"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-27T01:48:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.347085+09:00"
+    },
+    {
+      "id": "70c091b19a4f",
+      "title": "“승용차 3만대 분량 온실가스 감축한다”…LG전자, 가전제품 자원순환 진심이네 - MSN",
+      "url": "https://news.google.com/rss/articles/CBMiyANBVV95cUxQOVgyMGVMc1VZdUl4VW10dVZJLWgzd2NtX0NnMHpxOGNxTGk2c1ZucE1tc0RMNFo4U3FxVUVTX2RvdEhhY1o1VzlIZ2l3YkgyMjYta2JnOVJmcXI4aHl4YlZGbzFOVkNRTll6ZXQzaU41aE9KUVBlVG91bEkwRXZXSTRrZDhfM0RjbnR4LUJ1VHpSQ2gzZnBJcU4xQTlPOVo3MENNMXVQT3F2NEY4UmhybTcwU2IySFVmWWExWUlkV2RnWlRaS3BSM19ORlJtakhfVnZrOHltSnNPcGJ3VTJ4UjNmaUFwNWpqZ2p2QlAtQXQtaWlTZFczYmRkMGtFMGNUVjZkRGpkUGVRMmg5clNjRi1lM2tsRmpaN3lNelUyWnZVam85cU1YZjJQR05sNkhHcUtrRjVhSUdGVVJvRmc5Qkxidm1CTEczdEVxV2luVG5Pak8zSUJSdEJrNGNwMklqblNNd1BOVURNdkZBaDgzYkxvM09aZkpKNXMtU3piTGtTc3dQZl9HSzFUenkwWDd2NXFIcHNwaEhBODFTbnhUQ29TSlU3UWlsX0JZSnBkRm5DelBNckpVLWtSd2c2d0NBUDRiMFVsdHM?oc=5",
+      "summary": "“승용차 3만대 분량 온실가스 감축한다”…LG전자, 가전제품 자원순환 진심이네  MSN",
+      "steep": "Environmental",
+      "region": "Global",
+      "hashtags": [],
+      "score": 1,
+      "source": "구글",
+      "keyword": "배터리 재활용",
+      "published": "2026-06-27T01:01:17+09:00",
+      "collected_at": "2026-06-27T18:14:25.364198+09:00"
+    },
+    {
+      "id": "d388d2cb6941",
+      "title": "‘숫자부터 내놓으라’ 앞뒤 바뀐 반도체 투자",
+      "url": "https://www.chosun.com/economy/industry-company/2026/06/27/PNJELYJZFJHBJNOYX7I422TY4Y/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "summary": "재생에너지의 한계를 보완할 방안으로 대규모 에너지저장장치(ESS)와 액화천연가스(LNG) 발전이 거론된다. 반도체 공장을 밤새 돌릴 만큼의 ESS를 갖추려면 수십조 원대 투자가 필요하다.",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T00:58:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.332055+09:00"
+    },
+    {
+      "id": "6683fda3fb24",
+      "title": "“인력·용수·전력이 핵심인데...반도체 입지, 호남 안 유리해”",
+      "url": "https://www.chosun.com/economy/industry-company/2026/06/27/PALYG75FGVCNZKF3G3NJGYOQXQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "summary": "황 교수는 “태양광은 설비 효율이 15~20% 수준으로 낮은 데다 간헐성 보정을 위한 ESS(에너지 저장 장치) 설치에도 수십조 원이 필요하고 화재 위험까지 뒤따른다”고 말했다. 그는 “한때 반도체 이전론이 일었던 전북...",
+      "steep": "Social",
+      "region": "Korea",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T00:54:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.332224+09:00"
+    },
+    {
+      "id": "ba2bc6ec6e4c",
+      "title": "포스코 장인화 회장 \"안전 최우선과 초일류 혁신으로 위기 극복할 것\"",
+      "url": "https://www.greened.kr/news/articleView.html?idxno=343515",
+      "summary": "포스코 제공 장인화 포스코 회장이 글로벌 위기 극복의 핵심 열쇠로 '초일류 혁신'과 '안전 최우선 경영'을 선언하며 철강·이차전지소재·에너지 등 3대 핵심 사업을 통한 미래 성장 방향을 제시했다. 26일 발간된...",
+      "steep": "Social",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "이차전지",
+      "published": "2026-06-27T00:45:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.335066+09:00"
+    },
+    {
+      "id": "a35fe200a937",
+      "title": "함안서 입사 나흘 만에 추락사고 겪은 용접공 끝내 사망",
+      "url": "https://www.idomin.com/news/articleView.html?idxno=2008767",
+      "summary": "사고 당시 그는 동료와 2인 1조로 에너지저장장치(ESS) 케이스용 컨테이너 용접 작업을 맡았다. 컨테이너 윗쪽에서 용접 후 레일 위에 있던 작업물을 손으로 밀던 중 균형을 잃고 추락했다.",
+      "steep": "Social",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 1,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-27T00:38:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.332383+09:00"
+    },
+    {
+      "id": "f13f5a131dee",
+      "title": "美 의회 직접 요청…경제안보 핵심 실무진, 고려아연 온산제련소 찾았다",
+      "url": "https://www.apnews.kr/news/articleView.html?idxno=3049328",
+      "summary": "전기차 배터리와 반도체, 방산 등 첨단산업 전반에서 핵심광물 확보가 국가 경쟁력과 경제안보를 좌우하는... 원료 조달 다변화와 자원 재활용을 동시에 달성할 수 있는 구조라는 점에서 미국 정책 담당자들의 관심이...",
+      "steep": "Environmental",
+      "region": "NorthAmerica",
+      "hashtags": [
+        "전기차",
+        "재활용"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "배터리 재활용",
+      "published": "2026-06-27T00:12:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.344146+09:00"
+    },
+    {
+      "id": "1c2ae65e614d",
+      "title": "브릴스, 코스닥 상장예비심사 통과",
+      "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=846741",
+      "summary": "현재 자동차, 반도체, 이차전지, 식품, 물류 등 주요 산업에 솔루션을 공급하고 있으며 최근에는 △의료 △우주항공 △환경 등 신사업 분야로 적용 범위를 넓혀가고 있다. 이번 상장을 계기로 브릴스는 연구개발 투자를...",
+      "steep": "Technological",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "keyword": "이차전지",
+      "published": "2026-06-26T23:38:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.335227+09:00"
+    },
+    {
+      "id": "9b4857e6b67e",
+      "title": "㈜디에스시동탄, 고창신활력산단 잔금 완납…ESS 공장 투자 본격화 - 주간해피데이",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQMkNXUHpSZktxRmlGZDBMeHhJamxqZEQ2aFJyWTRGVnRBdUtxLVEyU19FRkExOWdjSlBIZ2ZhRzZmWnlpRFNIZ1FiZkQ5VlMwOWZtQnBac3JnVzdnSWFvZTNrd1cxYVpxMnBDMURFRGVrdGNNWldZeTBBZWxGLWxJYU44UQ?oc=5",
+      "summary": "㈜디에스시동탄, 고창신활력산단 잔금 완납…ESS 공장 투자 본격화  주간해피데이",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 2,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-26T22:48:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.354010+09:00"
+    },
+    {
+      "id": "8ee8efc10314",
+      "title": "필에너지 투자분석 2026. 06. 26 - 주달",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5Id3pxbDA0dlRrXzUxY25mRzJWWjhDZWVjZDl3elNya1phZEo4N2VPZWZGSEtoellyRmZmRjh3bnRsNVRtMlBXMHpoVzd3MUN1eVI1dHcyXzRmUXlEUmlpWVNnekFSUDJqX01lZk9wNnF6bnc?oc=5",
+      "summary": "필에너지 투자분석 2026. 06.",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T21:56:39+09:00",
+      "collected_at": "2026-06-27T18:14:25.355947+09:00"
+    },
+    {
+      "id": "19a8cf9e89ae",
+      "title": "전기차 이어 하이브리드… BYD, 씨라이언 6 DM-i 한국 공략 확대",
+      "url": "https://www.meconomynews.com/news/articleView.html?idxno=132293",
+      "summary": "최고 출력 204마력의 전기모터와 리튬인산철(LFP) 블레이드 배터리를 기반으로 EV 모드만으로 최대 70km를 주행할 수 있으며, V2L 기능과 DC 급속충전도 지원해 전기차 수준의 활용성을 확보했다. 조인철 BYD코리아...",
+      "steep": "Technological",
+      "region": "Korea",
+      "hashtags": [
+        "BYD",
+        "리튬",
+        "LFP",
+        "전기차",
+        "충전"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-26T21:36:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.347248+09:00"
+    },
+    {
+      "id": "d4c24bb00dbc",
+      "title": "삼성, 1000조원 첨단산업 투자 …반도체 · AI · 배터리 총망라",
+      "url": "https://wemakenews.co.kr/news/view.php?no=25600",
+      "summary": "삼성SDI는 울산 사업장을 중심으로 차세대 전고체 배터리와 고성능 배터리 생산 거점 구축 방안을 검토 중인 것으로 전해진다. 이번 투자 계획은 단순한 기업 투자 차원을 넘어 이재명 정부의 ‘5극3특’ 국가균형발전...",
+      "steep": "Technological",
+      "region": "Korea",
+      "hashtags": [
+        "삼성SDI",
+        "전고체"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T20:16:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.343159+09:00"
+    },
+    {
+      "id": "6d3c6b3fd1ab",
+      "title": "2025년의 전기 오토바이: 운영 비용 최적화 및 획기적인 배터리 기술 옵션. - Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcnRMMWdRR3JnT3lEbVVrcE85azBFN2dDcjdZQnhTOWhYNVNYWVJNWnhsUVg5LVhPWURudG5KMThSTmo2cVY0WlVNVzNmNXU0Mnp4OWZvbUNVZlJiWklRQTBwTVpucTV0enEwdlZmbU4yVUxwbnJwSVdqckl2SzY0b19fc2xaWGxSMVJscTJxN0ZTZ3VPWFFaX2ZabmdJLVo2WVdzRXF1bHladw?oc=5",
+      "summary": "2025년의 전기 오토바이: 운영 비용 최적화 및 획기적인 배터리 기술 옵션. Vietnam.vn",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [],
+      "score": 4,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-26T20:06:04+09:00",
+      "collected_at": "2026-06-27T18:14:25.364817+09:00"
+    },
+    {
+      "id": "baac4eca93da",
+      "title": "2025년의 전기 오토바이: 왜 진작 사지 않았을까 후회하게 될 이유. - Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNY0dkSmJOenFPZnBTRmdheHFtZ2JDdV9ETWU5NXdpVThnWGhfSTIxc013b1pZUkFPN0daNUxYMUNCWE1sMXRLeW5uMUIyMEp3djVYNmpMNllqdHdQMHl4RmtNRl81Y3RpWjIzaUgxUUtTTk5BTHdUanhBRExGQUtDMjctM28tN3FJTEF6aVNLcVdYZm1faHQwQUhTbi1PQ3VMWnc?oc=5",
+      "summary": "2025년의 전기 오토바이: 왜 진작 사지 않았을까 후회하게 될 이유. Vietnam.vn",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-26T20:00:12+09:00",
+      "collected_at": "2026-06-27T18:14:25.365268+09:00"
+    },
+    {
+      "id": "3cf1120cc693",
+      "title": "BYD코리아, 부산모빌리티쇼서 전기차 기반 하이브리드 ‘씨라이언 6 DM-i’ 최초 공개 - 다나와 자동차",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9IY1lXTDBjRF9JM3hGZUpSNUgxbFNrd3otSXpqSnNkcWR0LVJBNGhuQnVlSnBya1FRQW9kTFlJVndiTzhROWRLRjZ6NWFaVjVBT19sTnlLQW9qTmxmM2FUR0t2RUttR1pFOHhvamlfbzFqQQ?oc=5",
+      "summary": "BYD코리아, 부산모빌리티쇼서 전기차 기반 하이브리드 ‘씨라이언 6 DM-i’ 최초 공개  다나와 자동차",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "BYD",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-26T19:35:25+09:00",
+      "collected_at": "2026-06-27T18:14:25.352753+09:00"
+    },
     {
       "id": "92f279088130",
       "title": "[부산모빌리티쇼 2026]기아 PBV의 무한 변신...경찰차·바이크 수송·이...",
@@ -52,6 +1477,20 @@
       "collected_at": "2026-06-26T19:37:32.308024+09:00"
     },
     {
+      "id": "fd5ceb13aab5",
+      "title": "APS이노베이션 투자분석 2026. 06. 26 - 주달",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBQZVgyOVcxWjd5cGFlRmxfTGp2b1ZiRDdvajlxVVFmUDRrYXJfaTM3elFXZTEyYUctMjhYVmlZX3lGQlczSDlwLTVUS1MtTDBVWmVmNnhYUTUxcjI1a00zb3JiTVpCUVJqd3B6ZEZMNi0tQWM?oc=5",
+      "summary": "APS이노베이션 투자분석 2026. 06.",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T19:17:40+09:00",
+      "collected_at": "2026-06-27T18:14:25.357875+09:00"
+    },
+    {
       "id": "8a2b2f935e98",
       "title": "'모듈 방식의 로봇 SI' 브릴스, 코스닥 상장예비심사 통과",
       "url": "https://www.mt.co.kr/future/2026/06/26/2026062614323149087",
@@ -64,6 +1503,20 @@
       "keyword": "이차전지",
       "published": "2026-06-26T19:00:00+09:00",
       "collected_at": "2026-06-26T19:37:32.317867+09:00"
+    },
+    {
+      "id": "dd26a9e59219",
+      "title": "[Weekly 신기술 및 정책소식] 고동연 교수 연구팀, 원유 상온 분리 기술 개발...네이처 게재 - KIPOST",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9lWXZWV1JqdW9tZk0tZjJyV3g1T0ZhQ25JWWNJcnh2UEpRMlE1MTY4XzlSZ191RjFfSWlkUi1VeHVtOEJ3REpyRGlSZXR4a3dLR29SMHVYakpTenNBbHZCSUEyUXRJWFM5Ujhxa9IBbEFVX3lxTE9lWXZWV1JqdW9tZk0tZjJyV3g1T0ZhQ25JWWNJcnh2UEpRMlE1MTY4XzlSZ191RjFfSWlkUi1VeHVtOEJ3REpyRGlSZXR4a3dLR29SMHVYakpTenNBbHZCSUEyUXRJWFM5Ujhxaw?oc=5",
+      "summary": "[Weekly 신기술 및 정책소식] 고동연 교수 연구팀, 원유 상온 분리 기술 개발...네이처 게재  KIPOST",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "양극재",
+      "published": "2026-06-26T18:42:39+09:00",
+      "collected_at": "2026-06-27T18:14:25.360163+09:00"
     },
     {
       "id": "8c107ac50f48",
@@ -111,6 +1564,34 @@
       "keyword": "이차전지",
       "published": "2026-06-26T18:34:00+09:00",
       "collected_at": "2026-06-26T19:37:32.318042+09:00"
+    },
+    {
+      "id": "c60b60060f20",
+      "title": "코스피, 외인・기관 동반 매도세에 ‘5%대 급락’ 8410선 마감 - ksdaily.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBxQWJGblVEQ01keDBGbkJ6OFF4eDYzM0xiV0JHcy1wbDdiaGI5V0h2N2g5Qi1uN1ZZTV9rVXJwTG81QzN1TDhoVVl1YUpHN0ExT2toYlNsLXZHYURvMEVYSTJadTMtRHJ2REZz?oc=5",
+      "summary": "코스피, 외인・기관 동반 매도세에 ‘5%대 급락’ 8410선 마감  ksdaily.co.kr",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 1,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T18:33:09+09:00",
+      "collected_at": "2026-06-27T18:14:25.356768+09:00"
+    },
+    {
+      "id": "1018af51fa59",
+      "title": "[한눈에 보는 Weekly 기업 소식] 꿈의 ‘1나노 벽’ 깬 IBM… 반도체 패권 흔들까 - KIPOST",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9KVElVZkJNNHJlX0pSRXJ3NkRXQVhDdXRHVHRmQXRZbmxrZWdYMV9UeU9RUHJwZzk0a3RDTXNENHowUFFCa25fOUxzV2lpUDNiX0M1SWVXVXdzWXJSbnNhNkgtZDZ0Tlgt0gFsQVVfeXFMTmNjbURfWlFWVlpOLVEyMHJpcUpDOGxiYVJ5ZEpGX2hJY21FR1pfQjZIUTMyWU53TVJLd0tsNDFheV81S2NYSVkwdUlhdzFvdjdEYTlNc3gwVmFQZW5SNFk0dE9TVF9XOTl0NjU0?oc=5",
+      "summary": "[한눈에 보는 Weekly 기업 소식] 꿈의 ‘1나노 벽’ 깬 IBM… 반도체 패권 흔들까  KIPOST",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "양극재",
+      "published": "2026-06-26T18:31:54+09:00",
+      "collected_at": "2026-06-27T18:14:25.359872+09:00"
     },
     {
       "id": "694f54bba27d",
@@ -357,6 +1838,20 @@
       "collected_at": "2026-06-26T19:37:32.313537+09:00"
     },
     {
+      "id": "3f24a009cdab",
+      "title": "NH선물, 토너먼트 방식 국내선물옵션 실전투자대회 - 인더뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9tTFB1MzdwcjZRNHRld05TQmt3V21nMzJaVEhTdW1DVEluNUlEeGk3MHNpZ19heVMtaTVwYktfTHM5X2ZPcTZRR3RjWkotLTRYak5meWhsV3gtazF6OTA2NTlSZEI?oc=5",
+      "summary": "NH선물, 토너먼트 방식 국내선물옵션 실전투자대회  인더뉴스",
+      "steep": "Economic",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T17:43:15+09:00",
+      "collected_at": "2026-06-27T18:14:25.360740+09:00"
+    },
+    {
       "id": "d065009d9288",
       "title": "BMW 7시리즈 네로 루쏘·BYD 씨라이언 6 DM-i, 부산서 국내 최초 공개",
       "url": "http://www.consumernews.co.kr/news/articleView.html?idxno=758267",
@@ -538,6 +2033,20 @@
       "collected_at": "2026-06-26T19:37:32.318227+09:00"
     },
     {
+      "id": "d08a15771ceb",
+      "title": "이달희, 첨단산업 여성인재 키운다...'지역 맞춤형 양성법' 대표 발의 - 시사매거진",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9DSkw2bTFpRnVTQnk5TUhyUExlRFFlNm91cUZCYnJvbmtkOC1FaEowMmtza3ZERnFLUXVRWC1oQXRHcEpMOFNRdF9BTFpVVGFoNTJKRkJSd1ZyNjY1Y19GaFRfaFg3UjlVUVZ3SURrWXlwUWNzbHow0gF3QVVfeXFMT0NKTDZtMWlGdVNCeTlNSHJQTGVEUWU2b3VxRkJicm9ua2Q4LUVoSjAya3NrdkRGcUtRdVFYLWhBdEdwSkw4U1F0X0FMWlVUYWg1MkpGQlJ3VnI2NjVjX0ZoVF9oWDdSOVVRVndJRGtZeXBRY3NsejA?oc=5",
+      "summary": "이달희, 첨단산업 여성인재 키운다. ..'지역 맞춤형 양성법' 대표 발의  시사매거진",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 1,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T17:24:41+09:00",
+      "collected_at": "2026-06-27T18:14:25.357601+09:00"
+    },
+    {
       "id": "52ded8deb5e9",
       "title": "폐배터리 재생원료 가치 공식 인정… 정부, 인증제 시범사업 착수 - 인더스트리뉴스",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1VTjB3Z0JydXhSVnMzOUlsanp3dXpkSmRteXdfZl9aQlc2cElmUlVEdFl6NVJuZGpiZ3M3NEtUdUZlc2VXemRFWmgwaGd6QUVJOTBZdWNaekk5ZUpSRHliY3pENTZ1VmFSNDdQaEprbTE4QQ?oc=5",
@@ -634,6 +2143,23 @@
       "collected_at": "2026-06-26T19:37:32.312237+09:00"
     },
     {
+      "id": "02474c615842",
+      "title": "[부산모빌리티쇼] BMW코리아 국내 29대 한정 판매 7시리즈 공개, BYD코리아는 '씨라이언6 PHEV' 사전계약 받아 - 비즈니스포스트",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE90RXJ4TFNBdktia0NnZFYydEY1SFVBZzYtTmxQQWFQcjd5Y2hYaExRS2k4dG5ZbUxDYXZGdWlMcUFqU3lXdTVVVkNkZFNyRUdreWdwNXE3X1JObFVoaGItTkxuU09FWFVJalQ2Wm1XX0xkWDg?oc=5",
+      "summary": "[부산모빌리티쇼] BMW코리아 국내 29대 한정 판매 7시리즈 공개, BYD코리아는 '씨라이언6 PHEV' 사전계약 받아  비즈니스포스트",
+      "steep": "Economic",
+      "region": "Korea",
+      "hashtags": [
+        "BYD",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-26T17:14:29+09:00",
+      "collected_at": "2026-06-27T18:14:25.365875+09:00"
+    },
+    {
       "id": "4a8d701d35a9",
       "title": "TS, 르완다에 K-미래차 안전관리 체계 전수…모빌리티 안전관리 사례 소...",
       "url": "https://zdnet.co.kr/view/?no=20260626171256",
@@ -715,6 +2241,22 @@
       "collected_at": "2026-06-26T19:37:32.318790+09:00"
     },
     {
+      "id": "8d8516788228",
+      "title": "포스코퓨처엠, 잠재력은 크나 수주·실적 증명 필요 - MSN",
+      "url": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxOVnByRXBiWTJCM1NCYV9XdF80OWY5c3RWNDkyWHdVcUk4TzhCTFBYbkFhMFhBVWdBblNwZmVQd1BqcVYwNFhFeDY2VjlWR1Z1LXNNcjMxZ2RCMVpXcTdpQVhaT2plZlZJSnc4b050ekVUSS1fS0NNdks5Q1o1RGk4RFVjTlY1VFFJelBCNWlRaXBwVWY2VVpELXd1U1pXcWFkajlwYnZDU0dRaGlQN1dxZTRWMjJ3UVlpS2ZGVEtacHdhckY3M1Z0cC1hbUlQNllQNWVYT0VHUmwyc3RuRVc5d2k1czN1NE5uWHVXdE9DU1I5aGNVWU1RRldSUWZyTTJ2QU1LUlYzUjJBNnRDbWZacmVOb21ZYUZXeHM2MjNSZUF3dHdKdm80RXVBdUVOcUJzVmJzQ1ViYlVfYlRrRUIyRzBXSmhoZTJ4ak95eFZOaVdfLXlfSEE?oc=5",
+      "summary": "포스코퓨처엠, 잠재력은 크나 수주·실적 증명 필요  MSN",
+      "steep": "Economic",
+      "region": "Korea",
+      "hashtags": [
+        "포스코퓨처엠"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "양극재",
+      "published": "2026-06-26T17:08:17+09:00",
+      "collected_at": "2026-06-27T18:14:25.359721+09:00"
+    },
+    {
       "id": "bf3159711ed9",
       "title": "피지컬 AI 운영 플랫폼 전문기업 싸이몬, 상장예비심사 신청서 제출",
       "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=05661286645485656",
@@ -759,6 +2301,20 @@
       "keyword": "이차전지",
       "published": "2026-06-26T17:03:00+09:00",
       "collected_at": "2026-06-26T19:37:32.319140+09:00"
+    },
+    {
+      "id": "221abb7b5ea0",
+      "title": "한국투자증권, ‘2026 서울특별시 환경상’ 건물에너지부문 최우수상 - 인더뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4tbVUwZXg4LThsWXc2Q0k2ME5QMG96N3I5dTdKR2pRYkszSUFOUUd2MmI3ZTVLa1BXc283VWNTVEZCa0Z0Q0JLajlOdXF4VnlRbHRPUjlmOS04b3htZVk0RWM5M3g?oc=5",
+      "summary": "한국투자증권, ‘2026 서울특별시 환경상’ 건물에너지부문 최우수상  인더뉴스",
+      "steep": "Economic",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T16:57:54+09:00",
+      "collected_at": "2026-06-27T18:14:25.362232+09:00"
     },
     {
       "id": "a60f9ac3b03a",
@@ -808,6 +2364,54 @@
       "keyword": "이차전지",
       "published": "2026-06-26T16:46:00+09:00",
       "collected_at": "2026-06-26T19:37:32.319547+09:00"
+    },
+    {
+      "id": "3197fdeae24b",
+      "title": "금속노조, 충북 발암물질 최대 배출기업에 안전대책 요구 - 충북인뉴스",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9uUUpKUzlMd3c0cGxiNjVBR3dHalUwQU1EZWRTdnhPdjEyZk50VWtsUUc3VFM1cE9RV2xZLUY1Vkc5NEx4LTZNUHRkamFxWURpNGtscjJmSnZlT2NXYUZObmNJY1VEOWFoMjR0ZTVKbVLSAXBBVV95cUxPblFKSlM5THd3NHBsYjY1QUd3R2pVMEFNRGVkU3Z4T3YxMmZOdFVrbFFHN1RTNXBPUVdsWS1GNVZHOTRMeC02TVB0ZGphcVlEaTRrbHIyZkp2ZU9jV2FGTm5jSWNVRDlhaDI0dGU1Sm1S?oc=5",
+      "summary": "금속노조, 충북 발암물질 최대 배출기업에 안전대책 요구  충북인뉴스",
+      "steep": "Social",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T16:45:36+09:00",
+      "collected_at": "2026-06-27T18:14:25.356907+09:00"
+    },
+    {
+      "id": "c09a28d558e7",
+      "title": "AI·ESS로 체질 바꾸는 롯데에너지머티리얼즈···반등 성공할까 - 시사저널e",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBkZXNkejlUaWphYTFBdU96VWRnTXNQM2k3U1JHWWFCMVJNN3hjc3U2TjVPZjFOYUdsdGNQaWI2XzJPQ0VMUTlsWjVHTHdna2JVTkRmdU41ZVcwNWR1blhZd20xT2tSM3RYWGZyVE85T2pDRVFxM3fSAXZBVV95cUxQZGVzZHo5VGlqYWExQXVPelVkZ01zUDNpN1NSR1lhQjFSTTd4Y3N1Nk41T2YxTmFHbHRjUGliNl8yT0NFTFE5bFo1R0x3Z2tiVU5EZnVONWVXMDVkdW5YWXdtMU9rUjN0WFhmclRPOU9qQ0VRcTN3?oc=5",
+      "summary": "AI·ESS로 체질 바꾸는 롯데에너지머티리얼즈···반등 성공할까  시사저널e",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-26T16:44:02+09:00",
+      "collected_at": "2026-06-27T18:14:25.353593+09:00"
+    },
+    {
+      "id": "e97b56349dad",
+      "title": "삼성SDI, 소형 배터리 세계 1위에서 전고체·ESS 사업 세계 1위를 향해 나간다 - 엠투데이",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBnZUYyQzdUdERFNDM3RGt6cUZmODBJNHdsSmNFNk8ydWtlWWZBOWIwdlVLYlBMQWhaUlVKR2dya1ZIMWZVUWhhSTN0Um5vWXZwT3RLYXctYkFzT3VKdDhIcXZEVTdoY2FhUkdQMkg2cUVGZVHSAXNBVV95cUxQZ2VGMkM3VHRERTQzN0RrenFGZjgwSTR3bEpjRTZPMnVrZVlmQTliMHZVS2JQTEFoWlJVSkdncmtWSDFmVVFoYUkzdFJub1l2cE90S2F3LWJBc091SnQ4SHF2RFU3aGNhYVJHUDJINnFFRmVR?oc=5",
+      "summary": "삼성SDI, 소형 배터리 세계 1위에서 전고체·ESS 사업 세계 1위를 향해 나간다  엠투데이",
+      "steep": "Technological",
+      "region": "Korea",
+      "hashtags": [
+        "삼성SDI",
+        "전고체",
+        "ESS"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-26T16:42:48+09:00",
+      "collected_at": "2026-06-27T18:14:25.365577+09:00"
     },
     {
       "id": "d221c6fcdaa3",
@@ -964,6 +2568,22 @@
       "collected_at": "2026-06-26T19:37:32.338111+09:00"
     },
     {
+      "id": "e4074157ae53",
+      "title": "[전기차 관련주 동향] 6월 4주, 증시 급락 속 배터리주 동반 약세 - 센머니",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1INnR2N2Rzeld1Z0M5VDBHSTN3MGtDT3Utc3JLOFlSRmlMeVNNMzNwTm8zZV9XRDI0WkkwLXpRcERNVlp4VVUtaTkyc01jTFc0cjlBa21IVEZGMGcxTmpnYmhWdHd1ZlEwdHhPXw?oc=5",
+      "summary": "[전기차 관련주 동향] 6월 4주, 증시 급락 속 배터리주 동반 약세  센머니",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-26T16:18:30+09:00",
+      "collected_at": "2026-06-27T18:14:25.352050+09:00"
+    },
+    {
       "id": "7d14a6168841",
       "title": "울산대 '2026-1학기 캡스톤디자인 어워드' 개최.. '64개팀 271명 참여'",
       "url": "https://www.veritas-a.com/news/articleView.html?idxno=616799",
@@ -998,6 +2618,22 @@
       "keyword": "LFP 배터리",
       "published": "2026-06-26T16:02:00+09:00",
       "collected_at": "2026-06-26T19:37:32.338302+09:00"
+    },
+    {
+      "id": "48571dd5d49a",
+      "title": "BS한양, 광양 황금 ESS 사업 본격화…1979억 PF 수혈 - 블로터",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5GVXZKN2t5Uy1xWkdKVWtlUi1yV3dhQVFqWWZwNkFIeTFMS19nY3dvYTE0RTBfUXY1czVUeUZtTkpUdWs3RHhrbEJyWXRfNkp6UGVkN1hEaGZGclhVaTliWUxzXzZSeTV2QWdUSNIBbEFVX3lxTE5GVXZKN2t5Uy1xWkdKVWtlUi1yV3dhQVFqWWZwNkFIeTFMS19nY3dvYTE0RTBfUXY1czVUeUZtTkpUdWs3RHhrbEJyWXRfNkp6UGVkN1hEaGZGclhVaTliWUxzXzZSeTV2QWdUSA?oc=5",
+      "summary": "BS한양, 광양 황금 ESS 사업 본격화…1979억 PF 수혈  블로터",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-26T15:58:50+09:00",
+      "collected_at": "2026-06-27T18:14:25.354841+09:00"
     },
     {
       "id": "6768d0acbb2a",
@@ -1066,6 +2702,22 @@
       "collected_at": "2026-06-26T19:37:32.319739+09:00"
     },
     {
+      "id": "321be59d955a",
+      "title": "폭스바겐, 전기차 배터리 전력망에 판매하는 V2G 양산화 - 다나와 자동차",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5ud1B5WWJDbUVja0V1dnZrRlI2TFlmaExQV0toa28zdC16U1NmYlV1dDRHcFAwOWhMMUZQWDZoQlFBTFI4Z0s1UWZoLUxzWGI5c3NiaERyckJoWm90N3ZnNlNjVndYdV92X2xJMG9IakV2VHN2YjZSNA?oc=5",
+      "summary": "폭스바겐, 전기차 배터리 전력망에 판매하는 V2G 양산화  다나와 자동차",
+      "steep": "Uncategorized",
+      "region": "Europe",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-26T15:47:49+09:00",
+      "collected_at": "2026-06-27T18:14:25.350477+09:00"
+    },
+    {
       "id": "3b6eda029785",
       "title": "[증권 Pick] 이번주 상장소식 모아보기",
       "url": "https://www.lcnews.co.kr/news/articleView.html?idxno=204052",
@@ -1096,6 +2748,22 @@
       "keyword": "이차전지",
       "published": "2026-06-26T15:42:00+09:00",
       "collected_at": "2026-06-26T19:37:32.319945+09:00"
+    },
+    {
+      "id": "ac1c9ffffa50",
+      "title": "BYD, '3천만원대' 씨라이언6 DM-i 내놨다…하이브리드로 국내 공략 - 녹색경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4yNDZ2cDhqczFIZDFiQnlwMXNLRWJFY1NqWXVkX1hPemRvOEl3SngtZ01LS2EwWno4cC1jcHBKWDVZd0szaDVHeDBfQXhUblMzY1plV2s1WmV3LVkxajlJU3hBU1RYRWFJ?oc=5",
+      "summary": "BYD, '3천만원대' 씨라이언6 DM-i 내놨다…하이브리드로 국내 공략  녹색경제신문",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [
+        "BYD"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-26T15:39:02+09:00",
+      "collected_at": "2026-06-27T18:14:25.351185+09:00"
     },
     {
       "id": "5e6bb8e146bb",
@@ -1333,6 +3001,22 @@
       "collected_at": "2026-06-26T19:37:32.315878+09:00"
     },
     {
+      "id": "902a052ecb73",
+      "title": "폐배터리 속 ‘유가금속’ 가치 공인…배터리 재생원료 인증제 시범사업 착수 - 에코타임스",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBBc09vVEM2OWpSZWpXQmtfMWRpYXlmVHhHcTJpb01sd1gtT1NxWE1aVkxZdnhySmNEbVBOM1h1UE0zbGFqYXo2SHdQMjBtbjAyQVFaRHBJM3hLMFBSazJXQmR1NDhWLUlEa0pj0gFvQVVfeXFMTnBicGNHaHhmVDNIQTF6TEVuc1pmRlN3eG1KZV9LQzZ1T09RNjNBWHZTYlpVbGxDNGFWaFBtVkQ2VklwdG9na0U1Q05iVWtIQWR5aEgyYTVreFd4UVM5dHJrLURoZWFmQWRxSW1ISDJB?oc=5",
+      "summary": "폐배터리 속 ‘유가금속’ 가치 공인…배터리 재생원료 인증제 시범사업 착수  에코타임스",
+      "steep": "Environmental",
+      "region": "Global",
+      "hashtags": [
+        "재활용"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "배터리 재활용",
+      "published": "2026-06-26T14:56:07+09:00",
+      "collected_at": "2026-06-27T18:14:25.362532+09:00"
+    },
+    {
       "id": "cf9ca3fc0b7c",
       "title": "고양시, '2026년 적극행정 실행계획' 추진",
       "url": "https://weekly.hankooki.com/news/articleView.html?idxno=7171645",
@@ -1399,6 +3083,23 @@
       "collected_at": "2026-06-26T19:37:32.316610+09:00"
     },
     {
+      "id": "c12eebb18eb7",
+      "title": "2차전지주 급락에 전기제품 업종 약세…LG에너지솔루션·삼성SDI 하락세 뚜렷 - 핀포인트뉴스",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBqeFpTNmcxMkt1OEEybF81NUlOeWVUc2tPYlVrSUM4QmVHSkFSRW9iaUR1bTZOdmd6aUZvY2VNa216blVqU1d6cldUdEpoV3ZwVmZMVl8tbS1hQkpIa2pWdGFEcHFfMmozVGZRcHhZTDRGT1XSAXdBVV95cUxNRzhtQ2dQbXVTNldhVERqd25fTjM3bDFFb3RuMTVZSlFnWG5wM2gyM2lfLURZSXZlU3BueTh2OFRUUThJWXc2YzZ4WkFEQ1ZMWDBzc1BTMnFKVkd4a0dSdkMyWW40YloyLS15NlFxbzA2UnFCWDJxRQ?oc=5",
+      "summary": "2차전지주 급락에 전기제품 업종 약세…LG에너지솔루션·삼성SDI 하락세 뚜렷  핀포인트뉴스",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [
+        "LG에너지솔루션",
+        "삼성SDI"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-26T14:50:55+09:00",
+      "collected_at": "2026-06-27T18:14:25.352609+09:00"
+    },
+    {
       "id": "b31541f7f9c8",
       "title": "김재준 군산시장 당선인, '형식보다 실무'…취임식부터 시정혁신 시동",
       "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=846674",
@@ -1461,6 +3162,20 @@
       "keyword": "ESS 에너지저장장치",
       "published": "2026-06-26T14:46:00+09:00",
       "collected_at": "2026-06-26T19:37:32.316967+09:00"
+    },
+    {
+      "id": "7cbecc85ed4a",
+      "title": "우리은행 온실가스 감축기여 중소·중견기업에 이자지원·우대금리 - 인더뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5OcFYzNjE2WWR4NFBqeXk0NHY1cFhxSUtwWmphWmdYTXRsUXJjY2dNbG5kRjIwVDhVMTFIRUtpNXdSVE01RjFCWHhHN0R6d0lPZlBrUDF6VWFhRG5XZnJHLWNmVHE?oc=5",
+      "summary": "우리은행 온실가스 감축기여 중소·중견기업에 이자지원·우대금리  인더뉴스",
+      "steep": "Environmental",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T14:43:25+09:00",
+      "collected_at": "2026-06-27T18:14:25.361002+09:00"
     },
     {
       "id": "51753991e4fe",
@@ -1570,6 +3285,39 @@
       "keyword": "LFP 배터리",
       "published": "2026-06-26T14:31:00+09:00",
       "collected_at": "2026-06-26T19:37:32.340261+09:00"
+    },
+    {
+      "id": "65d7ac3e9be5",
+      "title": "[2026 부산모빌리티쇼]中 BYD “韓 씨라이언 6 DM-i 3750만원 가격대 승부수” - 전자신문",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1IeXItQ3I1cFdQbmxRZk5WRWNmRmlMb1NhX2FiMnNkX1ZzdEJvX3owUGtwR3BxaTRIcUpFMUxyZlQ5V2twZ2JGUldfZ0FHQQ?oc=5",
+      "summary": "[2026 부산모빌리티쇼]中 BYD “韓 씨라이언 6 DM-i 3750만원 가격대 승부수”  전자신문",
+      "steep": "Economic",
+      "region": "China",
+      "hashtags": [
+        "BYD"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-26T14:30:21+09:00",
+      "collected_at": "2026-06-27T18:14:25.351485+09:00"
+    },
+    {
+      "id": "a70ac852448e",
+      "title": "BYD, 3750만원 PHEV ‘씨라이언6 DM-i’ 국내 출시 - 서울경제",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5sbGxFX20xYnZnaU9ZeWtyLW1IM3BEaXBmUEJJa21pUzI1endILXJxRnZqc0pvNE5uQ2xQRC1BTWxSUU9rVnl3OGI4bWhaQXJSWnd30gFTQVVfeXFMTmxsbEVfbTFidmdpT1l5a3ItbUgzcERpcGZQQklrbWlTMjV6d0gtcnFGdmpzSm80Tm5DbFBELUFNbFJRT2tWeXc4YjhtaFpBclJad3c?oc=5",
+      "summary": "BYD, 3750만원 PHEV ‘씨라이언6 DM-i’ 국내 출시  서울경제",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [
+        "BYD",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-26T14:29:58+09:00",
+      "collected_at": "2026-06-27T18:14:25.366280+09:00"
     },
     {
       "id": "107bfaff90bc",
@@ -1718,6 +3466,20 @@
       "collected_at": "2026-06-26T19:37:32.321053+09:00"
     },
     {
+      "id": "77643713cf62",
+      "title": "부강테크, 글로벌 환경기업 베올리아와 맞손…배터리 수처리 시장 공략 - 서울경제",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9rdDFRMC13WEQ4NkdhYUVoc1VkUmIyeVBMTjV4Slo5T3lNcTBwRDdMcjhFZkx2bXVZSWNIYXFFT1NydThnSTdwZlNKcG15QXNxZmfSAVNBVV95cUxPTVlXcDBRTjJBOWZONURXYVp4bG5SY3FvWGdFZ0FnZ0ZxbER3UFhUbmtWZ295TFk4RUh6NGY5U3RmdURZTlpGdnZSdDZOTl9TaDVnYw?oc=5",
+      "summary": "부강테크, 글로벌 환경기업 베올리아와 맞손…배터리 수처리 시장 공략  서울경제",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [],
+      "score": 4,
+      "source": "구글",
+      "keyword": "배터리 재활용",
+      "published": "2026-06-26T13:58:35+09:00",
+      "collected_at": "2026-06-27T18:14:25.363784+09:00"
+    },
+    {
       "id": "e9c4c30e73d4",
       "title": "동서대, 교육부 ‘청년도약 인재양성 부트캠프’ 최종 선정",
       "url": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0300&key=20260623.99099006912",
@@ -1758,6 +3520,22 @@
       "keyword": "이차전지",
       "published": "2026-06-26T13:54:00+09:00",
       "collected_at": "2026-06-26T19:37:32.321628+09:00"
+    },
+    {
+      "id": "bf58863058e3",
+      "title": "테슬라, '유럽 판매량 회복'에 독일 기가팩토리 생산량 20% 확대 - 더구루",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ZNWo5ZDBxbl90VUJGa0Zva1dnU2VZOTJ4bkRYQktfNEdXbXBlRzFrQzhoQ3BTNERLbVRicElyQ0FxNmxINDVscnVkZXFnSG1HMjdwWXlnWjNTWjhlU2VLdg?oc=5",
+      "summary": "테슬라, '유럽 판매량 회복'에 독일 기가팩토리 생산량 20% 확대  더구루",
+      "steep": "Uncategorized",
+      "region": "Europe",
+      "hashtags": [
+        "테슬라"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T13:43:41+09:00",
+      "collected_at": "2026-06-27T18:14:25.361550+09:00"
     },
     {
       "id": "1a2e87f3fba7",
@@ -1809,6 +3587,22 @@
       "collected_at": "2026-06-26T19:37:32.358269+09:00"
     },
     {
+      "id": "b1ed7dc73e02",
+      "title": "BYD, 첫 하이브리드 SUV '3750만원' 출격…씨라이언 6 DM-i 공개[부산모빌리티쇼] - v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9jc2hxQXBhMjNzOTdKOGY3ZVhYemxEQ3k1OFpxMDBacUdEMUVndlhJU1Y1UHFFcmd6Nm8ydHZTa1RZZzdSZnc?oc=5",
+      "summary": "BYD, 첫 하이브리드 SUV '3750만원' 출격…씨라이언 6 DM-i 공개[부산모빌리티쇼]  v.daum.net",
+      "steep": "Uncategorized",
+      "region": "China",
+      "hashtags": [
+        "BYD"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-26T13:14:02+09:00",
+      "collected_at": "2026-06-27T18:14:25.365720+09:00"
+    },
+    {
       "id": "8865e4af08d5",
       "title": "폐배터리 리튬·니켈 등 ‘재생원료’ 공인 추진",
       "url": "https://www.naeil.com/news/read/593266?ref=naver",
@@ -1843,6 +3637,20 @@
       "keyword": "ESS 에너지저장장치",
       "published": "2026-06-26T12:35:32+09:00",
       "collected_at": "2026-06-26T19:37:32.345947+09:00"
+    },
+    {
+      "id": "e891ce3a136a",
+      "title": "배터리 폐기물 관리가 산업 개발의 초점이되었습니다. - VOI.id",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE11bWFETXFmbEdDME9Bb0ZQangzVDF5ZGQybzdlLXY5Yk4wWkYwbE1MOWNFN1BkZmN5TS12aGZiaEJ4anhzWlNN0gFCQVVfeXFMUEVDSlRHVjdGQUpfZ1IzSVFndG14ZnRnak95V1FqTTNZc0JwY2Q5T0dTWmxaTUtMbzZkMEVoMVpBbHRn?oc=5",
+      "summary": "배터리 폐기물 관리가 산업 개발의 초점이되었습니다. VOI.id",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [],
+      "score": 1,
+      "source": "구글",
+      "keyword": "배터리 재활용",
+      "published": "2026-06-26T12:30:04+09:00",
+      "collected_at": "2026-06-27T18:14:25.364054+09:00"
     },
     {
       "id": "3e0033c5495e",
@@ -1891,6 +3699,20 @@
       "collected_at": "2026-06-26T19:37:32.335412+09:00"
     },
     {
+      "id": "e05fa04af7a1",
+      "title": "[iN The Scene] NH농협은행 이사회 경기도 유관기관과 농촌일손돕기 - 인더뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9XTUNNc3F2TEJxWFlZNlYyM3FQTHBlMWtQalp0eDZ3YVpHMHBFdlN6OU9VTXY0b2xiRzdtT29HX2t4Zk0xTGZOc19QaFk3Zi1LWm4wUzlUeFFsSnZHNzlvV2VpR08?oc=5",
+      "summary": "[iN The Scene] NH농협은행 이사회 경기도 유관기관과 농촌일손돕기  인더뉴스",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T12:08:57+09:00",
+      "collected_at": "2026-06-27T18:14:25.361281+09:00"
+    },
+    {
       "id": "2247aebf012d",
       "title": "코스피 8400까지 밀렸다…올해 14번째 '매도 사이드카' 발동",
       "url": "https://www.wikitree.co.kr/articles/1143383",
@@ -1919,6 +3741,23 @@
       "keyword": "이차전지",
       "published": "2026-06-26T11:56:00+09:00",
       "collected_at": "2026-06-26T19:37:32.322162+09:00"
+    },
+    {
+      "id": "779337da927b",
+      "title": "BYD, PHEV '씨라이언 6 DM-i' 국내 출시…\"전기로만 70㎞ 주행\" - 뉴시스",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBjY29xbjUzSjFDQzNBbS1XbTdmeEVsNC10OUFHZk9XaUZqZ2JIcEMzRWh5VzEyZF9KVDFXMUxQOWFoNnlhT0hZa1REWWE1ZDFXc3c0cldXeXZON2lybldlTHZnNm9RQmY1LWNuUzRWRGFPYTg5SEd0ddIBeEFVX3lxTFBjY29xbjUzSjFDQzNBbS1XbTdmeEVsNC10OUFHZk9XaUZqZ2JIcEMzRWh5VzEyZF9KVDFXMUxQOWFoNnlhT0hZa1REWWE1ZDFXc3c0cldXeXZON2lybldlTHZnNm9RQmY1LWNuUzRWRGFPYTg5SEd0dQ?oc=5",
+      "summary": "BYD, PHEV '씨라이언 6 DM-i' 국내 출시…\"전기로만 70㎞ 주행\"  뉴시스",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [
+        "BYD",
+        "전기차"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-26T11:55:20+09:00",
+      "collected_at": "2026-06-27T18:14:25.366012+09:00"
     },
     {
       "id": "d46ee4f0d383",
@@ -2050,6 +3889,20 @@
       "collected_at": "2026-06-26T19:37:32.322723+09:00"
     },
     {
+      "id": "716fd9469d9c",
+      "title": "[CP’s View] ‘역대급 성과’ 착시 … 현대차 노조가 놓친 것들 - 글로벌에픽",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBjUXFpTjZaLVd0eW9oM2p4TGMxTVRBbmctN0pJZUpjUU9UNWpEUDFhaDI0N0hIQTZZZ2dZZmc0SldZQ3NmRUNJb3pfODM2RG5jVlJYM1lQN2pONnk3dFpPdDlfRXMxWmdqLW9XVXN6NGFGWnU2NlNWMFE0Yw?oc=5",
+      "summary": "[CP’s View] ‘역대급 성과’ 착시 … 현대차 노조가 놓친 것들  글로벌에픽",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "LFP 배터리",
+      "published": "2026-06-26T10:58:05+09:00",
+      "collected_at": "2026-06-27T18:14:25.366151+09:00"
+    },
+    {
       "id": "a3b597f2355d",
       "title": "포스코홀딩스, 흩어진 ESG 데이터 ‘그룹 표준’으로 묶었다 [2025 지속가...",
       "url": "https://futurechosun.com/?p=152808",
@@ -2097,6 +3950,20 @@
       "collected_at": "2026-06-26T19:37:32.344225+09:00"
     },
     {
+      "id": "aa8b32e84199",
+      "title": "이달희 의원, 첨단산업 여성인재 양성 법안 발의 - 드림저널",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE96MUpDZmh1MTQyTUc2ZmhwTVZVLXVEVVVmR29yYVFLU1lzQ1c4ZkpKUnI5UHNRUzJRc2V1NWZWNHRzUW9rRXc?oc=5",
+      "summary": "이달희 의원, 첨단산업 여성인재 양성 법안 발의  드림저널",
+      "steep": "Political",
+      "region": "Global",
+      "hashtags": [],
+      "score": 1,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T10:50:01+09:00",
+      "collected_at": "2026-06-27T18:14:25.357037+09:00"
+    },
+    {
       "id": "68dace822e0b",
       "title": "성평등가족부·고용부의 첨단산업 교육 보급 및 지자체장 맞춤형 훈련 ...",
       "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=463325",
@@ -2127,6 +3994,22 @@
       "collected_at": "2026-06-26T19:37:32.345015+09:00"
     },
     {
+      "id": "379c1242f420",
+      "title": "[이슈+]태양광 연계 ESS '폭발적 성장'…탈(脫)중국 정책에 K-배터리 날개 - 비즈니스플러스",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9sekJNQW5mQnFBRjdBY0o0YzUwakNDQk5LVUgzbmFXYWNtWmdTWGJ6MkZ2bW9rY3p5emR6Sy0tTFB6Nm94S2JtZ0lyRWtyU1dGeDFwenA2V0VNREt6NW1rdGhCQ2dKQXRYUUFzOFk1MA?oc=5",
+      "summary": "[이슈+]태양광 연계 ESS '폭발적 성장'…탈(脫)중국 정책에 K-배터리 날개  비즈니스플러스",
+      "steep": "Political",
+      "region": "China",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-26T10:47:07+09:00",
+      "collected_at": "2026-06-27T18:14:25.354292+09:00"
+    },
+    {
       "id": "278ab06f6205",
       "title": "[카드뉴스] 삼성운용 'KODEX 전고체배터리ESS TOP2플러스' 등 상장(금주...",
       "url": "http://www.newswatch.kr/news/articleView.html?idxno=80232",
@@ -2142,6 +4025,20 @@
       "keyword": "전고체 배터리",
       "published": "2026-06-26T10:44:00+09:00",
       "collected_at": "2026-06-26T19:37:32.332385+09:00"
+    },
+    {
+      "id": "686606552346",
+      "title": "세라믹기술원, 세라믹 표준·기준물질·국산 장비 연계로 첨단소재 신뢰성 제고 - 데일리안",
+      "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxPX2dKV3lIU0g4SUJLSW43MmlPUWpYV3Nzbk5TUW1QcjJNVkZmRUVJOE5MbE1lUHVUZzQ3b0RxVVZnRUVKemF5bFMtTmxVM3pJMVJtM1BMaWozeWpNYVdQSFcxYmR1RWhuNnlrbDEwaFpWSFRtYnNZcTRqemJ3b1ZjT2FlMmNmQzdnbEtONzRiNGhlR3gyN0tES0diTlZHdUNKbGFBVjNmZERCLVczclpma1d2YktlYVJhV3E1Q0I2UFhacTZjYVJPZWxCMmZ5N2pWTkV5M2FzQklSMFU4WEZZcFhaSlNmU0FMSEZYZ3poWEk5WHNrZnVESzd0ZVJnU19ueWxqNWE4THVXb3FhN3BLaGdScTNfMlB0TDZoSlU1c1psOWJyUnI5S3FxOVfSAa8CQVVfeXFMUDdoMEttV0tfNWNoMDdjUlVpQ0tqdWZRaEVZaVFDVl81ZmtHdm40c0NrNVVQaXJ4M1c0RlVxSlRGRzhVUEJmMGxidGVUUDVoZ1VKd1JhMFhOQ0JvZ3AxdVpEY0EyLURnMlRDX3ZtQzJfZXpJcHI4TUo4cVdnSldyMGdlM0p6RjY0NHRQbjRCcVl4QU5ZcVh0SmNJNTd4MU5JOXhIY1RDT2J0WGs4VW1VY3g1RDdUTWRVU3RFQzEzWFRBMjloZ0duVFBrczZ3cEUzUmtMQWpiQjBqa2prUkpDQVMtSlVXYXFHX3VLTmkzRnJ1MWRtejAxNUwwUDI1UncxZG5ubUVQMjU0SnNHcmNlSmduek00VXB6VHVSWThYNVZhMVJ3R0pKdnFKV2JqdWNF?oc=5",
+      "summary": "세라믹기술원, 세라믹 표준·기준물질·국산 장비 연계로 첨단소재 신뢰성 제고  데일리안",
+      "steep": "Technological",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T10:44:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.358167+09:00"
     },
     {
       "id": "113a7153dd42",
@@ -2173,6 +4070,20 @@
       "keyword": "배터리 재활용",
       "published": "2026-06-26T10:39:37+09:00",
       "collected_at": "2026-06-26T19:37:32.354685+09:00"
+    },
+    {
+      "id": "5ca466bafd99",
+      "title": "주한독일상공회의소, '제8회 한·독 에너지데이' 성료 - 매일경제 마켓",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE05a2N6VXBDRHlkT0RUQVVQRW9YckpHS0dVT3p0ZHRubUJvYUtpbEp4UVh3V3pPN1U3MXd0bVZfZDBMTFQ3MFduSEZ6cC02Qmd0cXc?oc=5",
+      "summary": "주한독일상공회의소, '제8회 한·독 에너지데이' 성료  매일경제 마켓",
+      "steep": "Uncategorized",
+      "region": "Europe",
+      "hashtags": [],
+      "score": 4,
+      "source": "구글",
+      "keyword": "배터리 재활용",
+      "published": "2026-06-26T10:39:37+09:00",
+      "collected_at": "2026-06-27T18:14:25.363646+09:00"
     },
     {
       "id": "589a10272059",
@@ -2207,6 +4118,20 @@
       "collected_at": "2026-06-26T19:37:32.353891+09:00"
     },
     {
+      "id": "65ad61a4c276",
+      "title": "'스페이스X 대항마' 로켓랩, 美 NASA 우주 임무 수행 위성 발사 수주 - 더구루",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9ZSFE3RUViS2pHY09sdlBSZDFWLUdUaDJWWnhWTmprcUlNOU1JcGJZRGJrT2VjOXJiV05FSmJxR0d5NGJJWEplZGphTW9mV0RoYVlUX0pCU0N4TFd4c1huZzlHYw?oc=5",
+      "summary": "'스페이스X 대항마' 로켓랩, 美 NASA 우주 임무 수행 위성 발사 수주  더구루",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [],
+      "score": 4,
+      "source": "구글",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T10:18:17+09:00",
+      "collected_at": "2026-06-27T18:14:25.362093+09:00"
+    },
+    {
       "id": "b56ae57547fc",
       "title": "재생에너지 ‘빛과 그림자’… 한·독, 베를린서 전력망ㆍ배터리 해법 모색 - 산업인뉴스",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9uUTVya180bHNKTFNBalRsMGpYQ2I3ZUx6ck5kOG9IMXNpaEZNVVpFak9yVmtlc0pPYmNOZEVvSGhTZzRmWDktWG4xRFhLemY5LVpQU1RTOGx2dXVtQzRjWG5IQ1BCaHlwcUhjc1l3?oc=5",
@@ -2235,6 +4160,20 @@
       "keyword": "ESS 에너지저장장치",
       "published": "2026-06-26T10:13:25+09:00",
       "collected_at": "2026-06-26T19:37:32.344069+09:00"
+    },
+    {
+      "id": "185b187d3562",
+      "title": "포스코-르노코리아, 핵심 소재 협력 강화로 미래 모빌리티 시장 선점 가속 - 더구루",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE42eG4yY055bWhTdWFqZElvb3JzM3VjN3lnSnNyMzUwem1qTDhmeUxxMEtBbWRDdnFSemRQVkQxLUk0NnBuLVFNS1NwbkdCRm9KWjRvTVFtQXBHSDdnTENhU2hxZw?oc=5",
+      "summary": "포스코-르노코리아, 핵심 소재 협력 강화로 미래 모빌리티 시장 선점 가속  더구루",
+      "steep": "Economic",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T10:10:52+09:00",
+      "collected_at": "2026-06-27T18:14:25.357742+09:00"
     },
     {
       "id": "3383c4119d8c",
@@ -2304,6 +4243,20 @@
       "keyword": "양극재",
       "published": "2026-06-26T10:02:00+09:00",
       "collected_at": "2026-06-26T19:37:32.328635+09:00"
+    },
+    {
+      "id": "d28882cff24a",
+      "title": "포스코·르노코리아, 미래차 소재 협력 강화…기가급 강재 공동 공략 - 더퍼블릭",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9aRGZ6NkpfS1p6d0stMEpYMmR5NHBTS1gyVjdaLUltaGVEY3JSal8yX29kTG1XaV9hWWVGMWNadUZJTlpEaW1TR05pcm1iYmdNbE1OLUtoUTc3aC1ZQ3gwNV96ZTRSSXJGVkVB0gFvQVVfeXFMT0FSQnJxR05iN21kUUNjZllKNmYxSUR4RWVrWkp3dVVfMl9nbFhpNGV1S09tTEJKenJOTE11eFlXYVhzeDVGOEY5b1l6SlFVNU9XNFp0M3RUMWdpR0d0R3piSktQNk9XdVM4ZEtwVmFV?oc=5",
+      "summary": "포스코·르노코리아, 미래차 소재 협력 강화…기가급 강재 공동 공략  더퍼블릭",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T10:00:01+09:00",
+      "collected_at": "2026-06-27T18:14:25.357178+09:00"
     },
     {
       "id": "ac5f1faf2d6b",
@@ -2475,6 +4428,50 @@
       "collected_at": "2026-06-26T19:37:32.347036+09:00"
     },
     {
+      "id": "89f16e401411",
+      "title": "삼성전자, ‘감사 페스티벌’ 종료 D-9…방문객 75% 증가 - 인더뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5XYVo0VnBrbVpRNWpjMWpkQWI1YUN2S3I4X0xDRDIxSHVuVW1VWmI1b0VQQnFPT2dOWjkxMjVHUzZYOFJfdXhFczEzYmNtaUNZRl8yR0ZLc1lyYzN0LWdF?oc=5",
+      "summary": "삼성전자, ‘감사 페스티벌’ 종료 D-9…방문객 75% 증가  인더뉴스",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T09:17:43+09:00",
+      "collected_at": "2026-06-27T18:14:25.361954+09:00"
+    },
+    {
+      "id": "402cb750dc9d",
+      "title": "美 나노뉴클리어, 초소형원전 건설 인허가 본격화 - 더구루",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Zak9FTExUdTY2cTRYanhDNHE2QTdFVnBzSTJMbXBRZXN6RXZYQ1ZOdHVQUzUweFBYYUlVSlVFQ00wTkRhU1c4RWVoT2JodjZhNEdXbENZOWE5RE5uV2gxUU9jNA?oc=5",
+      "summary": "美 나노뉴클리어, 초소형원전 건설 인허가 본격화  더구루",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 1,
+      "source": "구글",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T09:15:44+09:00",
+      "collected_at": "2026-06-27T18:14:25.361817+09:00"
+    },
+    {
+      "id": "759cbc8b2e19",
+      "title": "토요타, 전기차 2만991대 리콜…배터리 ECU 결함 가능성 - 네이트",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAzWktVZnNQZEM3RTVwOGQ5NzlDX00zbHg5cFhBdkxsQjZwemlNX2VRcUhYOFdWLTVzYTBLZjVmNlhlQWNaVUwxbDlkYkJPenlVLVh3?oc=5",
+      "summary": "토요타, 전기차 2만991대 리콜…배터리 ECU 결함 가능성  네이트",
+      "steep": "Uncategorized",
+      "region": "Japan",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-26T09:15:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.352185+09:00"
+    },
+    {
       "id": "008c4bd0f1e7",
       "title": "토요타, 전기차 2만991대 리콜…배터리 ECU 결함 가능성 - 디지털투데이",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9MbmFObENlTFdneTRLdFBWUFJaRko4UWxsZ2lIbVlmaVV6Tml6R0tmZ1VoQklEVzZ3MVc3S2xraDZNV2oxcldRR0VRUkNQczVfRVNGbUZHUlltY3dlOXNvT2oyeF9pSjZnR1hGMkZabUQ2VUE?oc=5",
@@ -2537,6 +4534,52 @@
       "collected_at": "2026-06-26T19:37:32.354536+09:00"
     },
     {
+      "id": "413ffc8b794d",
+      "title": "[인사] 손해보험협회 - 인더뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1yeld2VzNWU3dobjRhdmhieG1OMWdxYl9OVVZSWmtUTWZqU3NTYjZBTXUxQlp6eUlxZzRpNi1PSDZDZU0zYmlrX1FNcHRReThpZlpsbHNsQUNDSXZJaHA2cm5oMWk?oc=5",
+      "summary": "[인사] 손해보험협회  인더뉴스",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T08:49:43+09:00",
+      "collected_at": "2026-06-27T18:14:25.361414+09:00"
+    },
+    {
+      "id": "943f99ce8b1b",
+      "title": "“전기 먹는 AI 시대, 車를 발전소로”···GM이 그리는 전기차 미래 - 시사저널e",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1URk5LZHB6Z2FUSklVLU12aVBBb3o5VHl0TEZtMnBmdGNsTTd1X1RUQXdWWV93YXlSWVpUeG01Smtha29DaS1Rb0huRC1zYU53czNma01MTXR0NFUzS1BieHRLV0N3N2NYTVdDYU5NZXF1Z9IBdkFVX3lxTE5kQkl6RE0zcFZlVnQ1VXo1N1drOE1WU25VTnhGQlhfTE9IUnptT29IWklBYzQ2eGl2SnRvdTktY2c2NUFtNHpEOXBMd3laN2JDZkJmXzgxVWN1ZXVaYmcyMFR3UzFYaDRXcXA4ZUpGTGp0dEdBOEE?oc=5",
+      "summary": "“전기 먹는 AI 시대, 車를 발전소로”···GM이 그리는 전기차 미래  시사저널e",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-26T08:45:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.351326+09:00"
+    },
+    {
+      "id": "cb27d0c477fe",
+      "title": "삼성SDI, 美 방산 배터리 시장 '출사표'… 포지나노에 자금·기술력 제공 - 더구루",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBLaGNCdnJzUDY0RUZ1U1BFNG1UTWpjMUhfOHYyekYxQVo0UXdyUGdpMmNieW5EV09ZNVhCamZBVV9qMWp0NkJUNE5ta2ZxLVh5RG13LU1tS1N1eGp3Y3c?oc=5",
+      "summary": "삼성SDI, 美 방산 배터리 시장 '출사표'… 포지나노에 자금·기술력 제공  더구루",
+      "steep": "Technological",
+      "region": "Korea",
+      "hashtags": [
+        "삼성SDI"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T08:40:05+09:00",
+      "collected_at": "2026-06-27T18:14:25.357319+09:00"
+    },
+    {
       "id": "114353737766",
       "title": "솔리드파워, 전고체 배터리 연구에서 생산까지 AI 혁신 선언",
       "url": "https://www.sjsori.com/news/articleView.html?idxno=87048",
@@ -2553,6 +4596,20 @@
       "keyword": "리튬이온 배터리",
       "published": "2026-06-26T08:36:00+09:00",
       "collected_at": "2026-06-26T19:37:32.323806+09:00"
+    },
+    {
+      "id": "c203e3815b93",
+      "title": "폭염과 AI가 키운 냉방 수요…HVAC株 투자 몰린다 - 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAzN005V2tJb1lvVlFYN2dYM1h0NjVHTlpLSVZPSmV2TTZWc0NHMDdmcWlrTlRpeGswQkFTZU43aGpDMG54UjZkN2NlZ1dGdVl2SEZVb9IBVEFVX3lxTFAzN005V2tJb1lvVlFYN2dYM1h0NjVHTlpLSVZPSmV2TTZWc0NHMDdmcWlrTlRpeGswQkFTZU43aGpDMG54UjZkN2NlZ1dGdVl2SEZVbw?oc=5",
+      "summary": "폭염과 AI가 키운 냉방 수요…HVAC株 투자 몰린다  한국경제",
+      "steep": "Social",
+      "region": "Korea",
+      "hashtags": [],
+      "score": 3,
+      "source": "구글",
+      "keyword": "전고체 배터리",
+      "published": "2026-06-26T08:30:36+09:00",
+      "collected_at": "2026-06-27T18:14:25.361688+09:00"
     },
     {
       "id": "c701c1b50a99",
@@ -2586,6 +4643,23 @@
       "keyword": "양극재",
       "published": "2026-06-26T08:26:00+09:00",
       "collected_at": "2026-06-26T19:37:32.329152+09:00"
+    },
+    {
+      "id": "365b4b6b7a71",
+      "title": "[종목 포커스] 포스코퓨처엠, 비중국 음극재 독점…脫中 규제 수혜로 실적 도약? - 데일리인베스트",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9hbWFmVm5LRVd3M25tNlB4T0hJdzBfS25hMkZTLXR1UnFPaTdXbHp3ckFWd0dFckpJUWNXdkNiMVJ3Y09vNGUzd2NCVjA0UGRJSWtmRjlnRVNkZ0U5SGVLYzNSNTlLUE5CYkhB0gFvQVVfeXFMUG5TaVdYSjVQbmpZZlVBNEFNdWp2NGNfUEpJdDZnOWpyTU5qc043NU5MX2N4NXI3QkpWajBQMmVTVnlPMkZnQUpfdU81YkI4b3dka2Ztc29NTFZTNmNPY044eU5kNHUyVTJvS0RpdnRB?oc=5",
+      "summary": "[종목 포커스] 포스코퓨처엠, 비중국 음극재 독점…脫中 규제 수혜로 실적 도약? 데일리인베스트",
+      "steep": "Technological",
+      "region": "Korea",
+      "hashtags": [
+        "포스코퓨처엠",
+        "음극재"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "양극재",
+      "published": "2026-06-26T08:20:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.359270+09:00"
     },
     {
       "id": "6d6eeb16bde2",
@@ -2634,6 +4708,22 @@
       "keyword": "배터리 재활용",
       "published": "2026-06-26T08:02:00+09:00",
       "collected_at": "2026-06-26T19:37:32.336496+09:00"
+    },
+    {
+      "id": "3cb2b5eaeefe",
+      "title": "[핀포인트] [아이에스동서] 환경사업, 성장엔진인가 재무부담인가…권민석표 폐배터리 전략 '시험대' - DealSite경제TV",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAteUhmTk1uVkNsWEpRRHJvYTdDNFVPdEVmRzRjWnBNLTRtazVKR1BGUnl6eTMyX3g4QUZvS2otbThzN2ZON1RkWTdUYXQ1Q05GdGd6VWpB?oc=5",
+      "summary": "[핀포인트] [아이에스동서] 환경사업, 성장엔진인가 재무부담인가…권민석표 폐배터리 전략 '시험대'  DealSite경제TV",
+      "steep": "Environmental",
+      "region": "Global",
+      "hashtags": [
+        "재활용"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "배터리 재활용",
+      "published": "2026-06-26T08:00:26+09:00",
+      "collected_at": "2026-06-27T18:14:25.364353+09:00"
     },
     {
       "id": "0279f8d39f2d",
@@ -2747,6 +4837,22 @@
       "collected_at": "2026-06-26T19:37:32.337021+09:00"
     },
     {
+      "id": "8a037beb78be",
+      "title": "[단독]삼성SDI, 포지나노와 협력...美서 배터리셀 생산·판매 - 더트래커",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5tTGxJOE5rbHpMUU5LUWFvbFVZQ1cxbHd6ZFVPVnhqNjlEVTItQ1lWMGpLMmtSbzNhUjhNdGt2TWFlMkZmOVJRd0hYckRfUk5vMG1CYVRRbWc?oc=5",
+      "summary": "[단독]삼성SDI, 포지나노와 협력...美서 배터리셀 생산·판매  더트래커",
+      "steep": "Uncategorized",
+      "region": "Korea",
+      "hashtags": [
+        "삼성SDI"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "이차전지",
+      "published": "2026-06-26T06:34:51+09:00",
+      "collected_at": "2026-06-27T18:14:25.356626+09:00"
+    },
+    {
       "id": "8e9962bf3df7",
       "title": "\"이러다 중소기업 줄줄이 망한다\"…한국 정부가 중국에 황급히 SOS 친 '진짜 이유' - car.withnews.kr",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBKMUx6Nkk3cTEzbXNPRjBQYVRmZ09laWtNNmdFaVFoZG5id1kyeVNxdjFmcWRHdlFlOGtPcW1QRjN6cklmSlFlcEtCR1JuS192WUF6WlZEb3VKS2NleDhqQ2NtdDQ0WVVHS2J5aXhMZDDSAXhBVV95cUxNY1B4RnUtRk04NVR4TDlHN0NNSUE5MktMMXB1U1U1RVBXSm5yTFYwUmtfU3YzejlRR1ZqRTVZZVo0dWY1bUZjYmt4M1ZvczVJMWRKREVxZ2oyME84VE1oQWNadnVmQzh1cE5nd3A4QnlIMXo2TEdaSlc?oc=5",
@@ -2792,6 +4898,22 @@
       "keyword": "ESS 에너지저장장치",
       "published": "2026-06-26T06:02:58+09:00",
       "collected_at": "2026-06-26T19:37:32.346428+09:00"
+    },
+    {
+      "id": "601164eef8cc",
+      "title": "태양광 급증과 ESS, K-배터리 기회 - 뉴스N연합",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE43dnBFRjl3a29GdVVMc0E4cFBYS0FGSXJGRjZXYlBZTjFSXzRINzRXYnZJaUpSX0hITjZLeVU1RFNKRXBoQlZ2SGdR?oc=5",
+      "summary": "태양광 급증과 ESS, K-배터리 기회  뉴스N연합",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "ESS"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-06-26T05:59:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.355538+09:00"
     },
     {
       "id": "e60760c98668",
@@ -2865,6 +4987,20 @@
       "collected_at": "2026-06-26T19:37:32.329352+09:00"
     },
     {
+      "id": "462478dcc514",
+      "title": "아테이오스, 배터리 PFAS 무함유 인증 획득 - 스포츠 피플 타임즈",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5MdEY4dXEzaG5MSmR3eldBcVdnclIzUkRwM0g4WVlnUGVZbHNEN3JRQ2ZVRnRsbXBvNkt5My0wd1BpRkZldW9GTHJZV2pFOEsyLVFqMFpGbHRpb25lMGN3VnlkV1ZjbUxHb0VTOVhsemxDVUpNVzBB0gF3QVVfeXFMTkx0Rjh1cTNobkxKZHd6V0FxV2dyUjNSRHAzSDhZWWdQZVlsc0Q3clFDZlVGdGxtcG82S3kzLTB3UGlGRmV1b0ZMcllXakU4SzItUWowWkZsdGlvbmUwY3dWeWRXVmNtTEdvRVM5WGx6bENVSk1XMEE?oc=5",
+      "summary": "아테이오스, 배터리 PFAS 무함유 인증 획득  스포츠 피플 타임즈",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [],
+      "score": 4,
+      "source": "구글",
+      "keyword": "양극재",
+      "published": "2026-06-26T04:11:20+09:00",
+      "collected_at": "2026-06-27T18:14:25.360300+09:00"
+    },
+    {
       "id": "17fbeebe73ac",
       "title": "‘2026 부산모빌리티쇼’ 개막, AI 융합된 미래 모빌리티 비전 제시..관...",
       "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=61899",
@@ -2881,6 +5017,37 @@
       "collected_at": "2026-06-26T19:37:32.324355+09:00"
     },
     {
+      "id": "6d470856a9c1",
+      "title": "포스코퓨처엠, LMR 양극재 개발 완료 - 아이뉴스24",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBia1J6SHU3ekVqYkxsMmpONWZVR19jc21OV1VIcWcxSFdXZnl6VW1RVEpaaDRhRzB1NGRsSmxCUFI3Y2NLd3F3c1Jzb0Y?oc=5",
+      "summary": "포스코퓨처엠, LMR 양극재 개발 완료  아이뉴스24",
+      "steep": "Technological",
+      "region": "Korea",
+      "hashtags": [
+        "포스코퓨처엠",
+        "양극재"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "양극재",
+      "published": "2026-06-26T01:05:53+09:00",
+      "collected_at": "2026-06-27T18:14:25.359586+09:00"
+    },
+    {
+      "id": "9edf053faf78",
+      "title": "印尼에 6000억원 투자… 배터리 소재 사업 본격 진출 - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWkswSzJ6bWJJbG1iQlVhSHVjSzFaRTUzNFFBeXNxTkk3LUtmdmhBMHhJVWh6UGpueTRIajk4NGVqNVBFYmtzMDFpbldpdHhnQjZFQ1JHb1ZrSld4TkZWNUxZdW9TTEN6T01DaVhFQXVCeDlsQTB5ZDNtRVZMSjdfMmJZc3RZbjlUVnpEX3ln?oc=5",
+      "summary": "印尼에 6000억원 투자… 배터리 소재 사업 본격 진출  조선일보",
+      "steep": "Economic",
+      "region": "Global",
+      "hashtags": [],
+      "score": 4,
+      "source": "구글",
+      "keyword": "양극재",
+      "published": "2026-06-26T00:30:00+09:00",
+      "collected_at": "2026-06-27T18:14:25.360011+09:00"
+    },
+    {
       "id": "c1a8e5d794e9",
       "title": "이차전지 배터리 아카데미...울산TP, 교육 수강생 모집 - 울산일보",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1mem1XdFN1UXQ2eGR2bGlRdTFyNzA3Z2RNelNnbGRIUmYyRjRlSElZRkVHOWZNc1NtcDg4YTRwTXE0aXFZdzViaE9QelhZOUY5U0cyS3lmTEhIUWdzdXdhVXJqNjcxczNCdUQxLVJR?oc=5",
@@ -2893,6 +5060,20 @@
       "keyword": "이차전지",
       "published": "2026-06-26T00:01:35+09:00",
       "collected_at": "2026-06-26T19:37:32.347644+09:00"
+    },
+    {
+      "id": "81f02b7451b7",
+      "title": "중국은 전기 자동차의 화재 및 폭발 위험을 줄이는 데 도움이 되는 배터리 기술을 개발하고 있습니다. - Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOVC1wcHQzTFpHR29SSzBNcU5WQjh4bXdBUWRpdndCODZkdWd6S1kzem5vVXpiNVRBdFRuTnhsOFpjbnBiUGJJSHlPd3ZwZmNCMnZNT2kxVDktU1NoNF92WW1pRXo0TEJ6a2w3QlFDR3h1MWlWTTBTZllqVmVYMHVMWDdwVG81M0NKamFzWlVSUTIyYU9Zb3E4azVn?oc=5",
+      "summary": "중국은 전기 자동차의 화재 및 폭발 위험을 줄이는 데 도움이 되는 배터리 기술을 개발하고 있습니다. Vietnam.vn",
+      "steep": "Technological",
+      "region": "China",
+      "hashtags": [],
+      "score": 4,
+      "source": "구글",
+      "keyword": "리튬이온 배터리",
+      "published": "2026-06-25T23:35:52+09:00",
+      "collected_at": "2026-06-27T18:14:25.359052+09:00"
     },
     {
       "id": "490c6ca5de13",
@@ -3178,6 +5359,22 @@
       "collected_at": "2026-06-25T19:25:10.008966+09:00"
     },
     {
+      "id": "1fcb329478db",
+      "title": "\"전기차 인기 지속…관련株 장기 관심 필요\" - 아이뉴스24",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFA0UDVkLUtpai1COURWSUdOa2pIeVFWempnWjljU0lRc1BzZ0VYbTdvZS1CVlRqVzQ1ZWJFaEd5QXRjOW1uSktoTXUxQQ?oc=5",
+      "summary": "\"전기차 인기 지속…관련株 장기 관심 필요\"  아이뉴스24",
+      "steep": "Uncategorized",
+      "region": "Global",
+      "hashtags": [
+        "전기차"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "전기차 배터리",
+      "published": "2026-06-25T18:29:55+09:00",
+      "collected_at": "2026-06-27T18:14:25.352467+09:00"
+    },
+    {
       "id": "6535dcf5cb65",
       "title": "[단독] 데이터센터 러시에 전력수요 전망치 상향 추진",
       "url": "https://www.hankyung.com/article/2026062586031",
@@ -3239,6 +5436,23 @@
       "keyword": "이차전지",
       "published": "2026-06-25T18:24:00+09:00",
       "collected_at": "2026-06-25T19:25:10.012785+09:00"
+    },
+    {
+      "id": "fbbf0332f158",
+      "title": "전기차서 버려지는 폐배터리 5년 후 20배 급증…체계적 자원화 ‘시동’ - 서울신문",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE51ZUoyU003SDlFVm9HYUxCZDZiaTFEb2UzSzY2Sl9Gbi1hemxJa0tUM21ZRXJ6d3pGZ1JBa3h1U0xESE90T2VLZzF6b1p5cHhhSTdlaG9iMA?oc=5",
+      "summary": "전기차서 버려지는 폐배터리 5년 후 20배 급증…체계적 자원화 ‘시동’  서울신문",
+      "steep": "Environmental",
+      "region": "Global",
+      "hashtags": [
+        "전기차",
+        "재활용"
+      ],
+      "score": 4,
+      "source": "구글",
+      "keyword": "배터리 재활용",
+      "published": "2026-06-25T18:22:05+09:00",
+      "collected_at": "2026-06-27T18:14:25.363511+09:00"
     },
     {
       "id": "387d952d4696",
