@@ -6,7 +6,7 @@
 <title>Battery Intel · 분석실</title>
 <style>
   :root{
-    --bg:#0b1018; --ink:#e8edf7; --muted:#8a96b3; --accent:#22d3ee;
+    --bg:#eef7f9; --ink:#1f3a44; --muted:#6b8b95; --accent:#5bc8d8;
     --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   }
   *{box-sizing:border-box}
@@ -14,7 +14,7 @@
     font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
     overflow:hidden}
   header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;
-    gap:14px;padding:12px 18px;background:linear-gradient(180deg,rgba(11,16,24,.92),transparent)}
+    gap:14px;padding:12px 18px;background:linear-gradient(180deg,rgba(238,247,249,.95),transparent)}
   .logo{font-weight:800;font-size:16px}.logo span{color:var(--accent)}
   .tag{font:600 11px/1 var(--mono);letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
   .spacer{flex:1}
@@ -22,8 +22,8 @@
     border:1px solid var(--accent);padding:8px 14px;border-radius:8px}
   .back:hover{background:rgba(34,211,238,.22)}
   .hint{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:10;
-    font:500 12px/1 var(--mono);color:var(--muted);background:rgba(11,16,24,.7);
-    padding:8px 14px;border-radius:20px;border:1px solid #27304a}
+    font:500 12px/1 var(--mono);color:var(--muted);background:rgba(255,255,255,.85);
+    padding:8px 14px;border-radius:20px;border:1px solid #bce0e7}
   #stage{width:100vw;height:100vh;display:block;image-rendering:pixelated}
   .legend{position:fixed;top:54px;left:18px;z-index:10;display:flex;flex-direction:column;gap:5px}
   .legend .it{font:600 11px/1 var(--mono);color:var(--muted);display:flex;align-items:center;gap:6px}
@@ -88,7 +88,7 @@ function drawChar(a, walking, t){
   ctx.save();
   ctx.translate(x, y+bob);
   // 그림자
-  ctx.fillStyle="rgba(0,0,0,.35)";
+  ctx.fillStyle="rgba(31,58,68,.18)";
   ctx.beginPath();ctx.ellipse(0,12*s/2,7*s/2,2.4*s/2,0,0,6.28);ctx.fill();
   // 몸 (권역색 셔츠)
   ctx.fillStyle=a.color;
@@ -125,17 +125,17 @@ function drawFloor(){
   const tile=32;
   for(let gy=40;gy<H;gy+=tile)for(let gx=0;gx<W;gx+=tile){
     const odd=((gx/tile|0)+(gy/tile|0))%2;
-    ctx.fillStyle=odd?"#10202b":"#0d1a23";
+    ctx.fillStyle=odd?"#e6f3f6":"#eef7f9";
     ctx.fillRect(gx,gy,tile,tile);
   }
   // 중앙 러그 (팀장 구역 강조)
   const cx=W/2, cy=H/2, rw=Math.min(W,H)*0.34;
-  ctx.fillStyle="rgba(52,211,153,.06)";
-  ctx.strokeStyle="rgba(52,211,153,.25)";ctx.lineWidth=2;
+  ctx.fillStyle="rgba(127,212,184,.12)";
+  ctx.strokeStyle="rgba(127,212,184,.4)";ctx.lineWidth=2;
   roundRect(cx-rw,cy-rw*0.7,rw*2,rw*1.4,14);ctx.fill();ctx.stroke();
   // 상단 벽 띠
-  ctx.fillStyle="#161d2e";ctx.fillRect(0,40,W,16);
-  ctx.fillStyle="#27304a";ctx.fillRect(0,54,W,3);
+  ctx.fillStyle="#d3ebf0";ctx.fillRect(0,40,W,16);
+  ctx.fillStyle="#bce0e7";ctx.fillRect(0,54,W,3);
 }
 
 // ── 말풍선 ──
@@ -152,13 +152,13 @@ function bubble(a){
   let bx=x-bw/2, by=y-bh;
   bx=Math.max(8,Math.min(W-bw-8,bx)); by=Math.max(48,by);
   // 박스
-  ctx.fillStyle="rgba(16,24,38,.97)";ctx.strokeStyle=a.color;ctx.lineWidth=2;
+  ctx.fillStyle="rgba(255,255,255,.98)";ctx.strokeStyle=a.color;ctx.lineWidth=2;
   roundRect(bx,by,bw,bh,8);ctx.fill();ctx.stroke();
   // 이름줄
   ctx.fillStyle=a.color;ctx.font="700 12px ui-monospace,monospace";
   ctx.textAlign="left";ctx.fillText(`${a.flag} ${a.name}`,bx+pad,by+pad+10);
   // 본문
-  ctx.fillStyle="#e8edf7";ctx.font="13px ui-sans-serif,sans-serif";
+  ctx.fillStyle="#1f3a44";ctx.font="13px ui-sans-serif,sans-serif";
   lines.forEach((ln,i)=>ctx.fillText(ln,bx+pad,by+pad+28+i*lh));
 }
 function roundRect(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);
