@@ -75,15 +75,25 @@ def make_summary(desc: str, cfg_sum: dict) -> str:
     return (out[:mc] + "…") if len(out) > mc else out
 
 
-def classify_steep(text: str, steep_dict: dict) -> str:
-    """가장 많이 매칭된 카테고리. 동점이면 사전 정의 순서 우선."""
+def classify_pick(text: str, cat_dict: dict, default: str = "Etc") -> str:
+    """가장 많이 매칭된 카테고리 하나(대표). 없으면 default."""
     t = text.lower()
-    best, best_n = "Uncategorized", 0
-    for cat, words in steep_dict.items():
+    best, best_n = default, 0
+    for cat, words in (cat_dict or {}).items():
         n = sum(1 for w in words if w.lower() in t)
         if n > best_n:
             best, best_n = cat, n
     return best
+
+
+def extract_celltypes(text: str, cell_dict: dict) -> list:
+    """해당되는 셀타입 뱃지 모두(중복 없이). 없으면 빈 리스트."""
+    t = text.lower()
+    out = []
+    for name, variants in (cell_dict or {}).items():
+        if any(v.lower() in t for v in variants):
+            out.append(name)
+    return out
 
 
 def classify_region(text: str, region_dict: dict) -> str:
@@ -117,15 +127,17 @@ def extract_hashtags(text: str, tag_dict: dict) -> list:
 
 
 def score_importance(text: str, region: str, sc: dict) -> int:
-    """사용자 채점 학습 기반 중요도 점수(1~5)."""
+    """재직자 관점 중요도 점수(1~5). 실무 직결일수록 높음."""
     if not sc:
         return 3
     t = text.lower()
     def has(words):
         return any(w.lower() in t for w in (words or []))
     s = float(sc.get("base", 3))
-    if has(sc.get("pos_strong")):
-        s += 2
+    if has(sc.get("pos_top")):
+        s += 2.5
+    elif has(sc.get("pos_strong")):
+        s += 1.5
     elif has(sc.get("pos_med")):
         s += 1
     elif "배터리" in t or "이차전지" in t:
@@ -220,7 +232,9 @@ def collect(cfg):
         if cfg["sources"]["google"].get("enabled"):
             raw += fetch_google(kw, cfg["sources"]["google"])
 
-    steep_dict = cfg.get("steep", {})
+    app_dict = cfg.get("application", {})
+    mat_dict = cfg.get("material", {})
+    cell_dict = cfg.get("celltype", {})
     region_dict = cfg.get("regions", {})
     tag_dict = cfg.get("hashtags", {})
     scoring = cfg.get("scoring", {})
@@ -263,8 +277,10 @@ def collect(cfg):
             "title": it["title"],
             "url": it["url"],
             "summary": make_summary(it["desc"], cfg_sum),
-            "steep": classify_steep(text, steep_dict),
             "region": region,
+            "application": classify_pick(text, app_dict),
+            "material": classify_pick(text, mat_dict),
+            "celltypes": extract_celltypes(text, cell_dict),
             "hashtags": extract_hashtags(text, tag_dict),
             "score": score_importance(text, region, scoring),
             "source": it["source"],
