@@ -37,14 +37,26 @@ def append_markdown(md_path, fresh):
         return
     new_file = not os.path.exists(md_path)
     os.makedirs(os.path.dirname(md_path), exist_ok=True)
+
+    region_ko = {"Korea": "한국", "China": "중국", "Japan": "일본",
+                 "NorthAmerica": "북미", "Europe": "유럽", "Global": "글로벌"}
+    app_ko = {"EV": "전기차", "ESS": "ESS", "SmallIT": "소형·IT",
+              "Micromobility": "e-모빌리티", "Etc": "기타"}
+    mat_ko = {"Cathode": "양극재", "Anode": "음극재", "ElyteSep": "전해질·분리막",
+              "CellPack": "셀·팩", "RawMaterial": "원자재", "Etc": "기타"}
+
     with open(md_path, "a", encoding="utf-8") as f:
         if new_file:
             f.write("# 배터리 뉴스 아카이브\n\n")
-            f.write("| 일시 | STEEP | 출처 | 제목 | 요약 |\n")
-            f.write("|---|---|---|---|---|\n")
+            f.write("| 일시 | 점수 | 권역 | Application | 소재 | 출처 | 제목 | 요약 |\n")
+            f.write("|---|---|---|---|---|---|---|---|\n")
         for a in fresh:
             pub = (a.get("published") or "")[:16].replace("T", " ")
             title = a["title"].replace("|", "\\|")
-            summ = a["summary"].replace("|", "\\|")
-            f.write(f"| {pub} | {a['steep']} | {a['source']} | "
-                    f"[{title}]({a['url']}) | {summ} |\n")
+            summ = (a.get("summary") or "").replace("|", "\\|")
+            score = a.get("score", "")
+            region = region_ko.get(a.get("region", ""), a.get("region", ""))
+            appl = app_ko.get(a.get("application", ""), a.get("application", ""))
+            mat = mat_ko.get(a.get("material", ""), a.get("material", ""))
+            f.write(f"| {pub} | {score} | {region} | {appl} | {mat} | "
+                    f"{a['source']} | [{title}]({a['url']}) | {summ} |\n")
