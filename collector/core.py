@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""뉴스 수집 · 중복제거 · STEEP 분류 · 요약 (규칙기반)."""
+"""뉴스 수집 · 중복제거 · 권역·Application·소재 분류 · 요약 (규칙기반)."""
 
 import os
 import re
@@ -19,8 +19,21 @@ import feedparser
 KST = dt.timezone(dt.timedelta(hours=9))
 
 # 제목 유사도 임계값. 높을수록 "거의 똑같아야" 중복으로 봄(보수적),
-# 낮을수록 "비슷하면" 중복으로 봄(적극적). 0.72 = 적극적 제거.
-TITLE_SIM_THRESHOLD = 0.72
+# 낮을수록 "비슷하면" 중복으로 봄(적극적). 0.60 = 강하게 제거.
+TITLE_SIM_THRESHOLD = 0.60
+
+# 같은 사건 판정용 사전 (회사명 + 핵심명사)
+DEDUP_COMPANIES = [
+    "에코프로비엠", "에코프로", "LG에너지솔루션", "LG엔솔", "삼성SDI", "SK온",
+    "SK이노베이션", "포스코퓨처엠", "포스코", "엘앤에프", "LG화학",
+    "CATL", "BYD", "비야디", "테슬라", "토요타", "도요타", "파나소닉",
+    "노스볼트", "고려아연", "리비안", "폭스바겐",
+]
+DEDUP_KEYNOUNS = [
+    "니켈", "리튬", "코발트", "망간", "양극재", "음극재", "전해질", "분리막",
+    "전고체", "ESS", "배전망", "수주", "유증", "인니", "인도네시아",
+    "증설", "합작", "공장", "리콜", "RAV4", "라브4", "신차",
+]
 
 
 def normalize_title(t: str) -> str:
@@ -28,12 +41,49 @@ def normalize_title(t: str) -> str:
     t = t or ""
     t = re.sub(r"\[[^\]]*\]", "", t)   # [속보] [단독] 등
     t = re.sub(r"\([^)]*\)", "", t)    # (종합) (영상) 등
+    t = re.sub(r"\s*-\s*[\w.가-힣]+$", "", t)  # 끝 매체명 "- 더구루"
     t = re.sub(r"[^0-9a-z가-힣]", "", t.lower())  # 한글·영문·숫자만 남김
     return t
 
 
 def title_similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, a, b).ratio()
+
+
+def event_signature(title: str):
+    """제목에서 '사건 지문'을 뽑음: 대표회사 + 숫자 + 핵심명사들."""
+    comp = [c for c in DEDUP_COMPANIES if c in title]
+    nums = re.findall(r"\d+만|\d+억|\d+톤|\d+%|\d+\.\d+", title)
+    nouns = [n for n in DEDUP_KEYNOUNS if n in title]
+    sig = set()
+    rep_comp = None
+    if comp:
+        rep_comp = comp[0]
+        # 계열사 표기를 그룹명으로 통일 (에코프로비엠→에코프로, LG엔솔→LG에너지솔루션)
+        if "에코프로" in rep_comp:
+            rep_comp = "에코프로"
+        elif rep_comp in ("LG엔솔",):
+            rep_comp = "LG에너지솔루션"
+        elif rep_comp == "비야디":
+            rep_comp = "BYD"
+        elif rep_comp == "도요타":
+            rep_comp = "토요타"
+        sig.add(rep_comp)
+    sig.update(nouns[:3])
+    if nums:
+        sig.add(nums[0])
+    return sig, rep_comp
+
+
+def is_same_event(title_a, norm_a, sig_a, comp_a,
+                  title_b, norm_b, sig_b, comp_b) -> bool:
+    """두 기사가 같은 사건인지: 유사도 또는 (같은 회사 + 핵심 2개 이상 공유)."""
+    if title_similarity(norm_a, norm_b) >= TITLE_SIM_THRESHOLD:
+        return True
+    if comp_a and comp_b and comp_a == comp_b:
+        if len(sig_a & sig_b) >= 2:
+            return True
+    return False
 
 
 def _source_rank(src: str) -> int:
@@ -261,10 +311,19 @@ def collect(cfg):
     kept = []
     for it in by_url:
         nt = normalize_title(it["title"])
-        if any(title_similarity(nt, k["_nt"]) >= TITLE_SIM_THRESHOLD
-               for k in kept):
+        sig, comp = event_signature(it["title"])
+        dup = False
+        for k in kept:
+            if is_same_event(it["title"], nt, sig, comp,
+                             k["_title"], k["_nt"], k["_sig"], k["_comp"]):
+                dup = True
+                break
+        if dup:
             continue
         it["_nt"] = nt
+        it["_sig"] = sig
+        it["_comp"] = comp
+        it["_title"] = it["title"]
         kept.append(it)
 
     # 3단계: 최종 항목 구성
