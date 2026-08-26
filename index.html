@@ -115,6 +115,14 @@
   .rgn{font:600 11px/1 var(--mono);padding:5px 8px;border-radius:7px;background:#f0f6f8;color:var(--muted)}
   .htag{font:500 11px/1 var(--mono);color:var(--accent);cursor:pointer}
   .htag:hover{text-decoration:underline}
+  .compbadge{font:600 10.5px/1 var(--mono);padding:5px 8px;border-radius:7px;
+    background:#eef6f9;color:#4a8fa0;border:1px solid #d3e8ee;cursor:pointer}
+  .compbadge:hover{border-color:var(--accent);color:var(--accent)}
+  .entag{font:700 9.5px/1 var(--mono);padding:4px 6px;border-radius:5px;
+    background:#eaf0fb;color:#5b7fd0;border:1px solid #d3ddf5;letter-spacing:.05em}
+  .stagegrp{margin:8px 0 4px}
+  .stagelbl{font:600 10.5px/1 var(--mono);color:var(--muted);padding:4px 9px;letter-spacing:.03em}
+  .opt.comp{padding-left:16px;font-size:12.5px}
   .src{font:500 12px/1 var(--mono);color:var(--muted)}
   .score{font:600 12px/1 var(--mono);letter-spacing:1px}
   .empty,.loading{text-align:center;color:var(--muted);padding:60px 0;font-size:14px}
@@ -159,6 +167,8 @@
       <div id="appBox"></div>
       <h4>소재</h4>
       <div id="matBox"></div>
+      <h4>회사 (밸류체인)</h4>
+      <div id="compBox"></div>
       <h4>기간</h4>
       <select id="yearSel"><option value="">전체 연도</option></select>
       <select id="monthSel"><option value="">전체 월</option></select>
@@ -185,7 +195,11 @@
 const ACCESS_KEY="battery2026";
 const GITHUB_REPO="dongiljeffjang-ux/battery-news";
 const GITHUB_BRANCH="main";
-const DATA_URL=`https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/data/news.json`;
+// Vercel serves the repository files directly; GitHub Pages keeps using the
+// raw GitHub URL because it is the existing Actions deployment target.
+const DATA_URL=location.hostname.endsWith('.vercel.app')||location.hostname.endsWith('.vercel.sh')
+  ? '/data/news.json'
+  : `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/data/news.json`;
 
 const REGIONS=[["all","전체"],["Korea","🇰🇷 한국"],["China","🇨🇳 중국"],
   ["Japan","🇯🇵 일본"],["NorthAmerica","🇺🇸 북미"],["Europe","🇪🇺 유럽"],["Global","🌐 글로벌"]];
@@ -198,8 +212,14 @@ const APP_COL=Object.fromEntries(APPS.map(a=>[a[0],a[2]]));
 const MATS=[["Cathode","양극재"],["Anode","음극재"],["ElyteSep","전해질·분리막"],
   ["CellPack","셀·팩"],["RawMaterial","원자재"],["Etc","기타"]];
 const MAT_KO=Object.fromEntries(MATS.map(m=>[m[0],m[1]]));
+// 밸류체인 단계: [key, 라벨, 아이콘]
+const STAGES=[["Mineral","광물·제련","⛏️"],["Precursor","전구체","🧪"],
+  ["Competitor","경쟁사","🏭"],["Cell","셀사","🔋"],
+  ["Automaker","완성차","🚗"],["Recycle","재활용","♻️"]];
+const STAGE_KO=Object.fromEntries(STAGES.map(s=>[s[0],s[1]]));
+const STAGE_ICON=Object.fromEntries(STAGES.map(s=>[s[0],s[2]]));
 
-let DATA=[], fApp=null, fSrc="all", fRegion="all", fMat=null,
+let DATA=[], fApp=null, fSrc="all", fRegion="all", fMat=null, fComp=null,
     fYear="", fMonth="", fTag=null, query="";
 let tierOpen={highRest:false, mid:false, low:false};
 
@@ -210,7 +230,11 @@ function appOf(a){return a.application||"Etc";}
 function matOf(a){return a.material||"Etc";}
 function cellsOf(a){return Array.isArray(a.celltypes)?a.celltypes:[];}
 function tagsOf(a){return Array.isArray(a.hashtags)?a.hashtags:[];}
+function compsOf(a){return Array.isArray(a.companies)?a.companies:[];}
+function compNames(a){return compsOf(a).map(c=>c.name);}
 function scoreOf(a){return typeof a.score==='number'?a.score:3;}
+function isEn(a){return a.lang==='en';}
+
 
 function freshness(iso){
   if(!iso)return "갱신 시각 미상";
@@ -276,6 +300,26 @@ function buildSidebar(){
   document.querySelectorAll('[data-mat]').forEach(b=>b.onclick=()=>{
     const k=b.dataset.mat;fMat=(k==="__all")?null:(fMat===k?null:k);buildSidebar();renderSumm();render();});
 
+  // 회사 필터 (밸류체인 단계별 그룹). 데이터에 등장한 회사만 노출.
+  const compCount={};
+  DATA.forEach(a=>compsOf(a).forEach(c=>{
+    compCount[c.name]=compCount[c.name]||{n:0,stage:c.stage};
+    compCount[c.name].n++;}));
+  const byStage={};
+  Object.entries(compCount).forEach(([name,info])=>{
+    (byStage[info.stage]=byStage[info.stage]||[]).push([name,info.n]);});
+  let compHTML=`<button class="opt ${fComp===null?'on':''}" data-comp="__all">전체 회사<span class="ct">${DATA.length}</span></button>`;
+  STAGES.forEach(([key,label,icon])=>{
+    const list=(byStage[key]||[]).sort((a,b)=>b[1]-a[1]);
+    if(!list.length)return;
+    compHTML+=`<div class="stagegrp"><div class="stagelbl">${icon} ${label}</div>`+
+      list.map(([name,n])=>`<button class="opt comp ${fComp===name?'on':''}" data-comp="${esc(name)}">${esc(name)}<span class="ct">${n}</span></button>`).join('')+
+      `</div>`;
+  });
+  document.getElementById('compBox').innerHTML=compHTML;
+  document.querySelectorAll('[data-comp]').forEach(b=>b.onclick=()=>{
+    const k=b.dataset.comp;fComp=(k==="__all")?null:(fComp===k?null:k);buildSidebar();renderSumm();render();});
+
   const years=[...new Set(DATA.map(a=>(a.published||'').slice(0,4)).filter(Boolean))].sort().reverse();
   const ySel=document.getElementById('yearSel');
   ySel.innerHTML='<option value="">전체 연도</option>'+years.map(y=>`<option value="${y}">${y}년</option>`).join('');
@@ -296,7 +340,7 @@ function buildSidebar(){
     const t=b.dataset.tag;fTag=fTag===t?null:t;buildSidebar();renderSumm();render();});
 }
 document.getElementById('clearAll').onclick=()=>{
-  fApp=null;fSrc="all";fRegion="all";fMat=null;fYear="";fMonth="";fTag=null;query="";
+  fApp=null;fSrc="all";fRegion="all";fMat=null;fComp=null;fYear="";fMonth="";fTag=null;query="";
   document.getElementById('q').value="";
   document.querySelectorAll('.toolbar .tagbtn').forEach(x=>x.classList.remove('on'));
   document.querySelector('.toolbar .tagbtn[data-src="all"]').classList.add('on');
@@ -306,6 +350,7 @@ document.getElementById('clearAll').onclick=()=>{
 function pass(a){
   if(fApp&&appOf(a)!==fApp)return false;
   if(fMat&&matOf(a)!==fMat)return false;
+  if(fComp&&!compNames(a).includes(fComp))return false;
   if(fSrc!=="all"&&a.source!==fSrc)return false;
   if(fRegion!=="all"&&rOf(a)!==fRegion)return false;
   if(fTag&&!tagsOf(a).includes(fTag))return false;
@@ -322,6 +367,7 @@ function renderSumm(){
     if(fSrc!=="all"&&a.source!==fSrc)return false;
     if(fRegion!=="all"&&rOf(a)!==fRegion)return false;
     if(fMat&&matOf(a)!==fMat)return false;
+    if(fComp&&!compNames(a).includes(fComp))return false;
     if(fTag&&!tagsOf(a).includes(fTag))return false;
     const pub=a.published||"";
     if(fYear&&pub.slice(0,4)!==fYear)return false;
@@ -349,19 +395,25 @@ function artHTML(a, rank){
   const sc=scoreOf(a), stars="★".repeat(sc)+"☆".repeat(5-sc);
   const scol=sc>=4?"#f0a500":sc<=2?"#b8c8ce":"#8bb0bb";
   const cells=cellsOf(a).map(c=>`<span class="badge2">${esc(c)}</span>`).join("");
+  // 회사 뱃지 (밸류체인 단계 아이콘 + 회사명, 클릭 시 필터)
+  const comps=compsOf(a).map(c=>
+    `<span class="compbadge" data-jcomp="${esc(c.name)}" title="${STAGE_KO[c.stage]||''}">${STAGE_ICON[c.stage]||''} ${esc(c.name)}</span>`).join("");
   const tags=tagsOf(a).map(t=>`<span class="htag" data-jtag="${esc(t)}">#${esc(t)}</span>`).join(" ");
   const rankBadge=rank?`<span class="rank">${rank}</span>`:"";
+  const enTag=isEn(a)?`<span class="entag">EN</span>`:"";
   return `<article class="art" style="border-left-color:${col};${sc<=2?'opacity:.78':''}">
     <div class="arthead">${rankBadge}
       <a class="tt" href="${a.url}" target="_blank" rel="noopener">${esc(a.title)}</a></div>
     <div class="sm">${esc(a.summary||"")}</div>
     <div class="row">
       <span class="score" style="color:${scol}" title="중요도 ${sc}/5">${stars}</span>
+      ${enTag}
       <span class="pill" style="background:${col}22;color:${col}">${appko}</span>
       ${matko&&matK!=="Etc"?`<span class="rgn">${matko}</span>`:""}
       ${cells}
       <span class="rgn">${rgn}</span>
       <span class="src">${a.source} · ${day} ${pub}</span>
+      ${comps?'<span style="flex-basis:100%;height:0"></span>'+comps:''}
       ${tags?'<span style="flex-basis:100%;height:0"></span>'+tags:''}
     </div></article>`;
 }
@@ -428,6 +480,9 @@ function bindAll(){
     const t=el.dataset.tier;tierOpen[t]=!tierOpen[t];render();});
   document.querySelectorAll('[data-jtag]').forEach(el=>el.onclick=()=>{
     fTag=el.dataset.jtag;buildSidebar();renderSumm();render();
+    window.scrollTo({top:0,behavior:'smooth'});});
+  document.querySelectorAll('[data-jcomp]').forEach(el=>el.onclick=()=>{
+    fComp=el.dataset.jcomp;buildSidebar();renderSumm();render();
     window.scrollTo({top:0,behavior:'smooth'});});
 }
 
