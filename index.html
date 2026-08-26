@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>배터리 뉴스 대시보드</title>
+<style>
+  :root{
+    --bg:#ffffff; --panel:#f5fbfd; --panel2:#eef8fb; --line:#dbeef2;
+    --ink:#1f3a44; --muted:#6b8b95; --accent:#5bc8d8; --accent2:#7fd4b8;
+    --danger:#f0929e;
+    --EV:#5bc8d8; --ESS:#7fd4b8; --SmallIT:#b3a6e8; --Micro:#f5c99b; --Etc:#aebfc6;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+
+  /* 게이트 */
+  #gate{min-height:100vh;display:grid;place-items:center;padding:24px;
+    background:radial-gradient(1000px 600px at 75% -15%, rgba(91,200,216,.14), transparent),
+      radial-gradient(800px 500px at 15% 110%, rgba(127,212,184,.12), transparent), var(--bg)}
+  .card{width:100%;max-width:380px;background:#ffffff;border:1px solid var(--line);
+    border-radius:20px;padding:36px 32px;box-shadow:0 20px 50px rgba(91,200,216,.15)}
+  .badge{font:600 12px/1 var(--mono);letter-spacing:.18em;color:var(--accent);text-transform:uppercase}
+  .card h1{font-size:22px;margin:14px 0 4px}
+  .card p.sub{color:var(--muted);font-size:13px;margin:0 0 26px}
+  .card label{display:block;font-size:12px;color:var(--muted);margin:0 0 7px}
+  .card input{width:100%;padding:13px 14px;background:#f7fcfd;color:var(--ink);
+    border:1px solid var(--line);border-radius:12px;font-size:15px;outline:none}
+  .card input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(91,200,216,.18)}
+  .card button{width:100%;margin-top:18px;padding:13px;border:0;border-radius:12px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));color:#ffffff;font-weight:700;font-size:15px;cursor:pointer}
+  .err{color:var(--danger);font-size:13px;margin-top:14px;min-height:18px}
+
+  #app{display:none}
+  header{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);
+    background:rgba(255,255,255,.85);border-bottom:1px solid var(--line);
+    padding:13px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:17px}.logo span{color:var(--accent)}
+  .meta{font:500 12px/1 var(--mono);color:var(--muted)}
+  .spacer{flex:1}
+  .btn{font-size:12px;color:var(--muted);background:#ffffff;border:1px solid var(--line);
+    padding:7px 12px;border-radius:9px;cursor:pointer;text-decoration:none}
+  .btn:hover{color:var(--accent);border-color:var(--accent);background:#f2fbfc}
+  .btn.spin{opacity:.6;pointer-events:none}
+  .notice{display:flex;align-items:center;gap:9px;max-width:1240px;margin:0 auto;
+    padding:11px 20px;font-size:12.5px;color:var(--muted);
+    background:linear-gradient(90deg,rgba(91,200,216,.08),rgba(127,212,184,.06));border-bottom:1px solid var(--line)}
+  .notice b{color:var(--ink);font-weight:650}
+  .notice .dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);flex:none;
+    box-shadow:0 0 0 3px rgba(127,212,184,.25)}
+
+  .wrap{display:grid;grid-template-columns:240px 1fr;gap:0;max-width:1240px;margin:0 auto}
+  aside{border-right:1px solid var(--line);padding:20px 16px;min-height:calc(100vh - 52px)}
+  aside h4{font:600 11px/1 var(--mono);letter-spacing:.1em;color:var(--muted);
+    text-transform:uppercase;margin:22px 0 10px}
+  aside h4:first-child{margin-top:0}
+  .opt{display:block;width:100%;text-align:left;font-size:13px;color:var(--ink);
+    background:none;border:0;padding:7px 9px;border-radius:9px;cursor:pointer;margin-bottom:2px}
+  .opt:hover{background:var(--panel2)}
+  .opt.on{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#ffffff;font-weight:600}
+  .opt .ct{float:right;color:var(--muted);font:500 11px/1.5 var(--mono)}
+  .opt.on .ct{color:rgba(255,255,255,.85)}
+  select{width:100%;padding:8px 10px;background:#ffffff;color:var(--ink);
+    border:1px solid var(--line);border-radius:9px;font-size:13px;margin-bottom:8px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tagbtn{font:600 11px/1 var(--mono);padding:6px 9px;border-radius:14px;
+    border:1px solid var(--line);color:var(--muted);background:#ffffff;cursor:pointer}
+  .tagbtn:hover{color:var(--accent);border-color:var(--accent)}
+  .tagbtn.on{background:var(--accent);color:#ffffff;border-color:var(--accent)}
+  .clear{font-size:12px;color:var(--accent);background:none;border:0;cursor:pointer;margin-top:6px;padding:4px}
+
+  .content{padding:22px 22px 60px}
+  .summ{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:22px}
+  .scell{background:#ffffff;border:1px solid var(--line);border-radius:14px;padding:12px 13px;cursor:pointer;
+    transition:transform .12s,box-shadow .12s,border-color .12s;box-shadow:0 2px 8px rgba(91,200,216,.06)}
+  .scell:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(91,200,216,.14)}.scell.active{border-color:var(--accent)}
+  .scell .top{display:flex;justify-content:space-between;align-items:baseline}
+  .scell .name{font-size:11px;color:var(--muted)}.scell .num{font:700 19px/1 var(--mono);color:var(--ink)}
+  .bar{height:5px;border-radius:4px;background:#eaf5f8;margin-top:9px;overflow:hidden}
+  .bar>i{display:block;height:100%;border-radius:4px;transition:width .5s ease}
+  .toolbar{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+  .toolbar input{flex:1;min-width:180px;padding:10px 13px;background:#ffffff;
+    border:1px solid var(--line);border-radius:11px;color:var(--ink);font-size:14px}
+  .toolbar input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(91,200,216,.14)}
+  .count{font:500 12px/1 var(--mono);color:var(--muted);margin-bottom:12px}
+  .linkbtn{background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline}
+  .tier{margin-bottom:22px}
+  .tierhdr{display:flex;align-items:center;gap:9px;width:100%;text-align:left;
+    font-size:15px;font-weight:700;color:var(--ink);padding:12px 15px;border-radius:12px;
+    background:#ffffff;border:1px solid var(--line);cursor:pointer;margin-bottom:10px}
+  .tierhdr.top{background:linear-gradient(90deg,#fff6e9,#fffaf2);border-color:#f5d9a8;
+    cursor:default;font-size:16px}
+  .tierhdr.top .ticon{font-size:18px}
+  .tierhdr.top .tsub{margin-left:auto;font:500 12px/1 var(--mono);color:#c89a54;font-weight:500}
+  .tierhdr.sub2{background:linear-gradient(90deg,#eefaf7,#ffffff);border-color:rgba(127,212,184,.4)}
+  .tierhdr.sub{color:var(--muted)}
+  .tierhdr .arrow{color:var(--accent);font-size:11px}
+  .tierhdr .tcount{margin-left:auto;font:500 12px/1 var(--mono);color:var(--muted)}
+  .tbody{display:flex;flex-direction:column;gap:11px}
+  .arthead{display:flex;align-items:flex-start;gap:9px}
+  .rank{flex:none;width:24px;height:24px;border-radius:8px;display:grid;place-items:center;
+    font:700 13px/1 var(--mono);color:#ffffff;
+    background:linear-gradient(135deg,#f5b942,#f0a500);margin-top:1px}
+  .art{background:#ffffff;border:1px solid var(--line);border-radius:14px;
+    padding:15px 17px;border-left:4px solid var(--Etc);box-shadow:0 2px 8px rgba(91,200,216,.05)}
+  .art:hover{box-shadow:0 6px 16px rgba(91,200,216,.12)}
+  .art a.tt{color:var(--ink);font-weight:650;font-size:15.5px;text-decoration:none;line-height:1.4}
+  .art a.tt:hover{color:var(--accent)}
+  .art .sm{color:var(--muted);font-size:13px;margin:7px 0 9px;line-height:1.55}
+  .art .row{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+  .pill{font:600 10.5px/1 var(--mono);padding:5px 8px;border-radius:7px;letter-spacing:.04em}
+  .badge2{font:600 10px/1 var(--mono);padding:4px 7px;border-radius:6px;background:#eef9f4;color:#4bbf9a;border:1px solid rgba(127,212,184,.35)}
+  .rgn{font:600 11px/1 var(--mono);padding:5px 8px;border-radius:7px;background:#f0f6f8;color:var(--muted)}
+  .htag{font:500 11px/1 var(--mono);color:var(--accent);cursor:pointer}
+  .htag:hover{text-decoration:underline}
+  .compbadge{font:600 10.5px/1 var(--mono);padding:5px 8px;border-radius:7px;
+    background:#eef6f9;color:#4a8fa0;border:1px solid #d3e8ee;cursor:pointer}
+  .compbadge:hover{border-color:var(--accent);color:var(--accent)}
+  .entag{font:700 9.5px/1 var(--mono);padding:4px 6px;border-radius:5px;
+    background:#eaf0fb;color:#5b7fd0;border:1px solid #d3ddf5;letter-spacing:.05em}
+  .stagegrp{margin:8px 0 4px}
+  .stagelbl{font:600 10.5px/1 var(--mono);color:var(--muted);padding:4px 9px;letter-spacing:.03em}
+  .opt.comp{padding-left:16px;font-size:12.5px}
+  .src{font:500 12px/1 var(--mono);color:var(--muted)}
+  .score{font:600 12px/1 var(--mono);letter-spacing:1px}
+  .empty,.loading{text-align:center;color:var(--muted);padding:60px 0;font-size:14px}
+  .err2{color:var(--danger)}
+  @media (max-width:760px){.wrap{grid-template-columns:1fr}aside{border-right:0;border-bottom:1px solid var(--line);min-height:0}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <main class="card">
+    <div class="badge">🔋 Battery Market Intel</div>
+    <h1>뉴스 아카이브 접속</h1>
+    <p class="sub">접속 키를 입력하면 누적된 뉴스와 대시보드를 볼 수 있습니다.</p>
+    <label for="pw">접속 키</label>
+    <input id="pw" type="password" autocomplete="off" placeholder="키 입력" />
+    <button id="go">접속하기</button>
+    <div class="err" id="err"></div>
+  </main>
+</div>
+
+<div id="app">
+  <header>
+    <div class="logo">🔋 Battery<span>·</span>Intel</div>
+    <div class="meta" id="meta">로딩 중…</div>
+    <div class="spacer"></div>
+    <a class="btn" href="office.html">🏢 분석실로</a>
+    <button class="btn" id="refresh">🔄 새로고침</button>
+    <button class="btn" id="logout">로그아웃</button>
+  </header>
+  <div class="notice">
+    <span class="dot"></span>
+    <span>뉴스는 매일 <b>오전 8시</b>·<b>오후 8시</b>에 자동 업데이트됩니다.
+    지금 바로 최신 데이터를 받으려면 <b>새로고침</b>을 누르세요.</span>
+  </div>
+  <div class="wrap">
+    <aside>
+      <h4>권역</h4>
+      <div id="regionBox"></div>
+      <h4>Application</h4>
+      <div id="appBox"></div>
+      <h4>소재</h4>
+      <div id="matBox"></div>
+      <h4>회사 (밸류체인)</h4>
+      <div id="compBox"></div>
+      <h4>기간</h4>
+      <select id="yearSel"><option value="">전체 연도</option></select>
+      <select id="monthSel"><option value="">전체 월</option></select>
+      <h4>업체 해시태그</h4>
+      <div class="tags" id="tagBox"></div>
+      <button class="clear" id="clearAll">필터 초기화</button>
+    </aside>
+    <div class="content">
+      <section class="summ" id="summBox"></section>
+      <div class="toolbar">
+        <input id="q" placeholder="제목·요약 검색…" />
+        <button class="tagbtn" data-src="all">전체</button>
+        <button class="tagbtn" data-src="네이버">네이버</button>
+        <button class="tagbtn" data-src="구글">구글</button>
+      </div>
+      <div class="count" id="count"></div>
+      <section id="list"><div class="loading">불러오는 중…</div></section>
+    </div>
+  </div>
+</div>
+
+<script>
+// ════════ 설정 ════════
+const ACCESS_KEY="battery2026";
+const GITHUB_REPO="dongiljeffjang-ux/battery-news";
+const GITHUB_BRANCH="main";
+// Vercel serves the repository files directly; GitHub Pages keeps using the
+// raw GitHub URL because it is the existing Actions deployment target.
+const DATA_URL=location.hostname.endsWith('.vercel.app')||location.hostname.endsWith('.vercel.sh')
+  ? '/data/news.json'
+  : `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/data/news.json`;
+
+const REGIONS=[["all","전체"],["Korea","🇰🇷 한국"],["China","🇨🇳 중국"],
+  ["Japan","🇯🇵 일본"],["NorthAmerica","🇺🇸 북미"],["Europe","🇪🇺 유럽"],["Global","🌐 글로벌"]];
+const REGION_KO=Object.fromEntries(REGIONS.map(r=>[r[0],r[1]]));
+// Application: [key, 한글, 색변수]
+const APPS=[["EV","전기차","--EV"],["ESS","ESS","--ESS"],["SmallIT","소형·IT","--SmallIT"],
+  ["Micromobility","e-모빌리티","--Micro"],["Etc","기타","--Etc"]];
+const APP_KO=Object.fromEntries(APPS.map(a=>[a[0],a[1]]));
+const APP_COL=Object.fromEntries(APPS.map(a=>[a[0],a[2]]));
+const MATS=[["Cathode","양극재"],["Anode","음극재"],["ElyteSep","전해질·분리막"],
+  ["CellPack","셀·팩"],["RawMaterial","원자재"],["Etc","기타"]];
+const MAT_KO=Object.fromEntries(MATS.map(m=>[m[0],m[1]]));
+// 밸류체인 단계: [key, 라벨, 아이콘]
+const STAGES=[["Mineral","광물·제련","⛏️"],["Precursor","전구체","🧪"],
+  ["Competitor","경쟁사","🏭"],["Cell","셀사","🔋"],
+  ["Automaker","완성차","🚗"],["Recycle","재활용","♻️"]];
+const STAGE_KO=Object.fromEntries(STAGES.map(s=>[s[0],s[1]]));
+const STAGE_ICON=Object.fromEntries(STAGES.map(s=>[s[0],s[2]]));
+
+let DATA=[], fApp=null, fSrc="all", fRegion="all", fMat=null, fComp=null,
+    fYear="", fMonth="", fTag=null, query="";
+let tierOpen={highRest:false, mid:false, low:false};
+
+function cssvar(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+function esc(s){return (s||"").replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
+function rOf(a){return a.region||"Global";}
+function appOf(a){return a.application||"Etc";}
+function matOf(a){return a.material||"Etc";}
+function cellsOf(a){return Array.isArray(a.celltypes)?a.celltypes:[];}
+function tagsOf(a){return Array.isArray(a.hashtags)?a.hashtags:[];}
+function compsOf(a){return Array.isArray(a.companies)?a.companies:[];}
+function compNames(a){return compsOf(a).map(c=>c.name);}
+function scoreOf(a){return typeof a.score==='number'?a.score:3;}
+function isEn(a){return a.lang==='en';}
+
+
+function freshness(iso){
+  if(!iso)return "갱신 시각 미상";
+  const t=new Date(iso), now=new Date();
+  if(isNaN(t))return "갱신 "+String(iso).slice(0,16).replace('T',' ');
+  const min=Math.round((now-t)/60000), stamp=String(iso).slice(0,16).replace('T',' ');
+  if(min<1)return "방금 갱신";
+  if(min<60)return `${min}분 전 갱신 · ${stamp}`;
+  const hr=Math.floor(min/60);
+  if(hr<24)return `${hr}시간 전 갱신 · ${stamp}`;
+  return `갱신 ${stamp}`;
+}
+
+// 게이트
+const gate=document.getElementById('gate'),app=document.getElementById('app');
+const pw=document.getElementById('pw'),err=document.getElementById('err');
+function openApp(){gate.style.display='none';app.style.display='block';load();}
+function tryEnter(){if(pw.value===ACCESS_KEY){try{sessionStorage.setItem('bn_ok','1');}catch(e){}openApp();}
+  else err.textContent='접속 키가 올바르지 않습니다.';}
+document.getElementById('go').onclick=tryEnter;
+pw.addEventListener('keydown',e=>{if(e.key==='Enter')tryEnter();});
+document.getElementById('logout').onclick=()=>{try{sessionStorage.removeItem('bn_ok');}catch(e){}location.reload();};
+try{if(sessionStorage.getItem('bn_ok')==='1')openApp();}catch(e){}
+
+// 데이터
+async function load(){
+  const btn=document.getElementById('refresh');btn.classList.add('spin');
+  try{
+    const r=await fetch(DATA_URL+'?t='+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw new Error('fetch '+r.status);
+    const d=await r.json();
+    DATA=d.articles||[];
+    document.getElementById('meta').textContent=`총 ${DATA.length}건 · ${freshness(d.updated_at)}`;
+    buildSidebar();renderSumm();render();
+  }catch(e){
+    document.getElementById('list').innerHTML=
+      '<div class="loading err2">데이터를 불러오지 못했습니다. 저장소가 공개(Public)인지 확인하세요.</div>';
+  }finally{btn.classList.remove('spin');}
+}
+document.getElementById('refresh').onclick=load;
+
+// 사이드바
+function buildSidebar(){
+  const rc={};DATA.forEach(a=>{const k=rOf(a);rc[k]=(rc[k]||0)+1;});
+  document.getElementById('regionBox').innerHTML=REGIONS.map(([key,ko])=>{
+    const n=key==='all'?DATA.length:(rc[key]||0);
+    return `<button class="opt ${fRegion===key?'on':''}" data-region="${key}">${ko}<span class="ct">${n}</span></button>`;
+  }).join('');
+  document.querySelectorAll('[data-region]').forEach(b=>b.onclick=()=>{
+    fRegion=b.dataset.region;buildSidebar();renderSumm();render();});
+
+  const ac={};DATA.forEach(a=>{const k=appOf(a);ac[k]=(ac[k]||0)+1;});
+  document.getElementById('appBox').innerHTML=
+    `<button class="opt ${fApp===null?'on':''}" data-app="__all">전체<span class="ct">${DATA.length}</span></button>`+
+    APPS.map(([key,ko])=>`<button class="opt ${fApp===key?'on':''}" data-app="${key}">${ko}<span class="ct">${ac[key]||0}</span></button>`).join('');
+  document.querySelectorAll('[data-app]').forEach(b=>b.onclick=()=>{
+    const k=b.dataset.app;fApp=(k==="__all")?null:(fApp===k?null:k);buildSidebar();renderSumm();render();});
+
+  const mc={};DATA.forEach(a=>{const k=matOf(a);mc[k]=(mc[k]||0)+1;});
+  document.getElementById('matBox').innerHTML=
+    `<button class="opt ${fMat===null?'on':''}" data-mat="__all">전체<span class="ct">${DATA.length}</span></button>`+
+    MATS.map(([key,ko])=>`<button class="opt ${fMat===key?'on':''}" data-mat="${key}">${ko}<span class="ct">${mc[key]||0}</span></button>`).join('');
+  document.querySelectorAll('[data-mat]').forEach(b=>b.onclick=()=>{
+    const k=b.dataset.mat;fMat=(k==="__all")?null:(fMat===k?null:k);buildSidebar();renderSumm();render();});
+
+  // 회사 필터 (밸류체인 단계별 그룹). 데이터에 등장한 회사만 노출.
+  const compCount={};
+  DATA.forEach(a=>compsOf(a).forEach(c=>{
+    compCount[c.name]=compCount[c.name]||{n:0,stage:c.stage};
+    compCount[c.name].n++;}));
+  const byStage={};
+  Object.entries(compCount).forEach(([name,info])=>{
+    (byStage[info.stage]=byStage[info.stage]||[]).push([name,info.n]);});
+  let compHTML=`<button class="opt ${fComp===null?'on':''}" data-comp="__all">전체 회사<span class="ct">${DATA.length}</span></button>`;
+  STAGES.forEach(([key,label,icon])=>{
+    const list=(byStage[key]||[]).sort((a,b)=>b[1]-a[1]);
+    if(!list.length)return;
+    compHTML+=`<div class="stagegrp"><div class="stagelbl">${icon} ${label}</div>`+
+      list.map(([name,n])=>`<button class="opt comp ${fComp===name?'on':''}" data-comp="${esc(name)}">${esc(name)}<span class="ct">${n}</span></button>`).join('')+
+      `</div>`;
+  });
+  document.getElementById('compBox').innerHTML=compHTML;
+  document.querySelectorAll('[data-comp]').forEach(b=>b.onclick=()=>{
+    const k=b.dataset.comp;fComp=(k==="__all")?null:(fComp===k?null:k);buildSidebar();renderSumm();render();});
+
+  const years=[...new Set(DATA.map(a=>(a.published||'').slice(0,4)).filter(Boolean))].sort().reverse();
+  const ySel=document.getElementById('yearSel');
+  ySel.innerHTML='<option value="">전체 연도</option>'+years.map(y=>`<option value="${y}">${y}년</option>`).join('');
+  ySel.value=fYear;
+  const mSel=document.getElementById('monthSel');
+  mSel.innerHTML='<option value="">전체 월</option>'+
+    Array.from({length:12},(_,i)=>String(i+1).padStart(2,'0')).map(m=>`<option value="${m}">${parseInt(m)}월</option>`).join('');
+  mSel.value=fMonth;
+  ySel.onchange=()=>{fYear=ySel.value;renderSumm();render();};
+  mSel.onchange=()=>{fMonth=mSel.value;renderSumm();render();};
+
+  const tc={};DATA.forEach(a=>tagsOf(a).forEach(t=>{tc[t]=(tc[t]||0)+1;}));
+  const top=Object.entries(tc).sort((a,b)=>b[1]-a[1]).slice(0,20);
+  document.getElementById('tagBox').innerHTML=top.length
+    ? top.map(([t,n])=>`<button class="tagbtn ${fTag===t?'on':''}" data-tag="${esc(t)}">#${esc(t)} ${n}</button>`).join('')
+    : '<span style="color:var(--muted);font-size:12px">아직 태그 없음</span>';
+  document.querySelectorAll('[data-tag]').forEach(b=>b.onclick=()=>{
+    const t=b.dataset.tag;fTag=fTag===t?null:t;buildSidebar();renderSumm();render();});
+}
+document.getElementById('clearAll').onclick=()=>{
+  fApp=null;fSrc="all";fRegion="all";fMat=null;fComp=null;fYear="";fMonth="";fTag=null;query="";
+  document.getElementById('q').value="";
+  document.querySelectorAll('.toolbar .tagbtn').forEach(x=>x.classList.remove('on'));
+  document.querySelector('.toolbar .tagbtn[data-src="all"]').classList.add('on');
+  buildSidebar();renderSumm();render();
+};
+
+function pass(a){
+  if(fApp&&appOf(a)!==fApp)return false;
+  if(fMat&&matOf(a)!==fMat)return false;
+  if(fComp&&!compNames(a).includes(fComp))return false;
+  if(fSrc!=="all"&&a.source!==fSrc)return false;
+  if(fRegion!=="all"&&rOf(a)!==fRegion)return false;
+  if(fTag&&!tagsOf(a).includes(fTag))return false;
+  const pub=a.published||"";
+  if(fYear&&pub.slice(0,4)!==fYear)return false;
+  if(fMonth&&pub.slice(5,7)!==fMonth)return false;
+  if(query){const t=(a.title+a.summary).toLowerCase();if(!t.includes(query.toLowerCase()))return false;}
+  return true;
+}
+
+// 요약 카드: Application 분포
+function renderSumm(){
+  const base=DATA.filter(a=>{
+    if(fSrc!=="all"&&a.source!==fSrc)return false;
+    if(fRegion!=="all"&&rOf(a)!==fRegion)return false;
+    if(fMat&&matOf(a)!==fMat)return false;
+    if(fComp&&!compNames(a).includes(fComp))return false;
+    if(fTag&&!tagsOf(a).includes(fTag))return false;
+    const pub=a.published||"";
+    if(fYear&&pub.slice(0,4)!==fYear)return false;
+    if(fMonth&&pub.slice(5,7)!==fMonth)return false;
+    return true;});
+  const c={};APPS.forEach(a=>c[a[0]]=0);base.forEach(a=>{c[appOf(a)]=(c[appOf(a)]||0)+1;});
+  const max=Math.max(1,...Object.values(c));
+  document.getElementById('summBox').innerHTML=APPS.map(([key,ko,varname])=>{
+    const n=c[key]||0,pct=Math.round(n/max*100),col=cssvar(varname);
+    return `<div class="scell ${fApp===key?'active':''}" data-sapp="${key}">
+      <div class="top"><span class="name">${ko}</span><span class="num">${n}</span></div>
+      <div class="bar"><i style="width:${pct}%;background:${col}"></i></div></div>`;
+  }).join('');
+  document.querySelectorAll('[data-sapp]').forEach(el=>el.onclick=()=>{
+    const k=el.dataset.sapp;fApp=fApp===k?null:k;buildSidebar();renderSumm();render();});
+}
+
+function artHTML(a, rank){
+  const appK=appOf(a), col=cssvar(APP_COL[appK]||"--Etc");
+  const appko=APP_KO[appK]||"기타";
+  const day=(a.published||"").slice(5,10).replace("-","/");
+  const pub=(a.published||"").slice(11,16);
+  const rgn=REGION_KO[rOf(a)]||"🌐 글로벌";
+  const matK=matOf(a), matko=MAT_KO[matK]||"";
+  const sc=scoreOf(a), stars="★".repeat(sc)+"☆".repeat(5-sc);
+  const scol=sc>=4?"#f0a500":sc<=2?"#b8c8ce":"#8bb0bb";
+  const cells=cellsOf(a).map(c=>`<span class="badge2">${esc(c)}</span>`).join("");
+  // 회사 뱃지 (밸류체인 단계 아이콘 + 회사명, 클릭 시 필터)
+  const comps=compsOf(a).map(c=>
+    `<span class="compbadge" data-jcomp="${esc(c.name)}" title="${STAGE_KO[c.stage]||''}">${STAGE_ICON[c.stage]||''} ${esc(c.name)}</span>`).join("");
+  const tags=tagsOf(a).map(t=>`<span class="htag" data-jtag="${esc(t)}">#${esc(t)}</span>`).join(" ");
+  const rankBadge=rank?`<span class="rank">${rank}</span>`:"";
+  const enTag=isEn(a)?`<span class="entag">EN</span>`:"";
+  return `<article class="art" style="border-left-color:${col};${sc<=2?'opacity:.78':''}">
+    <div class="arthead">${rankBadge}
+      <a class="tt" href="${a.url}" target="_blank" rel="noopener">${esc(a.title)}</a></div>
+    <div class="sm">${esc(a.summary||"")}</div>
+    <div class="row">
+      <span class="score" style="color:${scol}" title="중요도 ${sc}/5">${stars}</span>
+      ${enTag}
+      <span class="pill" style="background:${col}22;color:${col}">${appko}</span>
+      ${matko&&matK!=="Etc"?`<span class="rgn">${matko}</span>`:""}
+      ${cells}
+      <span class="rgn">${rgn}</span>
+      <span class="src">${a.source} · ${day} ${pub}</span>
+      ${comps?'<span style="flex-basis:100%;height:0"></span>'+comps:''}
+      ${tags?'<span style="flex-basis:100%;height:0"></span>'+tags:''}
+    </div></article>`;
+}
+
+function render(){
+  let rows=DATA.filter(pass);
+  // 관련성 3단계로 분류
+  const high=rows.filter(a=>scoreOf(a)>=4).sort((x,y)=>scoreOf(y)-scoreOf(x)||(y.published||'').localeCompare(x.published||''));
+  const mid =rows.filter(a=>scoreOf(a)===3).sort((x,y)=>(y.published||'').localeCompare(x.published||''));
+  const low =rows.filter(a=>scoreOf(a)<=2).sort((x,y)=>scoreOf(y)-scoreOf(x)||(y.published||'').localeCompare(x.published||''));
+  const top10=high.slice(0,10);
+  const highRest=high.slice(10);
+
+  document.getElementById('count').innerHTML=
+    `총 ${rows.length}건 · 핵심 ${high.length} · 중간 ${mid.length} · 낮음 ${low.length}`;
+  const list=document.getElementById('list');
+  if(!rows.length){list.innerHTML='<div class="empty">조건에 맞는 기사가 없습니다.</div>';bindAll();return;}
+
+  let html="";
+  // ── Top 10 핵심 ──
+  if(top10.length){
+    html+=`<div class="tier">
+      <div class="tierhdr top"><span class="ticon">🔥</span> 오늘의 핵심 뉴스 TOP ${top10.length}
+        <span class="tsub">가장 관련성 높은 뉴스</span></div>
+      <div class="tbody">${top10.map((a,i)=>artHTML(a,i+1)).join('')}</div>
+    </div>`;
+  }
+  // ── 그 외 고관련 (11위~) ──
+  if(highRest.length){
+    const open=tierOpen.highRest;
+    html+=`<div class="tier">
+      <button class="tierhdr sub2" data-tier="highRest">
+        <span class="arrow">${open?'▼':'▶'}</span> 그 외 고관련 뉴스
+        <span class="tcount">${highRest.length}건</span></button>
+      ${open?`<div class="tbody">${highRest.map(a=>artHTML(a)).join('')}</div>`:''}
+    </div>`;
+  }
+  // ── 중간 관련성 ──
+  if(mid.length){
+    const open=tierOpen.mid;
+    html+=`<div class="tier">
+      <button class="tierhdr sub" data-tier="mid">
+        <span class="arrow">${open?'▼':'▶'}</span> 중간 관련성
+        <span class="tcount">${mid.length}건</span></button>
+      ${open?`<div class="tbody">${mid.map(a=>artHTML(a)).join('')}</div>`:''}
+    </div>`;
+  }
+  // ── 낮은 관련성 ──
+  if(low.length){
+    const open=tierOpen.low;
+    html+=`<div class="tier">
+      <button class="tierhdr sub" data-tier="low">
+        <span class="arrow">${open?'▼':'▶'}</span> 낮은 관련성
+        <span class="tcount">${low.length}건</span></button>
+      ${open?`<div class="tbody">${low.map(a=>artHTML(a)).join('')}</div>`:''}
+    </div>`;
+  }
+  list.innerHTML=html;
+  bindAll();
+}
+
+function bindAll(){
+  document.querySelectorAll('[data-tier]').forEach(el=>el.onclick=()=>{
+    const t=el.dataset.tier;tierOpen[t]=!tierOpen[t];render();});
+  document.querySelectorAll('[data-jtag]').forEach(el=>el.onclick=()=>{
+    fTag=el.dataset.jtag;buildSidebar();renderSumm();render();
+    window.scrollTo({top:0,behavior:'smooth'});});
+  document.querySelectorAll('[data-jcomp]').forEach(el=>el.onclick=()=>{
+    fComp=el.dataset.jcomp;buildSidebar();renderSumm();render();
+    window.scrollTo({top:0,behavior:'smooth'});});
+}
+
+document.getElementById('q').addEventListener('input',e=>{query=e.target.value;render();});
+document.querySelectorAll('.toolbar .tagbtn').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.toolbar .tagbtn').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');fSrc=b.dataset.src;renderSumm();render();});
+document.querySelector('.toolbar .tagbtn[data-src="all"]').classList.add('on');
+</script>
+</body>
+</html>

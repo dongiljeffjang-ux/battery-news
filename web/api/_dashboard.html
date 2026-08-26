@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>배터리 뉴스 대시보드</title>
+<style>
+  :root{
+    --bg:#0e1320; --panel:#161d2e; --panel2:#1b2438; --line:#27304a;
+    --ink:#e8edf7; --muted:#8a96b3; --accent:#22d3ee;
+    --S:#f59e0b; --T:#22d3ee; --E:#34d399; --Env:#a3e635; --P:#c084fc; --U:#64748b;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+  header{
+    position:sticky;top:0;z-index:10;backdrop-filter:blur(8px);
+    background:rgba(14,19,32,.82);border-bottom:1px solid var(--line);
+    padding:14px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .logo{font-weight:800;letter-spacing:-.01em;font-size:17px}
+  .logo span{color:var(--accent)}
+  .meta{font:500 12px/1 var(--mono);color:var(--muted)}
+  .spacer{flex:1}
+  .logout{font-size:12px;color:var(--muted);text-decoration:none;
+    border:1px solid var(--line);padding:7px 12px;border-radius:8px}
+  .logout:hover{color:var(--ink);border-color:var(--accent)}
+  main{max-width:1080px;margin:0 auto;padding:26px 22px 60px}
+
+  /* ── 시그니처: STEEP 충전 게이지 ── */
+  .gauge{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px;margin-bottom:30px}
+  .cell{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:14px 15px;cursor:pointer;transition:transform .12s,border-color .12s}
+  .cell:hover{transform:translateY(-2px)}
+  .cell.active{border-color:var(--accent)}
+  .cell .top{display:flex;justify-content:space-between;align-items:baseline}
+  .cell .name{font-size:12px;color:var(--muted);letter-spacing:.03em}
+  .cell .num{font:700 22px/1 var(--mono)}
+  .bar{height:6px;border-radius:4px;background:#0c111c;margin-top:11px;overflow:hidden}
+  .bar>i{display:block;height:100%;border-radius:4px;transition:width .5s ease}
+
+  .toolbar{display:flex;gap:10px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+  .toolbar input{flex:1;min-width:200px;padding:11px 13px;background:var(--panel);
+    border:1px solid var(--line);border-radius:10px;color:var(--ink);font-size:14px}
+  .toolbar input:focus{outline:none;border-color:var(--accent)}
+  .chip{font:600 11px/1 var(--mono);padding:7px 11px;border-radius:20px;
+    border:1px solid var(--line);color:var(--muted);cursor:pointer;background:none}
+  .chip.on{color:#06121a;background:var(--accent);border-color:var(--accent)}
+
+  .list{display:flex;flex-direction:column;gap:11px}
+  .art{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:15px 17px;border-left:4px solid var(--U);transition:background .12s}
+  .art:hover{background:var(--panel2)}
+  .art a.tt{color:var(--ink);font-weight:650;font-size:15.5px;text-decoration:none;
+    line-height:1.4}
+  .art a.tt:hover{color:var(--accent)}
+  .art .sm{color:var(--muted);font-size:13px;margin:7px 0 9px;line-height:1.55}
+  .art .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .tag{font:600 10.5px/1 var(--mono);padding:5px 8px;border-radius:6px;
+    text-transform:uppercase;letter-spacing:.05em}
+  .src{font:500 12px/1 var(--mono);color:var(--muted)}
+  .empty,.loading{text-align:center;color:var(--muted);padding:60px 0;font-size:14px}
+  .err{color:#fb7185}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🔋 Battery<span>·</span>Intel</div>
+  <div class="meta" id="meta">로딩 중…</div>
+  <div class="spacer"></div>
+  <a class="logout" href="/api/logout">로그아웃</a>
+</header>
+<main>
+  <section class="gauge" id="gauge"></section>
+  <div class="toolbar">
+    <input id="q" placeholder="제목·요약 검색…" />
+    <button class="chip" data-src="all">전체</button>
+    <button class="chip" data-src="네이버">네이버</button>
+    <button class="chip" data-src="구글">구글</button>
+  </div>
+  <section class="list" id="list">
+    <div class="loading">데이터를 불러오는 중…</div>
+  </section>
+</main>
+
+<script>
+const STEEP=[
+  ["Social","사회","--S","S"],["Technological","기술","--T","T"],
+  ["Economic","경제","--E","E"],["Environmental","환경","--Env","Env"],
+  ["Political","정책","--P","P"],["Uncategorized","미분류","--U","U"]];
+const COLORVAR=Object.fromEntries(STEEP.map(s=>[s[0],s[2]]));
+let DATA=[], activeSteep=null, activeSrc="all", query="";
+
+function cssvar(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+
+async function load(){
+  try{
+    const r=await fetch('/api/news');
+    if(r.status===401){location.href='/';return;}
+    if(!r.ok)throw new Error('fetch');
+    const d=await r.json();
+    DATA=d.articles||[];
+    document.getElementById('meta').textContent=
+      `총 ${DATA.length}건 · 갱신 ${(d.updated_at||'').slice(0,16).replace('T',' ')}`;
+    renderGauge();render();
+  }catch(e){
+    document.getElementById('list').innerHTML=
+      '<div class="loading err">데이터를 불러오지 못했습니다. 잠시 후 다시 시도하세요.</div>';
+  }
+}
+
+function counts(){
+  const c={};STEEP.forEach(s=>c[s[0]]=0);
+  DATA.forEach(a=>{c[a.steep]=(c[a.steep]||0)+1;});return c;
+}
+
+function renderGauge(){
+  const c=counts(),max=Math.max(1,...Object.values(c));
+  document.getElementById('gauge').innerHTML=STEEP.map(([key,ko,varname])=>{
+    const n=c[key]||0,pct=Math.round(n/max*100),col=cssvar(varname);
+    const on=activeSteep===key?'active':'';
+    return `<div class="cell ${on}" data-steep="${key}">
+      <div class="top"><span class="name">${ko} · ${key.slice(0,4).toUpperCase()}</span>
+      <span class="num">${n}</span></div>
+      <div class="bar"><i style="width:${pct}%;background:${col}"></i></div></div>`;
+  }).join('');
+  document.querySelectorAll('.cell').forEach(el=>el.onclick=()=>{
+    const k=el.dataset.steep;activeSteep=activeSteep===k?null:k;
+    renderGauge();render();});
+}
+
+function render(){
+  let rows=DATA.filter(a=>{
+    if(activeSteep&&a.steep!==activeSteep)return false;
+    if(activeSrc!=="all"&&a.source!==activeSrc)return false;
+    if(query){const t=(a.title+a.summary).toLowerCase();
+      if(!t.includes(query.toLowerCase()))return false;}
+    return true;});
+  const list=document.getElementById('list');
+  if(!rows.length){list.innerHTML='<div class="empty">조건에 맞는 기사가 없습니다.</div>';return;}
+  list.innerHTML=rows.map(a=>{
+    const col=cssvar(COLORVAR[a.steep]||"--U");
+    const ko=(STEEP.find(s=>s[0]===a.steep)||[,"미분류"])[1];
+    const pub=(a.published||"").slice(0,16).replace("T"," ");
+    return `<article class="art" style="border-left-color:${col}">
+      <a class="tt" href="${a.url}" target="_blank" rel="noopener">${esc(a.title)}</a>
+      <div class="sm">${esc(a.summary||"")}</div>
+      <div class="row">
+        <span class="tag" style="background:${col}22;color:${col}">${ko}</span>
+        <span class="src">${a.source} · ${esc(a.keyword)} · ${pub}</span>
+      </div></article>`;
+  }).join('');
+}
+function esc(s){return (s||"").replace(/[&<>"]/g,
+  m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
+
+document.getElementById('q').addEventListener('input',e=>{query=e.target.value;render();});
+document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');activeSrc=b.dataset.src;render();});
+document.querySelector('.chip[data-src="all"]').classList.add('on');
+load();
+</script>
+</body>
+</html>

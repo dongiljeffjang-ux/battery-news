@@ -1,0 +1,528 @@
+keywords:
+- 전기차 배터리
+- ESS 에너지저장장치
+- 이차전지
+- 리튬이온 배터리
+- 양극재
+- 전고체 배터리
+- 배터리 재활용
+- LFP 배터리
+keywords_en:
+- EV battery
+- battery energy storage system
+- lithium ion battery
+- cathode material battery
+- solid state battery
+- battery recycling
+- LFP battery
+- battery supply chain
+sources:
+  naver:
+    enabled: true
+    display: 30
+    sort: date
+  google:
+    enabled: true
+    hl: en
+    gl: US
+    ceid: US:en
+    max_items: 30
+max_age_days: 2
+application:
+  EV:
+  - 전기차
+  - EV
+  - 승용
+  - 상용차
+  - 전기트럭
+  - 전기버스
+  - BEV
+  - xEV
+  - electric vehicle
+  ESS:
+  - ESS
+  - 에너지저장
+  - 전력망
+  - 계통
+  - UPS
+  - 그리드
+  - 태양광 연계
+  - energy storage
+  - grid
+  SmallIT:
+  - 노트북
+  - 스마트폰
+  - 전동공구
+  - 파워툴
+  - 가전
+  - 웨어러블
+  - 드론
+  - 로봇
+  - laptop
+  - smartphone
+  - power tool
+  - drone
+  Micromobility:
+  - 전기자전거
+  - e-바이크
+  - 전동킥보드
+  - 전동스쿠터
+  - 마이크로모빌리티
+  - e-bike
+  - e-scooter
+material:
+  Cathode:
+  - 양극재
+  - 양극
+  - LFP
+  - NCM
+  - NCA
+  - LMR
+  - 하이니켈
+  - 삼원계
+  - 리튬인산철
+  - cathode
+  Anode:
+  - 음극재
+  - 음극
+  - 실리콘
+  - 흑연
+  - 그래파이트
+  - 리튬메탈
+  - anode
+  - silicon
+  - graphite
+  ElyteSep:
+  - 전해질
+  - 전해액
+  - 분리막
+  - 세퍼레이터
+  - 고체전해질
+  - electrolyte
+  - separator
+  CellPack:
+  - 셀
+  - 모듈
+  - 배터리팩
+  - 파우치
+  - 각형
+  - 원통형
+  - '4680'
+  - cell
+  - module
+  - pack
+  RawMaterial:
+  - 리튬
+  - 니켈
+  - 코발트
+  - 망간
+  - 광산
+  - 제련
+  - 정련
+  - 염호
+  - lithium
+  - nickel
+  - cobalt
+  - manganese
+celltype:
+  LFP:
+  - LFP
+  - 리튬인산철
+  NCM:
+  - NCM
+  - 삼원계
+  - 하이니켈
+  - NCA
+  전고체:
+  - 전고체
+  - 고체전해질
+  나트륨:
+  - 나트륨
+  - 소듐
+  LMR:
+  - LMR
+  - 리튬망간리치
+summary:
+  max_sentences: 2
+  max_chars: 180
+recipients:
+- example1@example.com
+- example2@example.com
+email:
+  subject_prefix: '[배터리 뉴스]'
+  sender_name: Battery News Bot
+output:
+  json_db: data/news.json
+  md_archive: data/news.md
+regions:
+  Korea:
+  - 울산
+  - 포항
+  - 청주
+  - 충북
+  - 충남
+  - 전북
+  - 전남
+  - 경북
+  - 경남
+  - 구미
+  - 오창
+  - 아산
+  - 익산
+  - 군산
+  - 국내
+  - 한국
+  - LG에너지솔루션
+  - LG엔솔
+  - 삼성SDI
+  - SK온
+  - SK이노베이션
+  - SK이노
+  - 포스코
+  - 에코프로
+  - 엘앤에프
+  - 코스닥
+  - 코스피
+  - 산업통상자원부
+  China:
+  - 중국
+  - CATL
+  - BYD
+  - 비야디
+  - 고션
+  - 선전
+  - 베이징
+  - 상하이
+  - 닝더
+  Japan:
+  - 일본
+  - 파나소닉
+  - Panasonic
+  - 도요타
+  - 토요타
+  - 닛산
+  - 혼다
+  - 도쿄
+  NorthAmerica:
+  - 미국
+  - 북미
+  - 테슬라
+  - Tesla
+  - 리비안
+  - 루시드
+  - IRA
+  - 캐나다
+  - 백악관
+  - 네바다
+  - 미시간
+  - 조지아
+  Europe:
+  - 유럽
+  - 독일
+  - 프랑스
+  - 폭스바겐
+  - 노스볼트
+  - Northvolt
+  - 스웨덴
+  - 헝가리
+  - 폴란드
+  - 벤츠
+  - BMW
+companies:
+  Mineral:
+    고려아연:
+    - 고려아연
+    - Korea Zinc
+    켐코:
+    - 켐코
+    - KEMCO
+    포스코홀딩스:
+    - 포스코홀딩스
+    - POSCO Holdings
+    Albemarle:
+    - Albemarle
+    - 앨버말
+    SQM:
+    - SQM
+    Ganfeng:
+    - Ganfeng
+    - 간펑
+    - 간펑리튬
+    Pilbara:
+    - Pilbara
+    - 필바라
+  Precursor:
+    포스코퓨처엠:
+    - 포스코퓨처엠
+    - 포스코케미칼
+    - POSCO Future M
+    GEM:
+    - GEM
+    - 거린메이
+    Huayou:
+    - Huayou
+    - 화유코발트
+    - 화유
+  Competitor:
+    엘앤에프:
+    - 엘앤에프
+    - L&F
+    에코프로비엠:
+    - 에코프로비엠
+    - 에코프로
+    - EcoPro
+    코스모신소재:
+    - 코스모신소재
+    Umicore:
+    - Umicore
+    - 유미코어
+    Sumitomo:
+    - Sumitomo
+    - 스미토모
+  Cell:
+    LG에너지솔루션:
+    - LG에너지솔루션
+    - LG엔솔
+    - LG Energy Solution
+    - LGES
+    삼성SDI:
+    - 삼성SDI
+    - Samsung SDI
+    SK온:
+    - SK온
+    - SK이노베이션
+    - SK On
+    - SK Innovation
+    CATL:
+    - CATL
+    - 닝더
+    - Ningde
+    BYD:
+    - BYD
+    - 비야디
+    파나소닉:
+    - 파나소닉
+    - Panasonic
+  Automaker:
+    현대차:
+    - 현대차
+    - 현대자동차
+    - Hyundai
+    기아:
+    - 기아
+    - Kia
+    테슬라:
+    - 테슬라
+    - Tesla
+    폭스바겐:
+    - 폭스바겐
+    - Volkswagen
+    - VW
+    GM:
+    - General Motors
+    - 제너럴모터스
+    도요타:
+    - 도요타
+    - 토요타
+    - Toyota
+    벤츠:
+    - 벤츠
+    - 메르세데스
+    - Mercedes
+  Recycle:
+    성일하이텍:
+    - 성일하이텍
+    - SungEel
+    새빗켐:
+    - 새빗켐
+    Redwood:
+    - Redwood
+    - 레드우드
+    Li-Cycle:
+    - Li-Cycle
+    - 라이사이클
+hashtags:
+  LG에너지솔루션:
+  - LG에너지솔루션
+  - LG엔솔
+  - LGES
+  삼성SDI:
+  - 삼성SDI
+  - 삼성에스디아이
+  SK온:
+  - SK온
+  - SK이노베이션
+  - SK이노
+  포스코퓨처엠:
+  - 포스코퓨처엠
+  - 포스코케미칼
+  에코프로:
+  - 에코프로
+  엘앤에프:
+  - 엘앤에프
+  - L&F
+  LG화학:
+  - LG화학
+  SKIET:
+  - SKIET
+  - SK아이이테크놀로지
+  CATL:
+  - CATL
+  - 닝더
+  BYD:
+  - BYD
+  - 비야디
+  파나소닉:
+  - 파나소닉
+  - Panasonic
+  테슬라:
+  - 테슬라
+  - Tesla
+  노스볼트:
+  - 노스볼트
+  - Northvolt
+  고려아연:
+  - 고려아연
+scoring:
+  base: 3
+  pos_top:
+  - 수주
+  - 계약
+  - 증설
+  - 투자 결정
+  - 양산
+  - 신규 라인
+  - 캐파
+  - 공급망
+  - 내재화
+  - 장기계약
+  - 합작
+  - JV
+  - 지분 투자
+  - 전고체
+  - 건식전극
+  - 46파이
+  - '4680'
+  - 파일럿
+  - contract
+  - supply chain
+  - joint venture
+  - capacity
+  - mass production
+  - solid state
+  pos_strong:
+  - LFP
+  - 리튬인산철
+  - NCM
+  - 하이니켈
+  - 양극재
+  - 음극재
+  - 실리콘
+  - 전해질
+  - 분리막
+  - 리튬
+  - 니켈
+  - 코발트
+  - PHEV
+  - 대용량
+  - 고효율
+  - 점유율
+  - cathode
+  - anode
+  - lithium
+  - nickel
+  - electrolyte
+  - separator
+  - market share
+  pos_med:
+  - ESS
+  - 전기차
+  - EV
+  - 출시
+  - 신차
+  - IRA
+  - CRMA
+  - 보조금
+  - 관세
+  - 가격
+  - 시황
+  - CATL
+  - BYD
+  - 테슬라
+  - 토요타
+  - 파나소닉
+  - LG에너지솔루션
+  - 삼성SDI
+  - SK온
+  - LG화학
+  - SKIET
+  - 에코프로
+  - 포스코퓨처엠
+  - 엘앤에프
+  - 노스볼트
+  - electric vehicle
+  - subsidy
+  - tariff
+  - Tesla
+  neg_strong:
+  - 마이스터고
+  - 이리공고
+  - 홀덤
+  - 피싱
+  - 습지
+  - 보조배터리
+  - 손선풍기
+  - 선풍기
+  - 독자위원회
+  - 구청장
+  - 임실
+  - 햇빛소득
+  - 원전
+  - 용접
+  - 폐전자
+  - 캠코
+  - 잠수함
+  - 부고
+  - 인사
+  neg_med:
+  - 선정
+  - 인재
+  - 양성
+  - 포항시
+  - 울산시
+  - 특화단지
+  - 거버넌스
+  - 홍보
+  - 공모
+  - 지정
+  - 테마
+  - 폭등
+  - 급등
+  - 반대매매
+  - 마통
+  - 건설
+  - 마감시황
+  - 코스피
+  - 코스닥
+  - ETF
+  - 캠페인
+  - 북구청
+  - 증가세
+  - 자율제조
+  - 실증
+  - 산단
+  - 지식재산
+  - 식품
+  - 포장
+  - 재테크
+  - 빚투
+  region_bonus:
+    China: 1
+    NorthAmerica: 1
+    Japan: 1
+    Europe: 1
+    Korea: 0
+    Global: 0
+blocked_sources:
+- 매일노동뉴스
+- labortoday
