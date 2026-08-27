@@ -1,6 +1,58 @@
 {
-  "updated_at": "2026-08-27T13:10:35.325474+09:00",
+  "updated_at": "2026-08-27T13:12:57.446382+09:00",
   "articles": [
+    {
+      "id": "35d9b6fd1f1c",
+      "title": "산업연구원 \"K배터리 위기, ESS로 성장축 전환해야\"",
+      "url": "https://www.g-enews.com/view.php?ud=202608271121375933139bf6e4b2_1",
+      "summary": "보고서에 따르면 국제에너지기구(IEA) 기준 지난해 세계 전기차(EV) 배터리 수요는 1.2TWh로 전년 대비 30% 증가했다. 반면 LG에너지솔루션·삼성SDI·포스코퓨처엠(배터리소재 부문)의 2025년 매출은 전년 대비 각각 7.6...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "hashtags": [
+        "LG에너지솔루션",
+        "삼성SDI",
+        "포스코퓨처엠"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "전기차 배터리",
+      "published": "2026-08-27T13:10:00+09:00",
+      "collected_at": "2026-08-27T13:12:57.279115+09:00"
+    },
+    {
+      "id": "d41e7fac1338",
+      "title": "추미애 \"반도체 산업 승부는 친환경 전력 인프라에 달렸다\"...자신감 밝...",
+      "url": "https://www.getnews.co.kr/news/articleView.html?idxno=879026",
+      "summary": "그러면서 \"RE100 달성과 탄소중립은 이제 기업 경쟁력과 직결되는 과제\"라며 \"경기도는 2030년까지 재생에너지 10GW 보급을 목표로 전력 기반시설과 행정 지원을 강화하고, 대규모 재생에너지 사업과 ESS(에너지저장장치)...",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-08-27T13:10:00+09:00",
+      "collected_at": "2026-08-27T13:12:57.284274+09:00"
+    },
+    {
+      "id": "e2a6e335e907",
+      "title": "[인하대학교]첨단바이오의약학과 2배 증원",
+      "url": "https://www.naeil.com/news/read/600285?ref=naver",
+      "summary": "인하대는 교육부 ‘첨단산업 특성화대학 재정지원사업’에서 반도체·바이오·이차전지·로봇 등 4개 분야에 선정됐다. 첨단바이오의약학과는 입학정원을 20명에서 40명으로 늘린다.",
+      "region": "Global",
+      "application": "SmallIT",
+      "material": "Etc",
+      "celltypes": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "keyword": "이차전지",
+      "published": "2026-08-27T13:10:00+09:00",
+      "collected_at": "2026-08-27T13:12:57.287193+09:00"
+    },
     {
       "id": "5adf73a9cfbd",
       "title": "리본카, 중고차 '체크슈머' 겨냥...정밀점검 결과 공개 강화",
@@ -834,6 +886,22 @@
       "keyword": "ESS 에너지저장장치",
       "published": "2026-08-27T11:22:00+09:00",
       "collected_at": "2026-08-27T13:10:35.213098+09:00"
+    },
+    {
+      "id": "bcfc74301195",
+      "title": "한빛레이저 주가, 급등세... 무슨 회사길래?",
+      "url": "https://www.ggilbo.com/news/articleView.html?idxno=1177941",
+      "summary": "지난 1997년 설립됐으며 레이저 기술을 기반으로 자동차, 이차전지, 반도체 등 제조 산업에 필요한 장비와 솔루션을 공급하고 있다. 주요 제품에는 자동차 차대번호를 레이저로 표시하는 VIN 마킹 시스템, 이차전지용...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "keyword": "이차전지",
+      "published": "2026-08-27T11:22:00+09:00",
+      "collected_at": "2026-08-27T13:12:57.288953+09:00"
     },
     {
       "id": "ab4c4875397d",
@@ -2115,6 +2183,22 @@
       "collected_at": "2026-08-27T13:10:35.231716+09:00"
     },
     {
+      "id": "0eca7fd96d2f",
+      "title": "[혁신기업-스탠다드에너지] 초급속 충전 확산에 커지는 전력부담…VIB ESS가 해법 될까 - 국토일보",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBST0pRNFVwUnRDRUhrc3BnZ3NqVGRybWhHRW9yVmZHQVNYRGxMUHRtSndWWUR2VlYwME1yRFlGLWlXdF8xY054MjlPVl9GT0g2cW5reWQ0RDdmRWhPaWJuUDJBMA?oc=5",
+      "summary": "[혁신기업-스탠다드에너지] 초급속 충전 확산에 커지는 전력부담…VIB ESS가 해법 될까  국토일보",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-08-27T09:21:00+09:00",
+      "collected_at": "2026-08-27T13:12:57.313098+09:00"
+    },
+    {
       "id": "50486f687174",
       "title": "코이즈 주가, 상한가... 무슨 회사길래?",
       "url": "https://www.ggilbo.com/news/articleView.html?idxno=1177827",
@@ -2909,6 +2993,26 @@
       "collected_at": "2026-08-27T13:10:35.241462+09:00"
     },
     {
+      "id": "04cdf15e49a0",
+      "title": "[포스코퓨처엠 주가 전망] LFP 양극재 19만톤 대형 계약 확정, 반토막 자리에서 지금이 진짜 시작인가 Ottawa Charge (s6qvAB4j0e) - Mshale",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9iclVxMDl0eTl0S2IzUkJKWW9zQW9sMnYwUkRqNEEwM0xzcjdZSjZhV1BmTTVZWk5uTGJCY2o2cHkzUmI1dUhXTF9RQlRNNFI4d3VWY0ptbXF6a2c?oc=5",
+      "summary": "[포스코퓨처엠 주가 전망] LFP 양극재 19만톤 대형 계약 확정, 반토막 자리에서 지금이 진짜 시작인가 Ottawa Charge (s6qvAB4j0e)  Mshale",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "hashtags": [
+        "포스코퓨처엠"
+      ],
+      "score": 5,
+      "source": "구글",
+      "keyword": "양극재",
+      "published": "2026-08-26T21:38:42+09:00",
+      "collected_at": "2026-08-27T13:12:57.320796+09:00"
+    },
+    {
       "id": "3e31e2987dfa",
       "title": "박수현 충남도지사, '3대 혁명' 정책 선언…글로벌 기업 인력난 해법 제...",
       "url": "https://www.gukjenews.com/news/articleView.html?idxno=3675804",
@@ -2957,6 +3061,22 @@
       "keyword": "전고체 배터리",
       "published": "2026-08-26T19:00:00+09:00",
       "collected_at": "2026-08-27T13:10:35.225589+09:00"
+    },
+    {
+      "id": "490facdfbc8d",
+      "title": "'ESS 골드러시' 미국 시장 4배 커진다…배터리 라인 전환 속도전 - 머니투데이 - 머니투데이",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9NUm5hQzBVZmFzZ1hpYl9pVWpKeWYwODlIWFlGTUFOV3o4WjN6cnkwa0o0emlRZk1DRFFIQmdlaGdIbXN6MnZtS1hYS1NZbmR4aVdQZ3RIREpZbWRtRG1JQ2tfb2dYLVJldUdvc2IxWWtSd9IBckFVX3lxTE9NUm5hQzBVZmFzZ1hpYl9pVWpKeWYwODlIWFlGTUFOV3o4WjN6cnkwa0o0emlRZk1DRFFIQmdlaGdIbXN6MnZtS1hYS1NZbmR4aVdQZ3RIREpZbWRtRG1JQ2tfb2dYLVJldUdvc2IxWWtSdw?oc=5",
+      "summary": "'ESS 골드러시' 미국 시장 4배 커진다…배터리 라인 전환 속도전 - 머니투데이  머니투데이",
+      "region": "NorthAmerica",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "구글",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-08-26T18:20:00+09:00",
+      "collected_at": "2026-08-27T13:12:57.313267+09:00"
     },
     {
       "id": "832a0c79c0c8",
