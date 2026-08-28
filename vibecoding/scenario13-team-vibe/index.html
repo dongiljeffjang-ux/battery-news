@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MBTI 팀 케미 분석기 · Scenario 13. Team Vibe</title>
+<style>
+  :root{
+    --purple-900:#3b0764; --purple-700:#6d28d9; --purple-600:#7c3aed; --purple-500:#8b5cf6;
+    --purple-200:#ddd6fe; --purple-100:#ede9fe; --purple-50:#f7f5fd;
+    --ink:#231c3d; --muted:#6b6580; --bg:#faf9fd; --card:#ffffff; --border:#e7e2f5;
+    --good:#16a34a; --warn:#d97706; --bad:#dc2626;
+    --c-creative:#a855f7; --c-exec:#3b82f6; --c-coord:#10b981; --c-analysis:#f59e0b;
+    font-size:16px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Pretendard,sans-serif;
+    line-height:1.55;
+  }
+  .page{max-width:1180px; margin:0 auto; padding:32px 20px 80px;}
+  a{color:var(--purple-600);}
+
+  /* ---------- Hero ---------- */
+  .badge{
+    display:inline-block; background:var(--purple-600); color:#fff; font-size:12px; font-weight:700;
+    padding:5px 12px; border-radius:999px; letter-spacing:.02em;
+  }
+  .eyebrow{color:var(--purple-600); font-weight:700; font-size:14px; margin:14px 0 6px;}
+  h1.title{font-size:34px; margin:0 0 14px; font-weight:800; letter-spacing:-.01em;}
+  .lede{
+    background:var(--purple-50); border-left:4px solid var(--purple-600); border-radius:10px;
+    padding:16px 20px; color:#3c3555; font-size:15px;
+  }
+  .lede p{margin:0 0 6px;}
+  .lede p:last-child{margin-bottom:0;}
+
+  .brief-table{margin:22px 0 8px; border:1px solid var(--border); border-radius:12px; overflow:hidden; background:var(--card);}
+  .brief-row{display:flex; border-top:1px solid var(--border);}
+  .brief-row:first-child{border-top:none;}
+  .brief-label{
+    flex:0 0 110px; background:var(--purple-600); color:#fff; font-weight:700; font-size:13px;
+    display:flex; align-items:center; padding:12px 16px;
+  }
+  .brief-val{flex:1; padding:12px 16px; font-size:14px; color:#413a5c;}
+
+  /* ---------- Sections ---------- */
+  .section-title{
+    margin:44px 0 16px; font-size:15px; font-weight:800; color:var(--purple-700);
+    border-bottom:2px solid var(--purple-600); padding-bottom:8px;
+  }
+
+  /* ---------- Layout ---------- */
+  .app-grid{display:grid; grid-template-columns:340px 1fr; gap:20px; align-items:start;}
+  @media (max-width:860px){ .app-grid{grid-template-columns:1fr;} }
+
+  .card{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px;}
+  .sidebar{position:sticky; top:16px;}
+
+  .field{margin-bottom:14px;}
+  .field label{display:block; font-size:12.5px; font-weight:700; color:var(--muted); margin-bottom:6px;}
+  .field input[type=text], .field select{
+    width:100%; padding:9px 10px; border:1px solid var(--border); border-radius:8px; font-size:14px;
+    background:#fff; color:var(--ink); font-family:inherit;
+  }
+  .field input[type=text]:focus, .field select:focus{outline:2px solid var(--purple-300, var(--purple-500)); outline-offset:1px;}
+
+  #memberList{display:flex; flex-direction:column; gap:8px; margin-bottom:10px;}
+  .member-row{display:flex; gap:6px; align-items:center;}
+  .member-row input[type=text]{flex:1 1 40%; min-width:0; padding:8px 9px; border:1px solid var(--border); border-radius:8px; font-size:13.5px;}
+  .member-row select{flex:1 1 50%; min-width:0; padding:8px 9px; border:1px solid var(--border); border-radius:8px; font-size:13.5px;}
+  .member-row .rm{
+    flex:0 0 auto; width:28px; height:28px; border-radius:7px; border:1px solid var(--border);
+    background:#fff; color:var(--bad); cursor:pointer; font-size:14px; line-height:1;
+  }
+  .member-row .rm:hover{background:#fef2f2;}
+  .member-row .rm:disabled{opacity:.3; cursor:not-allowed;}
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:6px;
+    padding:9px 14px; border-radius:9px; border:1px solid var(--border); background:#fff;
+    font-size:13.5px; font-weight:700; cursor:pointer; color:var(--ink); font-family:inherit;
+  }
+  .btn:hover{background:var(--purple-50);}
+  .btn:disabled{opacity:.4; cursor:not-allowed;}
+  .btn-block{width:100%;}
+  .btn-primary{background:var(--purple-600); border-color:var(--purple-600); color:#fff;}
+  .btn-primary:hover{background:var(--purple-700);}
+  .btn-add{width:100%; margin-top:2px;}
+  .hint{font-size:11.5px; color:var(--muted); margin-top:6px;}
+
+  /* ---------- Tabs ---------- */
+  .tabs{display:flex; gap:6px; margin-bottom:16px; flex-wrap:wrap;}
+  .tab-btn{
+    padding:9px 16px; border-radius:9px; border:1px solid var(--border); background:#fff;
+    font-size:13.5px; font-weight:700; cursor:pointer; color:var(--muted); font-family:inherit;
+  }
+  .tab-btn.active{background:var(--purple-600); border-color:var(--purple-600); color:#fff;}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;}
+
+  .empty-state{
+    border:1px dashed var(--border); border-radius:12px; padding:40px 20px; text-align:center;
+    color:var(--muted); font-size:14px; background:var(--purple-50);
+  }
+
+  /* ---------- Result blocks ---------- */
+  .result-card{margin-bottom:16px;}
+  .result-card h3{margin:0 0 12px; font-size:14.5px; font-weight:800; display:flex; align-items:center; gap:8px;}
+  .summary-box{
+    display:flex; gap:20px; align-items:center; flex-wrap:wrap;
+  }
+  .gauge{
+    width:132px; height:132px; border-radius:50%; position:relative; flex:0 0 auto;
+    background:conic-gradient(var(--ring,var(--purple-600)) calc(var(--pct,0)*3.6deg), var(--purple-100) 0);
+  }
+  .gauge::after{content:""; position:absolute; inset:11px; background:#fff; border-radius:50%;}
+  .gauge-value{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:1;}
+  .gauge-value .num{font-size:30px; font-weight:800;}
+  .gauge-value .lbl{font-size:11px; color:var(--muted); font-weight:700; margin-top:2px;}
+  .summary-text{flex:1; min-width:220px; font-size:14px; color:#413a5c;}
+  .summary-text b{color:var(--purple-700);}
+
+  .bars{display:flex; flex-direction:column; gap:10px;}
+  .bar-row{display:grid; grid-template-columns:72px 1fr 44px; align-items:center; gap:10px; font-size:13px;}
+  .bar-track{height:12px; background:var(--purple-100); border-radius:999px; overflow:hidden;}
+  .bar-fill{height:100%; border-radius:999px;}
+  .bar-row .pct{text-align:right; font-weight:700; color:var(--muted);}
+
+  ul.tip-list{margin:0; padding-left:0; list-style:none; display:flex; flex-direction:column; gap:9px;}
+  ul.tip-list li{
+    display:flex; gap:8px; font-size:13.5px; color:#413a5c; background:var(--purple-50);
+    border-radius:9px; padding:10px 12px; border-left:3px solid var(--purple-500);
+  }
+  ul.tip-list li.warn{border-left-color:var(--warn); background:#fffaf0;}
+
+  table.role-table{width:100%; border-collapse:collapse; font-size:13.5px;}
+  table.role-table th, table.role-table td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--border);}
+  table.role-table th{color:var(--muted); font-weight:700; font-size:12px;}
+  .mbti-chip{display:inline-flex; align-items:center; gap:4px; font-weight:700; background:var(--purple-100); color:var(--purple-700); padding:2px 8px; border-radius:999px; font-size:12px;}
+
+  /* matrix */
+  .matrix-wrap{overflow-x:auto;}
+  table.matrix{border-collapse:collapse; font-size:12px; min-width:100%;}
+  table.matrix th, table.matrix td{border:1px solid var(--border); padding:7px 9px; text-align:center; white-space:nowrap;}
+  table.matrix th{background:var(--purple-50); font-weight:700;}
+  table.matrix td.cell{font-weight:700; cursor:default;}
+  table.matrix td.self{background:#f4f2f9; color:var(--muted);}
+
+  .phase-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px;}
+  .phase-card{background:var(--purple-50); border-radius:10px; padding:14px;}
+  .phase-card .ph-title{font-weight:800; font-size:13.5px; margin-bottom:8px;}
+  .phase-card .ph-people{display:flex; flex-wrap:wrap; gap:6px;}
+  .pill{background:#fff; border:1px solid var(--border); border-radius:999px; padding:4px 10px; font-size:12px; font-weight:600;}
+
+  .need-card{display:flex; gap:12px; flex-wrap:wrap;}
+  .need-item{
+    flex:1 1 220px; background:var(--purple-50); border-radius:10px; padding:14px; font-size:13px;
+  }
+  .need-item .code{font-weight:800; color:var(--purple-700); font-size:15px;}
+
+  .sim-row{display:flex; gap:10px; align-items:flex-end; flex-wrap:wrap; margin-bottom:16px;}
+  .sim-row .field{margin:0; flex:0 0 220px;}
+  .compare-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:640px){ .compare-grid{grid-template-columns:1fr;} }
+  .compare-col h4{margin:0 0 10px; font-size:13px; color:var(--muted); font-weight:800;}
+  .delta{font-size:12px; font-weight:700; margin-left:6px;}
+  .delta.up{color:var(--good);}
+  .delta.down{color:var(--bad);}
+  .delta.flat{color:var(--muted);}
+
+  .activity-chips{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px;}
+  .activity-chip{background:#fff; border:1px solid var(--border); border-radius:10px; padding:8px 12px; font-size:12.5px; display:flex; gap:6px; align-items:center;}
+  .activity-chip .who{font-weight:800;}
+  .combo-activity{
+    background:linear-gradient(135deg,var(--purple-600),var(--purple-500)); color:#fff; border-radius:12px;
+    padding:16px 18px; font-size:14px;
+  }
+  .combo-activity b{font-size:16px;}
+
+  footer.note{margin-top:50px; text-align:center; font-size:12px; color:var(--muted);}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <span class="badge">Part 1 — 먹고 즐기기</span>
+  <div class="eyebrow">Scenario 13. Team Vibe</div>
+  <h1 class="title">🔮 MBTI 팀 케미 분석기</h1>
+  <div class="lede">
+    <p>팀원들의 MBTI를 입력하면 팀 전체의 케미·강점·갈등 포인트를 분석하고, 협업 팁과 역할 분배 가이드를 제공하는 서비스예요.</p>
+    <p>"우리 팀이 왜 이럴까?"를 데이터로 이해하고, 더 즐겁게 일하는 방법을 찾는 게 핵심이에요.</p>
+  </div>
+
+  <div class="brief-table">
+    <div class="brief-row"><div class="brief-label">Input</div><div class="brief-val">팀원 이름 + MBTI (최대 10명), 팀 목표 (프로젝트 협업 / 일상 협업 / 아이디어 회의)</div></div>
+    <div class="brief-row"><div class="brief-label">Process</div><div class="brief-val">MBTI 조합 분석 + 강점·갈등 포인트 도출</div></div>
+    <div class="brief-row"><div class="brief-label">Output</div><div class="brief-val">팀 케미 점수 + 강점 분석 + 잠재 갈등 포인트 + 역할 추천 + 협업 팁</div></div>
+  </div>
+
+  <div class="section-title">팀 정보 입력 &amp; 분석 결과</div>
+
+  <div class="app-grid">
+    <!-- ===================== SIDEBAR (INPUT) ===================== -->
+    <aside class="card sidebar">
+      <div class="field">
+        <label for="teamName">팀 이름</label>
+        <input type="text" id="teamName" placeholder="예: 배터리 뉴스 팀" value="우리 팀">
+      </div>
+      <div class="field">
+        <label for="teamGoal">팀 목표</label>
+        <select id="teamGoal">
+          <option value="프로젝트 협업">프로젝트 협업</option>
+          <option value="일상 협업">일상 협업</option>
+          <option value="아이디어 회의">아이디어 회의</option>
+        </select>
+      </div>
+
+      <div class="field" style="margin-bottom:8px;">
+        <label>팀원 (최소 2명 · 최대 10명)</label>
+        <div id="memberList"></div>
+        <button class="btn btn-add" id="addMemberBtn" type="button">＋ 팀원 추가</button>
+      </div>
+
+      <button class="btn btn-primary btn-block" id="analyzeBtn" type="button">🔍 팀 케미 분석하기</button>
+      <div class="hint">예시 데이터가 미리 입력되어 있어요. 자유롭게 수정 후 분석해보세요.</div>
+    </aside>
+
+    <!-- ===================== MAIN (RESULTS) ===================== -->
+    <div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="basic" type="button">① 기본 분석</button>
+        <button class="tab-btn" data-tab="advanced" type="button">② 심화 포인트</button>
+        <button class="tab-btn" data-tab="extended" type="button">③ 확장 미션</button>
+      </div>
+
+      <!-- BASIC -->
+      <div class="tab-panel active" id="tab-basic">
+        <div id="basicEmpty" class="empty-state">왼쪽에서 팀원을 입력하고 "팀 케미 분석하기"를 눌러보세요.</div>
+        <div id="basicContent" style="display:none;">
+          <div class="card result-card">
+            <h3>🧪 팀 케미 점수</h3>
+            <div class="summary-box">
+              <div class="gauge" id="gauge"><div class="gauge-value"><span class="num" id="gaugeNum">0</span><span class="lbl" id="gaugeLbl">-</span></div></div>
+              <div class="summary-text" id="summaryText"></div>
+            </div>
+          </div>
+
+          <div class="card result-card">
+            <h3>💪 강점 분석 (팀 성향 비중)</h3>
+            <div class="bars" id="strengthBars"></div>
+          </div>
+
+          <div class="card result-card">
+            <h3>⚠️ 잠재 갈등 포인트</h3>
+            <ul class="tip-list" id="conflictList"></ul>
+          </div>
+
+          <div class="card result-card">
+            <h3>🧭 역할 추천</h3>
+            <table class="role-table">
+              <thead><tr><th>이름</th><th>MBTI</th><th>추천 역할</th></tr></thead>
+              <tbody id="roleTableBody"></tbody>
+            </table>
+          </div>
+
+          <div class="card result-card" style="margin-bottom:0;">
+            <h3>💡 협업 팁</h3>
+            <ul class="tip-list" id="tipList"></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADVANCED -->
+      <div class="tab-panel" id="tab-advanced">
+        <div id="advancedEmpty" class="empty-state">먼저 ①기본 분석을 실행해주세요.</div>
+        <div id="advancedContent" style="display:none;">
+          <div class="card result-card">
+            <h3>🤝 1:1 케미 매트릭스</h3>
+            <div class="matrix-wrap"><table class="matrix" id="matrixTable"></table></div>
+            <div class="hint" style="margin-top:10px;">셀에 마우스를 올리면 두 사람의 궁합 이유를 볼 수 있어요.</div>
+          </div>
+
+          <div class="card result-card">
+            <h3>🗺️ 단계별 최적 역할 배분</h3>
+            <div class="phase-grid" id="phaseGrid"></div>
+          </div>
+
+          <div class="card result-card" style="margin-bottom:0;">
+            <h3>🧩 이 팀에 필요한 보완 유형</h3>
+            <div id="neededIntro" class="summary-text" style="margin-bottom:12px;"></div>
+            <div class="need-card" id="neededCard"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXTENDED -->
+      <div class="tab-panel" id="tab-extended">
+        <div id="extendedEmpty" class="empty-state">먼저 ①기본 분석을 실행해주세요.</div>
+        <div id="extendedContent" style="display:none;">
+          <div class="card result-card">
+            <h3>🧬 신규 팀원 추가 시뮬레이션</h3>
+            <div class="sim-row">
+              <div class="field">
+                <label for="simMbti">가상 팀원의 MBTI</label>
+                <select id="simMbti"></select>
+              </div>
+              <button class="btn btn-primary" id="simBtn" type="button">시뮬레이션 실행</button>
+            </div>
+            <div id="simResult"></div>
+          </div>
+
+          <div class="card result-card" style="margin-bottom:0;">
+            <h3>🎉 팀 빌딩 활동 추천</h3>
+            <div class="activity-chips" id="activityChips"></div>
+            <div class="combo-activity" id="comboActivity"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="note">※ MBTI는 재미와 참고를 위한 요소이며, 사람을 규정하는 절대적 기준이 아니에요. 실제 협업에서는 대화와 존중이 가장 중요합니다 🙂</footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* =========================================================
+     1. MBTI 데이터 테이블
+     w = [창의, 실행, 조율, 분석] (합계 100)
+     ========================================================= */
+  const MBTI_DATA = {
+    ISTJ:{emoji:"📋",nickname:"원칙주의자",role:"품질 관리자",activity:"체계적인 방탈출 카페",w:[10,50,15,25]},
+    ISFJ:{emoji:"🛡️",nickname:"수호자",role:"서포터",activity:"함께 요리 클래스",w:[10,40,40,10]},
+    INFJ:{emoji:"🔮",nickname:"옹호자",role:"비전 제시자",activity:"감상 나누는 북클럽",w:[30,10,40,20]},
+    INTJ:{emoji:"♟️",nickname:"전략가",role:"전략 설계자",activity:"전략 보드게임 나이트",w:[40,20,10,30]},
+    ISTP:{emoji:"🔧",nickname:"재주꾼",role:"트러블슈터",activity:"DIY 만들기 워크숍",w:[20,45,10,25]},
+    ISFP:{emoji:"🎨",nickname:"예술가",role:"디테일 장인",activity:"야외 사진 산책",w:[30,35,25,10]},
+    INFP:{emoji:"📖",nickname:"중재자",role:"스토리텔러",activity:"감성 다이어리 워크숍",w:[40,10,35,15]},
+    INTP:{emoji:"🧩",nickname:"사색가",role:"문제 해결사",activity:"논리 퍼즐 탈출게임",w:[35,10,10,45]},
+    ESTP:{emoji:"⚡",nickname:"모험가",role:"실행 대장",activity:"볼링·방탈출 경쟁전",w:[20,45,25,10]},
+    ESFP:{emoji:"🎉",nickname:"연예인",role:"에너자이저",activity:"노래방 파티",w:[25,30,40,5]},
+    ENFP:{emoji:"🌈",nickname:"활동가",role:"분위기 메이커",activity:"즉흥극 롤플레잉",w:[45,10,35,10]},
+    ENTP:{emoji:"💡",nickname:"발명가",role:"아이디어 뱅크",activity:"브레인스토밍 해커톤",w:[40,15,20,25]},
+    ESTJ:{emoji:"📊",nickname:"관리자",role:"일정 관리자",activity:"스포츠 리그전",w:[10,50,20,20]},
+    ESFJ:{emoji:"🤝",nickname:"외교관",role:"커뮤니케이션 허브",activity:"다같이 소풍·피크닉",w:[10,35,45,10]},
+    ENFJ:{emoji:"🌟",nickname:"선도자",role:"팀 케미 메이커",activity:"서프라이즈 파티 기획",w:[20,15,50,15]},
+    ENTJ:{emoji:"🚀",nickname:"지휘관",role:"프로젝트 리더",activity:"스타트업 시뮬레이션 게임",w:[25,35,15,25]},
+  };
+  const MBTI_LIST = Object.keys(MBTI_DATA);
+  const CATS = ["창의","실행","조율","분석"];
+  const CAT_COLOR = {창의:"var(--c-creative)",실행:"var(--c-exec)",조율:"var(--c-coord)",분석:"var(--c-analysis)"};
+  const catIndex = c => CATS.indexOf(c);
+
+  const GOAL_WEIGHTS = {
+    "프로젝트 협업":[20,35,20,25],
+    "일상 협업":[15,20,45,20],
+    "아이디어 회의":[45,10,20,25],
+  };
+
+  const clamp = (v,a,b)=>Math.max(a,Math.min(b,v));
+
+  /* =========================================================
+     2. State
+     ========================================================= */
+  let members = [
+    {id:1, name:"수진", mbti:"ENFP"},
+    {id:2, name:"태호", mbti:"ISTJ"},
+    {id:3, name:"민아", mbti:"INTJ"},
+  ];
+  let nextId = 4;
+  let lastAnalysis = null;
+
+  /* =========================================================
+     3. 렌더: 팀원 입력 행
+     ========================================================= */
+  const memberListEl = document.getElementById("memberList");
+  const addMemberBtn = document.getElementById("addMemberBtn");
+
+  function mbtiOptions(selected){
+    let html = `<option value="" ${!selected?"selected":""} disabled>MBTI 선택</option>`;
+    MBTI_LIST.forEach(code=>{
+      html += `<option value="${code}" ${code===selected?"selected":""}>${code} ${MBTI_DATA[code].emoji}</option>`;
+    });
+    return html;
+  }
+
+  function renderMemberRows(){
+    memberListEl.innerHTML = members.map((m,i)=>`
+      <div class="member-row" data-id="${m.id}">
+        <input type="text" class="m-name" placeholder="이름 (팀원${i+1})" value="${m.name.replace(/"/g,'&quot;')}">
+        <select class="m-mbti">${mbtiOptions(m.mbti)}</select>
+        <button class="rm" type="button" ${members.length<=2?"disabled":""} title="삭제">✕</button>
+      </div>
+    `).join("");
+    addMemberBtn.disabled = members.length>=10;
+    addMemberBtn.textContent = members.length>=10 ? "최대 10명까지 추가할 수 있어요" : "＋ 팀원 추가";
+
+    memberListEl.querySelectorAll(".member-row").forEach(row=>{
+      const id = Number(row.dataset.id);
+      row.querySelector(".m-name").addEventListener("input", e=>{
+        const m = members.find(x=>x.id===id); if(m) m.name = e.target.value;
+      });
+      row.querySelector(".m-mbti").addEventListener("change", e=>{
+        const m = members.find(x=>x.id===id); if(m) m.mbti = e.target.value;
+      });
+      row.querySelector(".rm").addEventListener("click", ()=>{
+        members = members.filter(x=>x.id!==id);
+        renderMemberRows();
+      });
+    });
+  }
+
+  addMemberBtn.addEventListener("click", ()=>{
+    if(members.length>=10) return;
+    members.push({id:nextId++, name:"", mbti:""});
+    renderMemberRows();
+  });
+
+  renderMemberRows();
+
+  /* =========================================================
+     4. 분석 엔진
+     ========================================================= */
+  function computeProfile(list){
+    const sum = [0,0,0,0];
+    list.forEach(m=>{ MBTI_DATA[m.mbti].w.forEach((v,i)=> sum[i]+=v); });
+    const n = list.length || 1;
+    const profile = {};
+    CATS.forEach((c,i)=> profile[c] = sum[i]/n);
+    return profile;
+  }
+
+  function compatScore(codeA, codeB){
+    let score = 50;
+    score += (codeA[0]!==codeB[0]) ? 9 : 5;
+    score += (codeA[1]===codeB[1]) ? 18 : -2;
+    score += (codeA[2]!==codeB[2]) ? 13 : 6;
+    score += (codeA[3]===codeB[3]) ? 12 : -8;
+    return clamp(Math.round(score),0,100);
+  }
+
+  function compatReason(codeA, codeB){
+    const parts = [];
+    parts.push(codeA[1]===codeB[1]
+      ? `같은 ${codeA[1]==='S'?'감각(S)':'직관(N)'}형이라 대화가 잘 통해요`
+      : `정보를 받아들이는 방식(S/N)이 달라 관점 차이가 생길 수 있어요`);
+    parts.push(codeA[2]!==codeB[2]
+      ? `사고(T)와 감정(F)이 달라 의사결정이 서로 보완돼요`
+      : `같은 ${codeA[2]==='T'?'사고(T)':'감정(F)'}형이라 결이 비슷해요`);
+    parts.push(codeA[3]===codeB[3]
+      ? `업무 스타일(J/P)이 비슷해 합이 잘 맞아요`
+      : `계획형과 즉흥형이 섞여 있어 일정 조율에 신경 써야 해요`);
+    return parts.join(". ") + ".";
+  }
+
+  function computePairwise(list){
+    const pairs = [];
+    for(let i=0;i<list.length;i++){
+      for(let j=i+1;j<list.length;j++){
+        const a=list[i], b=list[j];
+        pairs.push({a,b,score:compatScore(a.mbti,b.mbti),reason:compatReason(a.mbti,b.mbti)});
+      }
+    }
+    return pairs;
+  }
+
+  function teamScoreLabel(score){
+    if(score>=85) return "찰떡궁합 🔥";
+    if(score>=70) return "좋은 케미 ✨";
+    if(score>=55) return "무난한 케미 🙂";
+    return "노력이 필요한 케미 💭";
+  }
+  function ringColor(score){
+    if(score>=85) return "#16a34a";
+    if(score>=70) return "#7c3aed";
+    if(score>=55) return "#d97706";
+    return "#dc2626";
+  }
+
+  function goalFit(profile, goal){
+    const w = GOAL_WEIGHTS[goal];
+    let raw = 0;
+    CATS.forEach((c,i)=> raw += profile[c]*w[i]/100);
+    const maxW = Math.max(...w);
+    return clamp(Math.round(raw/maxW*100),0,100);
+  }
+  function goalFitLabel(pct){
+    if(pct>=85) return "탁월";
+    if(pct>=70) return "우수";
+    if(pct>=55) return "양호";
+    return "보완 필요";
+  }
+
+  function findConflicts(list, profile){
+    const conflicts = [];
+    const n = list.length;
+    if(n<2){ conflicts.push("팀원이 2명 이상일 때 궁합과 갈등 포인트를 분석할 수 있어요."); return conflicts; }
+
+    const counts = {E:0,I:0,S:0,N:0,T:0,F:0,J:0,P:0};
+    list.forEach(m=>{ [...m.mbti].forEach(ch=> counts[ch]++); });
+
+    if(counts.J===n) conflicts.push("전원이 계획형(J)이에요. 계획대로면 최고지만, 갑작스러운 변수 앞에서 유연성이 떨어질 수 있어요.");
+    else if(counts.P===n) conflicts.push("전원이 즉흥형(P)이에요. 아이디어는 넘치지만 마감 직전까지 미루다 몰아치기를 할 위험이 있어요.");
+    else if(counts.J>0 && counts.P>0 && Math.abs(counts.J-counts.P)<=1)
+      conflicts.push(`계획형(J) ${counts.J}명과 즉흥형(P) ${counts.P}명이 팽팽하게 나뉘어 있어요. 마감일을 먼저 합의하고 세부 진행은 유연하게 맡겨보세요.`);
+
+    if(counts.T===n) conflicts.push("전원이 사고형(T)이에요. 효율적인 결정은 강점이지만, 팀원 감정 케어에 의식적인 노력이 필요해요.");
+    else if(counts.F===n) conflicts.push("전원이 감정형(F)이에요. 관계는 좋지만 냉정한 판단이 필요한 순간엔 결정이 늦어질 수 있어요.");
+    else if(counts.T>0 && counts.F>0 && Math.abs(counts.T-counts.F)<=1)
+      conflicts.push(`사고형(T) ${counts.T}명과 감정형(F) ${counts.F}명이 고르게 섞여 있어요. '논리 우선'과 '관계 우선' 관점 차이로 회의가 길어질 수 있어요.`);
+
+    let weakest = CATS[0];
+    CATS.forEach(c=>{ if(profile[c]<profile[weakest]) weakest=c; });
+    if(profile[weakest] < 15)
+      conflicts.push(`팀 강점 중 '${weakest}' 비중이 ${Math.round(profile[weakest])}%로 낮아요. 관련 역할을 의식적으로 보완해보세요.`);
+
+    const uniqueTypes = new Set(list.map(m=>m.mbti)).size;
+    if(uniqueTypes===1) conflicts.push("팀원 전원이 같은 MBTI라 손발은 척척 맞지만, 다양한 관점이 부족해 사각지대가 생길 수 있어요.");
+
+    if(conflicts.length===0) conflicts.push("특별한 갈등 신호가 보이지 않는 균형 잡힌 팀이에요! 그래도 정기적인 소통은 잊지 마세요.");
+    return conflicts.slice(0,4);
+  }
+
+  function generateTips(ctx){
+    const {profile, teamScore, goal, gFit} = ctx;
+    const tips = [];
+    let dominant = CATS[0], weakest = CATS[0];
+    CATS.forEach(c=>{
+      if(profile[c]>profile[dominant]) dominant=c;
+      if(profile[c]<profile[weakest]) weakest=c;
+    });
+
+    const dominantTips = {
+      창의:"아이디어가 넘치는 팀이에요. 브레인스토밍 시간을 충분히 주되, 결정 마감 시점을 명확히 정해두세요.",
+      실행:"실행력이 강한 팀이에요. 속도만큼 방향 점검(왜 이걸 하는지)도 주기적으로 챙기세요.",
+      조율:"관계와 분위기를 잘 챙기는 팀이에요. 가끔은 불편한 피드백도 솔직하게 나눠보세요.",
+      분석:"꼼꼼하게 따지는 팀이에요. 완벽을 추구하다 속도가 느려지지 않도록 '80% 완성' 기준을 정해보세요.",
+    };
+    const weakestTips = {
+      창의:"새로운 아이디어가 부족할 수 있어요. 정기적으로 '엉뚱한 아이디어 타임'을 가져보세요.",
+      실행:"실행으로 옮기는 힘이 약할 수 있어요. 작은 마감을 자주 만들어 실행 습관을 들여보세요.",
+      조율:"팀 분위기나 소통이 약할 수 있어요. 짧은 데일리 체크인으로 서로의 상태를 확인해보세요.",
+      분석:"꼼꼼한 점검이 부족할 수 있어요. 마무리 전 '악마의 변호인' 역할을 정해 리스크를 점검하세요.",
+    };
+    const goalTips = {
+      "프로젝트 협업":"J형 팀원에게 일정·마일스톤 관리를, P형 팀원에게 아이디어 확장을 맡겨보세요.",
+      "일상 협업":"F형 팀원이 팀 분위기를, T형 팀원이 효율적인 규칙을 챙기게 해보세요.",
+      "아이디어 회의":"P형·N형 팀원에게 발언권을 먼저 주고, J형·S형 팀원이 정리·구체화를 맡아보세요.",
+    };
+    let scoreTip;
+    if(teamScore>=85) scoreTip="팀워크가 이미 훌륭해요. 방심하지 말고 서로의 성장 피드백을 정기적으로 나눠보세요.";
+    else if(teamScore>=70) scoreTip="좋은 케미를 가진 팀이에요. 작은 갈등은 빠르게 대화로 풀어보세요.";
+    else if(teamScore>=55) scoreTip="무난한 팀이에요. 서로의 성향을 명확히 공유하는 것만으로도 케미가 크게 올라갈 수 있어요.";
+    else scoreTip="합을 맞추는 데 의식적인 노력이 필요해요. 킥오프 미팅에서 각자의 일하는 스타일을 공유해보세요.";
+
+    tips.push(dominantTips[dominant]);
+    tips.push(weakestTips[weakest]);
+    tips.push(`'${goal}'가 목표라면: ${goalTips[goal]} (목표 적합도 ${gFit}%)`);
+    tips.push(scoreTip);
+    return tips;
+  }
+
+  function computePhaseRoles(list){
+    const phases = [
+      {key:"창의", label:"🧠 아이디어 발산"},
+      {key:"실행", label:"🏃 실행 · 추진"},
+      {key:"조율", label:"🤝 조율 · 소통"},
+      {key:"분석", label:"🔍 점검 · 마무리"},
+    ];
+    return phases.map(p=>{
+      const idx = catIndex(p.key);
+      const sorted = [...list].sort((a,b)=> MBTI_DATA[b.mbti].w[idx]-MBTI_DATA[a.mbti].w[idx]);
+      const picks = sorted.slice(0, Math.min(2, list.length));
+      return {...p, picks};
+    });
+  }
+
+  function computeNeededTypes(profile, list){
+    let weakest = CATS[0];
+    CATS.forEach(c=>{ if(profile[c]<profile[weakest]) weakest=c; });
+    const idx = catIndex(weakest);
+    const existing = new Set(list.map(m=>m.mbti));
+    const candidates = MBTI_LIST
+      .filter(code=>!existing.has(code))
+      .map(code=>({code, ...MBTI_DATA[code], score:MBTI_DATA[code].w[idx]}))
+      .sort((a,b)=>b.score-a.score)
+      .slice(0,2);
+    return {weakest, candidates};
+  }
+
+  function computeActivities(list){
+    const byType = list.map(m=>({name:m.name||m.mbti, mbti:m.mbti, activity:MBTI_DATA[m.mbti].activity}));
+    const profile = computeProfile(list);
+    let dominant = CATS[0];
+    CATS.forEach(c=>{ if(profile[c]>profile[dominant]) dominant=c; });
+    const comboMap = {
+      창의:{title:"아이디어 해커톤 데이 🧠", desc:"자유 주제로 짧게 아이디어를 쏟아내고, 최고의 아이디어에 상을 주는 시간을 가져보세요."},
+      실행:"",
+      조율:{title:"다같이 소셜 데이 🍽️", desc:"요리·피크닉처럼 함께 무언가를 만들며 자연스럽게 대화를 나누는 활동이 잘 맞아요."},
+      분석:{title:"보드게임 · 퀴즈 나이트 🧩", desc:"논리와 전략이 필요한 게임으로 즐겁게 두뇌를 자극해보세요."},
+    };
+    comboMap.실행 = {title:"미션 클리어 액티비티 🏃", desc:"방탈출 경쟁전이나 스포츠 리그전처럼 목표가 뚜렷한 활동에서 팀워크가 빛나요."};
+    return {byType, combo:comboMap[dominant]};
+  }
+
+  function runAnalysis(list, goal, teamName){
+    const profile = computeProfile(list);
+    const pairwise = computePairwise(list);
+    const teamScore = pairwise.length
+      ? Math.round(pairwise.reduce((s,p)=>s+p.score,0)/pairwise.length)
+      : 100;
+    const gFit = goalFit(profile, goal);
+    const conflicts = findConflicts(list, profile);
+    const roles = list.map(m=>({...m, role:MBTI_DATA[m.mbti].role}));
+    const tips = generateTips({profile, teamScore, goal, gFit});
+    const phaseRoles = computePhaseRoles(list);
+    const needed = computeNeededTypes(profile, list);
+    const activities = computeActivities(list);
+
+    let dominant = CATS[0];
+    CATS.forEach(c=>{ if(profile[c]>profile[dominant]) dominant=c; });
+
+    return {teamName, goal, list, profile, pairwise, teamScore, gFit, conflicts, roles, tips, phaseRoles, needed, activities, dominant};
+  }
+
+  /* =========================================================
+     5. 렌더: 결과
+     ========================================================= */
+  function renderBasic(res){
+    document.getElementById("basicEmpty").style.display="none";
+    document.getElementById("basicContent").style.display="block";
+
+    const gauge = document.getElementById("gauge");
+    gauge.style.setProperty("--pct", res.teamScore);
+    gauge.style.setProperty("--ring", ringColor(res.teamScore));
+    document.getElementById("gaugeNum").textContent = res.teamScore;
+    document.getElementById("gaugeLbl").textContent = teamScoreLabel(res.teamScore).replace(/ .$/,"");
+
+    document.getElementById("summaryText").innerHTML =
+      `<b>${res.teamName || "우리 팀"}</b>은(는) 팀 케미 점수 <b>${res.teamScore}점</b> (${teamScoreLabel(res.teamScore)}) 이에요.<br>`+
+      `가장 강한 성향은 <b>${res.dominant}</b>(${Math.round(res.profile[res.dominant])}%)이고, `+
+      `'${res.goal}' 목표 적합도는 <b>${res.gFit}%</b> (${goalFitLabel(res.gFit)})예요.`;
+
+    const barsEl = document.getElementById("strengthBars");
+    barsEl.innerHTML = CATS.map(c=>{
+      const pct = Math.round(res.profile[c]);
+      return `<div class="bar-row">
+        <div>${c}</div>
+        <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${CAT_COLOR[c]}"></div></div>
+        <div class="pct">${pct}%</div>
+      </div>`;
+    }).join("");
+
+    document.getElementById("conflictList").innerHTML =
+      res.conflicts.map(c=>`<li class="warn">⚠️ ${c}</li>`).join("");
+
+    document.getElementById("roleTableBody").innerHTML =
+      res.roles.map(r=>`<tr>
+        <td>${r.name || "(이름없음)"}</td>
+        <td><span class="mbti-chip">${MBTI_DATA[r.mbti].emoji} ${r.mbti}</span></td>
+        <td>${r.role}</td>
+      </tr>`).join("");
+
+    document.getElementById("tipList").innerHTML =
+      res.tips.map(t=>`<li>💡 ${t}</li>`).join("");
+  }
+
+  function renderAdvanced(res){
+    document.getElementById("advancedEmpty").style.display="none";
+    document.getElementById("advancedContent").style.display="block";
+
+    const list = res.list;
+    const matrixEl = document.getElementById("matrixTable");
+    let thead = "<tr><th></th>" + list.map(m=>`<th>${m.name||m.mbti}</th>`).join("") + "</tr>";
+    let rows = list.map((rowM,ri)=>{
+      let cells = list.map((colM,ci)=>{
+        if(ri===ci) return `<td class="self">–</td>`;
+        const score = compatScore(rowM.mbti, colM.mbti);
+        const reason = compatReason(rowM.mbti, colM.mbti);
+        const color = score>=85?"#16a34a":score>=70?"#7c3aed":score>=55?"#d97706":"#dc2626";
+        return `<td class="cell" style="color:${color}" title="${rowM.name||rowM.mbti} ↔ ${colM.name||colM.mbti}: ${reason}">${score}</td>`;
+      }).join("");
+      return `<tr><th>${rowM.name||rowM.mbti}</th>${cells}</tr>`;
+    }).join("");
+    matrixEl.innerHTML = thead + rows;
+
+    document.getElementById("phaseGrid").innerHTML = res.phaseRoles.map(p=>`
+      <div class="phase-card">
+        <div class="ph-title">${p.label}</div>
+        <div class="ph-people">${p.picks.map(m=>`<span class="pill">${MBTI_DATA[m.mbti].emoji} ${m.name||m.mbti}</span>`).join("")}</div>
+      </div>
+    `).join("");
+
+    document.getElementById("neededIntro").innerHTML =
+      `팀 강점 중 <b>'${res.needed.weakest}'</b>가 상대적으로 약해요. 이런 유형이 합류하면 균형을 채울 수 있어요:`;
+    document.getElementById("neededCard").innerHTML = res.needed.candidates.map(c=>`
+      <div class="need-item">
+        <div class="code">${c.emoji} ${c.code} · ${c.nickname}</div>
+        <div>이 유형은 '${res.needed.weakest}' 역량이 강해 팀의 부족한 부분을 채워줄 수 있어요. (추천 역할: ${c.role})</div>
+      </div>
+    `).join("");
+  }
+
+  function renderExtended(res){
+    document.getElementById("extendedEmpty").style.display="none";
+    document.getElementById("extendedContent").style.display="block";
+
+    document.getElementById("activityChips").innerHTML = res.activities.byType.map(a=>`
+      <div class="activity-chip"><span class="who">${MBTI_DATA[a.mbti].emoji} ${a.name}</span> · ${a.activity}</div>
+    `).join("");
+    document.getElementById("comboActivity").innerHTML =
+      `<b>${res.activities.combo.title}</b><br>${res.activities.combo.desc}`;
+  }
+
+  function renderAll(res){
+    lastAnalysis = res;
+    renderBasic(res);
+    renderAdvanced(res);
+    renderExtended(res);
+  }
+
+  /* =========================================================
+     6. 분석 버튼
+     ========================================================= */
+  document.getElementById("analyzeBtn").addEventListener("click", ()=>{
+    if(members.length<2){ alert("팀원을 2명 이상 입력해주세요."); return; }
+    const invalid = members.some(m=>!m.mbti);
+    if(invalid){ alert("모든 팀원의 MBTI를 선택해주세요."); return; }
+    members.forEach((m,i)=>{ if(!m.name.trim()) m.name = `팀원${i+1}`; });
+    renderMemberRows();
+
+    const teamName = document.getElementById("teamName").value.trim();
+    const goal = document.getElementById("teamGoal").value;
+    const res = runAnalysis(members.map(m=>({...m})), goal, teamName);
+    renderAll(res);
+  });
+
+  /* =========================================================
+     7. 탭 전환
+     ========================================================= */
+  document.querySelectorAll(".tab-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+      document.querySelectorAll(".tab-panel").forEach(p=>p.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById("tab-"+btn.dataset.tab).classList.add("active");
+    });
+  });
+
+  /* =========================================================
+     8. 확장 미션: 신규 팀원 시뮬레이션
+     ========================================================= */
+  const simMbtiEl = document.getElementById("simMbti");
+  simMbtiEl.innerHTML = mbtiOptions("");
+  document.getElementById("simBtn").addEventListener("click", ()=>{
+    if(!lastAnalysis){ alert("먼저 기본 분석을 실행해주세요."); return; }
+    const code = simMbtiEl.value;
+    if(!code){ alert("가상 팀원의 MBTI를 선택해주세요."); return; }
+    if(lastAnalysis.list.length>=10){ alert("최대 10명까지만 시뮬레이션할 수 있어요."); return; }
+
+    const before = lastAnalysis;
+    const newList = [...before.list, {id:-1, name:"가상 팀원", mbti:code}];
+    const after = runAnalysis(newList, before.goal, before.teamName);
+
+    const scoreDelta = after.teamScore - before.teamScore;
+    const deltaClass = scoreDelta>0?"up":scoreDelta<0?"down":"flat";
+    const deltaSign = scoreDelta>0?"▲":scoreDelta<0?"▼":"–";
+
+    const barsHtml = (profile)=> CATS.map(c=>{
+      const pct = Math.round(profile[c]);
+      return `<div class="bar-row"><div>${c}</div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${CAT_COLOR[c]}"></div></div><div class="pct">${pct}%</div></div>`;
+    }).join("");
+
+    document.getElementById("simResult").innerHTML = `
+      <div style="margin:14px 0;">
+        <b>${MBTI_DATA[code].emoji} ${code} (${MBTI_DATA[code].nickname})</b> 팀원을 추가하면
+        팀 케미 점수가 <b>${before.teamScore}점 → ${after.teamScore}점</b>
+        <span class="delta ${deltaClass}">${deltaSign} ${Math.abs(scoreDelta)}</span> 으로 변해요.
+      </div>
+      <div class="compare-grid">
+        <div class="compare-col"><h4>추가 전</h4><div class="bars">${barsHtml(before.profile)}</div></div>
+        <div class="compare-col"><h4>추가 후</h4><div class="bars">${barsHtml(after.profile)}</div></div>
+      </div>
+    `;
+  });
+
+  /* =========================================================
+     9. 초기 데모 실행
+     ========================================================= */
+  document.getElementById("analyzeBtn").click();
+
+})();
+</script>
+</body>
+</html>
