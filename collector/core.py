@@ -146,6 +146,22 @@ def extract_celltypes(text: str, cell_dict: dict) -> list:
     return out
 
 
+def extract_companies(text: str, comp_dict: dict) -> list:
+    """본문에 언급된 회사를 밸류체인 단계와 함께 반환.
+    [{"name":..., "stage":...}] 형태. 없으면 빈 리스트."""
+    t = text.lower()
+    out = []
+    seen = set()
+    for stage, companies in (comp_dict or {}).items():
+        for name, variants in (companies or {}).items():
+            if name in seen:
+                continue
+            if any(v.lower() in t for v in variants):
+                out.append({"name": name, "stage": stage})
+                seen.add(name)
+    return out
+
+
 def classify_region(text: str, region_dict: dict) -> str:
     """가장 많이 매칭된 권역. 어디에도 안 걸리면 'Global'.
     영문 약자(GM, EU 등)는 단어경계로 정확히 매칭해 오분류를 줄임."""
@@ -237,7 +253,8 @@ def fetch_naver(keyword, cfg):
                 "title": strip_tags(it.get("title", "")),
                 "url": it.get("originallink") or it.get("link", ""),
                 "desc": strip_tags(it.get("description", "")),
-                "pub": pub, "source": "네이버", "keyword": keyword})
+                "pub": pub, "source": "네이버", "keyword": keyword,
+                "lang": "ko"})
     except Exception as e:
         print(f"[naver] 오류 {keyword}: {e}", file=sys.stderr)
     return items
@@ -253,15 +270,22 @@ def fetch_google(keyword, cfg):
     try:
         feed = feedparser.parse(rss)
         for e in feed.entries[: cfg.get("max_items", 30)]:
+            title = strip_tags(getattr(e, "title", ""))
+            desc = strip_tags(getattr(e, "summary", ""))
+            # Google News RSS의 언어 설정만으로는 한국어 매체가 섞일 수 있다.
+            # 구글 소스는 영문 기사 전용이므로 한글이 포함된 항목은 수집하지 않는다.
+            if re.search(r"[가-힣]", f"{title} {desc}"):
+                continue
             pub = None
             if getattr(e, "published_parsed", None):
                 pub = dt.datetime(*e.published_parsed[:6],
                                   tzinfo=dt.timezone.utc).astimezone(KST)
             items.append({
-                "title": strip_tags(getattr(e, "title", "")),
+                "title": title,
                 "url": getattr(e, "link", ""),
-                "desc": strip_tags(getattr(e, "summary", "")),
-                "pub": pub, "source": "구글", "keyword": keyword})
+                "desc": desc,
+                "pub": pub, "source": "구글", "keyword": keyword,
+                "lang": "en"})
     except Exception as ex:
         print(f"[google] 오류 {keyword}: {ex}", file=sys.stderr)
     return items
@@ -276,15 +300,20 @@ def within_age(pub, max_age_days):
 def collect(cfg):
     """설정대로 수집 → 정규화된 신규 후보 리스트 반환 (중복 미적용)."""
     raw = []
-    for kw in cfg.get("keywords", []):
-        if cfg["sources"]["naver"].get("enabled"):
+    # 네이버: 한국어 키워드
+    if cfg["sources"]["naver"].get("enabled"):
+        for kw in cfg.get("keywords", []):
             raw += fetch_naver(kw, cfg["sources"]["naver"])
-        if cfg["sources"]["google"].get("enabled"):
+    # 구글: 영어 키워드 (없으면 기본 keywords 사용)
+    if cfg["sources"]["google"].get("enabled"):
+        en_kws = cfg.get("keywords_en") or cfg.get("keywords", [])
+        for kw in en_kws:
             raw += fetch_google(kw, cfg["sources"]["google"])
 
     app_dict = cfg.get("application", {})
     mat_dict = cfg.get("material", {})
     cell_dict = cfg.get("celltype", {})
+    comp_dict = cfg.get("companies", {})
     region_dict = cfg.get("regions", {})
     tag_dict = cfg.get("hashtags", {})
     scoring = cfg.get("scoring", {})
@@ -331,6 +360,7 @@ def collect(cfg):
     for it in kept:
         text = f"{it['title']} {it['desc']}"
         region = classify_region(text, region_dict)
+        companies = extract_companies(text, comp_dict)
         out.append({
             "id": url_hash(it["url"]),
             "title": it["title"],
@@ -340,11 +370,14 @@ def collect(cfg):
             "application": classify_pick(text, app_dict),
             "material": classify_pick(text, mat_dict),
             "celltypes": extract_celltypes(text, cell_dict),
+            "companies": companies,
             "hashtags": extract_hashtags(text, tag_dict),
             "score": score_importance(text, region, scoring),
             "source": it["source"],
+            "lang": it.get("lang", "ko"),
             "keyword": it["keyword"],
             "published": it["pub"].isoformat() if it["pub"] else None,
             "collected_at": dt.datetime.now(KST).isoformat(),
         })
     return out
+
