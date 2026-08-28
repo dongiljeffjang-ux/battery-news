@@ -1,6 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
+  "functions": {
+    "api/ai-top10.js": { "maxDuration": 60 },
+    "api/daily-briefing.js": { "maxDuration": 60 },
+    "api/news.js": { "maxDuration": 30 },
+    "api/timeline-insight.js": { "maxDuration": 60 },
+    "api/timeline-events.js": { "maxDuration": 30 },
+    "api/regional-agent.js": { "maxDuration": 60 },
+    "api/team-lead-agent.js": { "maxDuration": 60 },
+    "api/regional-weekly-report.js": { "maxDuration": 30 }
+  },
   "rewrites": [
     { "source": "/", "destination": "/index.html" }
   ]

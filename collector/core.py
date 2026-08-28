@@ -270,14 +270,20 @@ def fetch_google(keyword, cfg):
     try:
         feed = feedparser.parse(rss)
         for e in feed.entries[: cfg.get("max_items", 30)]:
+            title = strip_tags(getattr(e, "title", ""))
+            desc = strip_tags(getattr(e, "summary", ""))
+            # Google News RSS의 언어 설정만으로는 한국어 매체가 섞일 수 있다.
+            # 구글 소스는 영문 기사 전용이므로 한글이 포함된 항목은 수집하지 않는다.
+            if re.search(r"[가-힣]", f"{title} {desc}"):
+                continue
             pub = None
             if getattr(e, "published_parsed", None):
                 pub = dt.datetime(*e.published_parsed[:6],
                                   tzinfo=dt.timezone.utc).astimezone(KST)
             items.append({
-                "title": strip_tags(getattr(e, "title", "")),
+                "title": title,
                 "url": getattr(e, "link", ""),
-                "desc": strip_tags(getattr(e, "summary", "")),
+                "desc": desc,
                 "pub": pub, "source": "구글", "keyword": keyword,
                 "lang": "en"})
     except Exception as ex:
