@@ -1,6 +1,27 @@
 {
-  "updated_at": "2026-09-02T00:15:32.002380+09:00",
+  "updated_at": "2026-09-02T00:26:31.223023+09:00",
   "articles": [
+    {
+      "id": "a309f8f93f33",
+      "title": "[중앙시평] 알려지지 않은 미래를 향한 옵션",
+      "url": "https://www.joongang.co.kr/article/25458266",
+      "summary": "배터리에서도 액체 전해질을 없앤 전고체, 리튬 대신 나트륨을 쓰는 전지가 다음을 다툰다. 당대의 상식을 의심한 자리에서 미래의 지도가 펼쳐졌다.",
+      "region": "Global",
+      "application": "Etc",
+      "material": "ElyteSep",
+      "celltypes": [
+        "전고체",
+        "나트륨"
+      ],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전고체 배터리",
+      "published": "2026-09-02T00:20:00+09:00",
+      "collected_at": "2026-09-02T00:26:31.126064+09:00"
+    },
     {
       "id": "6b5c47068efb",
       "title": "박성민, 울산 산업전환 국비 확보 총력",
@@ -863,6 +884,24 @@
       "keyword": "이차전지",
       "published": "2026-09-01T20:40:00+09:00",
       "collected_at": "2026-09-02T00:15:31.874145+09:00"
+    },
+    {
+      "id": "336169014e50",
+      "title": "[2027과고경쟁률] 대구일 2.89대1 '상승'",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=625661",
+      "summary": "반도체뿐만 아니라 기지개를 펴고 있는 통신/이차전지/ESS에 기존의 조선/방산/원전까지 이공계 전반에 특화된 이공특 진학에 유리한 과고로 노선을 정한 사례가 늘어난 것으로 분석된다. 한...",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 1,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-01T20:40:00+09:00",
+      "collected_at": "2026-09-02T00:26:31.121168+09:00"
     },
     {
       "id": "238aaab2ea16",
