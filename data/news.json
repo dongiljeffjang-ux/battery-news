@@ -1,6 +1,27 @@
 {
-  "updated_at": "2026-09-02T23:45:26.295252+09:00",
+  "updated_at": "2026-09-03T00:02:57.264304+09:00",
   "articles": [
+    {
+      "id": "7a28168f5e56",
+      "title": "[증시 프리즘] 미 기술주 동반 약세에 글로벌 산업군 흔들…반도체·IT ...",
+      "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=86914",
+      "summary": "글로벌 친환경차 및 배터리 업종의 하락세도 두드러졌다. 전기차 대표주인 테슬라는 전기차 수요 둔화 우려 속에 4.30% 급락했고 세계 최대 배터리 업체인 중국의 CATL 또한 3.25% 하락해 이차전지 벨류체인 전반의 투자...",
+      "region": "China",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "CATL",
+        "테슬라"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-03T00:00:00+09:00",
+      "collected_at": "2026-09-03T00:02:57.117932+09:00"
+    },
     {
       "id": "3e7610ce8fcd",
       "title": "[크크맨의 카라이프] 제네시스가 그리는 새로운 플래그십 'GV90'",
