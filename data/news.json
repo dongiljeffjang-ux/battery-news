@@ -1,6 +1,67 @@
 {
-  "updated_at": "2026-09-06T09:28:10.853838+09:00",
+  "updated_at": "2026-09-06T09:46:41.728157+09:00",
   "articles": [
+    {
+      "id": "2c30361252f7",
+      "title": "에코프로, '로봇 배터리' 새 먹거리로…하이니켈·전고체 투트랙",
+      "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310496",
+      "summary": "고체전해질뿐 아니라 전고체 배터리에 적합한 양극재도 함께 개발해 소재 공급 범위를 넓히고 있다. 이는 에코프로가 전기차 중심의 기존 양극재 사업에서 차세대 애플리케이션으로 포트폴리오를 확대하려는 전략과도...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Cathode",
+      "celltypes": [
+        "NCM",
+        "전고체"
+      ],
+      "companies": [],
+      "hashtags": [
+        "에코프로"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-06T09:44:00+09:00",
+      "collected_at": "2026-09-06T09:46:41.570492+09:00"
+    },
+    {
+      "id": "c9c07fdf8f0c",
+      "title": "기업들 로봇 대전에 에코프로, 로봇용 배터리 시장 공략한다",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=01292326645577496&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+      "summary": "결국 배터리’ 콘텐츠에 따르면 삼성전자의 최고경영자 직속 미래로봇추진단 신설, 현대자동차의 휴머노이드 로봇 ‘아틀라스’ 전기차 전용 공장 적용 계획, LG전자의 대표이사 직속 로보틱스사업센터신설 등 대기업을...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "에코프로"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-06T09:40:00+09:00",
+      "collected_at": "2026-09-06T09:46:41.570709+09:00"
+    },
+    {
+      "id": "9285322a071b",
+      "title": "한국탄소산업진흥원, 중국 최대 복합소재 전시회 'CCE 2026' 참가…탄소...",
+      "url": "https://www.etnews.com/20260904000373",
+      "summary": "이들 기업은 활성탄소 등 기초 소재부터 탄소섬유 발열체, 탄소섬유 성형복합재(CF-SMC), 전기차 배터리 케이스, 정전기 방지 작업복(방진복), 실험용 배기기 등 탄소소재와 응용부품 분야 제품을 전시하고, 중국을...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-06T09:31:00+09:00",
+      "collected_at": "2026-09-06T09:46:41.570907+09:00"
+    },
     {
       "id": "cfd122feab26",
       "title": "\"전기차 관세 빈틈 막자\"…독일 집권당, 中 하이브리드 정조준",
@@ -4591,6 +4652,26 @@
       "keyword": "배터리 재활용",
       "published": "2026-09-04T10:30:00+09:00",
       "collected_at": "2026-09-04T23:35:44.745570+09:00"
+    },
+    {
+      "id": "fcec0f7546ed",
+      "title": "에코프로 인니 GEN, 원부자재 구매 한도 14억위안 설정…주주 2.8억달러...",
+      "url": "http://www.press9.kr/news/articleView.html?idxno=82199",
+      "summary": "MHP는 니켈과 코발트를 함유한 중간재로, 전기차 배터리 양극재의 전 단계 소재인 전구체를 만드는 원료로 사용된다. 이번 거래에서 GEM은 원부자재를 한꺼번에 구매해 조달 규모를 키우고 GEN에 공급하는 역할을...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Cathode",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "에코프로"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "양극재",
+      "published": "2026-09-04T10:30:00+09:00",
+      "collected_at": "2026-09-06T09:46:41.591409+09:00"
     },
     {
       "id": "7f36d3ae4f4a",
