@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T01:08:05.995027+09:00",
+  "updated_at": "2026-09-08T01:20:07.674785+09:00",
   "articles": [
     {
       "id": "cee38d1437c7",
@@ -829,6 +829,24 @@
       "keyword": "전기차 배터리",
       "published": "2026-09-07T18:16:00+09:00",
       "collected_at": "2026-09-08T01:08:05.829153+09:00"
+    },
+    {
+      "id": "4de6bf4bdaf4",
+      "title": "JB금융그룹, 인도네시아 금융사 인수 최종 승인",
+      "url": "http://www.domin.co.kr/news/articleView.html?idxno=1567907",
+      "summary": "특히, 인수 절차가 마무리되면 전략적 파트너인 AI 기반 핀테크 기업 에이젠글로벌과 협업해 전기차(EV) 금융사업에도 본격적으로 나선다. 전동 이륜차 매입자금 대출과 신용대출, 배터리 매입 대출 등 현지 시장...",
+      "region": "Global",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-07T18:16:00+09:00",
+      "collected_at": "2026-09-08T01:20:07.526204+09:00"
     },
     {
       "id": "89b353edf2a4",
