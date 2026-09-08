@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-09-08T23:48:14.351378+09:00",
+  "updated_at": "2026-09-09T00:00:40.862569+09:00",
   "articles": [
+    {
+      "id": "159cdd08bd33",
+      "title": "브릴스, 상반기 수출 비중 56.7%... 흑자 기조 이어가",
+      "url": "http://www.worktoday.co.kr/news/articleView.html?idxno=88997",
+      "summary": "물류, 식품가공, 이차전지, 조선, 의료·헬스케어 등으로 고객군을 넓혀가고 있는 브릴스는 향후 방산·우주·항공 등 고도의 지능형 로봇 기술이 필요한 첨단 산업으로도 사업 영역을 확대한다는 방침이다. 전진...",
+      "region": "Global",
+      "application": "SmallIT",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-08T23:54:00+09:00",
+      "collected_at": "2026-09-09T00:00:40.697908+09:00"
+    },
     {
       "id": "87a54c031fd1",
       "title": "톱텍, 체코 전기차 설비 수주…256억 규모 자체생산",
