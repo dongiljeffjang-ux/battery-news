@@ -1,6 +1,46 @@
 {
-  "updated_at": "2026-09-11T09:45:05.008758+09:00",
+  "updated_at": "2026-09-11T09:54:26.289577+09:00",
   "articles": [
+    {
+      "id": "e376728436cf",
+      "title": "에코프로비엠 11만3400원으로 하락…2거래일 상승 뒤 숨고르기 들어갔나",
+      "url": "https://www.cbci.co.kr/news/articleView.html?idxno=605875",
+      "summary": "에코프로비엠은 이차전지 양극재 대표 종목 가운데 하나로, 전기차 수요와 배터리 업황 변화에 민감하게 반응하는 종목이다. 최근에는 전고체 배터리와 차세대 배터리 기술에 대한 기대, 주요 배터리 업체들의 투자...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Cathode",
+      "celltypes": [
+        "전고체"
+      ],
+      "companies": [],
+      "hashtags": [
+        "에코프로"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-11T09:48:00+09:00",
+      "collected_at": "2026-09-11T09:54:26.099990+09:00"
+    },
+    {
+      "id": "0c069343eea5",
+      "title": "서산에 5개 기업 2974억원 투자…380명 신규 고용 계획",
+      "url": "http://www.ccnnews.co.kr/news/articleView.html?idxno=414801",
+      "summary": "투자 분야는 리튬이온 이차전지를 비롯해 우주항공용 첨단금속, 친환경 자동차용 통신전선, 하이브리드 자동차 변속기 부품, 탄산리튬 제조 등이다. 시는 이번 투자가 계획대로 진행될 경우 380명의 신규 고용이 이뤄질...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "RawMaterial",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-11T09:44:00+09:00",
+      "collected_at": "2026-09-11T09:54:26.100195+09:00"
+    },
     {
       "id": "9577ad3d2b09",
       "title": "한국앤컴퍼니 ‘까쥬’ 참가…車 애호가에 ‘한국’ 배터리 알린다",
