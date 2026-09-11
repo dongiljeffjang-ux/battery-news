@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-09-11T23:39:28.802441+09:00",
+  "updated_at": "2026-09-11T23:55:55.400295+09:00",
   "articles": [
+    {
+      "id": "406a6d19a7b4",
+      "title": "AI 설계·로봇 수행…24시간 자율실험실 확산",
+      "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8661593&ref=A",
+      "summary": "[정유성/'K-자율실험실' 산학연 협의체 총괄위원장 : \"표준화를 해두면 응용 목적에 맞게 누구나 쉽게 가져다 쓸 수 있기 때문에 생태계가 좀 커지는 역할을 (하게 됩니다).\"] 또 이차전지와 수소에너지 등 4대 분야에...",
+      "region": "Global",
+      "application": "SmallIT",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-11T23:11:00+09:00",
+      "collected_at": "2026-09-11T23:55:55.247565+09:00"
+    },
     {
       "id": "5128461e0cef",
       "title": "포항시, ‘국제 배터리 엑스포 2026 포항’ 준비 본격화…산업과 시민 ...",
