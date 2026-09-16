@@ -1,6 +1,42 @@
 {
-  "updated_at": "2026-09-17T00:11:43.311386+09:00",
+  "updated_at": "2026-09-17T00:22:28.383686+09:00",
   "articles": [
+    {
+      "id": "7042d8a6aaf9",
+      "title": "한국에너지공단, '기후에너지혁신상'... 유망 기업 9곳 선정",
+      "url": "https://www.newsworker.co.kr/news/articleView.html?idxno=504767",
+      "summary": "장관상을 거머쥔 5개 기업은 차세대 전력변압기술의 크로커스, 배터리 재사용기술의 포엔, 무탄소 전력... 이와 함께 한국에너지공단 이사장상은 친환경 재활용기술을 선보인 테라클을 비롯해 전기차 충전 인프라의...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-17T00:16:00+09:00",
+      "collected_at": "2026-09-17T00:22:28.183317+09:00"
+    },
+    {
+      "id": "1777055b35c0",
+      "title": "현대차그룹, 트럭·버스 수소차 전환 ‘가속 페달’",
+      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000012809&cp=nv",
+      "summary": "1회 충전으로 500㎞ 이상 장거리를 달리려면 전기차는 그만큼 더 무거운 배터리를 달아야만 한다. 반면 수소차는 수소 탱크 용량만 좀 더 늘리면 된다.",
+      "region": "Global",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-17T00:14:00+09:00",
+      "collected_at": "2026-09-17T00:22:28.183562+09:00"
+    },
     {
       "id": "ebf7b2b4f8e0",
       "title": "'브릴스 공모주' 17~18일 청약 접수...공모가와 상장일 확정",
