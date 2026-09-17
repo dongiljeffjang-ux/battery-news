@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-09-18T00:20:36.066595+09:00",
+  "updated_at": "2026-09-18T00:29:09.443320+09:00",
   "articles": [
+    {
+      "id": "aef08c731f2d",
+      "title": "[단독] ‘한국판 IRA’ 품목 선정 착수… 배터리·태양광 의견 수렴",
+      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000013174&cp=nv",
+      "summary": "17일 업계 등에 따르면 재정경제부는 최근 이차전지 업계 관계자들을 불러 적격품목으로 어떤 제품이 적합한지 의견을 제출해달라고 요청했다. 또 품목별로 어느 정도 수준의 세액공제가 필요한지에 대한 입장도...",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-18T00:27:00+09:00",
+      "collected_at": "2026-09-18T00:29:09.312082+09:00"
+    },
     {
       "id": "afe2af392281",
       "title": "[NZSI INDEX] 2026년 9월 10일…2026년 9월 10일…자동차산업은 전기차 전...",
