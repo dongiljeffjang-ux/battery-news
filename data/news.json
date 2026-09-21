@@ -1,6 +1,42 @@
 {
-  "updated_at": "2026-09-22T01:39:30.945857+09:00",
+  "updated_at": "2026-09-22T01:55:12.149716+09:00",
   "articles": [
+    {
+      "id": "dce0d5c696b0",
+      "title": "[이슈프리즘] 위기의 독일 제조업과 극우의 부상",
+      "url": "https://www.hankyung.com/article/2026092189581",
+      "summary": "독일 자동차기업 아우디가 올해 중국에서 판매하는 전기차에는 오랜 상징인 ‘네 개의 고리’가 없다. ...",
+      "region": "China",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-22T01:51:00+09:00",
+      "collected_at": "2026-09-22T01:55:11.960507+09:00"
+    },
+    {
+      "id": "b790e8601440",
+      "title": "[사설] 중국에 장악당한 韓 로봇 공급망…기술·산업 종속 탈피 시급",
+      "url": "https://www.hankyung.com/article/2026092189591",
+      "summary": "배터리, 모터, 센서 등 전기차 부품사를 그대로 로봇 공급망으로 흡수하는 전략이 주효했다. 한국은 ‘2030년 글로벌 로봇 최강국 도약’을 선언했지만 중국 의존도가 날로 높아지고 있다.",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-22T01:50:00+09:00",
+      "collected_at": "2026-09-22T01:55:11.960701+09:00"
+    },
     {
       "id": "752415103c7e",
       "title": "중국車, 美서 생산 길 열리나… 완성차 업계 초긴장",
