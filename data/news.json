@@ -1,6 +1,70 @@
 {
-  "updated_at": "2026-09-23T00:12:18.851588+09:00",
+  "updated_at": "2026-09-23T00:27:57.812785+09:00",
   "articles": [
+    {
+      "id": "be97015b2b53",
+      "title": "결실 맺는 구광모 ‘빅테크 동맹’… LG, MS와 손 잡고 엔비디아 AI 팩토...",
+      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000016706&cp=nv",
+      "summary": "LG에너지솔루션의 리튬·인산·철(LFP) 배터리 기반 ‘JF2 AC Link’ 제품은 AI 서버의 급격한 전력 사용 변화에 맞춰 충·방전해 부하를 완화하고 전압이 급변해도 안정적인 전력 공급을 지원한다. 모듈형 설계로...",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "LFP 배터리",
+      "published": "2026-09-23T00:21:00+09:00",
+      "collected_at": "2026-09-23T00:27:57.644068+09:00"
+    },
+    {
+      "id": "8753f3d80875",
+      "title": "“무려 1111마력 파워·제로백 2.1초”..사우디 전기차 시어 ‘엑소봇’...",
+      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62633",
+      "summary": "22일(현지시각) 사우디아라비아의 첫 국영 전기차 브랜드 시어(CEER)가 공개한 플래그십 전기차 ‘엑소봇... 안전성 및 주행 보조 측면에서는 배터리를 차체 구조에 직접 통합하는 셀투팩(Cell-to-Pack) 기술과 7개...",
+      "region": "Global",
+      "application": "EV",
+      "material": "CellPack",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-23T00:12:00+09:00",
+      "collected_at": "2026-09-23T00:27:57.621358+09:00"
+    },
+    {
+      "id": "0de92ac27bf3",
+      "title": "포스코퓨처엠, SK온과 1.1조 규모 LFP 양극재 공급계약..LFP 시장 경쟁력...",
+      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62636",
+      "summary": "최근 LFP 배터리는 가격 경쟁력과 길어진 수명을 바탕으로 전기차 보급형 모델은 물론, AI 데이터센터 증설에 따른 에너지저장장치(ESS) 시장에서 핵심 소재로 각광받고 있다. 포스코퓨처엠은 기존 삼원계(NCM·NCA) 중심...",
+      "region": "Korea",
+      "application": "ESS",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP",
+        "NCM"
+      ],
+      "companies": [],
+      "hashtags": [
+        "SK온",
+        "포스코퓨처엠"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-23T00:12:00+09:00",
+      "collected_at": "2026-09-23T00:27:57.621578+09:00"
+    },
     {
       "id": "273671abbd8a",
       "title": "LG엔솔, 엔비디아 ‘AI 팩토리’ 생태계 합류..K-배터리 ‘유일’",
