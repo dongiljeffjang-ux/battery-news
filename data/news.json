@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-09-22T10:23:07.716024+09:00",
+  "updated_at": "2026-09-22T10:32:41.767036+09:00",
   "articles": [
+    {
+      "id": "7d5e3f9898b2",
+      "title": "KB자산운용, 'RISE 삼성SK그룹' ETF 출시…삼성·SK핵심 계열사 투자",
+      "url": "http://www.smarttimes.co.kr/news/articleView.html?idxno=49175",
+      "summary": "육동휘 ETF상품마케팅본부장은 \"삼성전자와 SK하이닉스를 비롯해 전자부품, 이차전지, 금융, 통신 등 주요 계열사에 투자할 수 있는 만큼 삼성과 SK그룹의 성장에 함께 투자하고자 하는 투자자들에게 새로운...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-22T10:24:00+09:00",
+      "collected_at": "2026-09-22T10:32:41.580894+09:00"
+    },
     {
       "id": "80249b052bc5",
       "title": "LG에너지솔루션 엔비디아 AI 팩토리 생태계 합류, BESS 파트너로 선정",
@@ -190,6 +208,24 @@
       "keyword": "ESS 에너지저장장치",
       "published": "2026-09-22T10:16:00+09:00",
       "collected_at": "2026-09-22T10:23:07.543988+09:00"
+    },
+    {
+      "id": "a191ad3a6d9d",
+      "title": "환경산업기술원, 지속가능성 공시기준 이행지원 세미나 개최",
+      "url": "https://www.todayenergy.kr/news/articleView.html?idxno=303392",
+      "summary": "2023년 이차전지 업종을 시작으로 이차전지, 반도체, 디스플레이, 석유화학, 철강업종 등 총 5개 업종의 안내서가 나왔다. 또한, 국가 전과정 목록 데이터베이스(LCI DB) 활용방안을 설명한다.",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-22T10:16:00+09:00",
+      "collected_at": "2026-09-22T10:32:41.581099+09:00"
     },
     {
       "id": "289a48a71b55",
