@@ -1,6 +1,47 @@
 {
-  "updated_at": "2026-09-24T00:12:39.299183+09:00",
+  "updated_at": "2026-09-24T00:22:40.242632+09:00",
   "articles": [
+    {
+      "id": "6a87884ea6b0",
+      "title": "[사설] 허점투성이 '햇빛마을'…10%만 준비됐다는데 사업 확대한다니",
+      "url": "https://www.hankyung.com/article/2026092340501",
+      "summary": "사업이 지연되는 것을 막기 위해 에너지저장장치(ESS) 투자를 크게 확대한다는 계획이지만 이는 근본적 해결책이 아니다. 정부는 속도전을 중단하고 내실부터 다져야 한다.",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-09-24T00:19:00+09:00",
+      "collected_at": "2026-09-24T00:22:40.132173+09:00"
+    },
+    {
+      "id": "98f9de997da5",
+      "title": "두 배 커진 ‘정부 ESS’ 3차전… 국산화·안정성 ‘승부처’",
+      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000017033&cp=nv",
+      "summary": "SK온 역시 충남 서산공장의 전기차 배터리 생산라인 일부를 ESS용 LFP 라인으로 전환해 수주전에 대비하고 있다. 삼성SDI는 소재·부품 등을 국산화하는 동시에 가격 효율성을 강화하는 전략을 추진 중이다.",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "companies": [],
+      "hashtags": [
+        "삼성SDI",
+        "SK온"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-24T00:14:00+09:00",
+      "collected_at": "2026-09-24T00:22:40.128965+09:00"
+    },
     {
       "id": "9777871c133e",
       "title": "\"자동차만 보면 안 된다\"…현대차, 연말 '로봇 모멘텀' 온다",
