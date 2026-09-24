@@ -1,6 +1,26 @@
 {
-  "updated_at": "2026-09-25T00:31:39.587240+09:00",
+  "updated_at": "2026-09-25T00:46:01.171593+09:00",
   "articles": [
+    {
+      "id": "6732ceca656d",
+      "title": "메르세데스-벤츠, 프로로지움 Gen4 셀 공동 시험",
+      "url": "https://www.tokenpost.kr/news/tech/413677",
+      "summary": "메르세데스-벤츠와 프로로지움(ProLogium)이 최신 Gen4 전고체 배터리 셀의 공동 시험에 들어간다. 이번 합의는 성능 검증 단계로, 차량 탑재나 양산 계약을 의미하지 않는다.",
+      "region": "Europe",
+      "application": "Etc",
+      "material": "CellPack",
+      "celltypes": [
+        "전고체"
+      ],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전고체 배터리",
+      "published": "2026-09-25T00:44:00+09:00",
+      "collected_at": "2026-09-25T00:46:00.999632+09:00"
+    },
     {
       "id": "9f74574f5669",
       "title": "이 대통령, 멕시코 언론 인터뷰…\"멕시코, 북미·글로벌 시장 진출의 핵...",
