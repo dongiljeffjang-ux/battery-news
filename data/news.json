@@ -1,6 +1,42 @@
 {
-  "updated_at": "2026-09-26T10:06:04.256730+09:00",
+  "updated_at": "2026-09-26T10:24:06.951967+09:00",
   "articles": [
+    {
+      "id": "869344040544",
+      "title": "라이벌에서 파트너로···현대차·토요타 협력 접점 넓힌다",
+      "url": "https://www.sisajournal-e.com/news/articleView.html?idxno=423864",
+      "summary": "특히 배터리 전기차와 비교해 수소 승용차 시장의 성장 속도가 더딘 상황에서 개별 완성차 업체가 장기간 투자를 이어가는 데 따른 부담도 크다. 기술과 인프라 등 일부 영역에서 업체 간 협력 필요성이 상대적으로 높은...",
+      "region": "Japan",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-26T10:22:00+09:00",
+      "collected_at": "2026-09-26T10:24:06.805465+09:00"
+    },
+    {
+      "id": "9bbf5096b2fd",
+      "title": "ESS 시장 팽창 모멘텀… 전력변환 및 배터리 관련주 차별화 장세 뚜렷",
+      "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=490351",
+      "summary": "글로벌 빅테크 기업들의 인공지능(AI) 데이터센터 증설과 신재생에너지 인프라 확대로 전력저장장치(ESS) 수요가 급증하는 가운데, 23일 ESS 관련 핵심 기술 및 부품을 보유한 주요 종목들이 상승 마감했다. 이날 ESS...",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-09-26T10:06:00+09:00",
+      "collected_at": "2026-09-26T10:24:06.809611+09:00"
+    },
     {
       "id": "88f5c3b8ecb3",
       "title": "삼성SDI, 보수적 기조가 결실로… ESS·전고체로 캐즘 정면돌파",
