@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-09-27T10:02:44.411102+09:00",
+  "updated_at": "2026-09-27T10:16:56.434424+09:00",
   "articles": [
+    {
+      "id": "88e2fc58c0be",
+      "title": "증권업계, 3분기 영업익 추정치 삼전 영업익 5%·SK하닉 2% 상향...삼성S...",
+      "url": "https://www.livebiz.today/news/articleView.html?idxno=205121",
+      "summary": "ESS(에너지저장장치) 사업의 실적 개선에 더해, 완성차업체가 배터리 최소 구매 물량을 채우지 못하면서 지급하는 보상금까지 반영돼 실적 개선 기대가 커진 덕분이다. 두 번째로 전망치 상향폭이 큰 종목은...",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-09-27T10:08:00+09:00",
+      "collected_at": "2026-09-27T10:16:56.254245+09:00"
+    },
     {
       "id": "cf64b5a5b355",
       "title": "LG전자, 엔비디아 파트너 네트워크 등재…데이터센터 냉각 시장 공략 속...",
