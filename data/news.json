@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T01:31:55.901518+09:00",
+  "updated_at": "2026-10-01T01:44:54.317256+09:00",
   "articles": [
     {
       "id": "66bf31af7fe4",
@@ -889,6 +889,24 @@
       "keyword": "이차전지",
       "published": "2026-09-30T20:16:00+09:00",
       "collected_at": "2026-10-01T01:31:55.717326+09:00"
+    },
+    {
+      "id": "09741f1a1503",
+      "title": "'TK 패싱' 우려 속 與 지도부·TK 한자리…예산정책협의회 주목",
+      "url": "https://www.dkilbo.com/news/articleView.html?idxno=555942",
+      "summary": "김민석 대표는 대구의 AI 로봇, 구미의 반도체 소재·부품 및 방산, 포항의 철강·이차전지 산업을 거론하며 AI 대전환 시대에 맞춰 지역 주력산업을 고도화해야 한다는 취지의 입장을 밝혔다. 민주당 대구·경북...",
+      "region": "Korea",
+      "application": "SmallIT",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-30T20:16:00+09:00",
+      "collected_at": "2026-10-01T01:44:54.135736+09:00"
     },
     {
       "id": "8f7b306e372f",
