@@ -1,6 +1,74 @@
 {
-  "updated_at": "2026-09-30T10:46:49.624882+09:00",
+  "updated_at": "2026-09-30T10:57:19.926404+09:00",
   "articles": [
+    {
+      "id": "beaef804f32f",
+      "title": "LG엔솔-GM, 美서 LMR 배터리 양산…배터리 포트폴리오 확대",
+      "url": "https://www.todayenergy.kr/news/articleView.html?idxno=303658",
+      "summary": "LG에너지솔루션과 GM은 스프링힐 공장에서 고니켈계, LFP, LMR 등 다양한 배터리 화학계열을 파우치형과 각형으로 생산해 전기차와 ESS 등 시장 변화에 대응한다는 계획이다. 박인재 얼티엄셀즈 사장은 \"시장 변화에...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "CellPack",
+      "celltypes": [
+        "LFP",
+        "LMR"
+      ],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-30T10:54:00+09:00",
+      "collected_at": "2026-09-30T10:57:19.717893+09:00"
+    },
+    {
+      "id": "136de452a499",
+      "title": "\"LFP가격에 에너지밀도는 33%↑\" LG엔솔, 세계첫 '각형 LMR배터리' 양산...",
+      "url": "https://www.catchnews.kr/news/articleView.html?idxno=128940",
+      "summary": "이번에 선보이는 LMR 각형 배터리는 기존 리튬인산철(LFP) 배터리와 유사한 제조 원가를 유지하면서도 에너지밀도는 약 33% 높일 수 있어 차세대 전기차(EV) 시장의 게임 체인저로 주목받고 있다. 한편 얼티엄셀즈...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP",
+        "LMR"
+      ],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-09-30T10:54:00+09:00",
+      "collected_at": "2026-09-30T10:57:19.718110+09:00"
+    },
+    {
+      "id": "cb1cd31e77e4",
+      "title": "삼성SDI, 'DCWA 2026'서 AI 데이터센터 최적화 배터리 솔루션과 제품 라인...",
+      "url": "http://www.techholic.co.kr/news/articleView.html?idxno=223072",
+      "summary": "SBB 존에는 일체형 에너지저장장치(ESS) 솔루션인 'SBB 2.0'에 탑재될 각형 LFP 배터리가 전시됐다. 삼성SDI 고유의 각형 폼팩터에 LFP 소재를 적용해 성능과 안전성을 한층 강화한 제품이다.",
+      "region": "Korea",
+      "application": "ESS",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "companies": [],
+      "hashtags": [
+        "삼성SDI"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-09-30T10:48:00+09:00",
+      "collected_at": "2026-09-30T10:57:19.723408+09:00"
+    },
     {
       "id": "e1a7760bc190",
       "title": "벤처協, '이달의 우수벤처'에 헬프네이쳐·디쌤비즈·매이드 3社",
@@ -60,6 +128,24 @@
       "collected_at": "2026-09-30T10:46:49.416588+09:00"
     },
     {
+      "id": "6698cb1a4773",
+      "title": "[증권가로수] 하나증권/한투운용/마스턴투자운용/두나무",
+      "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609300849052770835",
+      "summary": "◆하나증권, 2차 국민성장펀드 판매 개시 하나증권은 ‘2026년 제2차 국민참여형 국민성장펀드’ 판매를 시작한다고 30일밝혔다. 국민성장펀드는 반도체·이차전지·바이오 등 미래 성장산업에 투자하는 정책...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-30T10:42:00+09:00",
+      "collected_at": "2026-09-30T10:57:19.726716+09:00"
+    },
+    {
       "id": "c8504903db18",
       "title": "워터, 휴게소 23곳에 충전기 123기…400kW급만 62기",
       "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=703828",
@@ -100,6 +186,24 @@
       "collected_at": "2026-09-30T10:46:49.421510+09:00"
     },
     {
+      "id": "1c2857ac1d40",
+      "title": "현대무벡스, 금호타이어 함평공장 720억 수주…'스마트 물류' 역량 입증",
+      "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=855140",
+      "summary": "중국 등 글로벌 타이어 거점으로 공급망을 넓혀왔다. 타이어 부문뿐만 아니라 이차전지와 의약, 유통 등 전방위적인 수주 호조가 맞물리면서 이달 기준 4000억원을 웃도는 탄탄한 수주잔고를 확보한 상태다.",
+      "region": "China",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-30T10:40:00+09:00",
+      "collected_at": "2026-09-30T10:57:19.726901+09:00"
+    },
+    {
       "id": "b0384f9b1372",
       "title": "자동차 경량화에서 항공·UAM까지, 금형 기술의 영역을 넓히다 - 동아이...",
       "url": "https://www.handmk.com/news/articleView.html?idxno=43210",
@@ -134,6 +238,42 @@
       "keyword": "ESS 에너지저장장치",
       "published": "2026-09-30T10:38:00+09:00",
       "collected_at": "2026-09-30T10:46:49.421700+09:00"
+    },
+    {
+      "id": "8276b6d62402",
+      "title": "2차 국민참여성장펀드 판매 돌입...6000억 모집",
+      "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=703823",
+      "summary": "국민성장펀드는 AI와 반도체, 이차전지, 바이오, 에너지 등 첨단전략산업에 5년간 총 150조원을 공급하는 것을 목표로 하고 있다. 일반 투자자가 직접 접근하기 어려운 비상장 성장기업과 첨단산업 관련 사모펀드 등에...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-30T10:38:00+09:00",
+      "collected_at": "2026-09-30T10:57:19.727096+09:00"
+    },
+    {
+      "id": "4f77ce118d61",
+      "title": "광양시-광양교육지원청, '교육혁신선도지역' 지정 맞손",
+      "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1297530",
+      "summary": "협약기관들은 철강·항만물류·AI·이차전지·신소재 등 지역산업과 연계한 인재양성을 비롯한 교육혁신 과제 추진을 위해 각 기관이 보유한 역량과 자원을 공유하고 협력하기로 했다. 광양시와 광양교육지원청이...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-09-30T10:38:00+09:00",
+      "collected_at": "2026-09-30T10:57:19.727280+09:00"
     },
     {
       "id": "2ede7dae4f88",
@@ -449,6 +589,29 @@
       "keyword": "전기차 배터리",
       "published": "2026-09-30T10:28:00+09:00",
       "collected_at": "2026-09-30T10:46:49.418389+09:00"
+    },
+    {
+      "id": "92acb27eb2e3",
+      "title": "LG에너지솔루션-GM 북미 합작법인, LMR 배터리 생산설비 구축 나서",
+      "url": "https://www.businesspost.co.kr/BP?command=article_view&num=448254",
+      "summary": "얼티엄셀즈는 지난 6월부터 에너지저장장치(ESS)용 LFP 배터리 생산설비도 증설하고 있다. 회사 측은 2030년까지 LFP 배터리 생산설비 증설, 신규 LMR 배터리 생산설비 구축에 총 10억 달러(약 1조3600억 원)를 투입할...",
+      "region": "Korea",
+      "application": "ESS",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP",
+        "LMR"
+      ],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-09-30T10:28:00+09:00",
+      "collected_at": "2026-09-30T10:57:19.724595+09:00"
     },
     {
       "id": "7a34152768d3",
@@ -1122,6 +1285,29 @@
       "keyword": "이차전지",
       "published": "2026-09-30T09:46:00+09:00",
       "collected_at": "2026-09-30T10:46:49.427241+09:00"
+    },
+    {
+      "id": "41ee585fb232",
+      "title": "LG에너지솔루션, 美서 세계 첫 각형 LMR 양산 추진",
+      "url": "https://www.etoday.co.kr/news/view/2630746",
+      "summary": "테네시 공장은 6월부터 LG에너지솔루션의 에너지저장장치(ESS) 시스템 통합(SI) 자회사 버테크 고객사들을 위한 LFP 배터리 생산을 시작했으며, LMR 각형 배터리를 추가해 제품 포트폴리오를 한층 넓힐 계획이다. 앞서...",
+      "region": "Korea",
+      "application": "ESS",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP",
+        "LMR"
+      ],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-09-30T09:44:00+09:00",
+      "collected_at": "2026-09-30T10:57:19.725941+09:00"
     },
     {
       "id": "66bf7ea2a65f",
