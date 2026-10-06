@@ -1,6 +1,26 @@
 {
-  "updated_at": "2026-10-07T01:58:02.337840+09:00",
+  "updated_at": "2026-10-07T02:06:11.228732+09:00",
   "articles": [
+    {
+      "id": "60cca0dcfa5e",
+      "title": "고려아연, 故 최창걸 1주기 추모…'사람·신뢰'로 미래 50년 잇는다",
+      "url": "https://www.apnews.kr/news/articleView.html?idxno=3051784",
+      "summary": "신재생에너지와 이차전지 소재, 자원순환 등 친환경 신성장 사업이 그 연장선에 있다. 고인이 보여준 과감한 투자와 기술혁신의 정신을 기존 사업을 지키는 데 머물지 않고 새로운 산업과 기술을 개척하는 방식으로...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "고려아연"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-10-07T02:00:00+09:00",
+      "collected_at": "2026-10-07T02:06:11.037135+09:00"
+    },
     {
       "id": "351931961e31",
       "title": "페라리 부산, 첫 전기차 ‘루체’ 고객 초청 행사",
@@ -591,6 +611,26 @@
       "keyword": "이차전지",
       "published": "2026-10-06T20:28:00+09:00",
       "collected_at": "2026-10-07T01:58:02.148421+09:00"
+    },
+    {
+      "id": "a5401809be91",
+      "title": "고려아연, 비철금속 개척자 故 최창걸 명예회장 1주기 추모식",
+      "url": "http://www.ujeil.com/news/articleView.html?idxno=393115",
+      "summary": "제련 경쟁력을 바탕으로 대한민국 경제 발전과 한미 경제협력, 핵심광물 공급망 구축 등에 기여하고 신재생에너지·이차전지 소재·자원순환 등 신성장 분야에서도 사업을 확대할 계획이다. 고려아연 관계자는 \"시대의...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "RawMaterial",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "고려아연"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-10-06T20:28:00+09:00",
+      "collected_at": "2026-10-07T02:06:11.039805+09:00"
     },
     {
       "id": "15ad5cf6176c",
