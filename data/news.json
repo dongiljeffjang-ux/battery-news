@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-10-09T11:41:01.641490+09:00",
+  "updated_at": "2026-10-09T11:53:05.647316+09:00",
   "articles": [
+    {
+      "id": "64c77a9cf0bb",
+      "title": "철강 수출 4개 연속 증가…단가 15.8% 상승",
+      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1727271",
+      "summary": "변압기와 태양광·풍력 구조물, 에너지저장장치(ESS) 등 수요가 늘어나는 시장을 공략하고 있다. 현대제철도 '차세대 전력 인프라 핵심산업 태스크포스(TF)'를 구성했다.",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-10-09T11:50:00+09:00",
+      "collected_at": "2026-10-09T11:53:05.442225+09:00"
+    },
     {
       "id": "b1586595a8e9",
       "title": "경북도, ‘가속기 기술’ 첨단산업 경쟁력 강화",
