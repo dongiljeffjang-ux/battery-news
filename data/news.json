@@ -1,6 +1,26 @@
 {
-  "updated_at": "2026-10-14T02:49:46.142118+09:00",
+  "updated_at": "2026-10-14T03:03:59.400056+09:00",
   "articles": [
+    {
+      "id": "5317e56822e2",
+      "title": "정의선 6년, 현대차그룹 '추격자의 문법' 바꿔…공장, AI·로봇 키운다",
+      "url": "https://sateconomy.co.kr/news/view/1065547002849274",
+      "summary": "BYD는 배터리와 핵심부품 내재화를 바탕으로 원가와 공급망 경쟁력을 확보했다. 현대차그룹은 자동차...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "BYD"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-10-14T02:50:00+09:00",
+      "collected_at": "2026-10-14T03:03:59.265860+09:00"
+    },
     {
       "id": "8af516536916",
       "title": "렉서스 8세대 ES 출시…첫 전기차 ES 350e, 하이브리드보다 130만원 싼 71...",
