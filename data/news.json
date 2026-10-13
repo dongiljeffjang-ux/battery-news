@@ -1,6 +1,44 @@
 {
-  "updated_at": "2026-10-13T12:18:09.521721+09:00",
+  "updated_at": "2026-10-13T12:27:40.218085+09:00",
   "articles": [
+    {
+      "id": "2cd90b463e76",
+      "title": "[수입차 Pick] 르노·푸조, '2026 파리 모터쇼' 참가…전동화 중심 전시",
+      "url": "https://www.lcnews.co.kr/news/articleView.html?idxno=209547",
+      "summary": "프랑스 자동차 시장에서 중국 전기차 브랜드의 진출이 확대되는 가운데, 르노와 푸조는 전동화... 또, RCZ 비전은 과거 쿠페 모델을 계승해 500마력급 전고체 배터리 시스템과 1,000V 전압 아키텍처, 마이크로 LED...",
+      "region": "China",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [
+        "전고체"
+      ],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-10-13T12:20:00+09:00",
+      "collected_at": "2026-10-13T12:27:39.985208+09:00"
+    },
+    {
+      "id": "8b2db992bbfb",
+      "title": "[현장] \"하이브리드보다 130만원 더 낮게 책정\" 렉서스 ES 첫 전기차, 71...",
+      "url": "https://www.newsis.com/view/NISX20261012_0003822898",
+      "summary": "\"렉서스의 첫 배터리 전기차 세단인 ES 350e는 프리미엄 브랜드의 가치는 지키면서, ES를 찾으시는 고객이 더 쉽게 선택하실 수 있는 가격으로 선보입니다. \" 강대환 렉서스코리아 부사장은 13일 오전 서울 광진구...",
+      "region": "Global",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-10-13T12:16:00+09:00",
+      "collected_at": "2026-10-13T12:27:39.985425+09:00"
+    },
     {
       "id": "6cf73cfd5e75",
       "title": "광양시, 민선9기 100대 공약 확정…13개 분야 공약실천계획 수립 착수",
