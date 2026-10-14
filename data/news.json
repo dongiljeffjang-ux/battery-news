@@ -1,6 +1,26 @@
 {
-  "updated_at": "2026-10-15T00:33:53.917905+09:00",
+  "updated_at": "2026-10-15T00:45:36.906822+09:00",
   "articles": [
+    {
+      "id": "f63088d41d6e",
+      "title": "코스닥 823선 하락…주성엔지니어링·원익IPS '털썩' 에코프로·에코프로...",
+      "url": "https://www.cbci.co.kr/news/articleView.html?idxno=615557",
+      "summary": "반면 이차전지 관련주는 상승했다. 에코프로는 전 거래일보다 2200원(2.58%) 오른 8만7400원에 마감했다.",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "에코프로"
+      ],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-10-15T00:36:00+09:00",
+      "collected_at": "2026-10-15T00:45:36.741819+09:00"
+    },
     {
       "id": "a674d446c7db",
       "title": "‘렉서스의 대명사’ ES, 8세대 신모델 ‘올 뉴 ES’ 출시",
@@ -2894,6 +2914,26 @@
       "keyword": "배터리 재활용",
       "published": "2026-10-14T11:00:00+09:00",
       "collected_at": "2026-10-15T00:33:53.731201+09:00"
+    },
+    {
+      "id": "8f239d8e1d3b",
+      "title": "엘앤에프 자회사 JHC, 폐배터리 리사이클링 본격화… 양극재 순환 생태...",
+      "url": "https://www.ddaily.co.kr/page/view/2026101410365468548",
+      "summary": "지난 2011년 설립돼 2014년부터 전기차용 전구체를 양산해 온 JHC는 그간 축적한 소재 제조 및 공정 운영 경험을 폐배터리 재활용 사업으로 이식했다. 폐기물종합재활용업 허가를 바탕으로 지정폐기물과 일반폐기물을...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Cathode",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "엘앤에프"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "배터리 재활용",
+      "published": "2026-10-14T11:00:00+09:00",
+      "collected_at": "2026-10-15T00:45:36.756357+09:00"
     },
     {
       "id": "2c3899eb598c",
