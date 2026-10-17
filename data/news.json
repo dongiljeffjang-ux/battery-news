@@ -1,6 +1,46 @@
 {
-  "updated_at": "2026-10-17T09:56:39.585123+09:00",
+  "updated_at": "2026-10-17T10:13:06.874368+09:00",
   "articles": [
+    {
+      "id": "ee5495972177",
+      "title": "[단독] 캐시워크 돈버는퀴즈 정답 10월 17일",
+      "url": "https://www.bntnews.co.kr/article/view/bnt202610170005",
+      "summary": "픽스 세이프티 LFP 보조배터리 퀴즈 정답은 '1000, LFP, 준고체, 초고속, 빠른충전'이다. 국민건강보험 내 건강보험료도 정산 대상일까 퀴즈 정답은 '소득정산'이다.",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "LFP 배터리",
+      "published": "2026-10-17T10:02:00+09:00",
+      "collected_at": "2026-10-17T10:13:06.678098+09:00"
+    },
+    {
+      "id": "b3754bdc6ed3",
+      "title": "[캐시워크 종합] 10월 17일 토요일 오전 10시 현재 출제되고 있는 모든 ...",
+      "url": "http://www.bizwnews.com/news/articleView.html?idxno=149174",
+      "summary": "\"폭발 위험 걱정 NO 안전성UP 대용량 고속충전 배터리\" 숫자, ㅈㄱㅊ, 영어, ㅊㄱㅅ, ㅃㄹㅊㅈ 관련이다. 정답은 '1000', '준고체', 'lfp', '초고속', '빠른충전' 이다.",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "LFP 배터리",
+      "published": "2026-10-17T10:00:00+09:00",
+      "collected_at": "2026-10-17T10:13:06.678277+09:00"
+    },
     {
       "id": "685050488b49",
       "title": "전기차가 '친환경'?...전기차는 원주민 산림 훼손 주범",
