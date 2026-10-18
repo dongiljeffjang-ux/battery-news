@@ -1,6 +1,50 @@
 {
-  "updated_at": "2026-10-18T09:32:12.396763+09:00",
+  "updated_at": "2026-10-18T09:48:12.369396+09:00",
   "articles": [
+    {
+      "id": "087dc69e0c28",
+      "title": "SK온, 제2회 미래기술원 학술대회 개최…기술 혁신 역량 결집",
+      "url": "https://www.etnews.com/20261018000021",
+      "summary": "올해 대상은 리튬인산철(LFP) 배터리 양극 제조에 쓰이는 고가의 CNT 페이스트를 CNT 파우더로 대체할 수 있는 공정을 개발한 연구팀이 수상했다. 연구팀은 CNT 파우더를 양극 소재에 고르게 분산시켜 기존 CNT 페이스트...",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "companies": [],
+      "hashtags": [
+        "SK온"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "LFP 배터리",
+      "published": "2026-10-18T09:45:00+09:00",
+      "collected_at": "2026-10-18T09:48:12.164871+09:00"
+    },
+    {
+      "id": "a346ec3b31e9",
+      "title": "SK온, LFP 양극 원가 낮출 공정 개발…차세대 배터리 연구 성과 공유",
+      "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=313349",
+      "summary": "대상 수상 연구는 LFP 배터리 양극 제조 과정에서 기존 CNT 페이스트 대신 CNT 파우더를 활용하는 공정이다. CNT는 전극 내부에서 전자의 이동을 돕는 도전재다.",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "companies": [],
+      "hashtags": [
+        "SK온"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "LFP 배터리",
+      "published": "2026-10-18T09:38:00+09:00",
+      "collected_at": "2026-10-18T09:48:12.165066+09:00"
+    },
     {
       "id": "1142b55efbe4",
       "title": "SK온, 제2회 미래기술원 학술대회… LFP 제조 신기술 개발팀 대상",
