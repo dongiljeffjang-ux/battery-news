@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-10-21T00:24:51.025037+09:00",
+  "updated_at": "2026-10-21T00:35:50.284229+09:00",
   "articles": [
+    {
+      "id": "18415a566266",
+      "title": "EU, 중국산 친환경차 겨냥 ‘산업 가속화법’… 유럽산 기준 강화 추진...",
+      "url": "https://www.chosun.com/economy/auto/2026/10/21/BJECRNUMRVBRNC3G5AN7VT33KY/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "summary": "친환경차의 경우 EU 회원국에서 최종 조립되고, 배터리를 제외한 부품 70% 이상을 유럽산으로 채웠을 때... 현대차·기아는 올 1~9월 유럽에서 전기차 약 20만대를 판매했는데, 이 중 튀르키예를 포함해 현지에서 생산한...",
+      "region": "China",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-10-21T00:34:00+09:00",
+      "collected_at": "2026-10-21T00:35:50.058560+09:00"
+    },
     {
       "id": "42847cae5d4c",
       "title": "울산 '산업용 지역전기요금제'로 연 최대 4561억 절감, AI·이차전지 등...",
@@ -1449,6 +1467,24 @@
       "keyword": "전기차 배터리",
       "published": "2026-10-20T17:40:00+09:00",
       "collected_at": "2026-10-21T00:24:50.701727+09:00"
+    },
+    {
+      "id": "a3e7b68f5c23",
+      "title": "싼타페 부분변경 실물 포착…세로형 램프에 965km EREV 추가",
+      "url": "https://thedrive.co.kr/news/newsview.php?ncode=1065602109141220",
+      "summary": "외부 충전이 가능한 배터리와 엔진 발전을 결합해 순수 전기차보다 장거리 주행 부담을 줄이는 것이 특징이다. 이번에 포착된 프로토타입의 뒷펜더에는 주유구가 확인된다.",
+      "region": "Global",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-10-20T17:40:00+09:00",
+      "collected_at": "2026-10-21T00:35:50.063709+09:00"
     },
     {
       "id": "c3b8e2b5fba4",
@@ -4768,6 +4804,29 @@
       "keyword": "리튬이온 배터리",
       "published": "2026-10-20T07:00:00+09:00",
       "collected_at": "2026-10-20T10:25:48.878753+09:00"
+    },
+    {
+      "id": "53a8b560324d",
+      "title": "[中 거인의 공급망] ②양극재 핵심 파트너 '용백과기' 없으면 'CATL'도 없...",
+      "url": "https://www.newspim.com/news/view/20261019001332",
+      "summary": "전고체 배터리용 삼원계 양극재도 누적 10톤급 출하를 달성했지만, 황화물계 고체전해질은 아직 개발 및 소규모 시험 공정 단계다. 결국 용백과기의 성장성을 판단할 핵심은 시장 확대 자체보다 고부가 제품의...",
+      "region": "China",
+      "application": "Etc",
+      "material": "Cathode",
+      "celltypes": [
+        "NCM",
+        "전고체"
+      ],
+      "companies": [],
+      "hashtags": [
+        "CATL"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전고체 배터리",
+      "published": "2026-10-20T07:00:00+09:00",
+      "collected_at": "2026-10-21T00:35:50.082837+09:00"
     },
     {
       "id": "8fbd78c5552a",
