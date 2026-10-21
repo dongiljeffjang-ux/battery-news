@@ -1,6 +1,62 @@
 {
-  "updated_at": "2026-10-22T00:40:49.141858+09:00",
+  "updated_at": "2026-10-22T00:53:18.466196+09:00",
   "articles": [
+    {
+      "id": "ebe5cccf6310",
+      "title": "CATL, 실적부진에 주가 12% 급락…中배터리업계 우려 증폭",
+      "url": "https://www.tfmedia.co.kr/news/article.html?no=208239",
+      "summary": "'탈CATL' 3분기 순익 증가율 7분기만에 최저…시총 하루만에 30조원↓ 주가 고점 대비 반토막…中 세제혜택 축소 등 악재 속 배터리주 동반 약세  세계 1위 전기차 배터리업체 CATL(닝더스다이)의 주가가 3분기...",
+      "region": "China",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "CATL"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-10-22T00:44:00+09:00",
+      "collected_at": "2026-10-22T00:53:18.324683+09:00"
+    },
+    {
+      "id": "7638309802f6",
+      "title": "[데스크시각] 곧 전기차 시대가 온다는데",
+      "url": "https://www.kmib.co.kr/article/20261021502363",
+      "summary": "중국 전기차의 저가 공세에 대응할 전략도 시급하다. 국내 업체들이 무조건 가격을 낮추는 방식으로 맞서기는 쉽지 않다.",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-10-22T00:40:00+09:00",
+      "collected_at": "2026-10-22T00:53:18.324816+09:00"
+    },
+    {
+      "id": "905a153335f9",
+      "title": "한국타이어, 폭스바겐 차세대 소형 EV 라인업에 '아이온' 공급",
+      "url": "http://www.ccnnews.co.kr/news/articleView.html?idxno=416607",
+      "summary": "여름용 퍼포먼스 타이어인 '아이온 에보'는 전기차의 높은 배터리 하중과 강력한 순간 토크에 안정적으로 대응할 수 있도록 설계되었다. 전기차에 최적화된 구조와 전용 소재를 채택해 고속 주행 안정성과 조향...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-10-22T00:40:00+09:00",
+      "collected_at": "2026-10-22T00:53:18.324939+09:00"
+    },
     {
       "id": "23970af9266f",
       "title": "“수리 전문가 늘리고 부품도 미리 준비”… 전기차 서비스 강화하는 B...",
