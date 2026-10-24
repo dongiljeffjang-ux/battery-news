@@ -1,6 +1,42 @@
 {
-  "updated_at": "2026-10-24T10:18:01.012396+09:00",
+  "updated_at": "2026-10-24T10:28:02.075991+09:00",
   "articles": [
+    {
+      "id": "631e7da8450e",
+      "title": "‘재계 5위’ 경쟁 2라운드…한화는 우주, 롯데는 바이오, 포스코는 리...",
+      "url": "https://economist.co.kr/article/view/ecn202610200062",
+      "summary": "철강회사가 배터리 원료의 ‘땅 밑’부터 장악하기 위해 수년간 투자한 결과다. 문제는 생산능력이 곧 기업가치는 아니라는 점이다.",
+      "region": "Korea",
+      "application": "EV",
+      "material": "RawMaterial",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-10-24T10:26:00+09:00",
+      "collected_at": "2026-10-24T10:28:01.838073+09:00"
+    },
+    {
+      "id": "e30fa0f20853",
+      "title": "10년 새 뒤집힌 서열…한화·롯데·포스코 ‘재계 5위’ 전쟁",
+      "url": "https://economist.co.kr/article/view/ecn202610190013",
+      "summary": "포스코홀딩스 출범과 함께 지주회사 체제로 전환하고 철강 중심의 사업구조를 이차전지소재·에너지 등으로 넓혔다. 리튬·니켈 등 원료부터 양·음극재까지 이어지는 이차전지소재 밸류체인 구축에 대규모...",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Anode",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-10-24T10:25:00+09:00",
+      "collected_at": "2026-10-24T10:28:01.846887+09:00"
+    },
     {
       "id": "a5b0d162b1f2",
       "title": "삼성SDI 주가 8월 이후 첫 50만원선 하회…새주장 반등 여부 '촉각'",
