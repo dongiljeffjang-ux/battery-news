@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-10-25T23:36:54.917628+09:00",
+  "updated_at": "2026-10-25T23:54:56.821095+09:00",
   "articles": [
+    {
+      "id": "5e6d32839875",
+      "title": "駐中호주상의 회장 \"호주-中 경제 상호보완성 강해\"",
+      "url": "https://www.the-today.com/news/articleView.html?idxno=92377",
+      "summary": "이어 \"중국이 전기차, 배터리, 청정에너지 등 분야에서 뚜렷한 발전 우위를 점하고 있다\"고 덧붙였다. 호주가 생산성 향상 및 경제적이고 실현가능한 에너지 전환을 추진 중인 만큼 중국과의 협력 강화는 관련 분야의 발전...",
+      "region": "China",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-10-25T23:46:00+09:00",
+      "collected_at": "2026-10-25T23:54:56.682017+09:00"
+    },
     {
       "id": "1b1ee6d63e7c",
       "title": "[포토] \"진짜 실물 깡패네\"...풀체인지로 돌아온 압도적 존재감, 'BMW 더...",
@@ -1574,6 +1592,24 @@
       "keyword": "ESS 에너지저장장치",
       "published": "2026-10-25T10:49:00+09:00",
       "collected_at": "2026-10-25T23:36:54.773443+09:00"
+    },
+    {
+      "id": "c068d585606b",
+      "title": "코스피 폭락에 한 달 새 1100조 증발…SK·HD현대 직격탄",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=01377606645616528&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+      "summary": "미국 내 AI 데이터센터 확대에 따른 에너지저장장치(ESS) 수요 증가 기대가 투자심리를 뒷받침한 것으로 보인다. 포스코그룹 시가총액은 약 540조원에서 505조원으로 6.4% 줄었다.",
+      "region": "Korea",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-10-25T10:34:00+09:00",
+      "collected_at": "2026-10-25T23:54:56.687613+09:00"
     },
     {
       "id": "c1ec57634081",
