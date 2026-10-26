@@ -6,3 +6,4 @@ data/news.json.sample
 
 .vercel
 
+node_modules/
