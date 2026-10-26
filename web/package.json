@@ -1,0 +1,7 @@
+{
+  "name": "battery-news-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "인증된 사용자용 배터리 뉴스 대시보드 (Vercel)",
+  "engines": { "node": ">=18" }
+}
