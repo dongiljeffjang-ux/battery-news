@@ -116,12 +116,7 @@
   .art a.tt:hover{color:var(--accent)}
   .art .sm{color:var(--muted);font-size:13px;margin:7px 0 9px;line-height:1.55}
   .art .row{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
-  .feedback{margin-left:auto;display:flex;gap:6px;align-items:center}
-  .reaction{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;
-    padding:6px 10px;font:600 11px/1 var(--mono);cursor:pointer;transition:.15s}
-  .reaction:hover{border-color:var(--accent);color:var(--accent)}
-  .reaction.like.on{background:#eaf8f1;border-color:#77c7a2;color:#23815d}
-  .reaction.dislike.on{background:#fff0ef;border-color:#e7a09a;color:#b34c43}
+  .feedback{display:none}
   .pill{font:600 10.5px/1 var(--mono);padding:5px 8px;border-radius:7px;letter-spacing:.04em}
   .badge2{font:600 10px/1 var(--mono);padding:4px 7px;border-radius:6px;background:#eef9f4;color:#4bbf9a;border:1px solid rgba(127,212,184,.35)}
   .rgn{font:600 11px/1 var(--mono);padding:5px 8px;border-radius:7px;background:#f0f6f8;color:var(--muted)}
@@ -192,32 +187,7 @@
 </head>
 <body>
 
-<div id="gate">
-  <main class="card">
-    <div class="badge">🔋 Battery Market Intel</div>
-    <h1>뉴스 아카이브 접속</h1>
-    <p class="sub">회사 이메일로 인증코드를 받아 안전하게 접속하세요.</p>
-    <div id="emailStep">
-      <label for="email">회사 이메일</label>
-      <input id="email" type="email" autocomplete="email" placeholder="name@company.com" />
-      <button id="go">인증코드 받기</button>
-      <p class="hint">입력한 이메일로 6자리 인증코드를 보내드립니다.</p>
-    </div>
-    <div id="codeStep" hidden>
-      <label for="code">이메일 인증코드</label>
-      <input id="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6자리 코드 입력" />
-      <button id="verify">인증하고 입장하기</button>
-      <p class="hint"><button class="linkbtn" id="changeEmail">이메일 주소 변경</button> · 메일이 오지 않으면 잠시 후 다시 요청해 주세요.</p>
-    </div>
-    <p class="hint"><button class="linkbtn" id="masterToggle">테스트용 마스터키로 입장</button></p>
-    <div id="masterStep" hidden>
-      <label for="masterKey">마스터키</label>
-      <input id="masterKey" type="password" autocomplete="off" placeholder="테스트용 마스터키 입력" />
-      <button id="masterGo">마스터키로 입장하기</button>
-    </div>
-    <div class="err" id="err"></div>
-  </main>
-</div>
+<div id="gate" style="display:none"></div>
 
 <div id="app">
   <header>
@@ -275,11 +245,8 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4/dist/umd/supabase.min.js"></script>
 <script>
 // ════════ 설정 ════════
-const SUPABASE_URL="https://wpgiidlfjtimeellpzwk.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY="sb_publishable_eV-VylNYTd2nypay_auzvQ_m_tBijyL";
 // 원본 아카이브는 GitHub에 보관하고, 대시보드는 서버 캐시된 최신분만 받는다.
 // 초기 입장 시 수천 건의 원본을 내려받지 않도록 제한한다.
 const DATA_URL="/api/news";
@@ -312,8 +279,8 @@ const TECH_TAG_PATTERN=/LFP|NCM|NCA|LMR|리튬|니켈|코발트|망간|흑연|�
 let DATA=[], AI_TOP10=[], fApp=null, fSrc="all", fRegion="all", fMat=null, fComp=null, fStage="Material",
     fYear="", fMonth="", fTag=null, query="";
 let tierOpen={highRest:false, mid:false, low:false};
-const FEEDBACK_KEY='battery-news-feedback-v1';
-let FEEDBACK=(()=>{try{return JSON.parse(localStorage.getItem(FEEDBACK_KEY)||'{}')}catch{return {}}})();
+const FEEDBACK={};
+const FEEDBACK_KEY=null;
 
 function cssvar(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
 function esc(s){return (s||"").replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
@@ -339,48 +306,14 @@ function articleSignals(a){
     ...tagsOf(a).filter(isIndustryTag).map(t=>`tag:${t}`)
   ];
 }
-function preferenceAdjustment(a){
-  const entries=Object.entries(FEEDBACK);
-  if(!entries.length)return 0;
-  const byId=new Map(DATA.map(x=>[articleId(x),x]));
-  const weights={};let samples=0;
-  entries.forEach(([id,reaction])=>{
-    const rated=byId.get(id);if(!rated)return;
-    samples++;
-    const delta=reaction==='like'?1:-1;
-    articleSignals(rated).forEach(signal=>weights[signal]=(weights[signal]||0)+delta);
-  });
-  if(!samples)return 0;
-  const exact=FEEDBACK[articleId(a)]==='like'?2:FEEDBACK[articleId(a)]==='dislike'?-2:0;
-  const overlap=articleSignals(a).reduce((sum,signal)=>sum+(weights[signal]||0),0);
-  // 피드백 20건까지는 보조 신호로만, 이후에는 최대 ±1.5점까지 반영한다.
-  const confidence=.25+.75*Math.min(samples/20,1);
-  return exact+Math.max(-1.5,Math.min(1.5,overlap*.35*confidence));
-}
-function scoreOf(a){return baseScore(a)+preferenceAdjustment(a);}
+function preferenceAdjustment(a){return 0;}
+function scoreOf(a){return baseScore(a);}
 function isEn(a){return a.lang==='en';}
 function isGoogleEnglish(a){return a.source!=="구글"||(!/[가-힣]/.test(`${a.title||''} ${a.summary||''}`));}
 function articleId(a){return String(a.id||a.url||`${a.source||''}:${a.published||''}:${a.title||''}`);}
-function persistFeedback(){localStorage.setItem(FEEDBACK_KEY,JSON.stringify(FEEDBACK));}
-async function loadRemoteFeedback(){
-  const {data:{session}}=await supabaseClient.auth.getSession();
-  if(!session)return;
-  const {data,error}=await supabaseClient.from('article_feedback').select('article_id,reaction');
-  if(!error){(data||[]).forEach(x=>FEEDBACK[x.article_id]=x.reaction);persistFeedback();render();}
-}
-async function setReaction(id,reaction){
-  const next=FEEDBACK[id]===reaction?null:reaction;
-  if(next)FEEDBACK[id]=next;else delete FEEDBACK[id];
-  persistFeedback();renderDailyBriefing();render();
-  const {data:{session}}=await supabaseClient.auth.getSession();
-  if(!session)return;
-  if(next){
-    const {error}=await supabaseClient.from('article_feedback').upsert({user_id:session.user.id,article_id:id,reaction:next},{onConflict:'user_id,article_id'});
-    if(error)console.warn('피드백 DB 저장 실패, 브라우저에는 저장됨:',error.message);
-  }else{
-    await supabaseClient.from('article_feedback').delete().eq('user_id',session.user.id).eq('article_id',id);
-  }
-}
+function persistFeedback(){}
+async function loadRemoteFeedback(){}
+async function setReaction(id,reaction){}
 
 
 function freshness(iso){
@@ -395,68 +328,11 @@ function freshness(iso){
   return `갱신 ${stamp}`;
 }
 
-// Supabase 인증 게이트
+// 게이트 없음 — 누구나 바로 입장
 const gate=document.getElementById('gate'),app=document.getElementById('app');
-const email=document.getElementById('email'),code=document.getElementById('code'),masterKey=document.getElementById('masterKey'),err=document.getElementById('err');
-const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
-const ALLOWED_EMAIL_DOMAINS=['poscofuturem.com'];
-function isAllowedCompanyEmail(value){
-  const match=value.trim().toLowerCase().match(/^[^\s@]+@([^\s@]+)$/);
-  return Boolean(match&&ALLOWED_EMAIL_DOMAINS.includes(match[1]));
-}
 function openApp(){gate.style.display='none';app.style.display='block';load();}
-async function tryEnter(){
-  const value=email.value.trim();
-  if(!value){err.textContent='이메일 주소를 입력해 주세요.';return;}
-  if(!isAllowedCompanyEmail(value)){
-    err.textContent='POSCO Future M 회사 이메일(@poscofuturem.com)만 사용할 수 있습니다.';
-    return;
-  }
-  const btn=document.getElementById('go');btn.disabled=true;btn.textContent='전송 중…';err.textContent='';
-  const {error}=await supabaseClient.auth.signInWithOtp({
-    email:value,
-    options:{emailRedirectTo:location.origin+location.pathname}
-  });
-  btn.disabled=false;btn.textContent='인증코드 받기';
-  if(error){err.textContent=`인증코드를 보내지 못했습니다: ${error.message}`;return;}
-  document.getElementById('emailStep').hidden=true;
-  document.getElementById('codeStep').hidden=false;
-  code.focus();
-  err.textContent=`${value}로 인증코드를 보냈습니다.`;
-}
-document.getElementById('go').onclick=tryEnter;
-email.addEventListener('keydown',e=>{if(e.key==='Enter')tryEnter();});
-async function verifyCode(){
-  if(!isAllowedCompanyEmail(email.value)){
-    err.textContent='POSCO Future M 회사 이메일(@poscofuturem.com)만 사용할 수 있습니다.';
-    return;
-  }
-  const token=code.value.trim();
-  if(token.length!==6){err.textContent='이메일로 받은 6자리 인증코드를 입력해 주세요.';return;}
-  const btn=document.getElementById('verify');btn.disabled=true;btn.textContent='확인 중…';
-  const {data,error}=await supabaseClient.auth.verifyOtp({email:email.value.trim(),token,type:'email'});
-  btn.disabled=false;btn.textContent='인증하고 입장하기';
-  if(error){err.textContent=`인증에 실패했습니다: ${error.message}`;return;}
-  if(data.session)openApp();
-}
-document.getElementById('verify').onclick=verifyCode;
-code.addEventListener('keydown',e=>{if(e.key==='Enter')verifyCode();});
-document.getElementById('changeEmail').onclick=()=>{document.getElementById('codeStep').hidden=true;document.getElementById('emailStep').hidden=false;err.textContent='';email.focus();};
-document.getElementById('masterToggle').onclick=()=>{const el=document.getElementById('masterStep');el.hidden=!el.hidden;if(!el.hidden)masterKey.focus();};
-async function tryMaster(){
-  const key=masterKey.value.trim();if(!key){err.textContent='마스터키를 입력해 주세요.';return;}
-  const btn=document.getElementById('masterGo');btn.disabled=true;btn.textContent='확인 중…';
-  const r=await fetch('/api/master-login',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify({key})});
-  btn.disabled=false;btn.textContent='마스터키로 입장하기';
-  if(!r.ok){err.textContent='마스터키가 올바르지 않거나 서버 설정이 아직 완료되지 않았습니다.';return;}
-  openApp();
-}
-document.getElementById('masterGo').onclick=tryMaster;
-masterKey.addEventListener('keydown',e=>{if(e.key==='Enter')tryMaster();});
-document.getElementById('logout').onclick=async()=>{await supabaseClient.auth.signOut();await fetch('/api/master-logout',{method:'POST',credentials:'same-origin'});location.reload();};
-supabaseClient.auth.getSession().then(({data})=>{if(data.session)openApp();});
-supabaseClient.auth.onAuthStateChange((_event,session)=>{if(session&&!app.style.display)openApp();});
-fetch('/api/master-session',{credentials:'same-origin'}).then(r=>r.ok?r.json():null).then(data=>{if(data&&data.active&&!app.style.display)openApp();}).catch(()=>{});
+document.getElementById('logout').onclick=()=>{location.reload();};
+openApp();
 
 // 데이터
 async function load(){
@@ -615,8 +491,7 @@ async function generateDailyReport(candidates){
   const body=document.querySelector('.reportBody');
   btn.disabled=true;btn.textContent='AI가 후보 뉴스를 평가하는 중…';
   try{
-    const {data:{session}}=await supabaseClient.auth.getSession();
-    const headers={'Content-Type':'application/json',...(session?{Authorization:`Bearer ${session.access_token}`}:{})};
+    const headers={'Content-Type':'application/json'};
     const rankResponse=await aiFetch('/api/ai-top10',{method:'POST',credentials:'same-origin',headers,body:JSON.stringify({articles:candidates})});
     const rankData=await rankResponse.json();
     if(!rankResponse.ok)throw new Error(rankData.error||'AI TOP 10 선정에 실패했습니다.');
@@ -649,24 +524,20 @@ function artHTML(a, rank){
   const rankBadge=rank?`<span class="rank">${rank}</span>`:"";
   const enTag=isEn(a)?`<span class="entag">EN</span>`:"";
   const aiReason=a._aiReason?`<div class="aiReason"><b>AI 선정 이유 · 중요도 ${a._aiImportance}/100</b><br>${esc(a._aiReason)}</div>`:"";
-  const id=articleId(a),reaction=FEEDBACK[id]||'';
+  const id=articleId(a);
   return `<article class="art" style="border-left-color:${col};${sc<=2?'opacity:.78':''}">
     <div class="arthead">${rankBadge}
       <a class="tt" href="${a.url}" target="_blank" rel="noopener">${esc(a.title)}</a></div>
     <div class="sm">${esc(a.summary||"")}</div>
     ${aiReason}
     <div class="row">
-      <span class="score" style="color:${scol}" title="기본 중요도 ${baseScore(a)}/5 · 피드백 반영 ${sc.toFixed(1)}/5">${stars}</span>
+      <span class="score" style="color:${scol}" title="중요도 ${sc.toFixed(1)}/5">${stars}</span>
       ${enTag}
       <span class="pill" style="background:${col}22;color:${col}">${appko}</span>
       ${matko&&matK!=="Etc"?`<span class="rgn">${matko}</span>`:""}
       ${cells}
       <span class="rgn">${rgn}</span>
       <span class="src">${a.source} · ${day} ${pub}</span>
-      <span class="feedback" aria-label="기사 평가">
-        <button class="reaction like ${reaction==='like'?'on':''}" data-reaction="like" data-article-id="${esc(id)}" aria-pressed="${reaction==='like'}">👍 좋아요</button>
-        <button class="reaction dislike ${reaction==='dislike'?'on':''}" data-reaction="dislike" data-article-id="${esc(id)}" aria-pressed="${reaction==='dislike'}">👎 싫어요</button>
-      </span>
       ${comps?'<span style="flex-basis:100%;height:0"></span>'+comps:''}
       ${tags?'<span style="flex-basis:100%;height:0"></span>'+tags:''}
     </div></article>`;
@@ -731,9 +602,6 @@ function render(){
 }
 
 function bindAll(){
-  document.querySelectorAll('[data-reaction]').forEach(el=>el.onclick=e=>{
-    e.preventDefault();e.stopPropagation();setReaction(el.dataset.articleId,el.dataset.reaction);
-  });
   document.querySelectorAll('[data-tier]').forEach(el=>el.onclick=()=>{
     const t=el.dataset.tier;tierOpen[t]=!tierOpen[t];render();});
   document.querySelectorAll('[data-jtag]').forEach(el=>el.onclick=()=>{
