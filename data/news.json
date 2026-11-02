@@ -1,6 +1,26 @@
 {
-  "updated_at": "2026-11-03T05:32:21.941145+09:00",
+  "updated_at": "2026-11-03T05:41:03.432880+09:00",
   "articles": [
+    {
+      "id": "5e82c47733d9",
+      "title": "솔리드 파워, 美 콜로라도 팹서 황화물계 전해질 라인 '모비우스' 가동",
+      "url": "https://www.g-enews.com/view.php?ud=2026110217433164250c8c1c064d_1",
+      "summary": "글로벌 배터리 산업 전문가들은 \"현재 전기차 시장이 내연기관차와의 가격 및 성능 패리티(동등성)를 요구하는 대중화 전환기를 맞이한 가운데, 황화물계 전고체 배터리는 최고의 대안으로 꼽히면서도 제조 단가가...",
+      "region": "Global",
+      "application": "EV",
+      "material": "ElyteSep",
+      "celltypes": [
+        "전고체"
+      ],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-03T05:36:00+09:00",
+      "collected_at": "2026-11-03T05:41:03.059198+09:00"
+    },
     {
       "id": "5501e6634614",
       "title": "코스피 7500 간다? 반도체 바닥은 언제…투자 구루의 답",
@@ -2411,6 +2431,24 @@
       "keyword": "리튬이온 배터리",
       "published": "2026-11-02T14:42:00+09:00",
       "collected_at": "2026-11-03T05:32:21.584246+09:00"
+    },
+    {
+      "id": "0c227802304e",
+      "title": "유럽 수출...디지털제품여권(DPP) 없으면 못 판다",
+      "url": "https://www.eroun.net/news/articleView.html?idxno=94091",
+      "summary": "배터리를 이루는 원료가 어디서 왔는지, 만드는 과정에서 탄소를 얼마나 배출했는지, 재활용 소재는 얼마나 들어갔는지를 스마트폰으로 확인할 수 있는 디지털 기록이다. EU 법이 의무로 정한 첫 '디지털제품여권...",
+      "region": "Europe",
+      "application": "SmallIT",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "배터리 재활용",
+      "published": "2026-11-02T14:32:00+09:00",
+      "collected_at": "2026-11-03T05:41:03.084113+09:00"
     },
     {
       "id": "1c6f44a68548",
