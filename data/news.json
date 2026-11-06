@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T02:43:21.232250+09:00",
+  "updated_at": "2026-11-07T02:52:19.961959+09:00",
   "articles": [
     {
       "id": "5ad17c6abad5",
@@ -4735,6 +4735,26 @@
       "keyword": "전고체 배터리",
       "published": "2026-11-06T00:30:00+09:00",
       "collected_at": "2026-11-06T03:21:12.783554+09:00"
+    },
+    {
+      "id": "f95d0efc9d93",
+      "title": "[NZSI INDEX] 2026년 10월 16일…코스피 +2.05%·코스닥 +4.46% 반등… 미...",
+      "url": "https://www.the-today.com/news/articleView.html?idxno=93142",
+      "summary": "해외 종목에서는 전고체 배터리 기업 솔리드파워(SLDP)가 +2.4% 상승한 2.13달러를 기록했다. 기준일 1.30달러 대비 누적수익률은 +63.8%로, 전고체 배터리 상용화에 대한 기대가 장기 투자 성과를 평가하는 주요...",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [
+        "전고체"
+      ],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전고체 배터리",
+      "published": "2026-11-06T00:30:00+09:00",
+      "collected_at": "2026-11-07T02:52:19.605487+09:00"
     },
     {
       "id": "c50f0aa55b75",
