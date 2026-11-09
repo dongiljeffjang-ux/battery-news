@@ -1,6 +1,60 @@
 {
-  "updated_at": "2026-11-10T06:08:49.238223+09:00",
+  "updated_at": "2026-11-10T06:21:18.563407+09:00",
   "articles": [
+    {
+      "id": "094c28348549",
+      "title": "\"개발 주기 24개월로 단축\"… 둥펑 닛산, 차세대 전략 전기 세단 ‘NX7’...",
+      "url": "https://www.g-enews.com/view.php?ud=2026110922085525480c8c1c064d_1",
+      "summary": "일본 닛산자동차와 중국 둥펑자동차의 합작법인인 둥펑 닛산(Dongfeng Nissan)이 중국 전기차 시장에서의... 콕핏과 배터리 관리 시스템(BMS), 자율주행 소프트웨어는 중국 현지 R&D센터가 주도해 완전히 현지화했다.",
+      "region": "Japan",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-10T06:16:00+09:00",
+      "collected_at": "2026-11-10T06:21:18.263747+09:00"
+    },
+    {
+      "id": "cb6648ce91ba",
+      "title": "[비바100] 실행의 시간⋯ 문성요 청장 “로봇·AI·수소 ‘피지컬 AI’ 생...",
+      "url": "https://www.viva100.com/article/20261108500072",
+      "summary": "이를 위해 초고압직류송전(HVDC) 전력망 확충과 에너지저장장치(ESS) 활용 방안 등을 전력당국과 협의한다는 방침이다. 이를 위해 적시적소에 전력·용수공급을 위한 실무적 포석도 탄탄하게 깔았다.",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-11-10T06:12:00+09:00",
+      "collected_at": "2026-11-10T06:21:18.267717+09:00"
+    },
+    {
+      "id": "f71c71c79c6a",
+      "title": "[비바100] 논에서 ‘미래 산업의 쌀’⋯AI·수소 허브로 변신하는 새만...",
+      "url": "https://www.viva100.com/article/20261108500044",
+      "summary": "식량 확보를 위한 간척사업으로 출발해 제조업과 이차전지 산업의 거점을 거쳐, 이제는 인공지능(AI)·로봇·수소를 아우르는 ‘피지컬 AI’ 생태계로 진화를 꾀하고 있다. 35년 전 바다를 막아 땅을 확보하는 데...",
+      "region": "Global",
+      "application": "SmallIT",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-11-10T06:12:00+09:00",
+      "collected_at": "2026-11-10T06:21:18.273350+09:00"
+    },
     {
       "id": "de59538eeef7",
       "title": "\"캔버라 3분의 1 정전 막는다\"… 에쿠 에너지, 호주 ‘메가 BESS’ 전격 ...",
@@ -3142,6 +3196,26 @@
       "keyword": "배터리 재활용",
       "published": "2026-11-09T13:30:00+09:00",
       "collected_at": "2026-11-10T06:08:48.876035+09:00"
+    },
+    {
+      "id": "4351d8e2d645",
+      "title": "페로타임즈 손바닥뉴스 11월9일(월)",
+      "url": "http://www.ferrotimes.com/news/articleView.html?idxno=51355",
+      "summary": "LMR 양극재 검증…장인화 '전략자원' 성과 주목 [이슈리포트] 세아제강, OCTG 판가 상승에 4분기 회복 전망 크라카타우스틸, 연산 120만 톤 STS슬래브 공장 건설 추진 철강자원協 36주년 총회 \"폐기물법 규제 개선 촉구...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Cathode",
+      "celltypes": [
+        "LMR"
+      ],
+      "companies": [],
+      "hashtags": [],
+      "score": 3,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "양극재",
+      "published": "2026-11-09T13:30:00+09:00",
+      "collected_at": "2026-11-10T06:21:18.282049+09:00"
     },
     {
       "id": "1fbabec40385",
