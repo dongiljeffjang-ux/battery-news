@@ -1,6 +1,65 @@
 {
-  "updated_at": "2026-11-10T13:27:06.821007+09:00",
+  "updated_at": "2026-11-10T13:33:45.919719+09:00",
   "articles": [
+    {
+      "id": "ff4962452e8e",
+      "title": "BMW그룹, 삼성SDI·LG엔솔과 '맞손'…추가 공급계약 체결",
+      "url": "http://www.yonhapnewstv.co.kr/news/AKR20261110133201CzS",
+      "summary": "계약 상대방을 공개하지는 않았지만, 업계에서는 이 배터리가 BMW의 차세대 전기차에 탑재될 것으로 보고, 총 수주 금액을 10조원 이상으로 추정했습니다. 삼성SDI도 작년 2분기 실적 콘퍼런스콜에서 \"계약 조건상...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션",
+        "삼성SDI"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-10T13:32:00+09:00",
+      "collected_at": "2026-11-10T13:33:45.618333+09:00"
+    },
+    {
+      "id": "cc88c9f0e762",
+      "title": "'이원택 도정' 민선 9기 첫 실행예산 꼼꼼히 따져보니…특징은 '도민소...",
+      "url": "https://www.pressian.com/pages/articles/2026111010170346700?utm_source=naver&utm_medium=search",
+      "summary": "반도체 소재·부품·장비 분야는 특화단지를 중심으로 기업 연구개발에 3억원을 신규 반영하고, 이차전지·반도체 소재부품 활성화 7억원 등을 통해 관련 기업의 기술 경쟁력을 강화한다. 재생에너지는 기업의 전력...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-11-10T13:32:00+09:00",
+      "collected_at": "2026-11-10T13:33:45.624895+09:00"
+    },
+    {
+      "id": "c058c43fb8f4",
+      "title": "BMW 전기차, 배터리 바꿔 가격 낮춘다…2028년 신차에 LFP 탑재하나",
+      "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=714120",
+      "summary": "BMW가 노이어 클라쎄 일부 전기차에 LFP 배터리를 도입해 가격 경쟁력을 높이는 방안을 추진한다. [사진: 셔터스톡] BMW가 차세대 전기차(EV) 플랫폼 '노이어 클라쎄'에 상대적으로 저렴한 리튬인산철(LFP) 배터리...",
+      "region": "Europe",
+      "application": "EV",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-10T13:30:00+09:00",
+      "collected_at": "2026-11-10T13:33:45.618501+09:00"
+    },
     {
       "id": "94787456cbb9",
       "title": "“실패도 배움”…경북대 공대생들, 연구 시행착오 나눴다",
@@ -508,6 +567,27 @@
       "keyword": "전기차 배터리",
       "published": "2026-11-10T13:02:00+09:00",
       "collected_at": "2026-11-10T13:27:06.497310+09:00"
+    },
+    {
+      "id": "3533b7f88540",
+      "title": "BMW그룹, 삼성SDI·LG엔솔 차세대 배터리 공급사 선정…유럽·미국 현지...",
+      "url": "https://www.etnews.com/20261110000246",
+      "summary": "고전압 배터리는 전기차의 주행거리와 충전 성능 등을 좌우하는 핵심 부품이다. 삼성SDI는 헝가리에 유럽 배터리 생산 거점을 운영하고 있다.",
+      "region": "Korea",
+      "application": "EV",
+      "material": "CellPack",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션",
+        "삼성SDI"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-10T13:00:00+09:00",
+      "collected_at": "2026-11-10T13:33:45.620966+09:00"
     },
     {
       "id": "f152aa114565",
