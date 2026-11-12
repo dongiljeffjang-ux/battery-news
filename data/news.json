@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T03:38:14.142360+09:00",
+  "updated_at": "2026-11-13T03:45:30.679997+09:00",
   "articles": [
     {
       "id": "e411c2d0eb49",
@@ -1660,6 +1660,24 @@
       "keyword": "ESS 에너지저장장치",
       "published": "2026-11-12T16:52:00+09:00",
       "collected_at": "2026-11-13T03:38:13.887228+09:00"
+    },
+    {
+      "id": "42298ba9bb4c",
+      "title": "기후부, 해외시장 공략 위한 '에너지 팀코리아' 띄운다",
+      "url": "https://www.tjb.co.kr/news05/bodo/view/id/106018",
+      "summary": "태양광과 에너지저장장치(ESS)를 활용한 전력 공급, 재생에너지 기반 물·식량 문제 해결, 학교와 병원 등 기초생활 인프라 지원 방안 등이 논의될 예정입니다. 이와 함께 공기업과 민간기업 간 협력체계 강화, 정책금융...",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-11-12T16:52:00+09:00",
+      "collected_at": "2026-11-13T03:45:30.396793+09:00"
     },
     {
       "id": "1de4c563d45f",
