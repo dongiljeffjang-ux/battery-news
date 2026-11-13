@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-11-13T12:04:45.707228+09:00",
+  "updated_at": "2026-11-13T12:20:18.382995+09:00",
   "articles": [
+    {
+      "id": "d804e0c979a1",
+      "title": "GS건설, 자회사 대출 1125억 상환…'배임' 뒤집은 크로스디폴트",
+      "url": "https://www.bloter.net/news/articleView.html?idxno=678524",
+      "summary": "GS건설은 폐배터리 재활용 사업을 통해 건설업 중심의 사업구조를 다변화하려 했지만 원료 수급난과 금속가격 하락, 전기차 시장 성장 둔화 등이 겹치면서 대규모 손실을 떠안았다. 이후 대응 역시 여러 차례...",
+      "region": "Global",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-13T12:13:00+09:00",
+      "collected_at": "2026-11-13T12:20:18.063404+09:00"
+    },
     {
       "id": "3b643a7202d3",
       "title": "AI 시대를 지탱할 '에너지'를 만든다...DGIST 에너지공학과",
