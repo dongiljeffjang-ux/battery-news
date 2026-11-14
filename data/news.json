@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-11-14T11:50:48.279562+09:00",
+  "updated_at": "2026-11-14T11:59:32.851555+09:00",
   "articles": [
+    {
+      "id": "56edabf3b023",
+      "title": "울산교육청, 과학고 첨단 실험시설 지역 교사에게 개방",
+      "url": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1072530",
+      "summary": "화학 분야에서는 유도결합 플라스마 발광분광기(ICP-OES)로 이차전지 원료의 불순물을 분석했다. 지구과학 분야에서는 편광현미경과 인공지능(AI)을 활용한 암석 미세구조 분석을, 천체 분야에서는 천체망원경을 활용한...",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-11-14T11:54:00+09:00",
+      "collected_at": "2026-11-14T11:59:32.448957+09:00"
+    },
     {
       "id": "f9239be6ca93",
       "title": "광양만권경제자유구역청 하동사무소, 고포마을 찾아 '찾아가는 주민 소...",
@@ -1916,6 +1934,26 @@
       "keyword": "전기차 배터리",
       "published": "2026-11-13T18:00:00+09:00",
       "collected_at": "2026-11-14T03:10:50.107067+09:00"
+    },
+    {
+      "id": "c9d2e8999bfd",
+      "title": "[이슈] 고려아연, 5272억원 신주발행 소송 2심 승소…영풍에 역전",
+      "url": "https://www.seoultimes.news/news/article.html?no=2000102182",
+      "summary": "현대차그룹과 니켈 원료를 공동 조달하고 배터리 중간재 공급, 폐배터리 재활용 사업 등을 추진하기 위해 자금을 유치했다는 입장이었다. 영풍은 HMG글로벌이 고려아연의 출자로 설립된 외국 합작법인이 아니라며...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "RawMaterial",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "고려아연"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "배터리 재활용",
+      "published": "2026-11-13T18:00:00+09:00",
+      "collected_at": "2026-11-14T11:59:32.466174+09:00"
     },
     {
       "id": "dac9cebcfe8c",
