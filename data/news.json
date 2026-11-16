@@ -1,6 +1,24 @@
 {
-  "updated_at": "2026-11-17T05:42:35.238227+09:00",
+  "updated_at": "2026-11-17T05:52:40.035644+09:00",
   "articles": [
+    {
+      "id": "456cb9386926",
+      "title": "북미 청정에너지 박람회 'RE+ 2026' 개막… BESS·스마트그리드 수주 대...",
+      "url": "https://www.g-enews.com/view.php?ud=2026111617481638600c8c1c064d_1",
+      "summary": "북미 최대 규모의 신재생에너지 및 에너지저장장치(ESS) 전문 전시회인 'RE+ 2026(구 SPI·Solar Power International)'이 11월 16일(현지시각) 미국 네바다주 라스베이거스 컨벤션 센터에서 나흘간의 일정으로 공식 개막했다. ...",
+      "region": "NorthAmerica",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-11-17T05:46:00+09:00",
+      "collected_at": "2026-11-17T05:52:39.633604+09:00"
+    },
     {
       "id": "c60f948444bd",
       "title": "LG엔솔, 미주 매출 76.5%↑… ‘ESS 수요’가 성장 견인",
