@@ -1,6 +1,140 @@
 {
-  "updated_at": "2026-11-16T11:30:46.468605+09:00",
+  "updated_at": "2026-11-16T11:39:51.287045+09:00",
   "articles": [
+    {
+      "id": "ccbc705e0823",
+      "title": "네이버, 카페에 AI 에이전트 도입… 검색 안 되던 댓글 속 정보 찾아준...",
+      "url": "https://biz.chosun.com/it-science/ict/2026/11/16/TO7IWEZSMREOVCBDKJLABYJLS4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+      "summary": "일본 여행 분야 ‘네일동’, 전기차 분야 ‘테슬라 코리아’, 명품 분야 ‘시크먼트’ 등 정보 공유와... 예를 들어 ‘테슬라 코리아’ AI 카페 에이전트에 “겨울에 캠핑 모드로 차박(차에서 숙박)하면 하룻밤에 배터리를...",
+      "region": "Japan",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "테슬라"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-16T11:38:00+09:00",
+      "collected_at": "2026-11-16T11:39:50.901409+09:00"
+    },
+    {
+      "id": "a67ff5945ccf",
+      "title": "삼성SDI, 美 주피터파워와 수조원대 ESS용 LFP 배터리 공급 계약 체결",
+      "url": "https://www.nocutnews.co.kr/news/6607333?utm_source=naver&utm_medium=article&utm_campaign=20261116113456",
+      "summary": "앞서 삼성SDI는 글로벌 전기차 시장 성장세 둔화로 가동률이 하락한 SPE 공장의 전기차 배터리 라인 일부를 ESS용 LFP 생산 라인으로 전환하는 유연한 전략을 택했다. 해당 라인에서 LFP 배터리 양산에 돌입하자마자...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "companies": [],
+      "hashtags": [
+        "삼성SDI"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-16T11:35:00+09:00",
+      "collected_at": "2026-11-16T11:39:50.901606+09:00"
+    },
+    {
+      "id": "42681d26ea27",
+      "title": "전남광주통합특별시 소방대원 15% 마음건강 '적신호'",
+      "url": "https://www.newspim.com/news/view/20261116000625",
+      "summary": "노후 장비 교체와 전기차·에너지저장장치(ESS) 화재 대응 장비 확충도 요구했다. 이오숙 소방본부장은 \"상담 인프라를 확대하고 치료 신청에 따른 불이익 우려를 해소하겠다\"며 장비와 복지 기준도 개선하겠다고...",
+      "region": "Korea",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-11-16T11:33:00+09:00",
+      "collected_at": "2026-11-16T11:39:50.905367+09:00"
+    },
+    {
+      "id": "7d43b7ac2080",
+      "title": "중복상장, 막는 규제에서 가려내는 규제로",
+      "url": "https://biz.heraldcorp.com/article/10938461?ref=naver",
+      "summary": "디스플레이 장비 회사 필옵틱스는 2023년 이차전지 장비 자회사를, 반도체 소재 회사 덕산하이메탈은 방산 항법 자회사를 상장시켰다. 둘 다 모회사 본업과 겹치지 않는 사업이다.",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-11-16T11:33:00+09:00",
+      "collected_at": "2026-11-16T11:39:50.906664+09:00"
+    },
+    {
+      "id": "89e865d0ed2c",
+      "title": "LG에너지솔루션, AI 전력난 푼다…북미 최대 에너지 전시회 출격",
+      "url": "https://www.ntoday.co.kr/news/articleView.html?idxno=130885",
+      "summary": "RE+는 태양광·에너지저장장치(ESS)·배터리·전력망 및 유틸리티·충전 인프라 분야 약 1300여 개의 글로벌 기업이 참여하는 대형 전시회다. 신재생에너지 전환 및 에너지 저장 기술 관련 산업 트렌드를 확인하기...",
+      "region": "Korea",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-11-16T11:30:00+09:00",
+      "collected_at": "2026-11-16T11:39:50.905547+09:00"
+    },
+    {
+      "id": "5286c0e224bd",
+      "title": "\"중소기업이 창출한 가치만큼 정부가 정당한 몫 지원 필요\"",
+      "url": "http://www.kbiznews.co.kr/news/articleView.html?idxno=115188",
+      "summary": "반도체와 이차전지, 바이오, 화장품 등 많은 중소벤처기업은 이미 세계시장에서 경쟁하고 있으므로 글로벌 경쟁우위를 확보하도록 지원해야 합니다. AI 전환 등 산업구조 변화에 대응하기 위해 중소벤처기업의 혁신 역량을...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-11-16T11:30:00+09:00",
+      "collected_at": "2026-11-16T11:39:50.906852+09:00"
+    },
+    {
+      "id": "740f68483725",
+      "title": "기보, 싱가포르서 국내 혁신기업 7곳 글로벌 IR 개최",
+      "url": "https://www.lcnews.co.kr/news/articleView.html?idxno=211419",
+      "summary": "이들 기업은 반도체·이차전지 소재, 바이오·헬스케어, 인공지능(AI) 기반 물류·검색·법률 서비스 등 다양한 분야에서 사업을 추진하고 있다. 핵심 행사인 '유니콘브릿지 글로벌 IR 데모데이'는 지난 12일 싱가포르...",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-11-16T11:30:00+09:00",
+      "collected_at": "2026-11-16T11:39:50.907039+09:00"
+    },
     {
       "id": "208eee18daa4",
       "title": "이브이첨단소재, 실적 개선 속 베트남 FPCB 증설 추진",
@@ -1460,6 +1594,29 @@
       "keyword": "양극재",
       "published": "2026-11-16T08:58:00+09:00",
       "collected_at": "2026-11-16T11:30:46.234007+09:00"
+    },
+    {
+      "id": "ae19c91763ee",
+      "title": "삼성SDI, 미국서 16GWh 규모 LFP 배터리 수주",
+      "url": "https://weekly.hankooki.com/news/articleView.html?idxno=7193972",
+      "summary": "ESS와 데이터센터용 고출력 배터리 사업을 확장하는 동시에 전기차용 배터리의 고객사와 제품군을 확대하고 전고체 배터리를 비롯한 차세대 기술 개발에 속도를 내고 있다. 단기적으로는 수익성 회복을 이어가고...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP",
+        "전고체"
+      ],
+      "companies": [],
+      "hashtags": [
+        "삼성SDI"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전고체 배터리",
+      "published": "2026-11-16T08:56:00+09:00",
+      "collected_at": "2026-11-16T11:39:50.917589+09:00"
     },
     {
       "id": "55dba9ff17bc",
