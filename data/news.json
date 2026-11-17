@@ -1,6 +1,84 @@
 {
-  "updated_at": "2026-11-17T13:55:20.939154+09:00",
+  "updated_at": "2026-11-17T14:00:25.966338+09:00",
   "articles": [
+    {
+      "id": "26584c5c8959",
+      "title": "고려아연, MS가 투자한 美 태양광 재활용 기업과 합작법인 설립",
+      "url": "https://www.busan.com/view/busan/view.php?code=2026111713571507203",
+      "summary": "앞서 고려아연 최윤범 회장은 2022년 신사업 전략 ‘트로이카 드라이브’를 내놓으며 신재생에너지·수소, 이차전지 소재와 함께 자원순환을 3대 축으로 꼽은 바 있다. 최 회장은 올해 1월 세계경제포럼(WEF) 기고문에서...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "고려아연"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-11-17T13:58:00+09:00",
+      "collected_at": "2026-11-17T14:00:25.657490+09:00"
+    },
+    {
+      "id": "010ab1611ac6",
+      "title": "민테크, 전고체 전지 진단 분야로 사업 확장···테라리더와 업무협약",
+      "url": "https://www.seoulfn.com/news/articleView.html?idxno=643069",
+      "summary": "글로벌 배터리 제조사 및 소재기업과의 협력을 강화하겠다\"고 밝혔다. 이어 \"이를 통해 중장기적인 매출 성장과 수익성 개선에도 기여할 것으로 기대한다\"고 덧붙였다.",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [
+        "전고체"
+      ],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-17T13:56:00+09:00",
+      "collected_at": "2026-11-17T14:00:25.651504+09:00"
+    },
+    {
+      "id": "f5bc6fbda6d5",
+      "title": "[중화학 ON] SK이노베이션, AI 스타트업 3곳 선정 外",
+      "url": "https://dealsite.co.kr/articles/172964",
+      "summary": "제2 생산동에서는 고압가스 부하개폐기(RMU), 에너지저장장치(ESS)용 배터리제어반(BCP), 기중차단기(ACB) 등 현지 전략 제품을 생산한다. 베트남법인 매출은 2022년 8300만달러에서 올해 1억6600만달러로 두 배 수준...",
+      "region": "Korea",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "SK온"
+      ],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-11-17T13:56:00+09:00",
+      "collected_at": "2026-11-17T14:00:25.655161+09:00"
+    },
+    {
+      "id": "c00271a21c7f",
+      "title": "LS일렉트릭, 베트남 박닌 사업장 제2 생산동 준공",
+      "url": "https://www.todayenergy.kr/news/articleView.html?idxno=305681",
+      "summary": "제품별 전용 생산라인을 구축해 △고압가스 부하개폐기(RMU) △에너지저장장치(ESS)용 배터리제어반(BCP) △기중차단기(ACB) 등 현지 전략 제품을 생산할 계획이다. 베트남법인 매출은 지난 2022년 8300만 달러(한화 약...",
+      "region": "Global",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-11-17T13:56:00+09:00",
+      "collected_at": "2026-11-17T14:00:25.655305+09:00"
+    },
     {
       "id": "aff8b112a1f5",
       "title": "상장 5년 앞둔 LG엔솔, 고성장 환상 깨졌다…시총 42조 증발·몸값 60% 뚝",
