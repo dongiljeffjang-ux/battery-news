@@ -1,6 +1,62 @@
 {
-  "updated_at": "2026-11-18T04:27:00.551493+09:00",
+  "updated_at": "2026-11-18T04:42:19.374322+09:00",
   "articles": [
+    {
+      "id": "ea861f8cfcfc",
+      "title": "D램-유조선-포니차… 안된다던 ‘메이드 인 코리아’ 수출신화 써",
+      "url": "https://www.donga.com/news/Economy/article/all/20261118/135043058/2",
+      "summary": "2009년 미국 A123시스템스를 제치고 제너럴모터스(GM)의 최초 전기차 ‘볼트’의 배터리 공급사로 선정되는 성과를 냈다. 한국 배터리가 글로벌 완성차 파트너로 발돋움하는 계기가 된 순간이었다.",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-18T04:31:00+09:00",
+      "collected_at": "2026-11-18T04:42:19.095346+09:00"
+    },
+    {
+      "id": "8f0151f93244",
+      "title": "에코프로머티리얼즈, 광물 약세와 환율 타격에 3분기 영업손실 290억 원...",
+      "url": "https://www.g-enews.com/view.php?ud=2026111722230591602bd56fbc3c_1",
+      "summary": "4분기 북미 신규 거래처 확보와 재활용 사업 확장 에코프로머티리얼즈는 4분기 실적 개선을 위해 북미 지역의 신규 고객사로 전구체 출하를 추진하고 있다. 에코프로그룹 역시 폐배터리 리사이클 계열사인...",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "에코프로"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "배터리 재활용",
+      "published": "2026-11-18T04:28:00+09:00",
+      "collected_at": "2026-11-18T04:42:19.112110+09:00"
+    },
+    {
+      "id": "58cc5ec83229",
+      "title": "[2027 증시 앵글] 윤석모 삼성증권 센터장 “내년 코스피 상저하고…AI ...",
+      "url": "https://www.news2day.co.kr/article/20261117500249",
+      "summary": "이에 따라 에너지저장장치(ESS)와 소재·부품·장비, 보안, 데이터센터 등 다양한 AI 관련 밸류체인으로 시장의 관심이 확산될 가능성에 주목했다. 반도체가 중심을 유지하는 가운데 다른 AI 연관 업종으로도 투자자들의...",
+      "region": "Korea",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-11-18T04:26:00+09:00",
+      "collected_at": "2026-11-18T04:42:19.099103+09:00"
+    },
     {
       "id": "a756b78e7f73",
       "title": "\"2027년엔 중국이 역전\"…위기의 K배터리, '신무기'로 반격 노린다",
