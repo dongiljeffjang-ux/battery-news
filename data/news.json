@@ -1,6 +1,26 @@
 {
-  "updated_at": "2026-11-19T04:09:49.268550+09:00",
+  "updated_at": "2026-11-19T04:17:45.644279+09:00",
   "articles": [
+    {
+      "id": "46c642b47fe3",
+      "title": "포스코그룹, CATL에 2028년까지 리튬 공급",
+      "url": "https://www.vegannews.co.kr/news/article.html?no=407425",
+      "summary": "포스코홀딩스(005490) 중심의 포스코그룹이 CATL과 전기차 배터리용 리튬 장기공급 계약을 맺고 2028년까지 공급한다. 포스코그룹 공식 발표에 따르면 공급 기간은 2026년부터 2028년까지 3년이며, 계약에 따른 공급은 이미...",
+      "region": "Korea",
+      "application": "EV",
+      "material": "RawMaterial",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "CATL"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-19T04:10:00+09:00",
+      "collected_at": "2026-11-19T04:17:45.358890+09:00"
+    },
     {
       "id": "76aae6964d95",
       "title": "GV90의 전기차 승부수…럭셔리 SUV 판 흔들까",
