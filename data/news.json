@@ -1,6 +1,26 @@
 {
-  "updated_at": "2026-11-19T12:55:52.404745+09:00",
+  "updated_at": "2026-11-19T13:03:26.830048+09:00",
   "articles": [
+    {
+      "id": "3fd9acd9e501",
+      "title": "포스코, CATL에 리튬 장기 공급",
+      "url": "https://www.naeil.com/news/read/609344?ref=naver",
+      "summary": "포스코그룹은 18일 CATL과 2026년부터 2028년까지 3년간 전기차 배터리 양극재의 주요 원료인 리튬을 공급하는 계약을 체결했다고 밝혔다. 계약에 따른 공급은 이미 진행 중이다.",
+      "region": "Korea",
+      "application": "EV",
+      "material": "Cathode",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "CATL"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-19T13:02:00+09:00",
+      "collected_at": "2026-11-19T13:03:26.574965+09:00"
+    },
     {
       "id": "b524379a3b69",
       "title": "[시승기] 여럿이 타면 정답, 혼자 타면 물음표…기아 EV9의 두 얼굴",
@@ -3325,6 +3345,30 @@
       "keyword": "배터리 재활용",
       "published": "2026-11-18T17:18:00+09:00",
       "collected_at": "2026-11-19T04:09:48.887953+09:00"
+    },
+    {
+      "id": "25bdfc3e8aa9",
+      "title": "포스코그룹, '배터리 1위' 中 CATL 공급망 뚫었다",
+      "url": "https://biz.sbs.co.kr/article_hub/20000347370?division=NAVER",
+      "summary": "LG에너지솔루션과도 양극재 자회사인 포스코퓨처엠을 통해 아르헨티나 염호리튬 기반 LFP(리튬인산철) 배터리 소재 협력을 추진하기로 했습니다. 중국 배터리 기업 대상으로도 리튬 공급을 추진해 왔습니다.",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Cathode",
+      "celltypes": [
+        "LFP"
+      ],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션",
+        "포스코퓨처엠",
+        "CATL"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "LFP 배터리",
+      "published": "2026-11-18T17:13:00+09:00",
+      "collected_at": "2026-11-19T13:03:26.589846+09:00"
     },
     {
       "id": "e2cac72e1a17",
