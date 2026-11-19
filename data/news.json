@@ -1,6 +1,63 @@
 {
-  "updated_at": "2026-11-20T04:12:50.380186+09:00",
+  "updated_at": "2026-11-20T04:25:52.095467+09:00",
   "articles": [
+    {
+      "id": "551d2a04e186",
+      "title": "[사설] 수출 1조 달러, 내수 활성화와 가계소득 증대에도 힘써야",
+      "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611191750237430877",
+      "summary": "자동차·조선·기계 등 기존 주력산업의 고부가가치화를 촉진하고, 바이오·이차전지·방산 등 신산업의 수출 역량도 키워야 하는 이유다. 수출 호조의 성과가 내수와 가계소득으로 충분히 확산되도록 하는 것도 중요한...",
+      "region": "Global",
+      "application": "Etc",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-11-20T04:20:00+09:00",
+      "collected_at": "2026-11-20T04:25:51.755245+09:00"
+    },
+    {
+      "id": "7a03fee1356d",
+      "title": "안정 택한 LG… 주요 계열사 CEO 유임",
+      "url": "https://www.mt.co.kr/industry/2026/11/20/2026111920034840661",
+      "summary": "LG화학은 석유화학사업 재편과 고부가가치 소재 중심의 포트폴리오 혁신을, LG에너지솔루션은 ESS(에너지저장장치)사업 확대와 북미 생산거점 재편을 이어간다. LG화학은 부사장 2명, 전무 2명, 상무 신규선임 9명...",
+      "region": "Korea",
+      "application": "ESS",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션",
+        "LG화학"
+      ],
+      "score": 4,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "ESS 에너지저장장치",
+      "published": "2026-11-20T04:17:00+09:00",
+      "collected_at": "2026-11-20T04:25:51.752240+09:00"
+    },
+    {
+      "id": "8ad227883d11",
+      "title": "현대차 제네시스, G80 하이브리드 북미 첫 공개",
+      "url": "https://biz.sbs.co.kr/article_hub/20000347687?division=NAVER",
+      "summary": "하이브리드 배터리 시스템을 탑재했습니다. 최고 출력은 347마력으로 기존 가솔린 모델보다 16% 높아졌고...",
+      "region": "NorthAmerica",
+      "application": "EV",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "전기차 배터리",
+      "published": "2026-11-20T04:16:00+09:00",
+      "collected_at": "2026-11-20T04:25:51.747518+09:00"
+    },
     {
       "id": "afc04e1b46b4",
       "title": "미국 후퇴한 기후 외교무대서 목소리 키우는 중국",
@@ -824,6 +881,26 @@
       "keyword": "전기차 배터리",
       "published": "2026-11-19T20:14:00+09:00",
       "collected_at": "2026-11-20T04:12:50.131579+09:00"
+    },
+    {
+      "id": "54986f75ce0a",
+      "title": "LG에너지솔루션, 임원 11명 승진…품질·R&D 조직 강화",
+      "url": "http://www.press9.kr/news/articleView.html?idxno=86695",
+      "summary": "김성길 미국 홀랜드 생산법인 품질담당, 김현수 소형전지 마케팅 FT담당, 박병천 셀 선행개발 양극재담당, 박효석 미국 GM 합작법인 생산법인 전극기술담당, 이상수 세무담당, 이형석 자동차 개발 제품솔루션개발담당이...",
+      "region": "Korea",
+      "application": "Etc",
+      "material": "Cathode",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "LG에너지솔루션"
+      ],
+      "score": 5,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "양극재",
+      "published": "2026-11-19T20:10:00+09:00",
+      "collected_at": "2026-11-20T04:25:51.762546+09:00"
     },
     {
       "id": "9e19e3b8c940",
