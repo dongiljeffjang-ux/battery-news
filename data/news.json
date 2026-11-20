@@ -1,6 +1,26 @@
 {
-  "updated_at": "2026-11-20T12:49:24.960229+09:00",
+  "updated_at": "2026-11-20T12:55:26.661806+09:00",
   "articles": [
+    {
+      "id": "cfb8ba299216",
+      "title": "앤스로픽발 수급 충격·AMD 악재…코스피 4900선 붕괴",
+      "url": "https://www.newspim.com/news/view/20261120000631",
+      "summary": "이차전지 관련주인 에코프로(-5.34%)와 에코프로비엠(-4.96%)도 약세를 보이고 있다. 로보티즈(-5.31%)와 레인보우로보틱스(-3.64%) 등 로봇 관련주도 하락하고 있다.",
+      "region": "Korea",
+      "application": "SmallIT",
+      "material": "Etc",
+      "celltypes": [],
+      "companies": [],
+      "hashtags": [
+        "에코프로"
+      ],
+      "score": 2,
+      "source": "네이버",
+      "lang": "ko",
+      "keyword": "이차전지",
+      "published": "2026-11-20T12:53:00+09:00",
+      "collected_at": "2026-11-20T12:55:26.343788+09:00"
+    },
     {
       "id": "296efa9bee7a",
       "title": "겨울철 자동차에 꼭 챙겨야 할 6가지…배터리 방전부터 눈길 탈출까지",
